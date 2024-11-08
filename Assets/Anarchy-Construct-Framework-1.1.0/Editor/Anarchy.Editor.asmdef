@@ -1,0 +1,20 @@
+{
+    "name": "Anarchy.Editor",
+    "rootNamespace": "Anarchy.Editor",
+    "references": [
+        "GUID:69448af7b92c7f342b298e06a37122aa",
+        "GUID:af5d5ffc4c036804598db57a14247fa8",
+        "GUID:1f83840bc67bda44999ef8223f4afef8"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
