@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.risky.anarchy-construct-framework": {
+      "version": "https://github.com/RiskyLudus/Anarchy-Construct-Framework.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "c8f666454fdea609f422f3bd874d8a97fe33f51d"
+    },
     "com.unity.2d.animation": {
       "version": "10.1.3",
       "depth": 1,

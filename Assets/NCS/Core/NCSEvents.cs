@@ -34,5 +34,9 @@ namespace NCS.Core
         // Background Functions
         public static UnityEvent<Sprite> DisplayBackgroundSprite = new UnityEvent<Sprite>();
         public static UnityEvent ClearBackgroundSprite = new UnityEvent();
+        
+        // Image Popup Functions
+        public static UnityEvent<Sprite> DisplayImagePopup = new UnityEvent<Sprite>();
+        public static UnityEvent CloseImagePopup = new UnityEvent();
     }
 }

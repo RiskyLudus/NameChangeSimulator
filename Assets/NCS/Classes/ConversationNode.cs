@@ -12,6 +12,7 @@ namespace NCS.Classes
         public string text;
         public ChoicesData choicesData;
         public InputData inputData;
+        public ImageData imageData;
         public string next;
     }
 }
