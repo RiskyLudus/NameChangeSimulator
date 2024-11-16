@@ -15,6 +15,12 @@ namespace Anarchy.Shared
         public static UnityEvent<bool> Send_CharacterData_ToggleCharacterSprite = new UnityEvent<bool>();
         public static UnityEvent<string> Send_CharacterData_characterName_Changed = new UnityEvent<string>();
 
+        // Events for ConversationData
+        public static UnityEvent<string, string, int> Send_ConversationData_DisplayConversation = new UnityEvent<string, string, int>();
+        public static UnityEvent<bool> Send_ConversationData_ClearConversation = new UnityEvent<bool>();
+        public static UnityEvent<int> Send_ConversationData_SubmitNode = new UnityEvent<int>();
+        public static UnityEvent<int> Send_ConversationData_node_Changed = new UnityEvent<int>();
+
         // Events for InputData
         public static UnityEvent<string, string> Send_InputData_ShowInputWindow = new UnityEvent<string, string>();
         public static UnityEvent Send_InputData_CloseInputWindow = new UnityEvent();
