@@ -15,7 +15,7 @@ MonoBehaviour:
   anarchyEvents:
   - eventName: ShowChoicesWindow
     type1: 2
-    type2: 1
+    type2: 0
     type3: 0
     type4: 0
   - eventName: CloseChoicesWindow
@@ -26,15 +26,16 @@ MonoBehaviour:
   - eventName: AddChoice
     type1: 2
     type2: 1
-    type3: 3
+    type3: 0
     type4: 0
   - eventName: ClearChoices
     type1: 0
     type2: 0
     type3: 0
     type4: 0
-  - eventName: SubmitChoices
-    type1: 0
+  - eventName: SubmitChoice
+    type1: 1
     type2: 0
     type3: 0
     type4: 0
+  choices: []
