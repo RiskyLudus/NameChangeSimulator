@@ -10,7 +10,7 @@ namespace NCS.Classes
         public string characterName;
         public CharacterSpriteData[] characterSprites;
 
-        public bool TryGetCharacterSprite(CharacterEmotionType emotion, out Sprite sprite)
+        public bool TryGetCharacterSprite(CharacterPoseType emotion, out Sprite sprite)
         {
             sprite = null;
             if (characterSprites == null || characterSprites.Length <= 0) return false;

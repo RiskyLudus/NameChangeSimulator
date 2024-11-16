@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec3f1ecb2b172f4287587d108a3f725, type: 3}
   m_Name: AnarchySettings
   m_EditorClassIdentifier: 
-  RootNamespace: AnarchyConstructFramework
-  PathToAnarchyConstructFramework: Assets/Anarchy-Construct-Framework
-  PathToConstructs: Assets/Anarchy-Construct-Framework/_Constructs
+  RootNamespace: NameChangeSimulator
+  PathToAnarchyConstructFramework: Assets/Anarchy
+  PathToConstructs: Assets/_Constructs

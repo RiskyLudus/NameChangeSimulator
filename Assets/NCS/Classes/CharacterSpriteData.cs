@@ -7,7 +7,7 @@ namespace NCS.Classes
     [Serializable]
     public class CharacterSpriteData
     {
-        public CharacterEmotionType emotionType = CharacterEmotionType.Neutral;
+        public CharacterPoseType emotionType = CharacterPoseType.Idle;
         public Sprite emotionSprite;
     }
 }

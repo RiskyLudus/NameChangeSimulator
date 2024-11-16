@@ -1,7 +1,10 @@
 {
-  "name": "Background",
-  "rootNamespace": "AnarchyConstructFramework.Constructs.Background",
-  "references": ["GUID:08e5556ddd4e225468d7469e0db1be24"],
+  "name": "NameChangeSimulator.Constructs.Background",
+  "rootNamespace": "NameChangeSimulator.Constructs.Background",
+  "references": [
+    "Anarchy",
+    "Anarchy.Shared"
+  ],
   "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,

@@ -1,33 +1,39 @@
-using NCS.Core;
+using System;
+using Anarchy.Shared;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace AnarchyConstructFramework.Constructs.Background
+namespace NameChangeSimulator.Constructs.Background
 {
-    public class BackgroundController : NCSBehaviour
+    public class BackgroundController : MonoBehaviour
     {
         [SerializeField] private Image backgroundImage;
+        [SerializeField] private BackgroundData backgroundData;
         
-        void OnEnable()
+        private void OnEnable()
         {
-            NCSEvents.DisplayBackgroundSprite?.AddListener(DisplayBackgroundSprite);
-            NCSEvents.ClearBackgroundSprite?.AddListener(ClearBackgroundSprite);
+            ConstructBindings.Send_BackgroundData_ChangeBackground?.AddListener(OnBackgroundDataChange);
         }
 
         private void OnDisable()
         {
-            NCSEvents.DisplayBackgroundSprite?.RemoveListener(DisplayBackgroundSprite);
-            NCSEvents.ClearBackgroundSprite?.RemoveListener(ClearBackgroundSprite);
+            ConstructBindings.Send_BackgroundData_ChangeBackground?.RemoveListener(OnBackgroundDataChange);
         }
 
-        private void DisplayBackgroundSprite(Sprite sprite)
+        private void Start()
         {
-            backgroundImage.sprite = sprite;
+            LoadBackground();
         }
 
-        private void ClearBackgroundSprite()
+        private void OnBackgroundDataChange(Sprite backgroundSprite)
         {
-            backgroundImage.sprite = null;
+            backgroundData.BackgroundSprite = backgroundSprite;
+            LoadBackground();
+        }
+
+        private void LoadBackground()
+        {
+            backgroundImage.sprite = backgroundData.BackgroundSprite;
         }
     }
 }
