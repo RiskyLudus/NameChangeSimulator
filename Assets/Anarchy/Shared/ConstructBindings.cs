@@ -28,26 +28,14 @@ namespace Anarchy.Shared
         public static UnityEvent<int> Send_ConversationData_SubmitNode = new UnityEvent<int>();
         public static UnityEvent<int> Send_ConversationData_node_Changed = new UnityEvent<int>();
 
+        // Events for FormCheckerData
+        public static UnityEvent<string> Send_FormCheckerData_ShowForm = new UnityEvent<string>();
+        public static UnityEvent Send_FormCheckerData_CloseForm = new UnityEvent();
+
         // Events for InputData
         public static UnityEvent<string, string> Send_InputData_ShowInputWindow = new UnityEvent<string, string>();
         public static UnityEvent Send_InputData_CloseInputWindow = new UnityEvent();
         public static UnityEvent<string> Send_InputData_SubmitInput = new UnityEvent<string>();
-
-        // Events for PlayerData
-        public static UnityEvent<string> Send_PlayerData_CurrentName_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_NewFirstName_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_NewMiddleName_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_NewLastName_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_Email_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_NicknameOne_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_NicknameTwo_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_StreetAddress_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_StreetAddress2_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_PhoneNumber_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_City_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_State_Changed = new UnityEvent<string>();
-        public static UnityEvent<string> Send_PlayerData_Zip_Changed = new UnityEvent<string>();
-        public static UnityEvent<Texture2D> Send_PlayerData_Signature_Changed = new UnityEvent<Texture2D>();
 
     }
 }

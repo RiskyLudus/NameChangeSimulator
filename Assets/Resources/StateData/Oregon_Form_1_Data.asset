@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be476d0ec3e208645867620fbe963200, type: 3}
+  m_Name: Oregon_Form_1_Data
+  m_EditorClassIdentifier: 
+  formFieldObject: {fileID: 6654899926438324974, guid: 1be86853ee05de844b973267360e57db, type: 3}
+  formSprite: {fileID: 8326230600623088061, guid: bc141f5eca492534fae0fe652fbc55b2, type: 3}
+  fields:
+  - Name: CountyName
+    IsCheck: 0
+    IsText: 1
+  - Name: DeadName1
+    IsCheck: 0
+    IsText: 1
+  - Name: DeadName2
+    IsCheck: 0
+    IsText: 1
+  - Name: NewFirstName
+    IsCheck: 0
+    IsText: 1
+  - Name: NewMiddleName
+    IsCheck: 0
+    IsText: 1
+  - Name: NewLastName
+    IsCheck: 0
+    IsText: 1
+  - Name: NicknameCheck
+    IsCheck: 1
+    IsText: 0
+  - Name: Nickname1
+    IsCheck: 0
+    IsText: 1
+  - Name: Nickname2
+    IsCheck: 0
+    IsText: 1
+  - Name: Nickname3
+    IsCheck: 0
+    IsText: 1
+  - Name: Nickname4
+    IsCheck: 0
+    IsText: 1
+  - Name: Nickname5
+    IsCheck: 0
+    IsText: 1
+  - Name: Nickname6
+    IsCheck: 0
+    IsText: 1
+  - Name: ChildSupportCheck
+    IsCheck: 1
+    IsText: 0
+  - Name: ChildSupportReason
+    IsCheck: 0
+    IsText: 1
+  - Name: RestrainingOrderCheck
+    IsCheck: 1
+    IsText: 0
+  - Name: RestainingOrderReason
+    IsCheck: 0
+    IsText: 1
+  - Name: ParoleCheck
+    IsCheck: 1
+    IsText: 0
+  - Name: ParoleReason
+    IsCheck: 0
+    IsText: 1
+  - Name: SOCheck
+    IsCheck: 1
+    IsText: 0
+  - Name: SOReason
+    IsCheck: 0
+    IsText: 1
+  - Name: ChangeNameCheck1
+    IsCheck: 1
+    IsText: 0
+  - Name: ChangeNameCheck2
+    IsCheck: 1
+    IsText: 0
+  - Name: ChangeSexCheck1
+    IsCheck: 1
+    IsText: 0
+  - Name: ChangeSexCheck2
+    IsCheck: 1
+    IsText: 0
+  - Name: MaleCheck
+    IsCheck: 1
+    IsText: 0
+  - Name: FemaleCheck
+    IsCheck: 1
+    IsText: 0
+  - Name: NonbinaryCheck
+    IsCheck: 1
+    IsText: 0
+  - Name: SealedCheck
+    IsCheck: 1
+    IsText: 0
+  - Name: AddressConfidentialityCheck
+    IsCheck: 1
+    IsText: 0
+  - Name: SexChangeReasonCheck
+    IsCheck: 1
+    IsText: 0
