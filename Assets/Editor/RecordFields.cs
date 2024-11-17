@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class RecordFieldsEditor : EditorWindow
 {
     private GameObject prefab; // To hold the user-provided prefab
+    private Sprite form;
     private string assetName = "StateData"; // Default asset name
 
     [MenuItem("Tools/Record Fields Generator")]
@@ -19,6 +20,9 @@ public class RecordFieldsEditor : EditorWindow
     {
         GUILayout.Label("Record Fields Generator", EditorStyles.boldLabel);
         GUILayout.Space(10);
+        
+        // Field to assign the form image
+        form = (Sprite)EditorGUILayout.ObjectField(form, typeof(Sprite), false);
 
         // Field to assign the prefab
         prefab = (GameObject)EditorGUILayout.ObjectField("Prefab", prefab, typeof(GameObject), false);
@@ -29,9 +33,9 @@ public class RecordFieldsEditor : EditorWindow
         // Generate button
         if (GUILayout.Button("Generate StateData"))
         {
-            if (prefab == null)
+            if (prefab == null || form == null)
             {
-                EditorUtility.DisplayDialog("Error", "Please assign a prefab.", "OK");
+                EditorUtility.DisplayDialog("Error", "Please assign all fields.", "OK");
             }
             else
             {
@@ -73,6 +77,7 @@ public class RecordFieldsEditor : EditorWindow
         // Create and populate the ScriptableObject
         var instance = ScriptableObject.CreateInstance<StateData>();
         instance.name = prefab.name;
+        instance.formSprite = form;
         instance.formFieldObject = prefab;
         instance.fields = fields.ToArray();
 
