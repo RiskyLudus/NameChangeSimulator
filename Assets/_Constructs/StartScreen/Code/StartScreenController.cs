@@ -9,7 +9,6 @@ namespace NameChangeSimulator.Constructs.StartScreen
     public class StartScreenController : MonoBehaviour
     {
         [SerializeField] private StartScreenData startScreenData;
-        [SerializeField] private GameObject conversationScreen;
         [SerializeField] private TMP_Text flavorText;
 
         private Coroutine _co = null;
@@ -30,7 +29,6 @@ namespace NameChangeSimulator.Constructs.StartScreen
         public void StartGame()
         {
             ClearCoroutine();
-            conversationScreen.gameObject.SetActive(true);
             gameObject.SetActive(false);
         }
 
