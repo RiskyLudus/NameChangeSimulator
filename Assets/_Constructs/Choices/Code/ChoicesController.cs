@@ -12,6 +12,8 @@ namespace NameChangeSimulator.Constructs.Choices
         [SerializeField] private GameObject container;
         [SerializeField] private Transform choiceLayout;
         [SerializeField] private TMP_Text choicePromptText;
+        
+        private string _keyword = String.Empty;
 
         private void OnEnable()
         {
@@ -29,8 +31,9 @@ namespace NameChangeSimulator.Constructs.Choices
             ConstructBindings.Send_ChoicesData_CloseChoicesWindow?.RemoveListener(OnCloseChoicesWindow);
         }
 
-        private void OnShowChoicesWindow(string choicesPromptString)
+        private void OnShowChoicesWindow(string keyword, string choicesPromptString)
         {
+            _keyword = keyword;
             choicePromptText.text = choicesPromptString;
             container.SetActive(true);
         }
@@ -40,10 +43,10 @@ namespace NameChangeSimulator.Constructs.Choices
             ConstructBindings.Send_ChoicesData_ClearChoices?.Invoke();
         }
         
-        private void OnAddChoice(string choicePromptString, int choiceIndex)
+        private void OnAddChoice(string choicePromptString, bool choiceToMake)
         {
             var choice = Instantiate(choicePrefab, choiceLayout);
-            choice.GetComponent<ChoiceItemController>().Initialize(choicePromptString, choiceIndex, this);
+            choice.GetComponent<ChoiceItemController>().Initialize(choicePromptString, choiceToMake, this);
             choicesData.choices.Add(choice);
         }
         
@@ -53,14 +56,14 @@ namespace NameChangeSimulator.Constructs.Choices
             {
                 Destroy(choiceLayout.transform.GetChild(i).gameObject);
             }
-            
+            _keyword = String.Empty;
             choicesData.choices.Clear();
             container.SetActive(false);
         }
 
-        public void Submit(int choiceIndex)
+        public void Submit(bool choiceMade)
         {
-            ConstructBindings.Send_ChoicesData_SubmitChoice?.Invoke(choiceIndex);
+            ConstructBindings.Send_ChoicesData_SubmitChoice?.Invoke(_keyword, choiceMade);
         }
     }
 }

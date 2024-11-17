@@ -9,22 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67295efb0cb27c94189da662a6cf3fac, type: 3}
-  m_Name: InputData
+  m_Script: {fileID: 11500000, guid: fe4608d39b4d4b34a98702bda200885d, type: 3}
+  m_Name: FormDataFillerData
   m_EditorClassIdentifier: 
   anarchyEvents:
-  - eventName: ShowInputWindow
+  - eventName: LoadFormFiller
     type1: 2
-    type2: 2
-    type3: 2
-    type4: 0
-  - eventName: CloseInputWindow
-    type1: 0
     type2: 0
-    type3: 0
-    type4: 0
-  - eventName: SubmitInput
-    type1: 2
-    type2: 2
     type3: 0
     type4: 0

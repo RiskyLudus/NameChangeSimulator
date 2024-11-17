@@ -9,18 +9,18 @@ namespace NameChangeSimulator.Constructs.Choices
         [SerializeField] private TMP_Text promptText;
         
         private ChoicesController _choicesController = null;
-        private int _choiceIndex = 0;
+        private bool _choice = false;
         
-        public void Initialize(string prompt, int choiceIndex, ChoicesController controller)
+        public void Initialize(string prompt, bool choice, ChoicesController controller)
         {
             promptText.text = prompt;
             _choicesController = controller;
-            _choiceIndex = choiceIndex;
+            _choice = choice;
         }
 
         public void SubmitChoice()
         {
-            _choicesController.Submit(_choiceIndex);
+            _choicesController.Submit(_choice);
         }
     }
 }
