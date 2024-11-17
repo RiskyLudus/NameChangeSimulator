@@ -31,10 +31,9 @@ namespace NameChangeSimulator.Constructs.Choices
             ConstructBindings.Send_ChoicesData_CloseChoicesWindow?.RemoveListener(OnCloseChoicesWindow);
         }
 
-        private void OnShowChoicesWindow(string keyword, string choicesPromptString)
+        private void OnShowChoicesWindow(string keyword)
         {
             _keyword = keyword;
-            choicePromptText.text = choicesPromptString;
             container.SetActive(true);
         }
         

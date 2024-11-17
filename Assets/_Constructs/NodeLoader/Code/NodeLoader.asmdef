@@ -1,16 +1,18 @@
 {
-  "name": "NameChangeSimulator.Constructs.NodeLoader",
-  "rootNamespace": "NameChangeSimulator.Constructs.NodeLoader",
-  "references": [
-    "Anarchy",
-    "Anarchy.Shared"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": []
+    "name": "NameChangeSimulator.Constructs.NodeLoader",
+    "rootNamespace": "NameChangeSimulator.Constructs.NodeLoader",
+    "references": [
+        "Anarchy",
+        "Anarchy.Shared",
+        "NameChangeSimulator.Shared"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

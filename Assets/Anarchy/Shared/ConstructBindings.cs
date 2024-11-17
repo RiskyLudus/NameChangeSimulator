@@ -16,7 +16,7 @@ namespace Anarchy.Shared
         public static UnityEvent<string> Send_CharacterData_characterName_Changed = new UnityEvent<string>();
 
         // Events for ChoicesData
-        public static UnityEvent<string, string> Send_ChoicesData_ShowChoicesWindow = new UnityEvent<string, string>();
+        public static UnityEvent<string> Send_ChoicesData_ShowChoicesWindow = new UnityEvent<string>();
         public static UnityEvent Send_ChoicesData_CloseChoicesWindow = new UnityEvent();
         public static UnityEvent<string, bool> Send_ChoicesData_AddChoice = new UnityEvent<string, bool>();
         public static UnityEvent Send_ChoicesData_ClearChoices = new UnityEvent();
@@ -39,6 +39,8 @@ namespace Anarchy.Shared
         public static UnityEvent<string, string, string> Send_InputData_ShowInputWindow = new UnityEvent<string, string, string>();
         public static UnityEvent Send_InputData_CloseInputWindow = new UnityEvent();
         public static UnityEvent<string, string> Send_InputData_SubmitInput = new UnityEvent<string, string>();
+
+        // Events for NodeLoaderData
 
         // Events for StartScreenData
 
