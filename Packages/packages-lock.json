@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.github.siccity.xnode": {
+      "version": "https://github.com/Siccity/xNode.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d6effd70f5574369e3415c423ef3e621ea309564"
+    },
     "com.risky.anarchy-construct-framework": {
       "version": "https://github.com/RiskyLudus/Anarchy-Construct-Framework.git",
       "depth": 0,

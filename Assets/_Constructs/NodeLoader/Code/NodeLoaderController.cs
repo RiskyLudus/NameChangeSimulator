@@ -9,7 +9,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
     {
         public void LoadNode(Node node)
         {
-            if (node.CharacterName != "" && node.CharacterName != "" && node.Id != -1)
+            /*if (node.CharacterName != "" && node.CharacterName != "" && node.Id != -1)
             {
                 ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke(node.CharacterName, node.ConversationText, node.Id);
             }
@@ -25,7 +25,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
                     ConstructBindings.Send_ChoicesData_AddChoice?.Invoke(data[0], data[1] == "True");
                 }
                 ConstructBindings.Send_ChoicesData_ShowChoicesWindow?.Invoke(node.Keyword);
-            }
+            }*/
         }
     }
 }

@@ -8,15 +8,27 @@ namespace NameChangeSimulator.Shared
     public class Node
     {
         public int Id;
+        public string CharacterDataName;
+        public string CharacterSpriteType;
         public string ConversationText;
-        public string CharacterName;
-        public string CharacterEmotion;
         public string Keyword;
-        public bool IsInput; // True if using input window, false if choice window
-        /// <summary>
-        /// For choices, this is prompt text and whether the choice is "True" or "False"
-        /// For input, this prompt and the placeholder text
-        /// </summary>
-        public List<string[]> DataToInject = new List<string[]>();
+        public Input Input;
+        public Choice Choice;
+    }
+
+    [Serializable]
+    public class Input
+    {
+        public string Prompt;
+        public string Placeholder;
+        public int NodeConnectionId;
+    }
+
+    [Serializable]
+    public class Choice
+    {
+        public string Prompt;
+        public bool Value;
+        public int NodeConnectionId;
     }
 }
