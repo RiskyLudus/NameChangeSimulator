@@ -30,6 +30,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
         
         private void OnSubmitNode(string nodeField)
         {
+            Debug.Log($"Current node is {_currentNode?.name} and the node field is {nodeField}");
             _currentNode = _currentNode.GetOutputPort(nodeField).Connection.node;
             GoToCurrentNode();
         }
@@ -65,6 +66,12 @@ namespace NameChangeSimulator.Constructs.NodeLoader
                     break;
                 case "ChoiceNode":
                     SendChoiceNode();
+                    break;
+                case "MultiInputNode":
+                    SendMultiInputNode();
+                    break;
+                case "EndNode":
+                    SendEndNode();
                     break;
                 default:
                     Debug.LogError($"Unknown node type: {typeName}");
@@ -104,10 +111,28 @@ namespace NameChangeSimulator.Constructs.NodeLoader
             ConstructBindings.Send_ChoicesData_ShowChoicesWindow?.Invoke(keywordName);
             ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", conversationText, "", false);
 
-            for (int i = 0; i < choiceNode.Choices.Count; i++)
+            foreach (var choice in choiceNode.Choices)
             {
-                ConstructBindings.Send_ChoicesData_AddChoice?.Invoke(choiceNode.Choices[i].Prompt, choiceNode.Choices[i].Value, choiceNode.Choices[i].PortFieldName);
+                ConstructBindings.Send_ChoicesData_AddChoice?.Invoke(choice.Prompt, choice.Value, choice.PortFieldName);
             }
+        }
+
+        private void SendMultiInputNode()
+        {
+            var inputNode = _currentNode as MultiInputNode;
+            var conversationText = inputNode.QuestionText;
+            var keywordName = inputNode.Keyword;
+            var numberOfInputs = inputNode.Inputs.Count;
+            var nextNodeFieldName = _currentNode.Outputs.First().fieldName;
+            
+            ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", conversationText, "", false);
+            ConstructBindings.Send_MultiInputData_ShowMultiInputWindow?.Invoke(keywordName, numberOfInputs, nextNodeFieldName);
+        }
+
+        private void SendEndNode()
+        {
+            ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", "Congratulations on your name change! Let's get those forms ready for you...", "", false);
+            ConstructBindings.Send_FormCheckerData_ShowForm?.Invoke("Oregon");
         }
     }
 }

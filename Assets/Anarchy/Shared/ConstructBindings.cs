@@ -39,6 +39,11 @@ namespace Anarchy.Shared
         public static UnityEvent Send_InputData_CloseInputWindow = new UnityEvent();
         public static UnityEvent<string, string, string> Send_InputData_SubmitInput = new UnityEvent<string, string, string>();
 
+        // Events for MultiInputData
+        public static UnityEvent<string, int, string> Send_MultiInputData_ShowMultiInputWindow = new UnityEvent<string, int, string>();
+        public static UnityEvent Send_MultiInputData_CloseMultiInputWindow = new UnityEvent();
+        public static UnityEvent<string, string, string, string> Send_MultiInputData_SubmitMultiInput = new UnityEvent<string, string, string, string>();
+
         // Events for NodeLoaderData
         public static UnityEvent<string> Send_NodeLoaderData_LoadDialogue = new UnityEvent<string>();
 

@@ -16,6 +16,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
             ConstructBindings.Send_FormDataFillerData_LoadFormFiller?.AddListener(OnLoadFormFiller);
             ConstructBindings.Send_InputData_SubmitInput?.AddListener(OnSubmitInput);
             ConstructBindings.Send_ChoicesData_SubmitChoice?.AddListener(OnSubmitChoice);
+            ConstructBindings.Send_MultiInputData_SubmitMultiInput?.AddListener(OnSubmitMultiInput);
         }
 
         private void OnLoadFormFiller(string stateName)
@@ -47,6 +48,26 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                     field.Value =  toggle ? "True" : "False";
                 }
                 break;
+            }
+            
+            ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(nodeFieldName);
+        }
+
+        private void OnSubmitMultiInput(string keyword, string inputText, string delimiter, string nodeFieldName)
+        {
+            var inputs = inputText.Split(delimiter);
+
+            for (int i = 0; i < inputs.Length; i++)
+            {
+                Debug.Log(inputs[i]);
+                foreach (var field in stateData.fields)
+                {
+                    if (field.Name == (keyword + i.ToString()))
+                    {
+                        field.Value = inputs[i];
+                    }
+                    break;
+                }
             }
             
             ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(nodeFieldName);

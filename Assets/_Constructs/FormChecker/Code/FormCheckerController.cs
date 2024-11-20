@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using Anarchy.Shared;
 using Mono.Cecil;
 using UnityEngine;
@@ -40,11 +41,11 @@ namespace NameChangeSimulator.Constructs.FormChecker
             }
         }
 
-        private void OnShowForm(string formDataName)
+        private void OnShowForm(string stateName)
         {
-            StateData stateData = Resources.Load<StateData>(Path.Combine("StateData", formDataName));
-            formImage.sprite = stateData.formSprite;
-            _form = Instantiate(stateData.formFieldObject, formImage.transform);
+            StateData data = Resources.LoadAll<StateData>($"States/{stateName}/").First();
+            formImage.sprite = data.formSprite;
+            _form = Instantiate(data.formFieldObject, formImage.transform);
             formImage.enabled = true;
             container.SetActive(true);
         }

@@ -33,6 +33,11 @@ namespace NameChangeSimulator.Constructs.Choices
 
         private void OnShowChoicesWindow(string keyword)
         {
+            for (int i = 0; i < choiceLayout.transform.childCount; i++)
+            {
+                Destroy(choiceLayout.transform.GetChild(i).gameObject);
+            }
+            choicesData.choices.Clear();
             _keyword = keyword;
             container.SetActive(true);
         }
@@ -51,17 +56,12 @@ namespace NameChangeSimulator.Constructs.Choices
         
         private void OnClearChoices()
         {
-            for (int i = 0; i < choiceLayout.transform.childCount; i++)
-            {
-                Destroy(choiceLayout.transform.GetChild(i).gameObject);
-            }
-            _keyword = String.Empty;
-            choicesData.choices.Clear();
             container.SetActive(false);
         }
 
         public void Submit(bool choiceMade, string nodeFieldName)
         {
+            OnClearChoices();
             ConstructBindings.Send_ChoicesData_SubmitChoice?.Invoke(_keyword, choiceMade, nodeFieldName);
         }
     }
