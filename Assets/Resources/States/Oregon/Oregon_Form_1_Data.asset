@@ -19,24 +19,24 @@ MonoBehaviour:
     Value: 
     IsCheck: 0
     IsText: 1
-  - Name: DeadName1
-    Value: 
+  - Name: DeadName
+    Value: Lorem
     IsCheck: 0
     IsText: 1
-  - Name: DeadName2
+  - Name: DeadName
     Value: 
     IsCheck: 0
     IsText: 1
   - Name: NewFirstName
-    Value: 
+    Value: Riza
     IsCheck: 0
     IsText: 1
   - Name: NewMiddleName
-    Value: 
+    Value: Ruthie
     IsCheck: 0
     IsText: 1
   - Name: NewLastName
-    Value: 
+    Value: Resnick
     IsCheck: 0
     IsText: 1
   - Name: NicknameCheck
@@ -99,15 +99,15 @@ MonoBehaviour:
     Value: 
     IsCheck: 0
     IsText: 1
-  - Name: ChangeNameCheck1
+  - Name: ChangeNameCheck
     Value: 
     IsCheck: 1
     IsText: 0
-  - Name: ChangeNameCheck2
+  - Name: ChangeNameCheck
     Value: 
     IsCheck: 1
     IsText: 0
-  - Name: ChangeSexCheck1
+  - Name: ChangeSexCheck
     Value: 
     IsCheck: 1
     IsText: 0
