@@ -113,7 +113,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   QuestionText: Finally, what's your new last name?
-  Keyword: LastName
+  Keyword: NewLastName
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-7381048918309845760
@@ -161,7 +161,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   QuestionText: Do you have a middle name now? It's okay to leave this blank if not.
-  Keyword: MiddleName
+  Keyword: NewMiddleName
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-7075332204030162725
@@ -817,7 +817,7 @@ MonoBehaviour:
   QuestionText: First off, may I please have your current first, middle, and last
     name? (Don't worry this won't appear for the rest of the game except on your
     documents).
-  Keyword: DeadName
+  Keyword: DeadName1
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-837122103295089647
@@ -964,7 +964,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   QuestionText: Thank you! Now what is the first name of your new name?
-  Keyword: FirstName
+  Keyword: NewFirstName
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &1156289713629848446
@@ -1028,7 +1028,7 @@ MonoBehaviour:
       _dynamic: 1
   SpriteType: 1
   QuestionText: Is it because you are changing your sex?
-  Keyword: SexChangeCheck
+  Keyword: SexChangeReasonCheck
   Input: {fileID: 0}
   Choices:
   - Prompt: Yes
@@ -1098,7 +1098,7 @@ MonoBehaviour:
       _dynamic: 1
   SpriteType: 1
   QuestionText: Now, are you also looking to change your gender on this form?
-  Keyword: GenderCheck
+  Keyword: ChangeNameCheck1
   Input: {fileID: 0}
   Choices:
   - Prompt: No, just my name is fine!
@@ -1747,7 +1747,7 @@ MonoBehaviour:
       _dynamic: 1
   SpriteType: 1
   QuestionText: Is it because of the Address Confidentiality Program (ORS 192.826)?
-  Keyword: ACPCheck
+  Keyword: AddressConfidentialityCheck
   Input: {fileID: 0}
   Choices:
   - Prompt: Yes
