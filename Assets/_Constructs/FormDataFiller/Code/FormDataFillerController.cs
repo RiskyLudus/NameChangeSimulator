@@ -9,7 +9,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
     public class FormDataFillerController : MonoBehaviour
     {
         [SerializeField] private FormDataFillerData formDataFillerData;
-        [SerializeField] private StateData stateData;
+        [SerializeField] private StateData[] stateDatas;
 
         private void OnEnable()
         {
@@ -21,19 +21,20 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 
         private void OnLoadFormFiller(string stateName)
         {
-            StateData data = Resources.LoadAll<StateData>($"States/{stateName}/").First();
-            stateData = data;
+            stateDatas = Resources.LoadAll<StateData>("States/Oregon");
         }
 
         private void OnSubmitInput(string keyword, string inputValue, string nodeFieldName)
         {
-            foreach (var field in stateData.fields)
+            foreach (var stateData in stateDatas)
             {
-                if (field.Name == keyword)
+                foreach (var field in stateData.fields)
                 {
-                    field.Value = inputValue;
+                    if (field.Name == keyword)
+                    {
+                        field.Value = inputValue;
+                    }
                 }
-                break;
             }
             
             ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(nodeFieldName);
@@ -41,13 +42,15 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
         
         private void OnSubmitChoice(string keyword, bool toggle, string nodeFieldName)
         {
-            foreach (var field in stateData.fields)
+            foreach (var stateData in stateDatas)
             {
-                if (field.Name == keyword)
+                foreach (var field in stateData.fields)
                 {
-                    field.Value =  toggle ? "True" : "False";
+                    if (field.Name == keyword)
+                    {
+                        field.Value =  toggle ? "True" : "False";
+                    }
                 }
-                break;
             }
             
             ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(nodeFieldName);
@@ -57,16 +60,18 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
         {
             var inputs = inputText.Split(delimiter);
 
-            for (int i = 0; i < inputs.Length; i++)
+            foreach (StateData stateData in stateDatas)
             {
-                Debug.Log(inputs[i]);
-                foreach (var field in stateData.fields)
+                for (int i = 0; i < inputs.Length; i++)
                 {
-                    if (field.Name == (keyword + i.ToString()))
+                    Debug.Log(inputs[i]);
+                    foreach (var field in stateData.fields)
                     {
-                        field.Value = inputs[i];
+                        if (field.Name == (keyword + i.ToString()))
+                        {
+                            field.Value = inputs[i];
+                        }
                     }
-                    break;
                 }
             }
             
