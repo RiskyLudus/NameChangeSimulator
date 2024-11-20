@@ -10,17 +10,19 @@ namespace NameChangeSimulator.Constructs.Choices
         
         private ChoicesController _choicesController = null;
         private bool _choice = false;
+        private string _fieldName = null;
         
-        public void Initialize(string prompt, bool choice, ChoicesController controller)
+        public void Initialize(string prompt, bool choice, string nodeFieldName, ChoicesController controller)
         {
             promptText.text = prompt;
             _choicesController = controller;
             _choice = choice;
+            _fieldName = nodeFieldName;
         }
 
         public void SubmitChoice()
         {
-            _choicesController.Submit(_choice);
+            _choicesController.Submit(_choice, _fieldName);
         }
     }
 }

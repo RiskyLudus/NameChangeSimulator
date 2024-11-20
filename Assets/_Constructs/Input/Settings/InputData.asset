@@ -16,7 +16,7 @@ MonoBehaviour:
   - eventName: ShowInputWindow
     type1: 2
     type2: 2
-    type3: 2
+    type3: 0
     type4: 0
   - eventName: CloseInputWindow
     type1: 0
@@ -26,5 +26,5 @@ MonoBehaviour:
   - eventName: SubmitInput
     type1: 2
     type2: 2
-    type3: 0
+    type3: 2
     type4: 0

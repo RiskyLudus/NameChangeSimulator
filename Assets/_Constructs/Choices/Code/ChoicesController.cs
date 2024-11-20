@@ -42,10 +42,10 @@ namespace NameChangeSimulator.Constructs.Choices
             ConstructBindings.Send_ChoicesData_ClearChoices?.Invoke();
         }
         
-        private void OnAddChoice(string choicePromptString, bool choiceToMake)
+        private void OnAddChoice(string choicePromptString, bool choiceValue, string nodeFieldName)
         {
             var choice = Instantiate(choicePrefab, choiceLayout);
-            choice.GetComponent<ChoiceItemController>().Initialize(choicePromptString, choiceToMake, this);
+            choice.GetComponent<ChoiceItemController>().Initialize(choicePromptString, choiceValue, nodeFieldName, this);
             choicesData.choices.Add(choice);
         }
         
@@ -60,9 +60,9 @@ namespace NameChangeSimulator.Constructs.Choices
             container.SetActive(false);
         }
 
-        public void Submit(bool choiceMade)
+        public void Submit(bool choiceMade, string nodeFieldName)
         {
-            ConstructBindings.Send_ChoicesData_SubmitChoice?.Invoke(_keyword, choiceMade);
+            ConstructBindings.Send_ChoicesData_SubmitChoice?.Invoke(_keyword, choiceMade, nodeFieldName);
         }
     }
 }

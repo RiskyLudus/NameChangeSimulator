@@ -14,7 +14,6 @@ public class ChoiceNode : Node
 
     // Dynamically add output ports based on the number of choices
     [Input(backingValue = ShowBackingValue.Never)] public DialogueNode Input;
-    [Output(dynamicPortList = true, backingValue = ShowBackingValue.Never)] public List<DialogueNode> Outputs;
 
     public List<Choice> Choices = new List<Choice>();
 
@@ -57,4 +56,6 @@ public class ChoiceNode : Node
 public class Choice
 {
     public string Prompt;
+    public bool Value;
+    public string PortFieldName;
 }

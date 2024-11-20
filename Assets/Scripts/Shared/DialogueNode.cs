@@ -3,7 +3,7 @@ using UnityEngine;
 using XNode;
 using Node = XNode.Node;
 
-[NodeWidth(350)]
+[Node.NodeWidth(350)]
 public class DialogueNode : Node
 {
     public CharacterSpriteType SpriteType = CharacterSpriteType.None;

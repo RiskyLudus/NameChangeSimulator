@@ -1069,10 +1069,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConversationDialogue
       objectReference: {fileID: 0}
-    - target: {fileID: 2637953098971666267, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1174,6 +1170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChoiceDialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 9030640613500858178, guid: 687c299c9b5eeaf49b8098892e382c00, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1247,6 +1247,22 @@ PrefabInstance:
     - target: {fileID: 7581629795441343250, guid: 8825709b6b9a76a48a3f586d75164329, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729995013112321819, guid: 8825709b6b9a76a48a3f586d75164329, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 65.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729995013112321819, guid: 8825709b6b9a76a48a3f586d75164329, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126105233095228071, guid: 8825709b6b9a76a48a3f586d75164329, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126105233095228071, guid: 8825709b6b9a76a48a3f586d75164329, type: 3}
+      propertyPath: m_fontSize
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 8423752709516562710, guid: 8825709b6b9a76a48a3f586d75164329, type: 3}
       propertyPath: m_Name
@@ -1335,6 +1351,10 @@ PrefabInstance:
     - target: {fileID: 8854162924854707573, guid: 8825709b6b9a76a48a3f586d75164329, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9210773163404378656, guid: 8825709b6b9a76a48a3f586d75164329, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

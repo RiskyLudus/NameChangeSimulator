@@ -17,29 +17,18 @@ MonoBehaviour:
   ports:
     keys:
     - Input
-    - Outputs
     - Output_0
     - Output_1
     values:
     - _fieldName: Input
       _node: {fileID: -8005077967105020299}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
         node: {fileID: -7561688723709277122}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Outputs
-      _node: {fileID: -8005077967105020299}
-      _typeQualifiedName: System.Collections.Generic.List`1[[DialogueNode, NameChangeSimulator.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -72,10 +61,13 @@ MonoBehaviour:
     includes any previous names you've used legally or have been called by others.
   Keyword: NicknameCheck
   Input: {fileID: 0}
-  Outputs: []
   Choices:
   - Prompt: Yes
+    Value: 1
+    PortFieldName: Output_0
   - Prompt: No
+    Value: 0
+    PortFieldName: Output_1
 --- !u!114 &-7561688723709277122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +89,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -7561688723709277122}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -109,7 +101,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -7561688723709277122}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -145,7 +137,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -7381048918309845760}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -157,7 +149,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -7381048918309845760}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -193,7 +185,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -7075332204030162725}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -205,7 +197,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -7075332204030162725}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -241,7 +233,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -6936122805636485369}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -253,7 +245,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -6936122805636485369}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -289,7 +281,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -6417134806959441554}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -301,7 +293,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -6417134806959441554}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -335,7 +327,7 @@ MonoBehaviour:
     values:
     - _fieldName: Output
       _node: {fileID: -6164172195419980325}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -367,7 +359,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -5982953341540744316}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -379,7 +371,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -5982953341540744316}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -410,30 +402,19 @@ MonoBehaviour:
   ports:
     keys:
     - Input
-    - Outputs
     - Output_0
     - Output_1
     - Output_2
     values:
     - _fieldName: Input
       _node: {fileID: -4394354475368892698}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_1
         node: {fileID: 1226733347336661030}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Outputs
-      _node: {fileID: -4394354475368892698}
-      _typeQualifiedName: System.Collections.Generic.List`1[[DialogueNode, NameChangeSimulator.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -479,11 +460,16 @@ MonoBehaviour:
     me what gender is closest to your lived experience?
   Keyword: GenderChoice
   Input: {fileID: 0}
-  Outputs: []
   Choices:
   - Prompt: Male
+    Value: 0
+    PortFieldName: 
   - Prompt: Female
+    Value: 0
+    PortFieldName: 
   - Prompt: Nonbinary
+    Value: 0
+    PortFieldName: 
 --- !u!114 &-4181252989243450681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,7 +490,7 @@ MonoBehaviour:
     values:
     - _fieldName: Output
       _node: {fileID: -4181252989243450681}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -536,7 +522,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -3077398421035335125}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -548,7 +534,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -3077398421035335125}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -583,7 +569,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -2457895537752988365}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -595,7 +581,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -2457895537752988365}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -631,7 +617,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -1901210851486569043}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -643,7 +629,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -1901210851486569043}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -669,7 +655,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
-  m_Name: Input
+  m_Name: DeadName Input
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -296, y: -216}
@@ -680,7 +666,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -1338616726177896150}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -692,7 +678,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -1338616726177896150}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -730,7 +716,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: -837122103295089647}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_0
@@ -742,7 +728,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: -837122103295089647}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -768,7 +754,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fca9d4d54328444c8f75d4e7f5453fe, type: 3}
-  m_Name: SampleFlow
+  m_Name: OregonFlow
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 5662798566677275321}
@@ -802,7 +788,6 @@ MonoBehaviour:
   - {fileID: 1226733347336661030}
   - {fileID: -4394354475368892698}
   - {fileID: 4578200490153924877}
-  - {fileID: 0}
   - {fileID: 5013270572686418947}
   - {fileID: 1156289713629848446}
   - {fileID: -6164172195419980325}
@@ -817,7 +802,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
-  m_Name: Input
+  m_Name: NewFirstName Input
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 168, y: -392}
@@ -828,7 +813,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 145821211321753720}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -840,7 +825,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 145821211321753720}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -872,13 +857,12 @@ MonoBehaviour:
   ports:
     keys:
     - Input
-    - Outputs
     - Output_0
     - Output_1
     values:
     - _fieldName: Input
       _node: {fileID: 1156289713629848446}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_0
@@ -888,16 +872,6 @@ MonoBehaviour:
         node: {fileID: 5013270572686418947}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Outputs
-      _node: {fileID: 1156289713629848446}
-      _typeQualifiedName: System.Collections.Generic.List`1[[DialogueNode, NameChangeSimulator.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -929,10 +903,13 @@ MonoBehaviour:
   QuestionText: Is it because you are changing your sex?
   Keyword: SexChangeCheck
   Input: {fileID: 0}
-  Outputs: []
   Choices:
   - Prompt: Yes
+    Value: 0
+    PortFieldName: 
   - Prompt: No
+    Value: 0
+    PortFieldName: 
 --- !u!114 &1226733347336661030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,13 +927,12 @@ MonoBehaviour:
   ports:
     keys:
     - Input
-    - Outputs
     - Output_0
     - Output_1
     values:
     - _fieldName: Input
       _node: {fileID: 1226733347336661030}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_1
@@ -966,16 +942,6 @@ MonoBehaviour:
         node: {fileID: 3641937382298910339}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Outputs
-      _node: {fileID: 1226733347336661030}
-      _typeQualifiedName: System.Collections.Generic.List`1[[DialogueNode, NameChangeSimulator.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -1007,10 +973,13 @@ MonoBehaviour:
   QuestionText: Now, are you also looking to change your gender on this form?
   Keyword: GenderCheck
   Input: {fileID: 0}
-  Outputs: []
   Choices:
   - Prompt: No, just my name is fine!
+    Value: 0
+    PortFieldName: 
   - Prompt: Yes please!
+    Value: 0
+    PortFieldName: 
 --- !u!114 &1667938504469356246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,13 +997,12 @@ MonoBehaviour:
   ports:
     keys:
     - Input
-    - Outputs
     - Output_0
     - Output_1
     values:
     - _fieldName: Input
       _node: {fileID: 1667938504469356246}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_1
@@ -1044,16 +1012,6 @@ MonoBehaviour:
         node: {fileID: -837122103295089647}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Outputs
-      _node: {fileID: 1667938504469356246}
-      _typeQualifiedName: System.Collections.Generic.List`1[[DialogueNode, NameChangeSimulator.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -1085,10 +1043,13 @@ MonoBehaviour:
   QuestionText: Have you been placed on parole, probation, or under post-prison supervision?
   Keyword: ParoleCheck
   Input: {fileID: 0}
-  Outputs: []
   Choices:
   - Prompt: Yes
+    Value: 0
+    PortFieldName: 
   - Prompt: No
+    Value: 0
+    PortFieldName: 
 --- !u!114 &1776631225341133628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,7 +1071,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 1776631225341133628}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_0
@@ -1131,7 +1092,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 1776631225341133628}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -1167,7 +1128,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 2028449777974842743}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -1179,7 +1140,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 2028449777974842743}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -1211,29 +1172,18 @@ MonoBehaviour:
   ports:
     keys:
     - Input
-    - Outputs
     - Output_0
     - Output_1
     values:
     - _fieldName: Input
       _node: {fileID: 2362983642881617625}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_1
         node: {fileID: 1667938504469356246}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Outputs
-      _node: {fileID: 2362983642881617625}
-      _typeQualifiedName: System.Collections.Generic.List`1[[DialogueNode, NameChangeSimulator.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -1266,10 +1216,13 @@ MonoBehaviour:
     a sex offender?
   Keyword: SOCheck
   Input: {fileID: 0}
-  Outputs: []
   Choices:
   - Prompt: Yes
+    Value: 0
+    PortFieldName: 
   - Prompt: No
+    Value: 0
+    PortFieldName: 
 --- !u!114 &2836447280509301691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1291,7 +1244,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 2836447280509301691}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_0
@@ -1303,7 +1256,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 2836447280509301691}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
@@ -1337,7 +1290,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 3200064973933023676}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -1349,7 +1302,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 3200064973933023676}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -1386,7 +1339,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 3641937382298910339}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_0
@@ -1398,7 +1351,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 3641937382298910339}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -1435,7 +1388,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 4405864307916772321}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_0
@@ -1447,7 +1400,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 4405864307916772321}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -1480,13 +1433,12 @@ MonoBehaviour:
   ports:
     keys:
     - Input
-    - Outputs
     - Output_0
     - Output_1
     values:
     - _fieldName: Input
       _node: {fileID: 4578200490153924877}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_0
@@ -1499,16 +1451,6 @@ MonoBehaviour:
         node: {fileID: -4394354475368892698}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Outputs
-      _node: {fileID: 4578200490153924877}
-      _typeQualifiedName: System.Collections.Generic.List`1[[DialogueNode, NameChangeSimulator.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -1542,10 +1484,13 @@ MonoBehaviour:
     this because you are changing your sex.
   Keyword: SealedCheck
   Input: {fileID: 0}
-  Outputs: []
   Choices:
   - Prompt: Yes
+    Value: 0
+    PortFieldName: 
   - Prompt: No
+    Value: 0
+    PortFieldName: 
 --- !u!114 &4726122230840578775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,13 +1508,12 @@ MonoBehaviour:
   ports:
     keys:
     - Input
-    - Outputs
     - Output_0
     - Output_1
     values:
     - _fieldName: Input
       _node: {fileID: 4726122230840578775}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_1
@@ -1579,16 +1523,6 @@ MonoBehaviour:
         node: {fileID: 4405864307916772321}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Outputs
-      _node: {fileID: 4726122230840578775}
-      _typeQualifiedName: System.Collections.Generic.List`1[[DialogueNode, NameChangeSimulator.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -1621,10 +1555,13 @@ MonoBehaviour:
     order against you?
   Keyword: RestrainingOrderCheck
   Input: {fileID: 0}
-  Outputs: []
   Choices:
   - Prompt: Yes
+    Value: 0
+    PortFieldName: 
   - Prompt: No
+    Value: 0
+    PortFieldName: 
 --- !u!114 &5013270572686418947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1642,29 +1579,18 @@ MonoBehaviour:
   ports:
     keys:
     - Input
-    - Outputs
     - Output_0
     - Output_1
     values:
     - _fieldName: Input
       _node: {fileID: 5013270572686418947}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_0
         node: {fileID: 4578200490153924877}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Outputs
-      _node: {fileID: 5013270572686418947}
-      _typeQualifiedName: System.Collections.Generic.List`1[[DialogueNode, NameChangeSimulator.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -1696,10 +1622,13 @@ MonoBehaviour:
   QuestionText: Is it because of the Address Confidentiality Program (ORS 192.826)?
   Keyword: ACPCheck
   Input: {fileID: 0}
-  Outputs: []
   Choices:
   - Prompt: Yes
+    Value: 0
+    PortFieldName: 
   - Prompt: No
+    Value: 0
+    PortFieldName: 
 --- !u!114 &5662798566677275321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1710,7 +1639,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
-  m_Name: Dialogue
+  m_Name: LineOne
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -744, y: -392}
@@ -1721,7 +1650,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 5662798566677275321}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -1733,7 +1662,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 5662798566677275321}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -1768,7 +1697,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 7019403017044085878}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -1783,7 +1712,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 7019403017044085878}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -1816,29 +1745,18 @@ MonoBehaviour:
   ports:
     keys:
     - Input
-    - Outputs
     - Output_0
     - Output_1
     values:
     - _fieldName: Input
       _node: {fileID: 7437549357593099369}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
         node: {fileID: 7019403017044085878}
         reroutePoints: []
       _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Outputs
-      _node: {fileID: 7437549357593099369}
-      _typeQualifiedName: System.Collections.Generic.List`1[[DialogueNode, NameChangeSimulator.Editor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -1870,10 +1788,13 @@ MonoBehaviour:
   QuestionText: Do you owe any child support?
   Keyword: ChildSupportCheck
   Input: {fileID: 0}
-  Outputs: []
   Choices:
   - Prompt: Yes
+    Value: 0
+    PortFieldName: 
   - Prompt: No
+    Value: 0
+    PortFieldName: 
 --- !u!114 &8139856482583099209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1895,7 +1816,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 8139856482583099209}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -1907,7 +1828,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 8139856482583099209}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -1949,7 +1870,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 8640553415563749526}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output_0
@@ -1961,7 +1882,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 8640553415563749526}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
@@ -2058,7 +1979,7 @@ MonoBehaviour:
     values:
     - _fieldName: Input
       _node: {fileID: 8719481727178769938}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
@@ -2070,7 +1991,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Output
       _node: {fileID: 8719481727178769938}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Editor, Version=0.0.0.0,
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input

@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using Anarchy.Shared;
 using UnityEngine;
 
@@ -17,13 +18,13 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
             ConstructBindings.Send_ChoicesData_SubmitChoice?.AddListener(OnSubmitChoice);
         }
 
-        private void OnLoadFormFiller(string formDataName)
+        private void OnLoadFormFiller(string stateName)
         {
-            StateData data = Resources.Load<StateData>(Path.Combine("StateData", formDataName));
+            StateData data = Resources.LoadAll<StateData>($"States/{stateName}/").First();
             stateData = data;
         }
 
-        private void OnSubmitInput(string keyword, string inputValue)
+        private void OnSubmitInput(string keyword, string inputValue, string nodeFieldName)
         {
             foreach (var field in stateData.fields)
             {
@@ -33,9 +34,11 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 }
                 break;
             }
+            
+            ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(nodeFieldName);
         }
         
-        private void OnSubmitChoice(string keyword, bool toggle)
+        private void OnSubmitChoice(string keyword, bool toggle, string nodeFieldName)
         {
             foreach (var field in stateData.fields)
             {
@@ -45,6 +48,8 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 }
                 break;
             }
+            
+            ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(nodeFieldName);
         }
     }
 }

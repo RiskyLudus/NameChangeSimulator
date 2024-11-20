@@ -13,6 +13,9 @@ namespace NameChangeSimulator.Constructs.Conversation
         [SerializeField] private GameObject container;
         [SerializeField] private TMP_Text conversationPromptText;
         [SerializeField] private TMP_Text nameText;
+        [SerializeField] private GameObject nextButton;
+
+        private string _nodeFieldNameToGoTo = String.Empty;
 
         private void OnEnable()
         {
@@ -26,19 +29,20 @@ namespace NameChangeSimulator.Constructs.Conversation
             ConstructBindings.Send_ConversationData_ClearConversation?.RemoveListener(OnClearConversation);
         }
 
-        private void OnDisplayConversation(string nameString, string conversationPromptString, int nodeID)
+        private void OnDisplayConversation(string nameString, string conversationPromptString, string nodeFieldName, bool doNotShowNextButton = true)
         {
             nameText.text = nameString;
             conversationPromptText.text = conversationPromptString;
-            conversationData.node = nodeID;
+            _nodeFieldNameToGoTo = nodeFieldName;
             container.gameObject.SetActive(true);
+            nextButton.SetActive(doNotShowNextButton);
         }
         
         private void OnClearConversation(bool windowState)
         {
             nameText.text = string.Empty;
             conversationPromptText.text = string.Empty;
-            conversationData.node = 0;
+            _nodeFieldNameToGoTo = string.Empty;
             if (!windowState)
             {
                 container.gameObject.SetActive(false);
@@ -47,7 +51,7 @@ namespace NameChangeSimulator.Constructs.Conversation
 
         public void Submit()
         {
-            ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(conversationData.node);
+            ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(_nodeFieldNameToGoTo);
         }
     }
 }

@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a62732b3bfd734d9c7e3c50b58f7a4, type: 3}
   m_Name: NodeLoaderData
   m_EditorClassIdentifier: 
-  anarchyEvents: []
+  anarchyEvents:
+  - eventName: LoadDialogue
+    type1: 2
+    type2: 0
+    type3: 0
+    type4: 0

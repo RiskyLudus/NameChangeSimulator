@@ -8,6 +8,5 @@ namespace NameChangeSimulator.Constructs.Conversation
 	{
 		// Add public fields for this construct's data
 		// Go to Anarchy/Update Bindings to use events
-		public int node = 0;
 	}
 }

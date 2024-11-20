@@ -26,7 +26,7 @@ MonoBehaviour:
   - eventName: AddChoice
     type1: 2
     type2: 3
-    type3: 0
+    type3: 2
     type4: 0
   - eventName: ClearChoices
     type1: 0
@@ -36,6 +36,6 @@ MonoBehaviour:
   - eventName: SubmitChoice
     type1: 2
     type2: 3
-    type3: 0
+    type3: 2
     type4: 0
   choices: []

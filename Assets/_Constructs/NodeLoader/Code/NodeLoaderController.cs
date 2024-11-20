@@ -1,31 +1,113 @@
 using System;
+using System.Linq;
 using Anarchy.Shared;
-using NameChangeSimulator.Shared;
 using UnityEngine;
+using XNode;
 
 namespace NameChangeSimulator.Constructs.NodeLoader
 {
     public class NodeLoaderController : MonoBehaviour
     {
-        public void LoadNode(Node node)
-        {
-            /*if (node.CharacterName != "" && node.CharacterName != "" && node.Id != -1)
-            {
-                ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke(node.CharacterName, node.ConversationText, node.Id);
-            }
+        private Node _currentNode = null;
 
-            if (node.IsInput)
+        private void OnEnable()
+        {
+            ConstructBindings.Send_NodeLoaderData_LoadDialogue?.AddListener(OnLoadDialogue);
+            ConstructBindings.Send_ConversationData_SubmitNode?.AddListener(OnSubmitNode);
+        }
+
+        private void OnDisable()
+        {
+            ConstructBindings.Send_NodeLoaderData_LoadDialogue?.RemoveListener(OnLoadDialogue);
+            ConstructBindings.Send_ConversationData_SubmitNode?.RemoveListener(OnSubmitNode);
+        }
+
+        private void OnLoadDialogue(string stateName)
+        {
+            LoadGraph(Resources.LoadAll<DialogueGraph>($"States/{stateName}/").First());
+            ConstructBindings.Send_FormDataFillerData_LoadFormFiller?.Invoke(stateName);
+        }
+        
+        private void OnSubmitNode(string nodeField)
+        {
+            _currentNode = _currentNode.GetOutputPort(nodeField).Connection.node;
+            GoToCurrentNode();
+        }
+
+        private void Start()
+        {
+            OnLoadDialogue("Oregon");
+        }
+
+        private void LoadGraph(DialogueGraph graph)
+        {
+            // Get the start node to begin our flow
+            foreach (var startNode in graph.nodes.OfType<StartNode>())
             {
-                ConstructBindings.Send_InputData_ShowInputWindow?.Invoke(node.Keyword, node.DataToInject[0][0], node.DataToInject[0][1]);
+                _currentNode = startNode.GetOutputPort("Output").Connection.node as Node;
             }
-            else
+            
+            GoToCurrentNode();
+        }
+
+        // Check what kind of node we're getting and parse it for data
+        private void GoToCurrentNode()
+        {
+            var typeName = _currentNode.GetType().Name;
+
+            switch (typeName)
             {
-                foreach (var data in node.DataToInject)
-                {
-                    ConstructBindings.Send_ChoicesData_AddChoice?.Invoke(data[0], data[1] == "True");
-                }
-                ConstructBindings.Send_ChoicesData_ShowChoicesWindow?.Invoke(node.Keyword);
-            }*/
+                case "DialogueNode":
+                    SendDialogueNode();
+                    break;
+                case "InputNode":
+                    SendInputNode();
+                    break;
+                case "ChoiceNode":
+                    SendChoiceNode();
+                    break;
+                default:
+                    Debug.LogError($"Unknown node type: {typeName}");
+                    break;
+            }
+        }
+
+        private void SendDialogueNode()
+        {
+            var dialogueNode = _currentNode as DialogueNode;
+            var conversationText = dialogueNode.DialogueText;
+            var nextNodeFieldName = _currentNode.Outputs.First().fieldName;
+            
+            ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", conversationText, nextNodeFieldName, true);
+        }
+        
+        private void SendInputNode()
+        {
+            var inputNode = _currentNode as InputNode;
+            var conversationText = inputNode.QuestionText;
+            var keywordName = inputNode.Keyword;
+            var nextNodeFieldName = _currentNode.Outputs.First().fieldName;
+
+            Debug.Log(_currentNode.GetOutputPort(nextNodeFieldName).Connection.node.name);
+            
+            
+            ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", conversationText, "", false);
+            ConstructBindings.Send_InputData_ShowInputWindow?.Invoke(keywordName, nextNodeFieldName);
+        }
+
+        private void SendChoiceNode()
+        {
+            var choiceNode = _currentNode as ChoiceNode;
+            var conversationText = choiceNode.QuestionText;
+            var keywordName = choiceNode.Keyword;
+            
+            ConstructBindings.Send_ChoicesData_ShowChoicesWindow?.Invoke(keywordName);
+            ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", conversationText, "", false);
+
+            for (int i = 0; i < choiceNode.Choices.Count; i++)
+            {
+                ConstructBindings.Send_ChoicesData_AddChoice?.Invoke(choiceNode.Choices[i].Prompt, choiceNode.Choices[i].Value, choiceNode.Choices[i].PortFieldName);
+            }
         }
     }
 }

@@ -11,10 +11,9 @@ namespace NameChangeSimulator.Constructs.Input
 
         [SerializeField] private GameObject container;
         [SerializeField] private TMP_InputField inputField;
-        [SerializeField] private TMP_Text placeholderText;
-        [SerializeField] private TMP_Text promptText;
         
         private string _keyword = string.Empty;
+        private string _nodeFieldName = string.Empty;
 
         private void OnEnable()
         {
@@ -28,25 +27,23 @@ namespace NameChangeSimulator.Constructs.Input
             ConstructBindings.Send_InputData_CloseInputWindow?.RemoveListener(OnCloseInputWindow);
         }
 
-        private void OnShowInputWindow(string keyword, string promptString, string placeholderString)
+        private void OnShowInputWindow(string keyword, string nodeFieldName)
         {
             _keyword = keyword;
-            placeholderText.text = placeholderString;
-            promptText.text = promptString;
+            _nodeFieldName = nodeFieldName;
+            inputField.text = string.Empty;
             container.SetActive(true);
         }
         
         private void OnCloseInputWindow()
         {
-            _keyword = string.Empty;
-            placeholderText.text = string.Empty;
-            promptText.text = string.Empty;
             container.SetActive(false);
         }
         
         public void SubmitInput()
         {
-            ConstructBindings.Send_InputData_SubmitInput?.Invoke(_keyword, inputField.text);
+            OnCloseInputWindow();
+            ConstructBindings.Send_InputData_SubmitInput?.Invoke(_keyword, inputField.text, _nodeFieldName);
         }
     }
 }

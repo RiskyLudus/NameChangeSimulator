@@ -50,6 +50,8 @@ public class ChoiceNodeEditor : NodeEditor
 
             // Display the prompt field for the choice
             node.Choices[i].Prompt = EditorGUILayout.TextField("", node.Choices[i].Prompt, GUILayout.Width(250));
+            node.Choices[i].Value = EditorGUILayout.Toggle("", node.Choices[i].Value, GUILayout.Width(25));
+            node.Choices[i].PortFieldName = $"Output_{i}";
 
             // Render the dynamic output port for each choice
             NodeEditorGUILayout.PortField(new GUIContent($"Output {i + 1}"), node.GetOutputPort($"Output_{i}"), GUILayout.MinWidth(0));
