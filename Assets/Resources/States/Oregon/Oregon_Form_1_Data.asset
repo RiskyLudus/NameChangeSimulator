@@ -28,19 +28,19 @@ MonoBehaviour:
     IsCheck: 0
     IsText: 1
   - Name: NewFirstName
-    Value: Riza
+    Value: 
     IsCheck: 0
     IsText: 1
   - Name: NewMiddleName
-    Value: Ruthie
+    Value: 
     IsCheck: 0
     IsText: 1
   - Name: NewLastName
-    Value: Resnick
+    Value: 
     IsCheck: 0
     IsText: 1
   - Name: NicknameCheck
-    Value: 
+    Value: False
     IsCheck: 1
     IsText: 0
   - Name: Nickname1
@@ -68,7 +68,7 @@ MonoBehaviour:
     IsCheck: 0
     IsText: 1
   - Name: ChildSupportCheck
-    Value: 
+    Value: False
     IsCheck: 1
     IsText: 0
   - Name: ChildSupportReason
@@ -76,7 +76,7 @@ MonoBehaviour:
     IsCheck: 0
     IsText: 1
   - Name: RestrainingOrderCheck
-    Value: 
+    Value: False
     IsCheck: 1
     IsText: 0
   - Name: RestainingOrderReason
@@ -84,7 +84,7 @@ MonoBehaviour:
     IsCheck: 0
     IsText: 1
   - Name: ParoleCheck
-    Value: 
+    Value: False
     IsCheck: 1
     IsText: 0
   - Name: ParoleReason
@@ -92,7 +92,7 @@ MonoBehaviour:
     IsCheck: 0
     IsText: 1
   - Name: SOCheck
-    Value: 
+    Value: False
     IsCheck: 1
     IsText: 0
   - Name: SOReason
@@ -111,20 +111,20 @@ MonoBehaviour:
     Value: 
     IsCheck: 1
     IsText: 0
-  - Name: ChangeSexCheck2
+  - Name: ChangeSexCheck
     Value: 
     IsCheck: 1
     IsText: 0
   - Name: MaleCheck
-    Value: 
+    Value: False
     IsCheck: 1
     IsText: 0
   - Name: FemaleCheck
-    Value: 
+    Value: True
     IsCheck: 1
     IsText: 0
   - Name: NonbinaryCheck
-    Value: 
+    Value: False
     IsCheck: 1
     IsText: 0
   - Name: SealedCheck

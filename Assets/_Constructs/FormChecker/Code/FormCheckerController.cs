@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using Anarchy.Shared;
 using Mono.Cecil;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -48,6 +49,7 @@ namespace NameChangeSimulator.Constructs.FormChecker
             _form = Instantiate(data.formFieldObject, formImage.transform);
             formImage.enabled = true;
             container.SetActive(true);
+            SetFieldsOnForm(data);
         }
 
         private void OnCloseForm()
@@ -57,6 +59,22 @@ namespace NameChangeSimulator.Constructs.FormChecker
             _form = null;
             formImage.sprite = null;
             formImage.enabled = false;
+        }
+
+        private void SetFieldsOnForm(StateData data)
+        {
+            for (int i = 0; i < _form.transform.childCount; i++)
+            {
+                var matchingField = data.fields.First(t => t.Name == _form.transform.GetChild(i).name);
+                if (matchingField.IsText)
+                {
+                    _form.transform.GetChild(i).GetComponent<TMP_Text>().text = matchingField.Value;
+                }
+                else
+                {
+                    _form.transform.GetChild(i).GetComponent<Image>().enabled = matchingField.Value == "True";
+                }
+            }
         }
     }
 }

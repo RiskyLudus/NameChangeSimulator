@@ -441,7 +441,7 @@ MonoBehaviour:
       _connectionType: 1
       _typeConstraint: 0
       _dynamic: 1
-  SpriteType: 0
+  SpriteType: 1
   QuestionText: We know gender is a complex framework, but the government is still
     a bit behind on the times. For the purpose of the document, can you please tell
     me what gender is closest to your lived experience?
@@ -795,7 +795,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: 8719481727178769938}
+        node: {fileID: 1294441767126005455}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -817,7 +817,7 @@ MonoBehaviour:
   QuestionText: First off, may I please have your current first, middle, and last
     name? (Don't worry this won't appear for the rest of the game except on your
     documents).
-  Keyword: DeadName1
+  Keyword: DeadName
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-837122103295089647
@@ -919,6 +919,7 @@ MonoBehaviour:
   - {fileID: -4181252989243450681}
   - {fileID: -1634487304197029632}
   - {fileID: -5697775667149937860}
+  - {fileID: 1294441767126005455}
 --- !u!114 &145821211321753720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,7 +1099,7 @@ MonoBehaviour:
       _dynamic: 1
   SpriteType: 1
   QuestionText: Now, are you also looking to change your gender on this form?
-  Keyword: ChangeNameCheck1
+  Keyword: ChangeNameCheck
   Input: {fileID: 0}
   Choices:
   - Prompt: No, just my name is fine!
@@ -1107,6 +1108,54 @@ MonoBehaviour:
   - Prompt: Yes please!
     Value: 1
     PortFieldName: Output_1
+--- !u!114 &1294441767126005455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -360, y: 440}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 1294441767126005455}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 8719481727178769938}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 1294441767126005455}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -1338616726177896150}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  QuestionText: What county do you live in?
+  Keyword: CountyName
+  Input: {fileID: 0}
+  Output: {fileID: 0}
 --- !u!114 &1667938504469356246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2122,7 +2171,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -1338616726177896150}
+        node: {fileID: 1294441767126005455}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
