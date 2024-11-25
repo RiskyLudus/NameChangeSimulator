@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Reflection;
 using Anarchy.Shared;
 using UnityEngine;
 using XNode;
@@ -55,30 +56,19 @@ namespace NameChangeSimulator.Constructs.NodeLoader
         private void GoToCurrentNode()
         {
             var typeName = _currentNode.GetType().Name;
-
-            switch (typeName)
+            var methodName = $"Send{typeName}";
+            var method = GetType().GetMethod(methodName, BindingFlags.Instance | BindingFlags.NonPublic);
+            
+            if (method != null)
             {
-                case "DialogueNode":
-                    SendDialogueNode();
-                    break;
-                case "InputNode":
-                    SendInputNode();
-                    break;
-                case "ChoiceNode":
-                    SendChoiceNode();
-                    break;
-                case "MultiInputNode":
-                    SendMultiInputNode();
-                    break;
-                case "EndNode":
-                    SendEndNode();
-                    break;
-                default:
-                    Debug.LogError($"Unknown node type: {typeName}");
-                    break;
+                method.Invoke(this, null);
+            }
+            else
+            {
+                Debug.LogError($"Unknown node type or method not implemented: {typeName}");
             }
         }
-
+        
         private void SendDialogueNode()
         {
             var dialogueNode = _currentNode as DialogueNode;
