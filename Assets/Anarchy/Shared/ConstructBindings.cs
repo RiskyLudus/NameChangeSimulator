@@ -49,5 +49,9 @@ namespace Anarchy.Shared
 
         // Events for StartScreenData
 
+        // Events for StatePickerData
+        public static UnityEvent Send_StatePickerData_ShowStatePickerWindow = new UnityEvent();
+        public static UnityEvent Send_StatePickerData_CloseStatePickerWindow = new UnityEvent();
+
     }
 }

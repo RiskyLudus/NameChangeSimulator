@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c46f5cdfe6b674ca8c0d851bd69750, type: 3}
+  m_Name: SupportedStateData
+  m_EditorClassIdentifier: 
+  supportedStates:
+  - Oregon
+  nonSupportedStates:
+  - Alabama
+  - Alaska
+  - American Samoa
+  - Arizona
+  - Arkansas
+  - California
+  - Colorado
+  - Connecticut
+  - DC
+  - Delaware
+  - Florida
+  - Georgia
+  - Guam
+  - Hawaii
+  - Idaho
+  - Illinois
+  - Indiana
+  - Iowa
+  - Kansas
+  - Kentucky
+  - Louisiana
+  - Maine
+  - Maryland
+  - Massachusettes
+  - Michigan
+  - Minnesota
+  - Mississippi
+  - Missouri
+  - Montana
+  - Nebraska
+  - Nevada
+  - New Hampshire
+  - New Jersey
+  - New Mexico
+  - New York
+  - North Carolina
+  - North Dakota
+  - Northern Mariana Islands
+  - Ohio
+  - Oklahoma
+  - Pennsylvania
+  - Puerto Rico
+  - Rhode Island
+  - South Carolina
+  - South Dakota
+  - Tennesee
+  - Texas
+  - US Virgin Islands
+  - Utah
+  - Vermont
+  - Virginia
+  - Washington
+  - West Virginia
+  - Wisconsin
+  - Wyoming
