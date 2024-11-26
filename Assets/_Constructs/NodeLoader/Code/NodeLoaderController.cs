@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using Anarchy.Shared;
+using NameChangeSimulator.Shared;
 using UnityEngine;
 using XNode;
 
@@ -21,23 +22,23 @@ namespace NameChangeSimulator.Constructs.NodeLoader
             ConstructBindings.Send_NodeLoaderData_LoadDialogue?.RemoveListener(OnLoadDialogue);
             ConstructBindings.Send_ConversationData_SubmitNode?.RemoveListener(OnSubmitNode);
         }
+        
+        private void Start()
+        {
+            OnLoadDialogue("Introduction");
+        }
 
         private void OnLoadDialogue(string stateName)
         {
-            LoadGraph(Resources.LoadAll<DialogueGraph>($"States/{stateName}/").First());
+            LoadGraph(Resources.LoadAll<DialogueGraph>(stateName).First());
             ConstructBindings.Send_FormDataFillerData_LoadFormFiller?.Invoke(stateName);
         }
         
         private void OnSubmitNode(string nodeField)
         {
             Debug.Log($"Current node is {_currentNode?.name} and the node field is {nodeField}");
-            _currentNode = _currentNode.GetOutputPort(nodeField).Connection.node;
+            if (_currentNode != null) _currentNode = _currentNode.GetOutputPort(nodeField).Connection.node;
             GoToCurrentNode();
-        }
-
-        private void Start()
-        {
-            OnLoadDialogue("Oregon");
         }
 
         private void LoadGraph(DialogueGraph graph)
@@ -72,6 +73,9 @@ namespace NameChangeSimulator.Constructs.NodeLoader
                     break;
                 case "EndNode":
                     SendEndNode();
+                    break;
+                case "ShowStatePickerNode":
+                    SendShowStatePickerNode();
                     break;
                 default:
                     Debug.LogError($"Unknown node type: {typeName}");
@@ -133,6 +137,11 @@ namespace NameChangeSimulator.Constructs.NodeLoader
         {
             ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", "Congratulations on your name change! Let's get those forms ready for you...", "", false);
             ConstructBindings.Send_FormCheckerData_ShowForm?.Invoke("Oregon");
+        }
+
+        private void SendShowStatePickerNode()
+        {
+            var statePickerNode = _currentNode as ShowStatePickerNode;
         }
     }
 }
