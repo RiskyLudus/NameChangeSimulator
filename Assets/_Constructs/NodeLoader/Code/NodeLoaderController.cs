@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Linq;
 using Anarchy.Shared;
 using NameChangeSimulator.Shared;
@@ -30,7 +31,16 @@ namespace NameChangeSimulator.Constructs.NodeLoader
 
         private void OnLoadDialogue(string stateName)
         {
-            LoadGraph(Resources.LoadAll<DialogueGraph>(stateName).First());
+            Debug.Log($"Loading Dialogue States/{stateName}");
+            var graph = Resources.LoadAll<DialogueGraph>("States/" + stateName).First();
+            if (graph == null)
+            {
+                Debug.LogError($"Failed to load Dialogue {stateName}");
+            }
+            else
+            {
+                LoadGraph(graph);
+            }
             ConstructBindings.Send_FormDataFillerData_LoadFormFiller?.Invoke(stateName);
         }
         
@@ -142,6 +152,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
         private void SendShowStatePickerNode()
         {
             var statePickerNode = _currentNode as ShowStatePickerNode;
+            ConstructBindings.Send_StatePickerData_ShowStatePickerWindow?.Invoke();
         }
     }
 }

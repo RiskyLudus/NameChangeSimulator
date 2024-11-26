@@ -11,6 +11,8 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
         [SerializeField] private FormDataFillerData formDataFillerData;
         [SerializeField] private StateData[] stateDatas;
 
+        [SerializeField] private string currentDateKeywordString;
+
         private void OnEnable()
         {
             ConstructBindings.Send_FormDataFillerData_LoadFormFiller?.AddListener(OnLoadFormFiller);
@@ -22,6 +24,18 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
         private void OnLoadFormFiller(string stateName)
         {
             stateDatas = Resources.LoadAll<StateData>("States/Oregon");
+            
+            // Set Current Date to relevant fields in forms
+            foreach (var stateData in stateDatas)
+            {
+                foreach (var field in stateData.fields)
+                {
+                    if (field.Name == currentDateKeywordString)
+                    {
+                        field.Value = DateTime.Today.ToString("MM/dd/yyyy");
+                    }
+                }
+            }
         }
 
         private void OnSubmitInput(string keyword, string inputValue, string nodeFieldName)

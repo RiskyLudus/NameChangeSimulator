@@ -913,6 +913,9 @@ MonoBehaviour:
       - fieldName: Output_1
         node: {fileID: 1667938504469356246}
         reroutePoints: []
+      - fieldName: Output
+        node: {fileID: 2836447280509301691}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -988,7 +991,10 @@ MonoBehaviour:
       _node: {fileID: 2836447280509301691}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Input
+        node: {fileID: 2362983642881617625}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
