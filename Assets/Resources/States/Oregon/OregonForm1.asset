@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be476d0ec3e208645867620fbe963200, type: 3}
-  m_Name: Oregon_Form_1_Data
+  m_Name: OregonForm1
   m_EditorClassIdentifier: 
   formFieldObject: {fileID: 6654899926438324974, guid: 1be86853ee05de844b973267360e57db, type: 3}
   formSprite: {fileID: 8326230600623088061, guid: bc141f5eca492534fae0fe652fbc55b2, type: 3}
@@ -20,7 +20,7 @@ MonoBehaviour:
     IsCheck: 0
     IsText: 1
   - Name: DeadName
-    Value: Lorem
+    Value: 
     IsCheck: 0
     IsText: 1
   - Name: DeadName
@@ -40,7 +40,7 @@ MonoBehaviour:
     IsCheck: 0
     IsText: 1
   - Name: NicknameCheck
-    Value: False
+    Value: 
     IsCheck: 1
     IsText: 0
   - Name: Nickname1
@@ -68,31 +68,31 @@ MonoBehaviour:
     IsCheck: 0
     IsText: 1
   - Name: ChildSupportCheck
-    Value: False
+    Value: 
     IsCheck: 1
     IsText: 0
   - Name: ChildSupportReason
     Value: 
     IsCheck: 0
     IsText: 1
-  - Name: RestrainingOrderCheck
-    Value: False
+  - Name: ProtectOrderCheck
+    Value: 
     IsCheck: 1
     IsText: 0
-  - Name: RestainingOrderReason
+  - Name: ProtectOrderReason
     Value: 
     IsCheck: 0
     IsText: 1
-  - Name: ParoleCheck
-    Value: False
+  - Name: ProbationCheck
+    Value: 
     IsCheck: 1
     IsText: 0
-  - Name: ParoleReason
+  - Name: ProbationReason
     Value: 
     IsCheck: 0
     IsText: 1
   - Name: SOCheck
-    Value: False
+    Value: 
     IsCheck: 1
     IsText: 0
   - Name: SOReason
@@ -116,15 +116,15 @@ MonoBehaviour:
     IsCheck: 1
     IsText: 0
   - Name: MaleCheck
-    Value: False
+    Value: 
     IsCheck: 1
     IsText: 0
   - Name: FemaleCheck
-    Value: True
+    Value: 
     IsCheck: 1
     IsText: 0
   - Name: NonbinaryCheck
-    Value: False
+    Value: 
     IsCheck: 1
     IsText: 0
   - Name: SealedCheck

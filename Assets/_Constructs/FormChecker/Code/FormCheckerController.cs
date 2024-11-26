@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Anarchy.Shared;
@@ -13,13 +14,14 @@ namespace NameChangeSimulator.Constructs.FormChecker
     {
         [SerializeField] private FormCheckerData formCheckerData;
         [SerializeField] private GameObject container;
-        [SerializeField] private Image formImage;
+        [SerializeField] private GameObject formImageTemplate;
+        [SerializeField] private Transform formImageLayout;
 
         [Header("DEBUG")] 
-        [SerializeField] private string checkFormStateData = "Oregon_Form_1_Data";
+        [SerializeField] private string checkFormStateData = "Oregon";
         [SerializeField] private bool checkFormLoading = false;
 
-        private GameObject _form = null;
+        private List<GameObject> _forms = new List<GameObject>();
 
         private void OnEnable()
         {
@@ -44,35 +46,55 @@ namespace NameChangeSimulator.Constructs.FormChecker
 
         private void OnShowForm(string stateName)
         {
-            StateData data = Resources.LoadAll<StateData>($"States/{stateName}/").First();
-            formImage.sprite = data.formSprite;
-            _form = Instantiate(data.formFieldObject, formImage.transform);
-            formImage.enabled = true;
+            StateData[] data = Resources.LoadAll<StateData>($"States/{stateName}/");
+            foreach (var stateData in data)
+            {
+                var form = Instantiate(formImageTemplate, formImageLayout);
+                form.gameObject.SetActive(true);
+                form.GetComponent<Image>().sprite = stateData.formSprite;
+                var formFields = Instantiate(stateData.formFieldObject, form.transform);
+                _forms.Add(formFields);
+                SetFieldsOnForm(formFields, stateData);
+            }
             container.SetActive(true);
-            SetFieldsOnForm(data);
         }
 
         private void OnCloseForm()
         {
             container.SetActive(false);
-            Destroy(_form);
-            _form = null;
-            formImage.sprite = null;
-            formImage.enabled = false;
+            foreach (var form in _forms)
+            {
+                Destroy(form);
+            }
+            _forms.Clear();
         }
 
-        private void SetFieldsOnForm(StateData data)
+        // We are checking the fields in StateData and marking the filling in the relevant fields on the form.
+        private void SetFieldsOnForm(GameObject form, StateData data)
         {
-            for (int i = 0; i < _form.transform.childCount; i++)
+            for (var i = 0; i < data.fields.Length; i++)
             {
-                var matchingField = data.fields.First(t => t.Name == _form.transform.GetChild(i).name);
-                if (matchingField.IsText)
+                var field = data.fields[i];
+                var fieldName = field.Name;
+                var fieldValue = field.Value;
+                
+                for (var j = 0; j < form.transform.childCount; j++)
                 {
-                    _form.transform.GetChild(i).GetComponent<TMP_Text>().text = matchingField.Value;
-                }
-                else
-                {
-                    _form.transform.GetChild(i).GetComponent<Image>().enabled = matchingField.Value == "True";
+                    var child = form.transform.GetChild(j);
+                    if (child.name == fieldName)
+                    {
+                        if (child.TryGetComponent<TMP_Text>(out var textField))
+                        {
+                            textField.text = fieldValue;
+                        }
+                        else
+                        {
+                            if (child.TryGetComponent<Image>(out var check))
+                            {
+                                check.enabled = fieldValue == "True";
+                            }
+                        }
+                    }
                 }
             }
         }
