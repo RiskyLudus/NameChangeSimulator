@@ -65,8 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What's your current name? Don't worry you won't see it again except on
-    your documents.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90f099489491be140be195af3111451b, type: 2}
   m_sharedMaterial: {fileID: 5102275285987350965, guid: 90f099489491be140be195af3111451b, type: 2}
@@ -93,7 +92,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -661,7 +660,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Please enter your current name...
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90f099489491be140be195af3111451b, type: 2}
   m_sharedMaterial: {fileID: 5102275285987350965, guid: 90f099489491be140be195af3111451b, type: 2}
@@ -788,8 +787,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -34.81}
-  m_SizeDelta: {x: 407.25, y: 40}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 407.25, y: 65.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3895564443748955099
 CanvasRenderer:
@@ -947,7 +946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5082222815705079928
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1069,5 +1068,3 @@ MonoBehaviour:
   inputData: {fileID: 11400000, guid: fb009e02f90afef4aa1a1a87c8e13d30, type: 2}
   container: {fileID: 7581629795441343250}
   inputField: {fileID: 6023528683291262062}
-  placeholderText: {fileID: 9210773163404378656}
-  promptText: {fileID: 8126105233095228071}

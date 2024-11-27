@@ -45,4 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   formDataFillerData: {fileID: 11400000, guid: bbccf37d5f849b648b19668e3f7588f0, type: 2}
-  stateData: {fileID: 0}
+  stateDatas: []
+  currentDateKeywordString: CurrentDate
+  cityStateZipKeywordString: CityStateZip
+  currentCityName: 
+  currentStateName: 
+  currentZipCode: 

@@ -719,7 +719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4303376781819564880
 RectTransform:
   m_ObjectHideFlags: 0
@@ -727,7 +727,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7843621709460030365}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -765,5 +765,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startScreenData: {fileID: 11400000, guid: a246c1313a8f04042b1cd4e18a5a8d7e, type: 2}
-  conversationScreen: {fileID: 0}
   flavorText: {fileID: 2403733711200099761}
