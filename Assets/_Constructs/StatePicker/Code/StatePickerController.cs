@@ -45,6 +45,7 @@ namespace NameChangeSimulator.Constructs.StatePicker
         public void SubmitStatePick()
         {
             ConstructBindings.Send_NodeLoaderData_LoadDialogue?.Invoke(dropdownText.text);
+            ConstructBindings.Send_StatePickerData_SendStateString?.Invoke(dropdownText.text);
             ConstructBindings.Send_StatePickerData_CloseStatePickerWindow?.Invoke();
         }
     }

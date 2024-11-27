@@ -153,6 +153,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
         {
             var statePickerNode = _currentNode as ShowStatePickerNode;
             ConstructBindings.Send_StatePickerData_ShowStatePickerWindow?.Invoke();
+            ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", "Now finally please tell me what state form we should load?", "", false);
         }
     }
 }
