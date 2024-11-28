@@ -19,12 +19,14 @@ namespace NameChangeSimulator.Constructs.Input
         {
             ConstructBindings.Send_InputData_ShowInputWindow?.AddListener(OnShowInputWindow);
             ConstructBindings.Send_InputData_CloseInputWindow?.AddListener(OnCloseInputWindow);
+            ConstructBindings.Send_NodeLoaderData_CloseAllWindows?.AddListener(OnCloseInputWindow);
         }
 
         private void OnDisable()
         {
             ConstructBindings.Send_InputData_ShowInputWindow?.RemoveListener(OnShowInputWindow);
             ConstructBindings.Send_InputData_CloseInputWindow?.RemoveListener(OnCloseInputWindow);
+            ConstructBindings.Send_NodeLoaderData_CloseAllWindows?.RemoveListener(OnCloseInputWindow);
         }
 
         private void OnShowInputWindow(string keyword, string nodeFieldName)

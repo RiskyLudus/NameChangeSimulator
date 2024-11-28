@@ -21,6 +21,7 @@ namespace NameChangeSimulator.Constructs.Choices
             ConstructBindings.Send_ChoicesData_AddChoice?.AddListener(OnAddChoice);
             ConstructBindings.Send_ChoicesData_ClearChoices?.AddListener(OnClearChoices);
             ConstructBindings.Send_ChoicesData_CloseChoicesWindow?.AddListener(OnCloseChoicesWindow);
+            ConstructBindings.Send_NodeLoaderData_CloseAllWindows?.AddListener(OnCloseChoicesWindow);
         }
 
         private void OnDisable()
@@ -29,6 +30,7 @@ namespace NameChangeSimulator.Constructs.Choices
             ConstructBindings.Send_ChoicesData_AddChoice?.RemoveListener(OnAddChoice);
             ConstructBindings.Send_ChoicesData_ClearChoices?.RemoveListener(OnClearChoices);
             ConstructBindings.Send_ChoicesData_CloseChoicesWindow?.RemoveListener(OnCloseChoicesWindow);
+            ConstructBindings.Send_NodeLoaderData_CloseAllWindows?.RemoveListener(OnCloseChoicesWindow);
         }
 
         private void OnShowChoicesWindow(string keyword)

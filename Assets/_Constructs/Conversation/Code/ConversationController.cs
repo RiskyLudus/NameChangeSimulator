@@ -2,7 +2,6 @@ using System;
 using Anarchy.Shared;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace NameChangeSimulator.Constructs.Conversation
 {
@@ -13,45 +12,61 @@ namespace NameChangeSimulator.Constructs.Conversation
         [SerializeField] private GameObject container;
         [SerializeField] private TMP_Text conversationPromptText;
         [SerializeField] private TMP_Text nameText;
+        [SerializeField] private GameObject backButton;
         [SerializeField] private GameObject nextButton;
 
-        private string _nodeFieldNameToGoTo = String.Empty;
+        private string _nodeFieldNameToGoBackTo = String.Empty;
+        private string _nodeFieldNameToGoNextTo = String.Empty;
 
         private void OnEnable()
         {
             ConstructBindings.Send_ConversationData_DisplayConversation?.AddListener(OnDisplayConversation);
             ConstructBindings.Send_ConversationData_ClearConversation?.AddListener(OnClearConversation);
+            ConstructBindings.Send_ConversationData_ToggleButtons?.AddListener(OnToggleButtons);
         }
 
         private void OnDisable()
         {
             ConstructBindings.Send_ConversationData_DisplayConversation?.RemoveListener(OnDisplayConversation);
             ConstructBindings.Send_ConversationData_ClearConversation?.RemoveListener(OnClearConversation);
+            ConstructBindings.Send_ConversationData_ToggleButtons?.RemoveListener(OnToggleButtons);
         }
 
-        private void OnDisplayConversation(string nameString, string conversationPromptString, string nodeFieldName, bool doNotShowNextButton = true)
+        private void OnDisplayConversation(string nameString, string conversationPromptString, string previousNodeFieldName, string nextNodeFieldName)
         {
             nameText.text = nameString;
             conversationPromptText.text = conversationPromptString;
-            _nodeFieldNameToGoTo = nodeFieldName;
+            _nodeFieldNameToGoBackTo = previousNodeFieldName;
+            _nodeFieldNameToGoNextTo = nextNodeFieldName;
             container.gameObject.SetActive(true);
-            nextButton.SetActive(doNotShowNextButton);
+        }
+
+        private void OnToggleButtons(bool showBackButton, bool showNextButton)
+        {
+            backButton.SetActive(showBackButton);
+            nextButton.SetActive(showNextButton);
         }
         
         private void OnClearConversation(bool windowState)
         {
             nameText.text = string.Empty;
             conversationPromptText.text = string.Empty;
-            _nodeFieldNameToGoTo = string.Empty;
+            _nodeFieldNameToGoBackTo = string.Empty;
+            _nodeFieldNameToGoNextTo = string.Empty;
             if (!windowState)
             {
                 container.gameObject.SetActive(false);
             }
         }
-
-        public void Submit()
+        
+        public void SubmitBack()
         {
-            ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(_nodeFieldNameToGoTo);
+            ConstructBindings.Send_ConversationData_SubmitPrevNode?.Invoke(_nodeFieldNameToGoBackTo);
+        }
+
+        public void SubmitNext()
+        {
+            ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(_nodeFieldNameToGoNextTo);
         }
     }
 }

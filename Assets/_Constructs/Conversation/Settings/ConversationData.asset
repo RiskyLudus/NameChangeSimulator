@@ -17,13 +17,23 @@ MonoBehaviour:
     type1: 2
     type2: 2
     type3: 2
-    type4: 3
+    type4: 2
   - eventName: ClearConversation
     type1: 3
     type2: 0
     type3: 0
     type4: 0
-  - eventName: SubmitNode
+  - eventName: SubmitNextNode
+    type1: 2
+    type2: 0
+    type3: 0
+    type4: 0
+  - eventName: ToggleButtons
+    type1: 3
+    type2: 3
+    type3: 0
+    type4: 0
+  - eventName: SubmitPrevNode
     type1: 2
     type2: 0
     type3: 0

@@ -23,9 +23,11 @@ namespace Anarchy.Shared
         public static UnityEvent<string, bool, string> Send_ChoicesData_SubmitChoice = new UnityEvent<string, bool, string>();
 
         // Events for ConversationData
-        public static UnityEvent<string, string, string, bool> Send_ConversationData_DisplayConversation = new UnityEvent<string, string, string, bool>();
+        public static UnityEvent<string, string, string, string> Send_ConversationData_DisplayConversation = new UnityEvent<string, string, string, string>();
         public static UnityEvent<bool> Send_ConversationData_ClearConversation = new UnityEvent<bool>();
-        public static UnityEvent<string> Send_ConversationData_SubmitNode = new UnityEvent<string>();
+        public static UnityEvent<string> Send_ConversationData_SubmitNextNode = new UnityEvent<string>();
+        public static UnityEvent<bool, bool> Send_ConversationData_ToggleButtons = new UnityEvent<bool, bool>();
+        public static UnityEvent<string> Send_ConversationData_SubmitPrevNode = new UnityEvent<string>();
 
         // Events for FormCheckerData
         public static UnityEvent<string> Send_FormCheckerData_ShowForm = new UnityEvent<string>();
@@ -46,6 +48,7 @@ namespace Anarchy.Shared
 
         // Events for NodeLoaderData
         public static UnityEvent<string> Send_NodeLoaderData_LoadDialogue = new UnityEvent<string>();
+        public static UnityEvent Send_NodeLoaderData_CloseAllWindows = new UnityEvent();
 
         // Events for StartScreenData
 

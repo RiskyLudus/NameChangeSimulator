@@ -18,12 +18,14 @@ namespace NameChangeSimulator.Constructs.StatePicker
         {
             ConstructBindings.Send_StatePickerData_ShowStatePickerWindow?.AddListener(OnShowStatePickerWindow);
             ConstructBindings.Send_StatePickerData_CloseStatePickerWindow?.AddListener(OnCloseStatePickerWindow);
+            ConstructBindings.Send_NodeLoaderData_CloseAllWindows?.AddListener(OnCloseStatePickerWindow);
         }
 
         private void OnDisable()
         {
             ConstructBindings.Send_StatePickerData_ShowStatePickerWindow?.RemoveListener(OnShowStatePickerWindow);
             ConstructBindings.Send_StatePickerData_CloseStatePickerWindow?.RemoveListener(OnCloseStatePickerWindow);
+            ConstructBindings.Send_NodeLoaderData_CloseAllWindows?.RemoveListener(OnCloseStatePickerWindow);
         }
 
         private void Start()

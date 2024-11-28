@@ -19,6 +19,14 @@ namespace NameChangeSimulator.Constructs.MultiInput
         {
             ConstructBindings.Send_MultiInputData_ShowMultiInputWindow?.AddListener(OnShowMultiInputWindow);
             ConstructBindings.Send_MultiInputData_CloseMultiInputWindow?.AddListener(OnCloseMultiInputWindow);
+            ConstructBindings.Send_NodeLoaderData_CloseAllWindows?.AddListener(OnCloseMultiInputWindow);
+        }
+
+        void OnDisable()
+        {
+            ConstructBindings.Send_MultiInputData_ShowMultiInputWindow?.RemoveListener(OnShowMultiInputWindow);
+            ConstructBindings.Send_MultiInputData_CloseMultiInputWindow?.RemoveListener(OnCloseMultiInputWindow);
+            ConstructBindings.Send_NodeLoaderData_CloseAllWindows?.RemoveListener(OnCloseMultiInputWindow);
         }
 
         private void OnShowMultiInputWindow(string keyword, int numberOfFields, string nodeFieldName)

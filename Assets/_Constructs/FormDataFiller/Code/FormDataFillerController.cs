@@ -89,7 +89,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 }
             }
             
-            ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(nodeFieldName);
+            ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
         }
         
         private void OnSubmitChoice(string keyword, bool toggle, string nodeFieldName)
@@ -105,7 +105,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 }
             }
             
-            ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(nodeFieldName);
+            ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
         }
 
         private void OnSubmitMultiInput(string keyword, string inputText, string delimiter, string nodeFieldName)
@@ -130,7 +130,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 }
             }
 
-            ConstructBindings.Send_ConversationData_SubmitNode?.Invoke(nodeFieldName);
+            ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
         }
         
         private void OnSendStateString(string stateString)
