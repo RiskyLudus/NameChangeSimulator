@@ -14,7 +14,7 @@ namespace NameChangeSimulator.Constructs.Conversation
         [SerializeField] private TMP_Text conversationPromptText;
         [SerializeField] private GameObject backButton;
         [SerializeField] private GameObject nextButton;
-        [SerializeField] private AudioSource textBlipSource;
+        [SerializeField] private AudioSource showWindowSource, closeWindowSource, textBlipSource;
 
         private string _nodeFieldNameToGoBackTo = String.Empty;
         private string _nodeFieldNameToGoNextTo = String.Empty;
@@ -39,6 +39,7 @@ namespace NameChangeSimulator.Constructs.Conversation
 
         private void OnDisplayConversation(string nameString, string conversationPromptString, string previousNodeFieldName, string nextNodeFieldName)
         {
+            showWindowSource.Play();
             conversationPromptText.text = string.Empty;
             _currentText = conversationPromptString;
             ScrollText(_currentText);
@@ -55,6 +56,7 @@ namespace NameChangeSimulator.Constructs.Conversation
         
         private void OnClearConversation(bool windowState)
         {
+            closeWindowSource.Play();
             conversationPromptText.text = string.Empty;
             _nodeFieldNameToGoBackTo = string.Empty;
             _nodeFieldNameToGoNextTo = string.Empty;
