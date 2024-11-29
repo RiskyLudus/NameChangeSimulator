@@ -14,6 +14,7 @@ namespace NameChangeSimulator.Constructs.Conversation
         [SerializeField] private TMP_Text conversationPromptText;
         [SerializeField] private GameObject backButton;
         [SerializeField] private GameObject nextButton;
+        [SerializeField] private AudioSource textBlipSource;
 
         private string _nodeFieldNameToGoBackTo = String.Empty;
         private string _nodeFieldNameToGoNextTo = String.Empty;
@@ -107,6 +108,7 @@ namespace NameChangeSimulator.Constructs.Conversation
             foreach (var character in textChars)
             {
                 conversationPromptText.text += character;
+                textBlipSource.Play();
                 yield return wait;
             }
 
