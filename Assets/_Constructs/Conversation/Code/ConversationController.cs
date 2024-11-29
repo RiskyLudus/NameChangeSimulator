@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Anarchy.Shared;
 using TMPro;
 using UnityEngine;
@@ -17,6 +18,10 @@ namespace NameChangeSimulator.Constructs.Conversation
         private string _nodeFieldNameToGoBackTo = String.Empty;
         private string _nodeFieldNameToGoNextTo = String.Empty;
 
+        private bool _textIsScrolling = false;
+        private string _currentText = string.Empty;
+        private Coroutine _coroutine = null;
+
         private void OnEnable()
         {
             ConstructBindings.Send_ConversationData_DisplayConversation?.AddListener(OnDisplayConversation);
@@ -33,7 +38,9 @@ namespace NameChangeSimulator.Constructs.Conversation
 
         private void OnDisplayConversation(string nameString, string conversationPromptString, string previousNodeFieldName, string nextNodeFieldName)
         {
-            conversationPromptText.text = conversationPromptString;
+            conversationPromptText.text = string.Empty;
+            _currentText = conversationPromptString;
+            ScrollText(_currentText);
             _nodeFieldNameToGoBackTo = previousNodeFieldName;
             _nodeFieldNameToGoNextTo = nextNodeFieldName;
             container.gameObject.SetActive(true);
@@ -63,7 +70,47 @@ namespace NameChangeSimulator.Constructs.Conversation
 
         public void SubmitNext()
         {
-            ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(_nodeFieldNameToGoNextTo);
+            if (_textIsScrolling)
+            {
+                _textIsScrolling = !_textIsScrolling;
+                ClearCoroutine();
+                conversationPromptText.text = _currentText;
+            }
+            else
+            {
+                ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(_nodeFieldNameToGoNextTo);
+            }
+        }
+
+        private void ClearCoroutine()
+        {
+            if (_coroutine != null)
+            {
+                StopCoroutine(_coroutine);
+                _coroutine = null;
+            }
+        }
+
+        private void ScrollText(string textToScroll)
+        {
+            ClearCoroutine();
+            _coroutine = StartCoroutine(ScrollText_Co(textToScroll));
+        }
+
+        private IEnumerator ScrollText_Co(string textToScroll)
+        {
+            _textIsScrolling = true;
+            
+            WaitForSeconds wait = new WaitForSeconds(conversationData.scrollSpeed);
+            var textChars = textToScroll.ToCharArray();
+
+            foreach (var character in textChars)
+            {
+                conversationPromptText.text += character;
+                yield return wait;
+            }
+
+            _textIsScrolling = false;
         }
     }
 }
