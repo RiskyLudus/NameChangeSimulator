@@ -50,6 +50,11 @@ namespace Anarchy.Shared
         public static UnityEvent<string> Send_NodeLoaderData_LoadDialogue = new UnityEvent<string>();
         public static UnityEvent Send_NodeLoaderData_CloseAllWindows = new UnityEvent();
 
+        // Events for ProgressBarData
+        public static UnityEvent<int, int> Send_ProgressBarData_ShowProgressBar = new UnityEvent<int, int>();
+        public static UnityEvent Send_ProgressBarData_CloseProgressBar = new UnityEvent();
+        public static UnityEvent<int> Send_ProgressBarData_UpdateProgress = new UnityEvent<int>();
+
         // Events for StartScreenData
 
         // Events for StatePickerData

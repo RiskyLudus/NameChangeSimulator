@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Anarchy.Shared;
 using Mono.Cecil;
+using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

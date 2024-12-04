@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Anarchy.Shared;
+using NameChangeSimulator.Shared;
 using UnityEngine;
 
 namespace NameChangeSimulator.Constructs.FormDataFiller
@@ -28,7 +30,19 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 
         private void OnLoadFormFiller(string stateName)
         {
-            stateDatas = Resources.LoadAll<StateData>("States/Oregon");
+            stateDatas = Resources.LoadAll<StateData>($"States/{stateName}");
+
+            var maxProgressToSet = new HashSet<Field>();
+            
+            foreach (StateData state in stateDatas)
+            {
+                foreach (Field field in state.fields)
+                {
+                    maxProgressToSet.Add(field);
+                }
+            }
+            
+            ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(1, maxProgressToSet.Count());
             
             // Set Current Date to relevant fields in forms
             foreach (var stateData in stateDatas)
@@ -89,6 +103,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 }
             }
             
+            ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke();
             ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
         }
         

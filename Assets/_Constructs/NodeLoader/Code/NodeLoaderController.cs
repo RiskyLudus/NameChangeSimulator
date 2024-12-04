@@ -25,8 +25,8 @@ namespace NameChangeSimulator.Constructs.NodeLoader
             ConstructBindings.Send_ConversationData_SubmitPrevNode?.RemoveListener(OnSubmitPrevNode);
             ConstructBindings.Send_ConversationData_SubmitNextNode?.RemoveListener(OnSubmitNextNode);
         }
-        
-        private void Start()
+
+        private void LoadIntroductionDialogue()
         {
             OnLoadDialogue("Introduction");
         }
@@ -168,6 +168,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
 
         private void SendEndNode()
         {
+            ConstructBindings.Send_ProgressBarData_CloseProgressBar?.Invoke();
             ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", "Congratulations on your name change! Let's get those forms ready for you...", "", "");
             ConstructBindings.Send_FormCheckerData_ShowForm?.Invoke("Oregon");
         }
@@ -180,6 +181,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
             var prevNodeFieldName = _currentNode.Inputs.First().fieldName;
             ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", "Now finally please tell me what state form we should load?", prevNodeFieldName, "");
             ConstructBindings.Send_ConversationData_ToggleButtons?.Invoke(true, false);
+            ConstructBindings.Send_ProgressBarData_CloseProgressBar?.Invoke();
         }
     }
 }
