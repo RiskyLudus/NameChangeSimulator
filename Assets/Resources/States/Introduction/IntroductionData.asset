@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be476d0ec3e208645867620fbe963200, type: 3}
+  m_Script: {fileID: 11500000, guid: c0301e3b186583b43891ca1ce5f0dc5b, type: 3}
   m_Name: IntroductionData
   m_EditorClassIdentifier: 
   formFieldObject: {fileID: 0}
@@ -44,6 +44,10 @@ MonoBehaviour:
     IsCheck: 0
     IsText: 1
   - Name: PhoneNumber
+    Value: 
+    IsCheck: 0
+    IsText: 1
+  - Name: State
     Value: 
     IsCheck: 0
     IsText: 1

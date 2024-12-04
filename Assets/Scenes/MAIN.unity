@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0e40267cef95f4bb6bb781a52e27ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introductionStateData: {fileID: 11400000, guid: 060030836d4945845a98f84be45500a1, type: 2}
 --- !u!1 &515965817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1657,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1814530260}
     m_Modifications:
+    - target: {fileID: 1596756212842497744, guid: 87113d2f8b54a184799081ea9f5c4a6a, type: 3}
+      propertyPath: introductionStateData
+      value: 
+      objectReference: {fileID: 11400000, guid: 060030836d4945845a98f84be45500a1, type: 2}
     - target: {fileID: 4532724864145708342, guid: 87113d2f8b54a184799081ea9f5c4a6a, type: 3}
       propertyPath: m_Name
       value: FormChecker

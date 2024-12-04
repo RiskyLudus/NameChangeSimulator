@@ -13,6 +13,8 @@ namespace NameChangeSimulator.Constructs.StatePicker
         [SerializeField] private GameObject container;
         [SerializeField] private TMP_Dropdown dropdown;
         [SerializeField] private TMP_Text dropdownText; // We're being hella lazy about this lol
+        
+        private string _nextNodeFieldName = string.Empty;
 
         private void OnEnable()
         {
@@ -34,9 +36,10 @@ namespace NameChangeSimulator.Constructs.StatePicker
             dropdown.AddOptions(supportedStateData.supportedStates);
         }
         
-        private void OnShowStatePickerWindow()
+        private void OnShowStatePickerWindow(string nextNodeString)
         {
             container.SetActive(true);
+            _nextNodeFieldName = nextNodeString;
         }
 
         private void OnCloseStatePickerWindow()
@@ -46,8 +49,7 @@ namespace NameChangeSimulator.Constructs.StatePicker
 
         public void SubmitStatePick()
         {
-            ConstructBindings.Send_NodeLoaderData_LoadDialogue?.Invoke(dropdownText.text);
-            ConstructBindings.Send_StatePickerData_SendStateString?.Invoke(dropdownText.text);
+            ConstructBindings.Send_StatePickerData_SendStateString?.Invoke(dropdownText.text, _nextNodeFieldName);
             ConstructBindings.Send_StatePickerData_CloseStatePickerWindow?.Invoke();
         }
     }

@@ -13,6 +13,7 @@ namespace NameChangeSimulator.Constructs.FormChecker
 {
     public class FormCheckerController : MonoBehaviour
     {
+        [SerializeField] private IntroductionStateData introductionStateData;
         [SerializeField] private FormCheckerData formCheckerData;
         [SerializeField] private GameObject container;
         [SerializeField] private GameObject formImageTemplate;
@@ -48,6 +49,9 @@ namespace NameChangeSimulator.Constructs.FormChecker
         private void OnShowForm(string stateName)
         {
             StateData[] data = Resources.LoadAll<StateData>($"States/{stateName}/");
+
+            introductionStateData.AddCityStateZip();
+            
             foreach (var stateData in data)
             {
                 var form = Instantiate(formImageTemplate, formImageLayout);
@@ -55,8 +59,10 @@ namespace NameChangeSimulator.Constructs.FormChecker
                 form.GetComponent<Image>().sprite = stateData.formSprite;
                 var formFields = Instantiate(stateData.formFieldObject, form.transform);
                 _forms.Add(formFields);
+                SetFieldsOnForm(formFields, introductionStateData);
                 SetFieldsOnForm(formFields, stateData);
             }
+            
             container.SetActive(true);
         }
 

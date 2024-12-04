@@ -10,6 +10,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
 {
     public class NodeLoaderController : MonoBehaviour
     {
+        [SerializeField] private IntroductionStateData introductionStateData;
         private Node _currentNode = null;
 
         private void OnEnable()
@@ -26,7 +27,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
             ConstructBindings.Send_ConversationData_SubmitNextNode?.RemoveListener(OnSubmitNextNode);
         }
 
-        private void LoadIntroductionDialogue()
+        private void Start()
         {
             OnLoadDialogue("Introduction");
         }
@@ -96,6 +97,9 @@ namespace NameChangeSimulator.Constructs.NodeLoader
                     break;
                 case "ShowStatePickerNode":
                     SendShowStatePickerNode();
+                    break;
+                case "LoadStateGraphNode":
+                    SendLoadStateGraphNode();
                     break;
                 default:
                     Debug.LogError($"Unknown node type: {typeName}");
@@ -177,11 +181,17 @@ namespace NameChangeSimulator.Constructs.NodeLoader
         private void SendShowStatePickerNode()
         {
             var statePickerNode = _currentNode as ShowStatePickerNode;
-            ConstructBindings.Send_StatePickerData_ShowStatePickerWindow?.Invoke();
             var prevNodeFieldName = _currentNode.Inputs.First().fieldName;
+            var nextNodeFieldName = _currentNode.Outputs.First().fieldName;
+            ConstructBindings.Send_StatePickerData_ShowStatePickerWindow?.Invoke(nextNodeFieldName);
             ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", "Now finally please tell me what state form we should load?", prevNodeFieldName, "");
             ConstructBindings.Send_ConversationData_ToggleButtons?.Invoke(true, false);
+        }
+
+        private void SendLoadStateGraphNode()
+        {
             ConstructBindings.Send_ProgressBarData_CloseProgressBar?.Invoke();
+            ConstructBindings.Send_NodeLoaderData_LoadDialogue?.Invoke(introductionStateData.GetState());
         }
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anarchyEvents:
   - eventName: ShowStatePickerWindow
-    type1: 0
+    type1: 2
     type2: 0
     type3: 0
     type4: 0
@@ -25,6 +25,6 @@ MonoBehaviour:
     type4: 0
   - eventName: SendStateString
     type1: 2
-    type2: 0
+    type2: 2
     type3: 0
     type4: 0

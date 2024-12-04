@@ -30,8 +30,19 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 
         private void OnLoadFormFiller(string stateName)
         {
+            // Load relevant state datas
             stateDatas = Resources.LoadAll<StateData>($"States/{stateName}");
+            
+            // Reset all fields for fresh experience
+            foreach (StateData state in stateDatas)
+            {
+                foreach (Field field in state.fields)
+                {
+                    field.Value = string.Empty;
+                }
+            }
 
+            // Set the progress bar
             var maxProgressToSet = new HashSet<Field>();
             
             foreach (StateData state in stateDatas)
@@ -42,8 +53,14 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 }
             }
             
-            ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(1, maxProgressToSet.Count());
-            
+            ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(GetCompletedFieldsOnDatas(), maxProgressToSet.Count());
+
+            SetNonUserFields();
+        }
+
+        // Here we are setting fields that do not require user input
+        private void SetNonUserFields()
+        {
             // Set Current Date to relevant fields in forms
             foreach (var stateData in stateDatas)
             {
@@ -71,39 +88,18 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 
         private void OnSubmitInput(string keyword, string inputValue, string nodeFieldName)
         {
-            if (keyword is "Zip" or "City")
+            foreach (var stateData in stateDatas)
             {
-                if (keyword == "Zip")
+                foreach (var field in stateData.fields)
                 {
-                    currentZipCode = inputValue;
-                    if (currentCityName != string.Empty && currentStateName != string.Empty && currentZipCode != string.Empty)
+                    if (field.Name == keyword)
                     {
-                        SendCityStateZip();
-                    }
-                } else if (keyword == "City")
-                {
-                    currentCityName = inputValue;
-                    if (currentCityName != string.Empty && currentStateName != string.Empty && currentZipCode != string.Empty)
-                    {
-                        SendCityStateZip();
-                    }
-                }
-            }
-            else
-            {
-                foreach (var stateData in stateDatas)
-                {
-                    foreach (var field in stateData.fields)
-                    {
-                        if (field.Name == keyword)
-                        {
-                            field.Value = inputValue;
-                        }
+                        field.Value = inputValue;
                     }
                 }
             }
             
-            ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke();
+            ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(GetCompletedFieldsOnDatas());
             ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
         }
         
@@ -120,6 +116,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 }
             }
             
+            ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(GetCompletedFieldsOnDatas());
             ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
         }
 
@@ -145,30 +142,34 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 }
             }
 
+            ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(GetCompletedFieldsOnDatas());
             ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
         }
         
-        private void OnSendStateString(string stateString)
-        {
-            currentStateName = stateString;
-            if (currentCityName != string.Empty && currentStateName != string.Empty && currentZipCode != string.Empty)
-            {
-                SendCityStateZip();
-            }
-        }
-
-        private void SendCityStateZip()
+        private void OnSendStateString(string stateString, string nodeFieldName)
         {
             foreach (var stateData in stateDatas)
             {
                 foreach (var field in stateData.fields)
                 {
-                    if (field.Name == cityStateZipKeywordString)
+                    if (field.Name == "State")
                     {
-                        field.Value = $"{currentCityName}, {currentStateName}, {currentZipCode}";
+                        field.Value = stateString;
                     }
                 }
             }
+            ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(GetCompletedFieldsOnDatas());
+            ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
+        }
+
+        private int GetCompletedFieldsOnDatas()
+        {
+            int completed = 0;
+            foreach (var stateData in stateDatas)
+            {
+                completed += stateData.GetCompletedFields();
+            }
+            return completed;
         }
     }
 }

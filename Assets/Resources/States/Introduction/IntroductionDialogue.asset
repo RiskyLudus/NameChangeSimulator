@@ -207,9 +207,10 @@ MonoBehaviour:
   position: {x: 616, y: 1256}
   ports:
     keys:
+    - Input
     - Output
     values:
-    - _fieldName: Output
+    - _fieldName: Input
       _node: {fileID: -7080890097183893353}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
@@ -221,6 +222,67 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -7080890097183893353}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6681513358996728978}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Input: {fileID: 0}
+  Output: {fileID: 0}
+--- !u!114 &-6681513358996728978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 856, y: 1272}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -6681513358996728978}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -7080890097183893353}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -6681513358996728978}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 7777717249031983762}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: Great work~! Now let's pop you over to finish your state's specific
+    information!
+  Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-6164172195419980325
 MonoBehaviour:
@@ -479,6 +541,8 @@ MonoBehaviour:
   - {fileID: 1736345343012585427}
   - {fileID: -8982625221297377304}
   - {fileID: -7080890097183893353}
+  - {fileID: -6681513358996728978}
+  - {fileID: 7777717249031983762}
 --- !u!114 &145821211321753720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,7 +869,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Output
+      - fieldName: Input
         node: {fileID: -7080890097183893353}
         reroutePoints: []
       _direction: 1
@@ -864,6 +928,37 @@ MonoBehaviour:
   DialogueText: Hmm? Who's there?
   Input: {fileID: 0}
   Output: {fileID: 0}
+--- !u!114 &7777717249031983762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4acd378e6928bc94e9aa12f35cd6ca91, type: 3}
+  m_Name: Load State Graph
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1272, y: 1448}
+  ports:
+    keys:
+    - Input
+    values:
+    - _fieldName: Input
+      _node: {fileID: 7777717249031983762}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -6681513358996728978}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Input: {fileID: 0}
 --- !u!114 &8139856482583099209
 MonoBehaviour:
   m_ObjectHideFlags: 0
