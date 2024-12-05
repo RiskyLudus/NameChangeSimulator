@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -13,6 +14,15 @@ namespace NameChangeSimulator.Shared
         public int GetCompletedFields()
         {
             return fields.Count(t => t.Value != string.Empty);
+        }
+
+        private void Reset()
+        {
+            foreach (var field in fields)
+            {
+                field.ParentStateData = this;
+                field.Value = string.Empty;
+            }
         }
     }
 }
