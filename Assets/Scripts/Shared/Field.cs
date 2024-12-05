@@ -6,8 +6,8 @@ using UnityEngine.UI;
 [Serializable]
 public class Field
 {
-    public StateData ParentStateData;
     public string Name = string.Empty;
+    public StateData ParentStateData;
     public string Value
     {
         get => _value;

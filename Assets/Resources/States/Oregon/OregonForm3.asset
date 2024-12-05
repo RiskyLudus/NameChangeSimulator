@@ -12,58 +12,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be476d0ec3e208645867620fbe963200, type: 3}
   m_Name: OregonForm3
   m_EditorClassIdentifier: 
+  ResetFieldValues: 0
   formFieldObject: {fileID: 3318020771777358118, guid: bb827f955bc0b3049844d2194e7e4b99, type: 3}
   formSprite: {fileID: 606416183922365099, guid: 20ebe5dd8e281db4cbe31c3aebbb7e20, type: 3}
   fields:
   - Name: CountyName
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: DeadName
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: DeadName
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: NewFirstName
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: NewMiddleName
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: NewLastName
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: ChangeSexCheck
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 1
     IsText: 0
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: MaleCheck
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 1
     IsText: 0
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: FemaleCheck
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 1
     IsText: 0
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: NonbinaryCheck
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 1
     IsText: 0
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: ChangeNameCheck
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 1
     IsText: 0
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: ChangeSexCheck
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 1
     IsText: 0
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: ChangeNameCheck
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 1
     IsText: 0
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 

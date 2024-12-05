@@ -12,42 +12,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0301e3b186583b43891ca1ce5f0dc5b, type: 3}
   m_Name: IntroductionData
   m_EditorClassIdentifier: 
+  ResetFieldValues: 0
   formFieldObject: {fileID: 0}
   formSprite: {fileID: 0}
   fields:
   - Name: DeadName
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: NewFirstName
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: NewMiddleName
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: NewLastName
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: Address
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: City
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: Zip
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: PhoneNumber
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
   - Name: State
-    Value: 
+    ParentStateData: {fileID: 11400000}
     IsCheck: 0
     IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
