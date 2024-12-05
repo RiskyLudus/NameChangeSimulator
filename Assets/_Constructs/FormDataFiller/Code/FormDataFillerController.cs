@@ -10,14 +10,11 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 {
     public class FormDataFillerController : MonoBehaviour
     {
+        [SerializeField] private IntroductionStateData introductionStateData;
         [SerializeField] private FormDataFillerData formDataFillerData;
         [SerializeField] private StateData[] stateDatas;
 
         [SerializeField] private string currentDateKeywordString;
-        [SerializeField] private string cityStateZipKeywordString;
-        [SerializeField] private string currentCityName = string.Empty;
-        [SerializeField] private string currentStateName = string.Empty;
-        [SerializeField] private string currentZipCode = string.Empty;
 
         private void OnEnable()
         {
@@ -56,6 +53,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
             ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(GetCompletedFieldsOnDatas(), maxProgressToSet.Count());
 
             SetNonUserFields();
+            PrefillFieldsFromIntroductionData();
         }
 
         // Here we are setting fields that do not require user input
@@ -81,6 +79,24 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                     if (field.Name == "ChangeNameCheck")
                     {
                         field.Value = "True";
+                    }
+                }
+            }
+        }
+
+        private void PrefillFieldsFromIntroductionData()
+        {
+            introductionStateData.AddCityStateZip();
+            foreach (var stateData in stateDatas)
+            {
+                foreach (var field in stateData.fields)
+                {
+                    foreach (var introductionField in introductionStateData.fields)
+                    {
+                        if (introductionField.Name == field.Name)
+                        {
+                            field.Value = introductionField.Value;
+                        }
                     }
                 }
             }

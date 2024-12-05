@@ -173,7 +173,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
         private void SendEndNode()
         {
             ConstructBindings.Send_ProgressBarData_CloseProgressBar?.Invoke();
-            ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", "Congratulations on your name change! Let's get those forms ready for you...", "", "");
+            ConstructBindings.Send_ConversationData_ClearConversation?.Invoke(false);
             ConstructBindings.Send_FormCheckerData_ShowForm?.Invoke("Oregon");
         }
 

@@ -13,7 +13,6 @@ namespace NameChangeSimulator.Constructs.FormChecker
 {
     public class FormCheckerController : MonoBehaviour
     {
-        [SerializeField] private IntroductionStateData introductionStateData;
         [SerializeField] private FormCheckerData formCheckerData;
         [SerializeField] private GameObject container;
         [SerializeField] private GameObject formImageTemplate;
@@ -49,8 +48,6 @@ namespace NameChangeSimulator.Constructs.FormChecker
         private void OnShowForm(string stateName)
         {
             StateData[] data = Resources.LoadAll<StateData>($"States/{stateName}/");
-
-            introductionStateData.AddCityStateZip();
             
             foreach (var stateData in data)
             {
@@ -59,7 +56,6 @@ namespace NameChangeSimulator.Constructs.FormChecker
                 form.GetComponent<Image>().sprite = stateData.formSprite;
                 var formFields = Instantiate(stateData.formFieldObject, form.transform);
                 _forms.Add(formFields);
-                SetFieldsOnForm(formFields, introductionStateData);
                 SetFieldsOnForm(formFields, stateData);
             }
             
@@ -79,27 +75,24 @@ namespace NameChangeSimulator.Constructs.FormChecker
         // We are checking the fields in StateData and marking the filling in the relevant fields on the form.
         private void SetFieldsOnForm(GameObject form, StateData data)
         {
-            for (var i = 0; i < data.fields.Length; i++)
+            foreach (var field in data.fields)
             {
-                var field = data.fields[i];
                 var fieldName = field.Name;
                 var fieldValue = field.Value;
                 
                 for (var j = 0; j < form.transform.childCount; j++)
                 {
                     var child = form.transform.GetChild(j);
-                    if (child.name == fieldName)
+                    if (child.name != fieldName) continue;
+                    if (child.TryGetComponent<TMP_Text>(out var textField))
                     {
-                        if (child.TryGetComponent<TMP_Text>(out var textField))
+                        textField.text = fieldValue;
+                    }
+                    else
+                    {
+                        if (child.TryGetComponent<Image>(out var check))
                         {
-                            textField.text = fieldValue;
-                        }
-                        else
-                        {
-                            if (child.TryGetComponent<Image>(out var check))
-                            {
-                                check.enabled = fieldValue == "True";
-                            }
+                            check.enabled = fieldValue == "True";
                         }
                     }
                 }

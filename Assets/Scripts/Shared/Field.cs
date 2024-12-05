@@ -33,7 +33,7 @@ public class Field
         }
     }
     
-    private string _value = string.Empty;
+    [SerializeField] private string _value = string.Empty;
 
     public bool IsCheck = false;
     public bool IsText = false;
