@@ -49,11 +49,11 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                     maxProgressToSet.Add(field);
                 }
             }
-            
-            ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(GetCompletedFieldsOnDatas(), maxProgressToSet.Count());
 
             SetNonUserFields();
             PrefillFieldsFromIntroductionData();
+            
+            ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(GetCompletedFieldsOnDatas(), maxProgressToSet.Count());
         }
 
         // Here we are setting fields that do not require user input
