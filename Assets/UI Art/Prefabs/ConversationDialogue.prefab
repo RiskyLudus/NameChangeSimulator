@@ -437,6 +437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConvoDialogueBG
       objectReference: {fileID: 0}
+    - target: {fileID: 4371601694899583861, guid: 5a21daa8661254c4b8b1d07b02d0295f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.1764706
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
