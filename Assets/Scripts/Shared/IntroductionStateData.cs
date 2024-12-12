@@ -57,5 +57,44 @@ namespace NameChangeSimulator.Shared
             }
             return state;
         }
+
+        public void AddNewFullName()
+        {
+            var fieldsList = new HashSet<Field>(fields)
+            {
+                new()
+                {
+                    IsText = true,
+                    Name = "NewFullName",
+                    Value = GetNewFullName()
+                }
+            };
+            fields = fieldsList.ToArray();
+        }
+
+        public string GetNewFullName()
+        {
+            var firstName = "";
+            var middleName = "";
+            var lastName = "";
+            foreach (var field in fields)
+            {
+                switch (field.Name)
+                {
+                    case "NewFirstName":
+                        firstName = field.Value.ToString();
+                        break;
+                    case "NewMiddleName":
+                        middleName = field.Value.ToString();
+                        break;
+                    case "NewLastName":
+                        lastName = field.Value.ToString();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return $"{firstName} {middleName} {lastName}";
+        }
     }
 }

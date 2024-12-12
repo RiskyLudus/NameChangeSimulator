@@ -14,7 +14,10 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
         [SerializeField] private FormDataFillerData formDataFillerData;
         [SerializeField] private StateData[] stateDatas;
 
-        [SerializeField] private string currentDateKeywordString;
+        private const string currentDateKeywordString = "CurrentDate";
+        private const string currentDayKeywordString = "CurrentDay";
+        private const string currentMonthKeywordString = "CurrentMonth";
+        private const string currentYearKeywordString = "CurrentYear";
 
         private void OnEnable()
         {
@@ -64,6 +67,14 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
             {
                 foreach (var field in stateData.fields)
                 {
+                    field.Value = field.Name switch
+                    {
+                        currentDateKeywordString => DateTime.Today.ToString("MM/dd/yyyy"),
+                        currentDayKeywordString => DateTime.Today.ToString("dd"),
+                        currentMonthKeywordString => DateTime.Today.ToString("MM"),
+                        currentYearKeywordString => DateTime.Today.Year.ToString(),
+                        _ => string.Empty
+                    };
                     if (field.Name == currentDateKeywordString)
                     {
                         field.Value = DateTime.Today.ToString("MM/dd/yyyy");
@@ -87,6 +98,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
         private void PrefillFieldsFromIntroductionData()
         {
             introductionStateData.AddCityStateZip();
+            introductionStateData.AddNewFullName();
             foreach (var stateData in stateDatas)
             {
                 foreach (var field in stateData.fields)
