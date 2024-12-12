@@ -101,8 +101,8 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 
         private void PrefillFieldsFromIntroductionData()
         {
-            introductionStateData.AddCityStateZip();
-            introductionStateData.AddNewFullName();
+            introductionStateData.AddCompositeFields();
+            
             foreach (var stateData in stateDatas)
             {
                 foreach (var field in stateData.fields)

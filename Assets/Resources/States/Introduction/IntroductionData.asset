@@ -18,6 +18,7 @@ MonoBehaviour:
   fields:
   - Name: DeadName
     ParentStateData: {fileID: 11400000}
+    _value: 
     IsCheck: 0
     IsText: 1
     LinkedFieldNames: []
@@ -25,6 +26,7 @@ MonoBehaviour:
     LinkedValueToSet: 
   - Name: NewFirstName
     ParentStateData: {fileID: 11400000}
+    _value: 
     IsCheck: 0
     IsText: 1
     LinkedFieldNames: []
@@ -32,6 +34,7 @@ MonoBehaviour:
     LinkedValueToSet: 
   - Name: NewMiddleName
     ParentStateData: {fileID: 11400000}
+    _value: 
     IsCheck: 0
     IsText: 1
     LinkedFieldNames: []
@@ -39,6 +42,7 @@ MonoBehaviour:
     LinkedValueToSet: 
   - Name: NewLastName
     ParentStateData: {fileID: 11400000}
+    _value: 
     IsCheck: 0
     IsText: 1
     LinkedFieldNames: []
@@ -46,6 +50,7 @@ MonoBehaviour:
     LinkedValueToSet: 
   - Name: Address
     ParentStateData: {fileID: 11400000}
+    _value: 
     IsCheck: 0
     IsText: 1
     LinkedFieldNames: []
@@ -53,6 +58,7 @@ MonoBehaviour:
     LinkedValueToSet: 
   - Name: City
     ParentStateData: {fileID: 11400000}
+    _value: 
     IsCheck: 0
     IsText: 1
     LinkedFieldNames: []
@@ -60,6 +66,7 @@ MonoBehaviour:
     LinkedValueToSet: 
   - Name: Zip
     ParentStateData: {fileID: 11400000}
+    _value: 
     IsCheck: 0
     IsText: 1
     LinkedFieldNames: []
@@ -67,6 +74,7 @@ MonoBehaviour:
     LinkedValueToSet: 
   - Name: PhoneNumber
     ParentStateData: {fileID: 11400000}
+    _value: 
     IsCheck: 0
     IsText: 1
     LinkedFieldNames: []
@@ -74,6 +82,39 @@ MonoBehaviour:
     LinkedValueToSet: 
   - Name: State
     ParentStateData: {fileID: 11400000}
+    _value: 
+    IsCheck: 0
+    IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
+  - Name: EmailAddress
+    ParentStateData: {fileID: 11400000}
+    _value: 
+    IsCheck: 0
+    IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
+  - Name: CityStateZip
+    ParentStateData: {fileID: 11400000}
+    _value: 
+    IsCheck: 0
+    IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
+  - Name: NewFullName
+    ParentStateData: {fileID: 11400000}
+    _value: 
+    IsCheck: 0
+    IsText: 1
+    LinkedFieldNames: []
+    TriggerLink: 
+    LinkedValueToSet: 
+  - Name: CountryOfCitizenship
+    ParentStateData: {fileID: 11400000}
+    _value: 
     IsCheck: 0
     IsText: 1
     LinkedFieldNames: []

@@ -10,18 +10,11 @@ namespace NameChangeSimulator.Shared
         /// <summary>
         /// Adds the CityStateZip keyword to the fields.
         /// </summary>
-        public void AddCityStateZip()
+        public void AddCompositeFields()
         {
-            var fieldsList = new HashSet<Field>(fields)
-            {
-                new()
-                {
-                    IsText = true,
-                    Name = "CityStateZip",
-                    Value = GetCityStateZip()
-                }
-            };
-            fields = fieldsList.ToArray();
+            fields.Single(field => field.Name == "CityStateZip").Value = GetCityStateZip();
+            fields.Single(field => field.Name == "NewFullName").Value = GetNewFullName();
+            fields.Single(field => field.Name == "CountryOfCitizenship").Value = "United States of America";
         }
         
         private string GetCityStateZip()
@@ -44,6 +37,31 @@ namespace NameChangeSimulator.Shared
             }
             return $"{city}, {state}, {zip}";
         }
+        
+        private string GetNewFullName()
+        {
+            var firstName = "";
+            var middleName = "";
+            var lastName = "";
+            foreach (var field in fields)
+            {
+                switch (field.Name)
+                {
+                    case "NewFirstName":
+                        firstName = field.Value;
+                        break;
+                    case "NewMiddleName":
+                        middleName = field.Value;
+                        break;
+                    case "NewLastName":
+                        lastName = field.Value;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return $"{firstName} {middleName} {lastName}";
+        }
 
         public string GetState()
         {
@@ -56,59 +74,6 @@ namespace NameChangeSimulator.Shared
                 }
             }
             return state;
-        }
-
-        public void AddNewFullName()
-        {
-            var fieldsList = new HashSet<Field>(fields)
-            {
-                new()
-                {
-                    IsText = true,
-                    Name = "NewFullName",
-                    Value = GetNewFullName()
-                }
-            };
-            fields = fieldsList.ToArray();
-        }
-
-        private string GetNewFullName()
-        {
-            var firstName = "";
-            var middleName = "";
-            var lastName = "";
-            foreach (var field in fields)
-            {
-                switch (field.Name)
-                {
-                    case "NewFirstName":
-                        firstName = field.Value.ToString();
-                        break;
-                    case "NewMiddleName":
-                        middleName = field.Value.ToString();
-                        break;
-                    case "NewLastName":
-                        lastName = field.Value.ToString();
-                        break;
-                    default:
-                        break;
-                }
-            }
-            return $"{firstName} {middleName} {lastName}";
-        }
-
-        public void AddCountryOfCitizenship()
-        {
-            var fieldsList = new HashSet<Field>(fields)
-            {
-                new()
-                {
-                    IsText = true,
-                    Name = "CountryOfCitizenship",
-                    Value = "United States of America"
-                }
-            };
-            fields = fieldsList.ToArray();
         }
     }
 }
