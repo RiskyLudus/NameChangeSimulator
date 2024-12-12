@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 133a602bcbf5fc9419217a1f2344a82c
+guid: 629b77b44d58f354b9639d719d0b42da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3274004241606303868
-    second: NCS_NextButton_Hover_0
+      213: 1813943226827989614
+    second: ChoiceDiag_StrokeMap_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NCS_NextButton_Hover_0
+      name: ChoiceDiag_StrokeMap_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 21
-        width: 788
-        height: 307
+        x: 0
+        y: 0
+        width: 880
+        height: 872
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48f1fe91d766092d0800000000000000
-      internalID: -3274004241606303868
+      spriteID: e62eecd01cb6c2910800000000000000
+      internalID: 1813943226827989614
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      NCS_NextButton_Hover_0: -3274004241606303868
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

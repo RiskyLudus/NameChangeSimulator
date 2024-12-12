@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 5a579ea5cc2089d46a3d587b651e430f
+guid: 6106af52a9feb1240a6b36122aecab0c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6348924418361031994
-    second: NCS_NextButton_Text_0
-  - first:
-      213: -2294177140402114192
-    second: NCS_NextButton_Text_1
+      213: 48489144474362191
+    second: Yes_Text_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NCS_NextButton_Text_0
+      name: Yes_Text_0
       rect:
         serializedVersion: 2
-        x: 142
-        y: 79
-        width: 548
-        height: 192
+        x: 0
+        y: 0
+        width: 296
+        height: 168
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c289c921e614e7a0800000000000000
-      internalID: -6348924418361031994
+      spriteID: f416bd7be944ca000800000000000000
+      internalID: 48489144474362191
       vertices: []
       indices: 
       edges: []
@@ -128,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 01bfce55b9410c146a50ed46d1bac1af
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -137,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      NCS_NextButton_Text_0: -6348924418361031994
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

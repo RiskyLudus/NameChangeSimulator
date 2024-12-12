@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 10fd8d47e42301d4282eeb19cc4fa302
+guid: daa66e88186cce74484b90eb733c1d68
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3125997920280956708
-    second: NCS_BackButton_Text_0
-  - first:
-      213: -1230064964845652688
-    second: NCS_BackButton_Text_1
+      213: 6684496506278773337
+    second: ChoiceDiag_BG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NCS_BackButton_Text_0
+      name: ChoiceDiag_BG_0
       rect:
         serializedVersion: 2
-        x: 181
-        y: 129
-        width: 551
-        height: 168
+        x: 0
+        y: 0
+        width: 880
+        height: 872
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42fc4f6db86c16b20800000000000000
-      internalID: 3125997920280956708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NCS_BackButton_Text_1
-      rect:
-        serializedVersion: 2
-        x: 578
-        y: 130
-        width: 154
-        height: 167
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 035b8bf7e6eedeee0800000000000000
-      internalID: -1230064964845652688
+      spriteID: 952061f082a14cc50800000000000000
+      internalID: 6684496506278773337
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1973fb5f554edfb4a825c7d894621d8c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      NCS_BackButton_Text_0: 3125997920280956708
-      NCS_BackButton_Text_1: -1230064964845652688
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
