@@ -17,7 +17,9 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
         private const string currentDateKeywordString = "CurrentDate";
         private const string currentDayKeywordString = "CurrentDay";
         private const string currentMonthKeywordString = "CurrentMonth";
+        private const string currentMonthNameKeywordString = "CurrentMonthName";
         private const string currentYearKeywordString = "CurrentYear";
+        private const string currentYearEndKeywordString = "CurrentYearEnd";
 
         private void OnEnable()
         {
@@ -72,7 +74,9 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                         currentDateKeywordString => DateTime.Today.ToString("MM/dd/yyyy"),
                         currentDayKeywordString => DateTime.Today.ToString("dd"),
                         currentMonthKeywordString => DateTime.Today.ToString("MM"),
+                        currentMonthNameKeywordString => DateTime.Today.ToString("MMMM"),
                         currentYearKeywordString => DateTime.Today.Year.ToString(),
+                        currentYearEndKeywordString => DateTime.Today.Year.ToString("yy"),
                         _ => string.Empty
                     };
                     if (field.Name == currentDateKeywordString)

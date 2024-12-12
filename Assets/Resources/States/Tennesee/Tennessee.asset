@@ -180,7 +180,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -4972118395026208431}
+        node: {fileID: 8942223594646269745}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: -6877539536893850361}
+        node: {fileID: 8942223594646269745}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  SpriteType: 0
+  SpriteType: 1
   QuestionText: We already know WHY you want to change your name, but please state
     it here for the form.
   Keyword: NameChangeReason
@@ -492,6 +492,7 @@ MonoBehaviour:
   - {fileID: 8387482673264864464}
   - {fileID: 232426349344305168}
   - {fileID: -4972118395026208431}
+  - {fileID: 8942223594646269745}
 --- !u!114 &232426349344305168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,3 +881,51 @@ MonoBehaviour:
   - Prompt: No
     Value: 0
     PortFieldName: Output_1
+--- !u!114 &8942223594646269745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 936, y: 760}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 8942223594646269745}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -6877539536893850361}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 8942223594646269745}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -4972118395026208431}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  QuestionText: Finally, what state were you born in?
+  Keyword: BirthState
+  Input: {fileID: 0}
+  Output: {fileID: 0}

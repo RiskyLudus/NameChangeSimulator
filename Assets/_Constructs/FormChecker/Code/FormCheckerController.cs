@@ -95,6 +95,14 @@ namespace NameChangeSimulator.Constructs.FormChecker
                             check.enabled = fieldValue == "True";
                         }
                     }
+                    
+                    if (child.name == "Image")
+                    {
+                        if (child.TryGetComponent<Image>(out var check))
+                        {
+                            check.enabled = true;
+                        }
+                    }
                 }
             }
         }

@@ -72,7 +72,7 @@ namespace NameChangeSimulator.Shared
             fields = fieldsList.ToArray();
         }
 
-        public string GetNewFullName()
+        private string GetNewFullName()
         {
             var firstName = "";
             var middleName = "";
@@ -95,6 +95,20 @@ namespace NameChangeSimulator.Shared
                 }
             }
             return $"{firstName} {middleName} {lastName}";
+        }
+
+        public void AddCountryOfCitizenship()
+        {
+            var fieldsList = new HashSet<Field>(fields)
+            {
+                new()
+                {
+                    IsText = true,
+                    Name = "CountryOfCitizenship",
+                    Value = "United States of America"
+                }
+            };
+            fields = fieldsList.ToArray();
         }
     }
 }

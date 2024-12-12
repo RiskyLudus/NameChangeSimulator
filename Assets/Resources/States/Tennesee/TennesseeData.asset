@@ -136,14 +136,15 @@ MonoBehaviour:
     LinkedFieldNames: []
     TriggerLink: 
     LinkedValueToSet: 
-  - Name: FelonCheckYes
+  - Name: FelonCheck
     ParentStateData: {fileID: 11400000}
     _value: 
     IsCheck: 1
     IsText: 0
-    LinkedFieldNames: []
-    TriggerLink: 
-    LinkedValueToSet: 
+    LinkedFieldNames:
+    - FelonCheckNo
+    TriggerLink: Yes
+    LinkedValueToSet: False
   - Name: FelonCheckNo
     ParentStateData: {fileID: 11400000}
     _value: 
