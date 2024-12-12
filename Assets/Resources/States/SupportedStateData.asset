@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   supportedStates:
   - Oregon
+  - Tennesee
   nonSupportedStates:
   - Alabama
   - Alaska
@@ -32,6 +33,7 @@ MonoBehaviour:
   - Idaho
   - Illinois
   - Indiana
+  - Introduction
   - Iowa
   - Kansas
   - Kentucky
@@ -60,7 +62,6 @@ MonoBehaviour:
   - Rhode Island
   - South Carolina
   - South Dakota
-  - Tennesee
   - Texas
   - US Virgin Islands
   - Utah

@@ -27,6 +27,7 @@ namespace NameChangeSimulator.Shared
         {
             var allStates = new List<string>(supportedStates);
             allStates.AddRange(nonSupportedStates);
+            allStates.Remove("Introduction");
             return allStates;
         }
     }

@@ -44,7 +44,7 @@ namespace NameChangeSimulator.Shared
                 // Check if the folder contains any files
                 bool hasContent = Directory.GetFiles(subdirectory).Length > 0;
 
-                if (hasContent)
+                if (hasContent && folderName != "Introduction")
                 {
                     supportedStateData.supportedStates.Add(folderName);
                 }
