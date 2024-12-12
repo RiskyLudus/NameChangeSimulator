@@ -174,7 +174,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
         {
             ConstructBindings.Send_ProgressBarData_CloseProgressBar?.Invoke();
             ConstructBindings.Send_ConversationData_ClearConversation?.Invoke(false);
-            ConstructBindings.Send_FormCheckerData_ShowForm?.Invoke("Oregon");
+            ConstructBindings.Send_FormCheckerData_ShowForm?.Invoke(introductionStateData.GetState());
         }
 
         // A state picker conversation. We ask the Player to select a state from a dropdown. We have the next button on the form itself. We have a back button active in its normal place.
