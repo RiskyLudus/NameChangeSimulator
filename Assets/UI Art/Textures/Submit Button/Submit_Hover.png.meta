@@ -103,12 +103,12 @@ TextureImporter:
       name: Submit_Hover_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 28
-        width: 558
-        height: 196
+        x: 0
+        y: 0
+        width: 584
+        height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1da1e4282dd92404887b7a8959c69c01
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Submit_Hover_0: -2835026052097541668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

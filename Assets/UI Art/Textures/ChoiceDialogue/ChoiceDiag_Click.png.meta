@@ -103,12 +103,12 @@ TextureImporter:
       name: ChoiceDiag_Click_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 29
-        width: 544
-        height: 255
+        x: 0
+        y: 0
+        width: 568
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 118edd2746ab5c74a96e05dbc87c2993
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ChoiceDiag_Click_0: 3176592090977370766
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

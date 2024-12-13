@@ -103,12 +103,12 @@ TextureImporter:
       name: InpDiag_Hover_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 30
-        width: 1217
-        height: 194
+        x: 0
+        y: 0
+        width: 1244
+        height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a2a12c9a46f13cd439465bda8bcc4109
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      InpDiag_Hover_0: -5984365539358717149
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
