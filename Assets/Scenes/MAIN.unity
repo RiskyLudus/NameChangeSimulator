@@ -1239,8 +1239,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 581362025767777853, guid: 6349bcdbbc10e024182a9291ec96c461, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6961537571304061400}
   m_SourcePrefab: {fileID: 100100000, guid: 6349bcdbbc10e024182a9291ec96c461, type: 3}
+--- !u!1 &6961537571304061399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 581362025767777853, guid: 6349bcdbbc10e024182a9291ec96c461, type: 3}
+  m_PrefabInstance: {fileID: 6961537571304061398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6961537571304061400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6961537571304061399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6453facb21fb7254ea0c1684b9460c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _testFormFilling: 0
+  _pdfFileName: TennesseePDF
+  _testFormFillingFieldData: {fileID: 11400000, guid: 78fcfd981572d78438db52b49a06533f, type: 2}
+  _dummyText: Hello
 --- !u!224 &7124761518125703614 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2447603658024753142, guid: 6c25f494fada4f64a8e5cc8e63fb267a, type: 3}
