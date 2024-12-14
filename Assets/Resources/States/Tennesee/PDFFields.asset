@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 63d8c8bff4fcba944bef3fddcb0dfdbc, type: 3}
   m_Name: PDFFields
-  m_EditorClassIdentifier: NameChangeSimulator.Editor::PDFFieldScriptableObject
+  m_EditorClassIdentifier: 
   fields:
   - fieldName: What is your CURRENT Name?
     fieldValue: 
@@ -168,3 +168,18 @@ MonoBehaviour:
     - Off
     - Yes
     - No
+  keywords:
+  - What is your CURRENT Name?
+  - What is your Address?
+  - Which COUNTRY are you are Citizen?
+  - What is your Date of Birth?
+  - What is your CITY of Birth?
+  - What is your COUNTY of Birth?
+  - What is your NAME as written on your Birth Certificate?
+  - What is your STATE of Birth?
+  - What is your NEW or REQUESTED Name?
+  - What is the REASON for the Name Change?
+  - 'If you have been convicted of a Felony, describe:'
+  - Which COUNTY is this being filed?
+  - 'If any former names or aliases, enter them here:'
+  - Have you EVER been convicted of a Felony?

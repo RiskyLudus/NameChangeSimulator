@@ -1,30 +1,18 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using iTextSharp.text.pdf;
-
-[System.Serializable]
-public class PDFFieldData
-{
-    public string fieldName;
-    public string fieldValue;
-    public string fieldType;
-    public string[] options; // Dropdown or radio button options
-}
-
-[CreateAssetMenu(fileName = "PDFFields", menuName = "ScriptableObjects/PDFFields", order = 1)]
-public class PDFFieldScriptableObject : ScriptableObject
-{
-    public PDFFieldData[] fields;
-}
+using NameChangeSimulator.Shared.Shared.Classes;
+using NameChangeSimulator.Shared.Shared.ScriptableObjects;
 
 public class PDFFieldReaderEditor : EditorWindow
 {
     private Object pdfFile; // Generic Unity object for selecting the file
     private Vector2 scrollPosition; // Scroll position for the output section
     private string outputText = "";
-    List<PDFFieldData> fieldsList = new List<PDFFieldData>();
+    List<PDFField> fieldsList = new List<PDFField>();
     private bool fileRead = false;
 
     [MenuItem("Tools/PDF Field Reader")]
@@ -36,19 +24,18 @@ public class PDFFieldReaderEditor : EditorWindow
     void OnGUI()
     {
         GUILayout.Label("PDF Field Reader", EditorStyles.boldLabel);
+        
+        GUILayout.Space(10);
 
         // File selector
         pdfFile = EditorGUILayout.ObjectField("PDF File", pdfFile, typeof(Object), false);
 
         // Button to read PDF fields
-        if (pdfFile != null)
-        {
-            GUILayout.Label("Oh yeah, lemme read those hot steamy fields, ma'am :3", EditorStyles.boldLabel);
-        }
-        else
-        {
-            GUILayout.Label("No pdf for good girl? :(", EditorStyles.boldLabel);
-        }
+        GUILayout.Label(
+            pdfFile != null ? "Oh yeah, lemme read those hot steamy fields, ma'am :3" : "No pdf for good girl? :(",
+            EditorStyles.boldLabel);
+
+        GUILayout.Space(10);
         
         if (GUILayout.Button("Read PDF Fields"))
         {
@@ -69,7 +56,9 @@ public class PDFFieldReaderEditor : EditorWindow
                 outputText = "No PDF file assigned.";
             }
         }
-
+        
+        GUILayout.Space(10);
+        
         if (fileRead)
         {
             // Button to read PDF fields
@@ -79,7 +68,9 @@ public class PDFFieldReaderEditor : EditorWindow
                 CreatePDFFieldScriptableObject(fieldsList);
             }
         }
-
+        
+        GUILayout.Space(10);
+        
         // Output section with scroll view
         GUILayout.Label("Output:", EditorStyles.boldLabel);
         scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition, GUILayout.Height(800));
@@ -106,7 +97,7 @@ public class PDFFieldReaderEditor : EditorWindow
                     string fieldValue = acroFields.GetField(fieldName); // Field value (empty if not filled)
                     string fieldType = GetFieldType(acroFields.GetFieldType(fieldName)); // Field type (e.g., Text, Checkbox)
 
-                    var fieldData = new PDFFieldData
+                    var fieldData = new PDFField
                     {
                         fieldName = fieldName,
                         fieldValue = fieldValue,
@@ -124,10 +115,7 @@ public class PDFFieldReaderEditor : EditorWindow
                         {
                             fieldData.options = options;
                             result += "  Dropdown Options:\n";
-                            foreach (var option in options)
-                            {
-                                result += $"    - {option}\n";
-                            }
+                            result = options.Where(option => !string.IsNullOrWhiteSpace(option)).Aggregate(result, (current, option) => current + $"    - {option}\n");
                         }
                     }
 
@@ -139,10 +127,7 @@ public class PDFFieldReaderEditor : EditorWindow
                         {
                             fieldData.options = appearances;
                             result += "  Radio Button Options:\n";
-                            foreach (var option in appearances)
-                            {
-                                result += $"    - {option}\n";
-                            }
+                            result = appearances.Where(option => option != "Off").Aggregate(result, (current, option) => current + $"    - {option}\n");
                         }
                     }
 
@@ -169,12 +154,12 @@ public class PDFFieldReaderEditor : EditorWindow
         }
     }
 
-    void CreatePDFFieldScriptableObject(System.Collections.Generic.List<PDFFieldData> fieldsList)
+    void CreatePDFFieldScriptableObject(List<PDFField> fieldsList)
     {
-        PDFFieldScriptableObject scriptableObject = CreateInstance<PDFFieldScriptableObject>();
-        scriptableObject.fields = fieldsList.ToArray();
+        PDFFieldData scriptableObject = CreateInstance<PDFFieldData>();
+        scriptableObject.Fields = fieldsList.ToArray();
 
-        string path = EditorUtility.SaveFilePanelInProject("Save PDF Fields", "PDFFields", "asset", "Save the fields as a ScriptableObject asset.");
+        string path = EditorUtility.SaveFilePanelInProject("Save PDF Fields", "PDFFields", "asset", "Save the fields as a ScriptableObject asset.", "Assets/Resources/States");
 
         if (!string.IsNullOrEmpty(path))
         {
