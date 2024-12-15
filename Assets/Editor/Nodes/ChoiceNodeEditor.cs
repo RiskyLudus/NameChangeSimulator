@@ -70,7 +70,7 @@ public class ChoiceNodeEditor : NodeEditor
         if (GUILayout.Button("Add Choice"))
         {
             // Add a new choice and update ports
-            node.Choices.Add(new Choice { Prompt = "" });
+            node.Choices.Add(new Choice ("", ""));
             node.UpdateDynamicPorts(); // Synchronize ports
         }
 

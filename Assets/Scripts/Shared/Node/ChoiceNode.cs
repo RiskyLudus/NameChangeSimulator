@@ -58,4 +58,10 @@ public class Choice
     public string Prompt;
     public bool Value;
     public string PortFieldName;
+
+    public Choice(string prompt, string portFieldName)
+    {
+        Prompt = prompt;
+        PortFieldName = portFieldName;
+    }
 }
