@@ -857,12 +857,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConversationDialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 6135493607546685735, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a7f1ef6bb0356e640a2b56f90ae0f3a1, type: 3}
+    - target: {fileID: 6135493607546685735, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a7f1ef6bb0356e640a2b56f90ae0f3a1, type: 3}
     - target: {fileID: 6613809293288962151, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7606897628730910265, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+    - {fileID: 1134188859833979677, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
