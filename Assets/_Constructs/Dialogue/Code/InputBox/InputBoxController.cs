@@ -20,7 +20,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         public void SubmitInput()
         {
             container.SetActive(false);
-            dialogueController.GoToNext();
+            dialogueController.GoToNext(inputField.text);
         }
     }
 }

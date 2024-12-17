@@ -8,6 +8,8 @@ namespace NameChangeSimulator.Shared.Shared.ScriptableObjects
     [CreateAssetMenu(fileName = "PDFFields", menuName = "NCS/Create PDFFieldData", order = 1)]
     public class PDFFieldData : ScriptableObject
     {
+        public string PdfFileName;
+        
         public PDFField[] Fields
         {
             get => fields;

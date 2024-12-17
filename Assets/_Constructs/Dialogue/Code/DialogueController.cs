@@ -81,9 +81,15 @@ namespace NameChangeSimulator.Constructs.Dialogue
             }
         }
 
-        public void GoToNext()
+        public void GoToNext(string valueEntered = null)
         {
             if (_currentNode == null) return;
+
+            if (valueEntered != null)
+            {
+                ConstructBindings.Send_FormDataFillerData_Submit?.Invoke(_currentNode.name, valueEntered);
+            }
+            
             var nextNode = _currentNode.GetOutputPort("Output").Connection.node;
 
             if (nextNode is DialogueNode dialogueNode)
@@ -173,11 +179,8 @@ namespace NameChangeSimulator.Constructs.Dialogue
                 case "ChoiceNode":
                     SetChoiceNode(node as ChoiceNode);
                     break;
-                case "MultiInputNode":
-                    
-                    break;
                 case "EndNode":
-                    
+                    ConstructBindings.Send_FormDataFillerData_ApplyToPDF?.Invoke();
                     break;
                 default:
                     Debug.LogError($"Unknown node type: {typeName}");

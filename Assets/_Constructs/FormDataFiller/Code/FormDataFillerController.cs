@@ -3,205 +3,116 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Anarchy.Shared;
+using iTextSharp.text.pdf;
 using NameChangeSimulator.Shared;
+using NameChangeSimulator.Shared.Shared.Classes;
+using NameChangeSimulator.Shared.Shared.ScriptableObjects;
 using UnityEngine;
 
 namespace NameChangeSimulator.Constructs.FormDataFiller
 {
     public class FormDataFillerController : MonoBehaviour
     {
-        [SerializeField] private IntroductionStateData introductionStateData;
-        [SerializeField] private FormDataFillerData formDataFillerData;
-        [SerializeField] private StateData[] stateDatas;
-
-        private const string currentDateKeywordString = "CurrentDate";
-        private const string currentDayKeywordString = "CurrentDay";
-        private const string currentMonthKeywordString = "CurrentMonth";
-        private const string currentMonthNameKeywordString = "CurrentMonthName";
-        private const string currentYearKeywordString = "CurrentYear";
-        private const string currentYearEndKeywordString = "CurrentYearEnd";
-
+        private PDFFieldData _fieldData;
+        
         private void OnEnable()
         {
-            ConstructBindings.Send_FormDataFillerData_LoadFormFiller?.AddListener(OnLoadFormFiller);
-            ConstructBindings.Send_InputData_SubmitInput?.AddListener(OnSubmitInput);
-            ConstructBindings.Send_ChoicesData_SubmitChoice?.AddListener(OnSubmitChoice);
-            ConstructBindings.Send_MultiInputData_SubmitMultiInput?.AddListener(OnSubmitMultiInput);
-            ConstructBindings.Send_StatePickerData_SendStateString?.AddListener(OnSendStateString);
+            ConstructBindings.Send_FormDataFillerData_Load?.AddListener(OnLoad);
+            ConstructBindings.Send_FormDataFillerData_Submit?.AddListener(OnSubmit);
+            ConstructBindings.Send_FormDataFillerData_ApplyToPDF?.AddListener(OnApplyToPDF);
         }
 
-        private void OnLoadFormFiller(string stateName)
+        private void OnDisable()
         {
-            // Load relevant state datas
-            stateDatas = Resources.LoadAll<StateData>($"States/{stateName}");
-            
-            // Reset all fields for fresh experience
-            foreach (StateData state in stateDatas)
-            {
-                foreach (Field field in state.fields)
-                {
-                    field.Value = string.Empty;
-                }
-            }
-
-            // Set the progress bar
-            var maxProgressToSet = new HashSet<Field>();
-            
-            foreach (StateData state in stateDatas)
-            {
-                foreach (Field field in state.fields)
-                {
-                    maxProgressToSet.Add(field);
-                }
-            }
-
-            SetNonUserFields();
-            PrefillFieldsFromIntroductionData();
-            
-            ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(GetCompletedFieldsOnDatas(), maxProgressToSet.Count());
+            ConstructBindings.Send_FormDataFillerData_Load?.RemoveListener(OnLoad);
+            ConstructBindings.Send_FormDataFillerData_Submit?.RemoveListener(OnSubmit);
+            ConstructBindings.Send_FormDataFillerData_ApplyToPDF?.RemoveListener(OnApplyToPDF);
         }
 
-        // Here we are setting fields that do not require user input
-        private void SetNonUserFields()
+        private void OnLoad(string formDataToLoad)
         {
-            // Set Current Date to relevant fields in forms
-            foreach (var stateData in stateDatas)
-            {
-                foreach (var field in stateData.fields)
-                {
-                    field.Value = field.Name switch
-                    {
-                        currentDateKeywordString => DateTime.Today.ToString("MM/dd/yyyy"),
-                        currentDayKeywordString => DateTime.Today.ToString("dd"),
-                        currentMonthKeywordString => DateTime.Today.ToString("MM"),
-                        currentMonthNameKeywordString => DateTime.Today.ToString("MMMM"),
-                        currentYearKeywordString => DateTime.Today.Year.ToString(),
-                        currentYearEndKeywordString => DateTime.Today.Year.ToString("yy"),
-                        _ => string.Empty
-                    };
-                    if (field.Name == currentDateKeywordString)
-                    {
-                        field.Value = DateTime.Today.ToString("MM/dd/yyyy");
-                    }
-                }
-            }
+            Debug.Log($"Loading Form Data: {formDataToLoad}");
             
-            // Set Name Change Check to relevant fields in forms
-            foreach (var stateData in stateDatas)
+            // Load the Form Data
+            _fieldData = Resources.LoadAll<PDFFieldData>("States/" + formDataToLoad).First();
+            if (_fieldData == null)
             {
-                foreach (var field in stateData.fields)
-                {
-                    if (field.Name == "ChangeNameCheck")
-                    {
-                        field.Value = "True";
-                    }
-                }
+                Debug.LogError($"Failed to load form data {formDataToLoad}");
             }
-        }
-
-        private void PrefillFieldsFromIntroductionData()
-        {
-            introductionStateData.AddCompositeFields();
-            
-            foreach (var stateData in stateDatas)
-            {
-                foreach (var field in stateData.fields)
-                {
-                    foreach (var introductionField in introductionStateData.fields)
-                    {
-                        if (introductionField.Name == field.Name)
-                        {
-                            field.Value = introductionField.Value;
-                        }
-                    }
-                }
-            }
-        }
-
-        private void OnSubmitInput(string keyword, string inputValue, string nodeFieldName)
-        {
-            foreach (var stateData in stateDatas)
-            {
-                foreach (var field in stateData.fields)
-                {
-                    if (field.Name == keyword)
-                    {
-                        field.Value = inputValue;
-                    }
-                }
-            }
-            
-            ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(GetCompletedFieldsOnDatas());
-            ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
         }
         
-        private void OnSubmitChoice(string keyword, bool toggle, string nodeFieldName)
+        private void OnSubmit(string keyword, string value)
         {
-            foreach (var stateData in stateDatas)
-            {
-                foreach (var field in stateData.fields)
-                {
-                    if (field.Name == keyword)
-                    {
-                        field.Value =  toggle ? "True" : "False";
-                    }
-                }
-            }
-            
-            ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(GetCompletedFieldsOnDatas());
-            ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
-        }
-
-        private void OnSubmitMultiInput(string keyword, string inputText, string delimiter, string nodeFieldName)
-        {
-            // Split the input text and remove any empty entries from the list
-            var inputs = inputText.Split(new string[] { delimiter }, StringSplitOptions.RemoveEmptyEntries).ToList();
-
-            foreach (StateData stateData in stateDatas)
-            {
-                // Loop through inputs to set the values in fields
-                for (int i = 0; i < inputs.Count; i++)
-                {
-                    Debug.Log(inputs[i]);
-                    foreach (var field in stateData.fields)
-                    {
-                        if (field.Name == (keyword + i.ToString()))
-                        {
-                            field.Value = inputs[i];
-                            break; // Exit the inner loop once a match is found and value is assigned
-                        }
-                    }
-                }
-            }
-
-            ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(GetCompletedFieldsOnDatas());
-            ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
+            _fieldData.SetValue(keyword, value);
         }
         
-        private void OnSendStateString(string stateString, string nodeFieldName)
+        private void OnApplyToPDF()
         {
-            foreach (var stateData in stateDatas)
+            RunDataFiller(Path.Combine(Application.streamingAssetsPath, _fieldData.PdfFileName + ".pdf"), _fieldData);
+        }
+        
+        public void RunDataFiller(string pdfFilePath, PDFFieldData fieldData)
+        {
+            if (string.IsNullOrEmpty(pdfFilePath))
             {
-                foreach (var field in stateData.fields)
-                {
-                    if (field.Name == "State")
-                    {
-                        field.Value = stateString;
-                    }
-                }
+                Debug.LogError("PDF file path is not assigned.");
+                return;
             }
-            ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(GetCompletedFieldsOnDatas());
-            ConstructBindings.Send_ConversationData_SubmitNextNode?.Invoke(nodeFieldName);
+
+            if (!File.Exists(pdfFilePath))
+            {
+                Debug.LogError($"PDF file not found at path: {pdfFilePath}");
+                return;
+            }
+
+            // Read the PDF file into a byte array
+            byte[] pdfBytes = File.ReadAllBytes(pdfFilePath);
+
+            if (pdfBytes != null)
+            {
+                SetPDFFields(pdfBytes, fieldData.Fields, pdfFilePath);
+            }
         }
 
-        private int GetCompletedFieldsOnDatas()
+        private void SetPDFFields(byte[] pdfBytes, PDFField[] pdfFields, string originalFilePath)
         {
-            int completed = 0;
-            foreach (var stateData in stateDatas)
+            try
             {
-                completed += stateData.GetCompletedFields();
+                // Define output file path
+                string outputFilePath = Path.Combine(Path.GetDirectoryName(originalFilePath), "Updated_" + Path.GetFileName(originalFilePath));
+
+                // Load the PDF into a reader
+                using MemoryStream inputStream = new MemoryStream(pdfBytes);
+                using PdfReader reader = new PdfReader(inputStream);
+                using FileStream outputStream = new FileStream(outputFilePath, FileMode.Create);
+                using PdfStamper stamper = new PdfStamper(reader, outputStream);
+
+                // Get the AcroFields from the PDF
+                AcroFields form = stamper.AcroFields;
+
+                foreach (var field in pdfFields)
+                {
+                    if (form.Fields.ContainsKey(field.fieldName))
+                    {
+                        form.SetField(field.fieldName, field.fieldValue);
+                        Debug.Log($"Field '{field.fieldName}' set to '{field.fieldValue}'.");
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Field '{field.fieldName}' not found in the PDF.");
+                    }
+                }
+
+                // Finalize changes (flatten the form if needed, optional)
+                stamper.FormFlattening = true;
+
+                Debug.Log("PDF fields updated successfully!");
+                Debug.Log($"Updated PDF saved to: {outputFilePath}");
             }
-            return completed;
+            catch (Exception e)
+            {
+                Debug.LogError($"Error updating PDF fields: {e.Message}");
+            }
         }
     }
 }

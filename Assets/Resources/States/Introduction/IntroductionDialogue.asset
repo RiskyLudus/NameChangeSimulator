@@ -239,7 +239,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   DialogueText: Thanks for that! Now can you please give me your new name?
-  Keyword: NewName
+  Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-6164172195419980325
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: Input
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1064, y: 872}
+  position: {x: -888, y: 872}
   ports:
     keys:
     - Input
@@ -416,7 +416,7 @@ MonoBehaviour:
   SpriteType: 1
   DialogueText: What is your deadname? (Don't worry, this is the only time you'll
     see it) <3
-  Keyword: DeadName
+  Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &11400000

@@ -21,7 +21,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.DropdownBox
 
         public void SubmitOption()
         {
-            dialogueController.GoToNext();
+            dialogueController.GoToNext(dropdownText.text);
             container.SetActive(false);
         }
     }

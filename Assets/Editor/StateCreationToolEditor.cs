@@ -23,6 +23,8 @@ namespace NameChangeSimulator.Editor
         private bool readyForNextStep = false;
         private string[] folderNames;
         private int selectedFolderIndex = 0;
+        private string pdfFilePath;
+        private string pdfFileName;
         
         [MenuItem("Tools/State Creation Tool")]
         public static void ShowWindow()
@@ -135,10 +137,11 @@ namespace NameChangeSimulator.Editor
             {
                 if (pdfFile != null)
                 {
-                    string path = AssetDatabase.GetAssetPath(pdfFile);
-                    if (File.Exists(path))
+                    pdfFileName = pdfFile.name;
+                    pdfFilePath = AssetDatabase.GetAssetPath(pdfFile);
+                    if (File.Exists(pdfFilePath))
                     {
-                        ReadPDFFillableFields(File.ReadAllBytes(path));
+                        ReadPDFFillableFields(File.ReadAllBytes(pdfFilePath));
                     }
                     else
                     {
@@ -288,6 +291,7 @@ namespace NameChangeSimulator.Editor
         {
             PDFFieldData scriptableObject = CreateInstance<PDFFieldData>();
             scriptableObject.Fields = fieldsList.ToArray();
+            scriptableObject.PdfFileName = pdfFileName;
 
             string path = EditorUtility.SaveFilePanelInProject("Save PDF Fields", $"{stateName}PDFFields", "asset", "Save the fields as a ScriptableObject asset.", $"Assets/Resources/States/{stateName}");
 
@@ -343,6 +347,7 @@ namespace NameChangeSimulator.Editor
                     {
                         var node = ScriptableObject.CreateInstance<ChoiceNode>();
                         node.name = field.fieldName;
+                        node.DialogueText = field.fieldName;
                         node.graph = dialogueGraph;
                         node.Options = field.options;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
@@ -353,6 +358,7 @@ namespace NameChangeSimulator.Editor
                     {
                         var node = ScriptableObject.CreateInstance<DropdownNode>();
                         node.name = field.fieldName;
+                        node.DialogueText = field.fieldName;
                         node.Options = field.options;
                         node.graph = dialogueGraph;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
@@ -363,6 +369,7 @@ namespace NameChangeSimulator.Editor
                     {
                         var node = ScriptableObject.CreateInstance<ShowStatePickerNode>();
                         node.graph = dialogueGraph;
+                        node.DialogueText = field.fieldName;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -373,6 +380,7 @@ namespace NameChangeSimulator.Editor
                     {
                         var node = ScriptableObject.CreateInstance<ChoiceNode>();
                         node.name = field.fieldName;
+                        node.DialogueText = field.fieldName;
                         node.graph = dialogueGraph;
                         node.Options = field.options;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
@@ -383,6 +391,7 @@ namespace NameChangeSimulator.Editor
                     {
                         var node = ScriptableObject.CreateInstance<ChoiceNode>();
                         node.name = field.fieldName;
+                        node.DialogueText = field.fieldName;
                         node.graph = dialogueGraph;
                         node.Options = field.options;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);

@@ -5,7 +5,7 @@ namespace NameChangeSimulator.Constructs.Options
 {
     public class OptionsController : MonoBehaviour
     {
-
+        [SerializeField] private GameObject optionsMenu;
         [SerializeField] private AudioMixer mixer;
 
         public void ChangeMasterVolume(float volume)
@@ -21,6 +21,16 @@ namespace NameChangeSimulator.Constructs.Options
         public void ChangeSFXVolume(float volume)
         {
             mixer.SetFloat("SFXVolume", volume);
+        }
+
+        public void ShowOptionsMenu()
+        {
+            optionsMenu.SetActive(true);
+        }
+
+        public void CloseOptionsMenu()
+        {
+            optionsMenu.SetActive(false);
         }
     }
 }
