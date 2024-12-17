@@ -1,11 +1,14 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using iTextSharp.text.pdf;
+using NameChangeSimulator.Shared.Node;
 using NameChangeSimulator.Shared.Shared.Classes;
 using NameChangeSimulator.Shared.Shared.ScriptableObjects;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace NameChangeSimulator.Editor
 {
@@ -309,7 +312,9 @@ namespace NameChangeSimulator.Editor
                         break;
                     case "Dropdown":
                     {
-                        var node = ScriptableObject.CreateInstance<ShowStatePickerNode>();
+                        var node = ScriptableObject.CreateInstance<DropdownNode>();
+                        node.name = field.fieldName;
+                        node.Options = field.options;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -367,6 +372,22 @@ namespace NameChangeSimulator.Editor
                         break;
                     default:
                         break;
+                }
+            }
+
+            // Daisy chain the nodes
+            for (var i = 0; i < dialogueGraph.nodes.Count - 1; i++)
+            {
+                var node = dialogueGraph.nodes[i];
+                var next = dialogueGraph.nodes[i + 1];
+
+                try
+                {
+                    node.GetOutputPort("Output").Connect(next.GetInputPort("Input"));
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(e);
                 }
             }
             

@@ -6,7 +6,7 @@ using Node = XNode.Node;
 [Node.NodeWidth(350)]
 public class DialogueNode : Node
 {
-    public CharacterSpriteType SpriteType = CharacterSpriteType.None;
+    public CharacterSpriteType SpriteType = CharacterSpriteType.Idle;
     [TextArea] public string DialogueText;
 
     // Define input and output ports
@@ -15,6 +15,6 @@ public class DialogueNode : Node
 
     public override object GetValue(NodePort port)
     {
-        return null; // No value to return, used only for connections
+        return DialogueText;
     }
 }
