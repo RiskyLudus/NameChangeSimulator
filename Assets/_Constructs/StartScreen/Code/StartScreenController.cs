@@ -1,5 +1,5 @@
-using System;
 using System.Collections;
+using Anarchy.Shared;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -29,7 +29,8 @@ namespace NameChangeSimulator.Constructs.StartScreen
         public void StartGame()
         {
             ClearCoroutine();
-            gameObject.SetActive(false);
+            ConstructBindings.Send_DialogueData_Load?.Invoke("Introduction");
+            Destroy(gameObject);
         }
 
         private void ClearCoroutine()

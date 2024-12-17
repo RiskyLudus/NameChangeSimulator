@@ -1,78 +1,68 @@
 using NameChangeSimulator.Shared;
+using NameChangeSimulator.Shared.Node;
 using UnityEditor;
 using UnityEngine;
-using XNode;
 using XNodeEditor;
 
 [CustomNodeEditor(typeof(ChoiceNode))]
 public class ChoiceNodeEditor : NodeEditor
 {
+    private bool showOptions = false; // Tracks foldout state
+
     public override void OnBodyGUI()
     {
         serializedObject.Update();
 
         ChoiceNode node = target as ChoiceNode;
 
-        // Display input port
-        NodeEditorGUILayout.PortField(new GUIContent("Input"), target.GetInputPort("Input"), GUILayout.MinWidth(0));
+        // Explicitly draw input port from base class
+        var inputPort = target.GetInputPort("Input");
+        if (inputPort != null)
+            NodeEditorGUILayout.PortField(new GUIContent("Input"), inputPort, GUILayout.MinWidth(0));
+        else
+            EditorGUILayout.LabelField("Input Port not found!");
 
         GUILayout.Space(10);
-        
+
         // Display Character Sprite Type
         node.SpriteType = (CharacterSpriteType)EditorGUILayout.EnumPopup("Sprite:", node.SpriteType);
-        
-        GUIStyle style = new GUIStyle(EditorStyles.textArea);
-        style.wordWrap = true;
-        style.richText = true;
-        
+
+        GUIStyle style = new GUIStyle(EditorStyles.textArea)
+        {
+            wordWrap = true,
+            richText = true
+        };
+
         // Display Dialogue Text
         EditorGUILayout.LabelField("Dialogue Text", EditorStyles.boldLabel);
-        node.QuestionText = EditorGUILayout.TextArea(node.QuestionText, style, GUILayout.Height(100));
-        
-        // Display prompt
+        node.DialogueText = EditorGUILayout.TextArea(node.DialogueText, style, GUILayout.Height(100));
+
+        // Display Keyword
         EditorGUILayout.LabelField("Keyword", EditorStyles.boldLabel);
         node.Keyword = EditorGUILayout.TextField(node.Keyword);
-        
+
         GUILayout.Space(10);
 
-        // Display dynamic choices
-        EditorGUILayout.LabelField("Choices", EditorStyles.boldLabel);
-        int removeIndex = -1; // Track the index to remove after the loop
-        for (int i = 0; i < node.Choices.Count; i++)
+        // Foldout for Options
+        showOptions = EditorGUILayout.Foldout(showOptions, "Options", true, EditorStyles.foldoutHeader);
+        if (showOptions && node.Options != null)
         {
-            EditorGUILayout.BeginHorizontal();
-
-            // Remove choice button
-            if (GUILayout.Button("X", GUILayout.Width(20)))
+            EditorGUI.indentLevel++;
+            for (int i = 0; i < node.Options.Length; i++)
             {
-                removeIndex = i; // Mark the index to remove later
+                EditorGUILayout.LabelField($"Option {i + 1}: {node.Options[i]}");
             }
-
-            // Display the prompt field for the choice
-            node.Choices[i].Prompt = EditorGUILayout.TextField("", node.Choices[i].Prompt, GUILayout.Width(250));
-            node.Choices[i].Value = EditorGUILayout.Toggle("", node.Choices[i].Value, GUILayout.Width(25));
-            node.Choices[i].PortFieldName = $"Output_{i}";
-
-            // Render the dynamic output port for each choice
-            NodeEditorGUILayout.PortField(new GUIContent($"Output {i + 1}"), node.GetOutputPort($"Output_{i}"), GUILayout.MinWidth(0));
-
-            EditorGUILayout.EndHorizontal();
+            EditorGUI.indentLevel--;
         }
 
-        // Remove the choice outside the loop to avoid GUILayout state issues
-        if (removeIndex >= 0)
-        {
-            node.Choices.RemoveAt(removeIndex);
-            node.UpdateDynamicPorts(); // Synchronize ports
-        }
+        GUILayout.Space(10);
 
-        // Add choice button
-        if (GUILayout.Button("Add Choice"))
-        {
-            // Add a new choice and update ports
-            node.Choices.Add(new Choice ("", ""));
-            node.UpdateDynamicPorts(); // Synchronize ports
-        }
+        // Explicitly draw output port from base class
+        var outputPort = target.GetOutputPort("Output");
+        if (outputPort != null)
+            NodeEditorGUILayout.PortField(new GUIContent("Output"), outputPort, GUILayout.MinWidth(0));
+        else
+            EditorGUILayout.LabelField("Output Port not found!");
 
         serializedObject.ApplyModifiedProperties();
     }

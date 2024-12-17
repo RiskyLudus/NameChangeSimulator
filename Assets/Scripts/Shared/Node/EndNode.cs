@@ -7,7 +7,7 @@ using Node = XNode.Node;
 public class EndNode : Node
 {
     // Define input and output ports
-    [Input(backingValue = ShowBackingValue.Never)] public DialogueNode Output;
+    [Input(backingValue = ShowBackingValue.Never)] public DialogueNode Input;
 
     public override object GetValue(NodePort port)
     {

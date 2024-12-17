@@ -125,7 +125,7 @@ namespace NameChangeSimulator.Constructs.NodeLoader
         private void SendInputNode()
         {
             var inputNode = _currentNode as InputNode;
-            var conversationText = inputNode.QuestionText;
+            var conversationText = inputNode.DialogueText;
             var keywordName = inputNode.Keyword;
             var prevNodeFieldName = _currentNode.Inputs.First().fieldName;
             var nextNodeFieldName = _currentNode.Outputs.First().fieldName;
@@ -141,18 +141,13 @@ namespace NameChangeSimulator.Constructs.NodeLoader
         private void SendChoiceNode()
         {
             var choiceNode = _currentNode as ChoiceNode;
-            var conversationText = choiceNode.QuestionText;
+            var conversationText = choiceNode.DialogueText;
             var keywordName = choiceNode.Keyword;
             var prevNodeFieldName = _currentNode.Inputs.First().fieldName;
             
             ConstructBindings.Send_ChoicesData_ShowChoicesWindow?.Invoke(keywordName);
             ConstructBindings.Send_ConversationData_DisplayConversation?.Invoke("Default-Chan", conversationText, prevNodeFieldName, "");
             ConstructBindings.Send_ConversationData_ToggleButtons?.Invoke(true, false);
-            
-            foreach (var choice in choiceNode.Choices)
-            {
-                ConstructBindings.Send_ChoicesData_AddChoice?.Invoke(choice.Prompt, choice.Value, choice.PortFieldName);
-            }
         }
 
         // A multi-input conversation. We ask the Player to make x number of inputs. We have the next button on the form itself. We have a back button active in its normal place.

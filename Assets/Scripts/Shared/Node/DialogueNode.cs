@@ -8,6 +8,7 @@ public class DialogueNode : Node
 {
     public CharacterSpriteType SpriteType = CharacterSpriteType.Idle;
     [TextArea] public string DialogueText;
+    public string Keyword;
 
     // Define input and output ports
     [Input(backingValue = ShowBackingValue.Never)] public DialogueNode Input;
@@ -16,5 +17,10 @@ public class DialogueNode : Node
     public override object GetValue(NodePort port)
     {
         return DialogueText;
+    }
+
+    public void SetValue(string value)
+    {
+        
     }
 }

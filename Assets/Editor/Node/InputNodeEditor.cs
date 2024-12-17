@@ -26,7 +26,7 @@ public class InputNodeEditor : NodeEditor
         
         // Display Dialogue Text
         EditorGUILayout.LabelField("Dialogue Text", EditorStyles.boldLabel);
-        node.QuestionText = EditorGUILayout.TextArea(node.QuestionText, style, GUILayout.Height(100));
+        node.DialogueText = EditorGUILayout.TextArea(node.DialogueText, style, GUILayout.Height(100));
         
         // Display prompt
         EditorGUILayout.LabelField("Keyword", EditorStyles.boldLabel);

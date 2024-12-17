@@ -21,6 +21,8 @@ namespace NameChangeSimulator.Editor
         List<PDFField> fieldsList = new List<PDFField>();
         private int stepNumber = 1;
         private bool readyForNextStep = false;
+        private string[] folderNames;
+        private int selectedFolderIndex = 0;
         
         [MenuItem("Tools/State Creation Tool")]
         public static void ShowWindow()
@@ -72,12 +74,45 @@ namespace NameChangeSimulator.Editor
 
         private void ShowStep1()
         {
+            LoadFolderNames();
             EditorGUILayout.LabelField("Hewwo~! Welcome to the State Creation tool! :3");
             GUILayout.Space(5);
-            stateName = EditorGUILayout.TextField("State: ", stateName);
+
+            // Dropdown for folder selection
+            EditorGUILayout.LabelField("Choose a State Folder:");
+            if (folderNames != null && folderNames.Length > 0)
+            {
+                selectedFolderIndex = EditorGUILayout.Popup(selectedFolderIndex, folderNames);
+                stateName = folderNames[selectedFolderIndex]; // Update stateName based on selection
+            }
+            else
+            {
+                EditorGUILayout.LabelField("No valid folders found.");
+            }
+
+            GUILayout.Space(5);
+
             if (GUILayout.Button("Submit... UwU"))
             {
                 stepNumber++;
+                Debug.Log($"Selected State: {stateName}");
+            }
+        }
+
+        private void LoadFolderNames()
+        {
+            string path = "Assets/Resources/States/";
+            if (Directory.Exists(path))
+            {
+                // Get folders and filter out "Introduction"
+                folderNames = Directory.GetDirectories(path)
+                    .Select(folder => Path.GetFileName(folder)) // Get folder names only
+                    .Where(name => name != "Introduction")     // Filter out the Introduction folder
+                    .ToArray();
+            }
+            else
+            {
+                folderNames = new string[0]; // Empty array if directory doesn't exist
             }
         }
         
@@ -293,6 +328,12 @@ namespace NameChangeSimulator.Editor
                 AssetDatabase.SaveAssets();
                 AssetDatabase.Refresh();
             }
+            
+            var startNode = ScriptableObject.CreateInstance<StartNode>();
+            startNode.name = "StartNode";
+            startNode.graph = dialogueGraph;
+            AssetDatabase.AddObjectToAsset(startNode, dialogueGraph);
+            dialogueGraph.nodes.Add(startNode);
 
             foreach (var field in fieldsList)
             {
@@ -302,10 +343,8 @@ namespace NameChangeSimulator.Editor
                     {
                         var node = ScriptableObject.CreateInstance<ChoiceNode>();
                         node.name = field.fieldName;
-                        foreach (var option in field.options)
-                        {
-                            node.Choices.Add(new Choice(option, option));
-                        }
+                        node.graph = dialogueGraph;
+                        node.Options = field.options;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -315,6 +354,7 @@ namespace NameChangeSimulator.Editor
                         var node = ScriptableObject.CreateInstance<DropdownNode>();
                         node.name = field.fieldName;
                         node.Options = field.options;
+                        node.graph = dialogueGraph;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -322,6 +362,7 @@ namespace NameChangeSimulator.Editor
                     case "List":
                     {
                         var node = ScriptableObject.CreateInstance<ShowStatePickerNode>();
+                        node.graph = dialogueGraph;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -332,10 +373,8 @@ namespace NameChangeSimulator.Editor
                     {
                         var node = ScriptableObject.CreateInstance<ChoiceNode>();
                         node.name = field.fieldName;
-                        foreach (var option in field.options)
-                        {
-                            node.Choices.Add(new Choice(option, option));
-                        }
+                        node.graph = dialogueGraph;
+                        node.Options = field.options;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -344,10 +383,8 @@ namespace NameChangeSimulator.Editor
                     {
                         var node = ScriptableObject.CreateInstance<ChoiceNode>();
                         node.name = field.fieldName;
-                        foreach (var option in field.options)
-                        {
-                            node.Choices.Add(new Choice(option, option));
-                        }
+                        node.graph = dialogueGraph;
+                        node.Options = field.options;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -356,7 +393,8 @@ namespace NameChangeSimulator.Editor
                     {
                         var node = ScriptableObject.CreateInstance<InputNode>();
                         node.name = field.fieldName;
-                        node.QuestionText = field.fieldName;
+                        node.DialogueText = field.fieldName;
+                        node.graph = dialogueGraph;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -365,7 +403,8 @@ namespace NameChangeSimulator.Editor
                     {
                         var node = ScriptableObject.CreateInstance<InputNode>();
                         node.name = field.fieldName;
-                        node.QuestionText = field.fieldName;
+                        node.DialogueText = field.fieldName;
+                        node.graph = dialogueGraph;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -374,20 +413,38 @@ namespace NameChangeSimulator.Editor
                         break;
                 }
             }
-
+            
+            var endNode = ScriptableObject.CreateInstance<EndNode>();
+            endNode.name = "EndNode";
+            endNode.graph = dialogueGraph;
+            AssetDatabase.AddObjectToAsset(endNode, dialogueGraph);
+            dialogueGraph.nodes.Add(endNode);
+            
+            Vector2 pos = Vector2.zero;
+            
             // Daisy chain the nodes
-            for (var i = 0; i < dialogueGraph.nodes.Count - 1; i++)
+            for (var i = 0; i < dialogueGraph.nodes.Count; i++)
             {
                 var node = dialogueGraph.nodes[i];
-                var next = dialogueGraph.nodes[i + 1];
-
-                try
+                
+                pos = new Vector2(pos.x + 500, pos.y);
+                if (i % 4 == 0)
                 {
-                    node.GetOutputPort("Output").Connect(next.GetInputPort("Input"));
+                    pos = new Vector2(pos.x - 2000, pos.y + 600);
                 }
-                catch (Exception e)
+                node.position = pos;
+
+                if (node.GetType() != typeof(EndNode))
                 {
-                    Debug.Log(e);
+                    try
+                    {
+                        var next = dialogueGraph.nodes[i + 1];
+                        node.GetOutputPort("Output").Connect(next.GetInputPort("Input"));
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.Log(e);
+                    }
                 }
             }
             
