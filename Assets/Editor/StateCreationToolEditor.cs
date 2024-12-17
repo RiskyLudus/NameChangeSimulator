@@ -25,6 +25,7 @@ namespace NameChangeSimulator.Editor
         private int selectedFolderIndex = 0;
         private string pdfFilePath;
         private string pdfFileName;
+        private Dictionary<string, bool> foldoutStates = new Dictionary<string, bool>(); // Tracks foldout states for fields
         
         [MenuItem("Tools/State Creation Tool")]
         public static void ShowWindow()
@@ -133,6 +134,8 @@ namespace NameChangeSimulator.Editor
         {
             EditorGUILayout.LabelField($"Okie dokie, time to get my reading paws on! (I hate that I'm doing this lol)");
             GUILayout.Space(5);
+
+            // Button to read PDF fields
             if (GUILayout.Button("Lemme see what we got..."))
             {
                 if (pdfFile != null)
@@ -153,13 +156,59 @@ namespace NameChangeSimulator.Editor
                     outputText = "No PDF file assigned.";
                 }
             }
-            
+
+            GUILayout.Space(10);
+
+            // Scrollable area for displaying parsed fields
             scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition, GUILayout.Height(800));
-            EditorGUILayout.TextArea(outputText, GUILayout.ExpandHeight(true));
+            if (fieldsList.Count > 0)
+            {
+                foreach (var field in fieldsList)
+                {
+                    // Initialize foldout state for each field
+                    if (!foldoutStates.ContainsKey(field.fieldName))
+                    {
+                        foldoutStates[field.fieldName] = false;
+                    }
+
+                    // Foldout for field details
+                    foldoutStates[field.fieldName] = EditorGUILayout.Foldout(foldoutStates[field.fieldName], $"Field: {field.fieldName}", true);
+
+                    if (foldoutStates[field.fieldName])
+                    {
+                        EditorGUI.indentLevel++;
+
+                        // Display field details as read-only
+                        EditorGUILayout.LabelField("Field Name:", field.fieldName);
+                        EditorGUILayout.LabelField("Field Type:", field.fieldType ?? "Unknown");
+
+                        // Display dropdown/radio options if available
+                        if (field.options != null && field.options.Length > 0)
+                        {
+                            EditorGUILayout.LabelField("Options:");
+                            foreach (var option in field.options)
+                            {
+                                EditorGUILayout.LabelField($"- {option}");
+                            }
+                        }
+
+                        // Editable override key
+                        field.overrideKey = EditorGUILayout.TextField("Override Key:", field.overrideKey);
+
+                        EditorGUI.indentLevel--;
+                    }
+                }
+            }
+            else
+            {
+                EditorGUILayout.LabelField("No fields have been loaded yet.");
+            }
             EditorGUILayout.EndScrollView();
 
-            if (!readyForNextStep) return;
-            if (GUILayout.Button("Submit... UwU"))
+            GUILayout.Space(5);
+
+            // Move to the next step when ready
+            if (readyForNextStep && GUILayout.Button("Submit... UwU"))
             {
                 stepNumber++;
                 readyForNextStep = false;
@@ -218,25 +267,23 @@ namespace NameChangeSimulator.Editor
             {
                 using (MemoryStream stream = new MemoryStream(pdfBytes))
                 {
-                    // Create a PdfReader for the PDF file
                     PdfReader reader = new PdfReader(stream);
-                    
                     string result = "Form Fields:\n";
-
-                    // Get the AcroFields from the PDF
                     var acroFields = reader.AcroFields;
+
                     foreach (var field in acroFields.Fields)
                     {
-                        string fieldName = field.Key; // Field name
-                        string fieldValue = acroFields.GetField(fieldName); // Field value (empty if not filled)
-                        string fieldType = GetFieldType(acroFields.GetFieldType(fieldName)); // Field type (e.g., Text, Checkbox)
+                        string fieldName = field.Key;
+                        string fieldValue = acroFields.GetField(fieldName);
+                        string fieldType = GetFieldType(acroFields.GetFieldType(fieldName));
 
                         var fieldData = new PDFField
                         {
                             fieldName = fieldName,
                             fieldValue = fieldValue,
                             fieldType = fieldType,
-                            options = null
+                            options = null,
+                            overrideKey = null // Default to null
                         };
 
                         result += $"- Name: {fieldName}\n  Value: {fieldValue}\n  Type: {fieldType}\n";
@@ -244,25 +291,44 @@ namespace NameChangeSimulator.Editor
                         // Check for dropdown options (combobox)
                         if (acroFields.GetFieldType(fieldName) == AcroFields.FIELD_TYPE_COMBO)
                         {
-                            var options = acroFields.GetListOptionExport(fieldName); // Export values for dropdown
+                            var options = acroFields.GetListOptionExport(fieldName);
                             if (options != null && options.Length > 0)
                             {
                                 fieldData.options = options;
                                 result += "  Dropdown Options:\n";
-                                result = options.Where(option => !string.IsNullOrWhiteSpace(option)).Aggregate(result, (current, option) => current + $"    - {option}\n");
+                                foreach (var option in options)
+                                {
+                                    if (!string.IsNullOrWhiteSpace(option))
+                                    {
+                                        result += $"    - {option}\n";
+                                    }
+                                }
                             }
                         }
 
                         // Check for radio button options
                         if (acroFields.GetFieldType(fieldName) == AcroFields.FIELD_TYPE_RADIOBUTTON)
                         {
-                            var appearances = acroFields.GetAppearanceStates(fieldName); // Radio button options
+                            var appearances = acroFields.GetAppearanceStates(fieldName);
                             if (appearances != null && appearances.Length > 0)
                             {
                                 fieldData.options = appearances;
                                 result += "  Radio Button Options:\n";
-                                result = appearances.Where(option => option != "Off").Aggregate(result, (current, option) => current + $"    - {option}\n");
+                                foreach (var option in appearances)
+                                {
+                                    if (option != "Off")
+                                    {
+                                        result += $"    - {option}\n";
+                                    }
+                                }
                             }
+                        }
+
+                        // Assign an override keyword manually for certain fields (e.g., based on field name)
+                        if (fieldName.Contains("Override", StringComparison.OrdinalIgnoreCase))
+                        {
+                            fieldData.overrideKey = "CustomOverride";
+                            result += $"  Override Key: {fieldData.overrideKey}\n";
                         }
 
                         result += "\n";
@@ -276,8 +342,6 @@ namespace NameChangeSimulator.Editor
 
                     outputText = result;
                     readyForNextStep = true;
-                    
-                    // Close the PdfReader
                     reader.Close();
                 }
             }
@@ -286,7 +350,7 @@ namespace NameChangeSimulator.Editor
                 outputText = $"Error reading PDF: {e.Message}";
             }
         }
-        
+                
         void CreatePDFFieldScriptableObject(List<PDFField> fieldsList)
         {
             PDFFieldData scriptableObject = CreateInstance<PDFFieldData>();
@@ -350,6 +414,7 @@ namespace NameChangeSimulator.Editor
                         node.DialogueText = field.fieldName;
                         node.graph = dialogueGraph;
                         node.Options = field.options;
+                        node.Keyword = field.overrideKey;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -361,6 +426,7 @@ namespace NameChangeSimulator.Editor
                         node.DialogueText = field.fieldName;
                         node.Options = field.options;
                         node.graph = dialogueGraph;
+                        node.Keyword = field.overrideKey;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -370,6 +436,7 @@ namespace NameChangeSimulator.Editor
                         var node = ScriptableObject.CreateInstance<ShowStatePickerNode>();
                         node.graph = dialogueGraph;
                         node.DialogueText = field.fieldName;
+                        node.Keyword = field.overrideKey;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -383,6 +450,7 @@ namespace NameChangeSimulator.Editor
                         node.DialogueText = field.fieldName;
                         node.graph = dialogueGraph;
                         node.Options = field.options;
+                        node.Keyword = field.overrideKey;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -394,6 +462,7 @@ namespace NameChangeSimulator.Editor
                         node.DialogueText = field.fieldName;
                         node.graph = dialogueGraph;
                         node.Options = field.options;
+                        node.Keyword = field.overrideKey;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -404,6 +473,7 @@ namespace NameChangeSimulator.Editor
                         node.name = field.fieldName;
                         node.DialogueText = field.fieldName;
                         node.graph = dialogueGraph;
+                        node.Keyword = field.overrideKey;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }
@@ -414,6 +484,7 @@ namespace NameChangeSimulator.Editor
                         node.name = field.fieldName;
                         node.DialogueText = field.fieldName;
                         node.graph = dialogueGraph;
+                        node.Keyword = field.overrideKey;
                         AssetDatabase.AddObjectToAsset(node, dialogueGraph);
                         dialogueGraph.nodes.Add(node);
                     }

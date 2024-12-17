@@ -14,6 +14,12 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
     public class FormDataFillerController : MonoBehaviour
     {
         private PDFFieldData _fieldData;
+        private string _fullDeadName => $"{_deadFirstName} {_deadMiddleName} {_deadLastName}";
+        private string _deadFirstName, _deadMiddleName, _deadLastName;
+        
+        
+        private string _newFullName => $"{_newFirstName} {_newMiddleName} {_newLastName}";
+        private string _newFirstName, _newMiddleName, _newLastName;
         
         private void OnEnable()
         {

@@ -27,9 +27,10 @@ namespace NameChangeSimulator.Shared.Shared.ScriptableObjects
         {
             foreach (var field in fields)
             {
-                if (field.fieldName != keyword) continue;
-                field.fieldValue = value;
-                return;
+                if (field.fieldName == keyword || field.overrideKey == keyword)
+                {
+                    field.fieldValue = value;
+                }
             }
         }
     }
