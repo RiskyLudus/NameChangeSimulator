@@ -50,16 +50,31 @@ namespace NameChangeSimulator.Shared
             musicAudioSource.Play();
         }
 
+        public void StopMusic()
+        {
+            musicAudioSource.Stop();
+        }
+
         public void PlaySfx(AudioClip clip)
         {
             sfxAudioSource.clip = clip;
             sfxAudioSource.Play();
+        }
+
+        public void StopSfx()
+        {
+            sfxAudioSource.Stop();
         }
         
         public void PlayVoiceOver(AudioClip clip)
         {
             voAudioSource.clip = clip;
             voAudioSource.Play();
+        }
+
+        public void StopVoiceOver()
+        {
+            voAudioSource.Stop();
         }
 
         #region Music Sounds
