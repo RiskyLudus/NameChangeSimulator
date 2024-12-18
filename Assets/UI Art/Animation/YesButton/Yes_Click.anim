@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Back_Click
+  m_Name: Yes_Click
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -101,7 +101,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BackButtonText
+    path: Yes_Text
   m_FloatCurves:
   - serializedVersion: 2
     curve:
@@ -138,7 +138,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: BackButtonText
+    path: Yes_Text
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -168,7 +168,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: BackButton_Hover
+    path: ChoiceDiag_Hover
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -216,7 +216,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: BackButton_Hover
+    path: ChoiceDiag_Hover
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -246,7 +246,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: BackButton_Pressed
+    path: ChoiceDiag_Click
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -294,7 +294,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: BackButton_Pressed
+    path: ChoiceDiag_Click
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -316,7 +316,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 4213931991
+      path: 2077074518
       attribute: 3
       script: {fileID: 0}
       typeID: 4
@@ -325,7 +325,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 4213931991
+      path: 2077074518
       attribute: 304273561
       script: {fileID: 0}
       typeID: 212
@@ -334,7 +334,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1950873965
+      path: 2130212950
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -343,7 +343,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1950873965
+      path: 2130212950
       attribute: 304273561
       script: {fileID: 0}
       typeID: 212
@@ -352,7 +352,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3208073091
+      path: 1054215586
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -361,7 +361,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3208073091
+      path: 1054215586
       attribute: 304273561
       script: {fileID: 0}
       typeID: 212
@@ -579,7 +579,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: BackButtonText
+    path: Yes_Text
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -627,7 +627,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: BackButtonText
+    path: Yes_Text
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -675,7 +675,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: BackButtonText
+    path: Yes_Text
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -714,7 +714,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: BackButtonText
+    path: Yes_Text
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -744,7 +744,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: BackButton_Hover
+    path: ChoiceDiag_Hover
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -792,7 +792,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: BackButton_Hover
+    path: ChoiceDiag_Hover
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -822,7 +822,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: BackButton_Pressed
+    path: ChoiceDiag_Click
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -870,7 +870,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: BackButton_Pressed
+    path: ChoiceDiag_Click
     classID: 212
     script: {fileID: 0}
     flags: 0
