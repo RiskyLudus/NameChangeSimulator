@@ -168,15 +168,11 @@ MonoBehaviour:
   m_Name: Are you changing your GENDER?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -936, y: 1304}
+  position: {x: -1080, y: 1288}
   ports:
     keys:
     - Input
     - Output
-    - Options
-    - myFloatList 0
-    - myFloatList 1
-    - myFloatList 2
     - Options 0
     - Options 1
     values:
@@ -196,60 +192,21 @@ MonoBehaviour:
       _node: {fileID: -8202301885593932624}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 2926993368146666056}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Options
-      _node: {fileID: -8202301885593932624}
-      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-    - _fieldName: myFloatList 0
-      _node: {fileID: -8202301885593932624}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _connectionType: 1
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: myFloatList 1
-      _node: {fileID: -8202301885593932624}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _connectionType: 1
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: myFloatList 2
-      _node: {fileID: -8202301885593932624}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _connectionType: 1
-      _typeConstraint: 0
-      _dynamic: 1
     - _fieldName: Options 0
       _node: {fileID: -8202301885593932624}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: Input
-        node: {fileID: -8215322052189868933}
+        node: {fileID: -6589353945326074590}
         reroutePoints: []
       _direction: 1
-      _connectionType: 0
+      _connectionType: 1
       _typeConstraint: 0
       _dynamic: 1
     - _fieldName: Options 1
@@ -261,7 +218,7 @@ MonoBehaviour:
         node: {fileID: 2120197859699329685}
         reroutePoints: []
       _direction: 1
-      _connectionType: 0
+      _connectionType: 1
       _typeConstraint: 0
       _dynamic: 1
   SpriteType: 1
@@ -441,7 +398,6 @@ MonoBehaviour:
     keys:
     - Input
     - Output
-    - Options
     - Options 0
     - Options 1
     values:
@@ -471,15 +427,6 @@ MonoBehaviour:
       - fieldName: Input
         node: {fileID: 1884247849386897618}
         reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Options
-      _node: {fileID: -7478159831886932904}
-      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -535,7 +482,6 @@ MonoBehaviour:
     keys:
     - Input
     - Output
-    - Options
     - Options 0
     - Options 1
     values:
@@ -550,6 +496,9 @@ MonoBehaviour:
       - fieldName: Output
         node: {fileID: -8215322052189868933}
         reroutePoints: []
+      - fieldName: Options 0
+        node: {fileID: -8202301885593932624}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -562,15 +511,6 @@ MonoBehaviour:
       - fieldName: Input
         node: {fileID: -7478159831886932904}
         reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Options
-      _node: {fileID: -6589353945326074590}
-      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -673,7 +613,6 @@ MonoBehaviour:
     keys:
     - Input
     - Output
-    - Options
     - Options 0
     - Options 1
     values:
@@ -707,20 +646,14 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-    - _fieldName: Options
-      _node: {fileID: -6015935852157025409}
-      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
     - _fieldName: Options 0
       _node: {fileID: -6015935852157025409}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: Input
+        node: {fileID: 8752289299363725083}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -811,7 +744,6 @@ MonoBehaviour:
     keys:
     - Input
     - Output
-    - Options
     - Options 0
     - Options 1
     values:
@@ -838,15 +770,6 @@ MonoBehaviour:
       - fieldName: Input
         node: {fileID: 2985270080905465202}
         reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Options
-      _node: {fileID: -4295306337960960722}
-      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1387,7 +1310,7 @@ MonoBehaviour:
   m_Name: Which COUNTY is this being filed?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -104, y: 216}
+  position: {x: -88, y: 200}
   ports:
     keys:
     - Input
@@ -1479,7 +1402,6 @@ MonoBehaviour:
     keys:
     - Input
     - Output
-    - Options
     - Options 0
     - Options 1
     values:
@@ -1509,15 +1431,6 @@ MonoBehaviour:
       - fieldName: Input
         node: {fileID: -6015935852157025409}
         reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Options
-      _node: {fileID: 1884247849386897618}
-      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1572,7 +1485,6 @@ MonoBehaviour:
     keys:
     - Input
     - Output
-    - Options
     - Options 0
     - Options 1
     - Options 2
@@ -1597,15 +1509,6 @@ MonoBehaviour:
       - fieldName: Input
         node: {fileID: -6589353945326074590}
         reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Options
-      _node: {fileID: 2120197859699329685}
-      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1724,7 +1627,6 @@ MonoBehaviour:
     keys:
     - Input
     - Output
-    - Options
     - Options 0
     - Options 1
     values:
@@ -1751,15 +1653,6 @@ MonoBehaviour:
       - fieldName: Input
         node: {fileID: -2753629973460356407}
         reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Options
-      _node: {fileID: 2985270080905465202}
-      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -2020,7 +1913,6 @@ MonoBehaviour:
     keys:
     - Input
     - Output
-    - Options
     - Options 0
     - Options 1
     values:
@@ -2044,15 +1936,6 @@ MonoBehaviour:
       - fieldName: Input
         node: {fileID: -7874623585430634254}
         reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Options
-      _node: {fileID: 8353449374087225633}
-      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -2163,6 +2046,9 @@ MonoBehaviour:
       connections:
       - fieldName: Output
         node: {fileID: -2161337018147134915}
+        reroutePoints: []
+      - fieldName: Options 0
+        node: {fileID: -6015935852157025409}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

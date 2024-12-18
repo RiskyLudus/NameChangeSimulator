@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Anarchy.Shared;
 using NameChangeSimulator.Constructs.Dialogue.ChoiceBox;
@@ -92,8 +93,31 @@ namespace NameChangeSimulator.Constructs.Dialogue
             {
                 ConstructBindings.Send_FormDataFillerData_Submit?.Invoke(_currentNode.name, valueEntered);
             }
+
+            Node nextNode = _currentNode;
             
-            var nextNode = _currentNode.GetOutputPort("Output").Connection.node;
+            if (_currentNode is ChoiceNode choiceNode)
+            {
+                Dictionary<string, string> outputData = new Dictionary<string, string>();
+            
+                foreach (var iOutput in _currentNode.DynamicOutputs)
+                {
+                    int index = int.Parse(iOutput.fieldName.Replace("Options ", string.Empty));
+                    string optionValue = choiceNode.Options[index];
+                    
+                    Debug.Log($"Adding option {iOutput.fieldName} to outputdata: {optionValue}");
+                    outputData.Add(iOutput.fieldName, optionValue);
+                }
+                
+                foreach (var output in outputData.Where(output => output.Value == valueEntered))
+                {
+                    nextNode = _currentNode.DynamicOutputs.First(op => op.fieldName == output.Key).Connection.node;
+                }
+            }
+            else
+            {
+                nextNode = _currentNode.GetOutputPort("Output").Connection.node;
+            }
 
             if (nextNode is DialogueNode dialogueNode)
             {

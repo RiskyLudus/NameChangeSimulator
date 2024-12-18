@@ -86,7 +86,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                     break;
                 }
                 default:
-                    Debug.Log($"Keyword {keyword}");
+                    Debug.Log($"Keyword {keyword} with Value {value}");
                     _fieldData.SetValue(keyword, value);
                     ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(
                         _fieldData.Fields.Count(field => !string.IsNullOrEmpty(field.fieldValue))
