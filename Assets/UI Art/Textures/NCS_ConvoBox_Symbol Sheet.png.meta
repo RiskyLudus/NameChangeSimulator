@@ -813,6 +813,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -6109,7 +6148,247 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NCS_ConvoBox_Symbol Sheet_0: -4829008211068769835
+      NCS_ConvoBox_Symbol Sheet_1: 433898371384354062
+      NCS_ConvoBox_Symbol Sheet_10: -2228357882398839251
+      NCS_ConvoBox_Symbol Sheet_100: -5609849446561297699
+      NCS_ConvoBox_Symbol Sheet_101: -7476705740740603400
+      NCS_ConvoBox_Symbol Sheet_102: 7552093471390264185
+      NCS_ConvoBox_Symbol Sheet_103: 3262708510736438948
+      NCS_ConvoBox_Symbol Sheet_104: 6396372853253449238
+      NCS_ConvoBox_Symbol Sheet_105: 1310011252333557419
+      NCS_ConvoBox_Symbol Sheet_106: -1425575131860865991
+      NCS_ConvoBox_Symbol Sheet_107: 6026657725618582751
+      NCS_ConvoBox_Symbol Sheet_108: -7639969961521566897
+      NCS_ConvoBox_Symbol Sheet_109: 4401344309066539077
+      NCS_ConvoBox_Symbol Sheet_11: 1701109246772431785
+      NCS_ConvoBox_Symbol Sheet_110: -4906405407442026092
+      NCS_ConvoBox_Symbol Sheet_111: 2407070088953293730
+      NCS_ConvoBox_Symbol Sheet_112: -3264963543852832747
+      NCS_ConvoBox_Symbol Sheet_113: 3354700621414612363
+      NCS_ConvoBox_Symbol Sheet_114: -7742444568110766593
+      NCS_ConvoBox_Symbol Sheet_115: 6625137865377106142
+      NCS_ConvoBox_Symbol Sheet_116: 2429663850992544189
+      NCS_ConvoBox_Symbol Sheet_117: -6375035577058063393
+      NCS_ConvoBox_Symbol Sheet_118: -5323590482674986628
+      NCS_ConvoBox_Symbol Sheet_119: 7522417171350357062
+      NCS_ConvoBox_Symbol Sheet_12: -5043427598298350514
+      NCS_ConvoBox_Symbol Sheet_120: -6190247975619802548
+      NCS_ConvoBox_Symbol Sheet_121: 6655714983671357459
+      NCS_ConvoBox_Symbol Sheet_122: -2487464887116931926
+      NCS_ConvoBox_Symbol Sheet_123: 5194793979250611138
+      NCS_ConvoBox_Symbol Sheet_124: 1825257235607859784
+      NCS_ConvoBox_Symbol Sheet_125: 2137177374997345895
+      NCS_ConvoBox_Symbol Sheet_126: 8383942770037919073
+      NCS_ConvoBox_Symbol Sheet_127: 4092040674163387076
+      NCS_ConvoBox_Symbol Sheet_128: -1963459447055289223
+      NCS_ConvoBox_Symbol Sheet_129: -5077315093385464834
+      NCS_ConvoBox_Symbol Sheet_13: -5191875918606371823
+      NCS_ConvoBox_Symbol Sheet_130: -3306436726223205148
+      NCS_ConvoBox_Symbol Sheet_131: 5760856136031171069
+      NCS_ConvoBox_Symbol Sheet_132: 3167293430630455906
+      NCS_ConvoBox_Symbol Sheet_133: 4285522903661945618
+      NCS_ConvoBox_Symbol Sheet_134: 360545336631977460
+      NCS_ConvoBox_Symbol Sheet_135: 1990539725287856330
+      NCS_ConvoBox_Symbol Sheet_136: 555819688841113152
+      NCS_ConvoBox_Symbol Sheet_137: -5325641516417731421
+      NCS_ConvoBox_Symbol Sheet_138: 3472032164133381705
+      NCS_ConvoBox_Symbol Sheet_139: 5495886848735238705
+      NCS_ConvoBox_Symbol Sheet_14: -3911066584211058062
+      NCS_ConvoBox_Symbol Sheet_140: 6716144381056891338
+      NCS_ConvoBox_Symbol Sheet_141: 5278904648192875611
+      NCS_ConvoBox_Symbol Sheet_142: -66111350278032906
+      NCS_ConvoBox_Symbol Sheet_143: -8922711990069247489
+      NCS_ConvoBox_Symbol Sheet_144: 969749640004922414
+      NCS_ConvoBox_Symbol Sheet_145: 1358496485801396480
+      NCS_ConvoBox_Symbol Sheet_146: -2221838097996379055
+      NCS_ConvoBox_Symbol Sheet_147: 4615011143640510017
+      NCS_ConvoBox_Symbol Sheet_148: 8047380719415324109
+      NCS_ConvoBox_Symbol Sheet_149: -3897944816185901014
+      NCS_ConvoBox_Symbol Sheet_15: 3977028237704242967
+      NCS_ConvoBox_Symbol Sheet_150: 128718296157079626
+      NCS_ConvoBox_Symbol Sheet_151: -1241166127393051683
+      NCS_ConvoBox_Symbol Sheet_152: 4455483921878282575
+      NCS_ConvoBox_Symbol Sheet_153: -6901651945613530610
+      NCS_ConvoBox_Symbol Sheet_154: 5866173563298174917
+      NCS_ConvoBox_Symbol Sheet_155: 3662311111851271879
+      NCS_ConvoBox_Symbol Sheet_156: -9062724200913824818
+      NCS_ConvoBox_Symbol Sheet_157: 7868398367501830749
+      NCS_ConvoBox_Symbol Sheet_158: 3696953484344263711
+      NCS_ConvoBox_Symbol Sheet_159: 393694769610159565
+      NCS_ConvoBox_Symbol Sheet_16: -1977160309365439592
+      NCS_ConvoBox_Symbol Sheet_160: 6199236309145149942
+      NCS_ConvoBox_Symbol Sheet_161: 4164058099988313994
+      NCS_ConvoBox_Symbol Sheet_162: -6610518542051495382
+      NCS_ConvoBox_Symbol Sheet_163: 484512211613597249
+      NCS_ConvoBox_Symbol Sheet_164: -8516261021712853618
+      NCS_ConvoBox_Symbol Sheet_165: -5314714118315656083
+      NCS_ConvoBox_Symbol Sheet_166: -8185281968145120509
+      NCS_ConvoBox_Symbol Sheet_167: 730702828539398342
+      NCS_ConvoBox_Symbol Sheet_168: 4617095440286799031
+      NCS_ConvoBox_Symbol Sheet_169: 9024163945527028700
+      NCS_ConvoBox_Symbol Sheet_17: 6247114151927272376
+      NCS_ConvoBox_Symbol Sheet_170: 6633698807811817483
+      NCS_ConvoBox_Symbol Sheet_171: 4757775794836625915
+      NCS_ConvoBox_Symbol Sheet_172: 7826094326010927618
+      NCS_ConvoBox_Symbol Sheet_173: -735910678717671536
+      NCS_ConvoBox_Symbol Sheet_174: 3391013309142933484
+      NCS_ConvoBox_Symbol Sheet_175: -1841510804242868928
+      NCS_ConvoBox_Symbol Sheet_176: 5342693565972809558
+      NCS_ConvoBox_Symbol Sheet_177: 7249900008094946896
+      NCS_ConvoBox_Symbol Sheet_178: -1187167741670057338
+      NCS_ConvoBox_Symbol Sheet_179: 3905750778040167197
+      NCS_ConvoBox_Symbol Sheet_18: 3756934938376623364
+      NCS_ConvoBox_Symbol Sheet_180: 6868133888086790317
+      NCS_ConvoBox_Symbol Sheet_181: -2923520586676618918
+      NCS_ConvoBox_Symbol Sheet_182: -8672659440305599635
+      NCS_ConvoBox_Symbol Sheet_183: 8207612131543895775
+      NCS_ConvoBox_Symbol Sheet_184: -6100237644996985525
+      NCS_ConvoBox_Symbol Sheet_185: 5875882350243772539
+      NCS_ConvoBox_Symbol Sheet_186: 6387223599403072181
+      NCS_ConvoBox_Symbol Sheet_187: -2184895205402990315
+      NCS_ConvoBox_Symbol Sheet_188: 3962946017466907493
+      NCS_ConvoBox_Symbol Sheet_189: 4229568345443016310
+      NCS_ConvoBox_Symbol Sheet_19: 6000364048777003051
+      NCS_ConvoBox_Symbol Sheet_190: -4967990934572407573
+      NCS_ConvoBox_Symbol Sheet_191: -1278928862377681336
+      NCS_ConvoBox_Symbol Sheet_192: 8586754553535371506
+      NCS_ConvoBox_Symbol Sheet_193: 1753240303905242959
+      NCS_ConvoBox_Symbol Sheet_194: -3239823173046340811
+      NCS_ConvoBox_Symbol Sheet_195: 9206469327039126303
+      NCS_ConvoBox_Symbol Sheet_196: 3884944726052618819
+      NCS_ConvoBox_Symbol Sheet_197: 648436899842892244
+      NCS_ConvoBox_Symbol Sheet_198: 9885939075252028
+      NCS_ConvoBox_Symbol Sheet_199: -1263708977981741662
+      NCS_ConvoBox_Symbol Sheet_2: -2243819888916844650
+      NCS_ConvoBox_Symbol Sheet_20: -907783160925695248
+      NCS_ConvoBox_Symbol Sheet_200: 5747499877421511566
+      NCS_ConvoBox_Symbol Sheet_201: 874274491822309032
+      NCS_ConvoBox_Symbol Sheet_202: -8041039778293112042
+      NCS_ConvoBox_Symbol Sheet_203: 5402549536646607300
+      NCS_ConvoBox_Symbol Sheet_204: -8239583836757766345
+      NCS_ConvoBox_Symbol Sheet_205: 6327839346651951670
+      NCS_ConvoBox_Symbol Sheet_206: 4889432760182622308
+      NCS_ConvoBox_Symbol Sheet_207: -2616364534165355629
+      NCS_ConvoBox_Symbol Sheet_208: -8117317949470120192
+      NCS_ConvoBox_Symbol Sheet_209: -7662537071056747768
+      NCS_ConvoBox_Symbol Sheet_21: 605392229865376512
+      NCS_ConvoBox_Symbol Sheet_210: 7561665765503965364
+      NCS_ConvoBox_Symbol Sheet_211: -242064875968474973
+      NCS_ConvoBox_Symbol Sheet_212: -7574508972967279752
+      NCS_ConvoBox_Symbol Sheet_213: -7872486851382068343
+      NCS_ConvoBox_Symbol Sheet_214: 7210709995079706290
+      NCS_ConvoBox_Symbol Sheet_215: 6311787197548669121
+      NCS_ConvoBox_Symbol Sheet_216: -5839391031983037496
+      NCS_ConvoBox_Symbol Sheet_217: 5775640430866916604
+      NCS_ConvoBox_Symbol Sheet_218: -5313037748994909740
+      NCS_ConvoBox_Symbol Sheet_219: -3443266635967536938
+      NCS_ConvoBox_Symbol Sheet_22: 725211368604948639
+      NCS_ConvoBox_Symbol Sheet_220: -8252614357941646589
+      NCS_ConvoBox_Symbol Sheet_221: 3632488621412572753
+      NCS_ConvoBox_Symbol Sheet_222: 4510276179072632317
+      NCS_ConvoBox_Symbol Sheet_223: -3000204258808493887
+      NCS_ConvoBox_Symbol Sheet_224: 5576409365077430857
+      NCS_ConvoBox_Symbol Sheet_225: 6976862672096496115
+      NCS_ConvoBox_Symbol Sheet_226: 3240410301501587904
+      NCS_ConvoBox_Symbol Sheet_227: 283225061551924278
+      NCS_ConvoBox_Symbol Sheet_228: 7135901363412581706
+      NCS_ConvoBox_Symbol Sheet_229: -9144749266590916865
+      NCS_ConvoBox_Symbol Sheet_23: -7600516670064902239
+      NCS_ConvoBox_Symbol Sheet_230: 3345632364774512386
+      NCS_ConvoBox_Symbol Sheet_231: -4480730132900977091
+      NCS_ConvoBox_Symbol Sheet_232: -1263041864483519381
+      NCS_ConvoBox_Symbol Sheet_233: 122192389644572747
+      NCS_ConvoBox_Symbol Sheet_234: -4434992165298364709
+      NCS_ConvoBox_Symbol Sheet_235: 2673474292689394068
+      NCS_ConvoBox_Symbol Sheet_236: 5530531533205593002
+      NCS_ConvoBox_Symbol Sheet_237: 7047260099548577410
+      NCS_ConvoBox_Symbol Sheet_238: -781799133789901423
+      NCS_ConvoBox_Symbol Sheet_239: 7840234673632237547
+      NCS_ConvoBox_Symbol Sheet_24: -6721600488433128658
+      NCS_ConvoBox_Symbol Sheet_25: 5413037689233272606
+      NCS_ConvoBox_Symbol Sheet_26: -2337713677431042337
+      NCS_ConvoBox_Symbol Sheet_27: 1876052444659849399
+      NCS_ConvoBox_Symbol Sheet_28: 7482740105300262353
+      NCS_ConvoBox_Symbol Sheet_29: 3454518764264534765
+      NCS_ConvoBox_Symbol Sheet_3: -3364556721613647250
+      NCS_ConvoBox_Symbol Sheet_30: -1211326708422816609
+      NCS_ConvoBox_Symbol Sheet_31: -179535293658284723
+      NCS_ConvoBox_Symbol Sheet_32: 6205277346749789745
+      NCS_ConvoBox_Symbol Sheet_33: -4303941514013012916
+      NCS_ConvoBox_Symbol Sheet_34: -7823650762421415315
+      NCS_ConvoBox_Symbol Sheet_35: -3228568608874717139
+      NCS_ConvoBox_Symbol Sheet_36: -1141407720212720300
+      NCS_ConvoBox_Symbol Sheet_37: -1438396883522592124
+      NCS_ConvoBox_Symbol Sheet_38: -4373594888643694066
+      NCS_ConvoBox_Symbol Sheet_39: -6682632933981861093
+      NCS_ConvoBox_Symbol Sheet_4: 4261141114834679244
+      NCS_ConvoBox_Symbol Sheet_40: 5239273239255750703
+      NCS_ConvoBox_Symbol Sheet_41: -3325854366325789589
+      NCS_ConvoBox_Symbol Sheet_42: -2899932379686303210
+      NCS_ConvoBox_Symbol Sheet_43: 2195159105807431576
+      NCS_ConvoBox_Symbol Sheet_44: -1874359228333987803
+      NCS_ConvoBox_Symbol Sheet_45: -3810847823203867254
+      NCS_ConvoBox_Symbol Sheet_46: 7841209805780239901
+      NCS_ConvoBox_Symbol Sheet_47: 5332398041914621421
+      NCS_ConvoBox_Symbol Sheet_48: 4954011511009466383
+      NCS_ConvoBox_Symbol Sheet_49: -5867100456724727696
+      NCS_ConvoBox_Symbol Sheet_5: 2188497708302846664
+      NCS_ConvoBox_Symbol Sheet_50: 4733214872332563851
+      NCS_ConvoBox_Symbol Sheet_51: 6696788700034172841
+      NCS_ConvoBox_Symbol Sheet_52: -2769126139236830869
+      NCS_ConvoBox_Symbol Sheet_53: 3033140525709930710
+      NCS_ConvoBox_Symbol Sheet_54: 3769829216585419951
+      NCS_ConvoBox_Symbol Sheet_55: 4148426272465195907
+      NCS_ConvoBox_Symbol Sheet_56: 3047457479460376858
+      NCS_ConvoBox_Symbol Sheet_57: -8010696633416794985
+      NCS_ConvoBox_Symbol Sheet_58: 921519202556763567
+      NCS_ConvoBox_Symbol Sheet_59: 8421139851783097042
+      NCS_ConvoBox_Symbol Sheet_6: 1904780354877300373
+      NCS_ConvoBox_Symbol Sheet_60: -9059323711017959938
+      NCS_ConvoBox_Symbol Sheet_61: -1671199028496485501
+      NCS_ConvoBox_Symbol Sheet_62: 8539265758158492802
+      NCS_ConvoBox_Symbol Sheet_63: 2910506815318589671
+      NCS_ConvoBox_Symbol Sheet_64: 2330719279191920415
+      NCS_ConvoBox_Symbol Sheet_65: -6989771244495809861
+      NCS_ConvoBox_Symbol Sheet_66: -2161744835975875281
+      NCS_ConvoBox_Symbol Sheet_67: 5107723372806886606
+      NCS_ConvoBox_Symbol Sheet_68: 8781132978455649787
+      NCS_ConvoBox_Symbol Sheet_69: 487583820078501104
+      NCS_ConvoBox_Symbol Sheet_7: -1090956316037232681
+      NCS_ConvoBox_Symbol Sheet_70: -5990266603876710658
+      NCS_ConvoBox_Symbol Sheet_71: 7168868046697897009
+      NCS_ConvoBox_Symbol Sheet_72: -3460935525841862225
+      NCS_ConvoBox_Symbol Sheet_73: -7280725017591811064
+      NCS_ConvoBox_Symbol Sheet_74: 7092226543394445455
+      NCS_ConvoBox_Symbol Sheet_75: 1424759780385975998
+      NCS_ConvoBox_Symbol Sheet_76: 8742476446191350094
+      NCS_ConvoBox_Symbol Sheet_77: 6822292239445222974
+      NCS_ConvoBox_Symbol Sheet_78: -5426325129164888781
+      NCS_ConvoBox_Symbol Sheet_79: -3113606213914938263
+      NCS_ConvoBox_Symbol Sheet_8: -5675388868534707392
+      NCS_ConvoBox_Symbol Sheet_80: -8952445006127081777
+      NCS_ConvoBox_Symbol Sheet_81: -5322154678609700681
+      NCS_ConvoBox_Symbol Sheet_82: 709745934194887158
+      NCS_ConvoBox_Symbol Sheet_83: -1220339053081215595
+      NCS_ConvoBox_Symbol Sheet_84: -3567277116845564491
+      NCS_ConvoBox_Symbol Sheet_85: -8090969127136811247
+      NCS_ConvoBox_Symbol Sheet_86: 3706044898720849868
+      NCS_ConvoBox_Symbol Sheet_87: -8339973801090181077
+      NCS_ConvoBox_Symbol Sheet_88: 8155321421912830604
+      NCS_ConvoBox_Symbol Sheet_89: -1450735971960151630
+      NCS_ConvoBox_Symbol Sheet_9: -4381434953831531562
+      NCS_ConvoBox_Symbol Sheet_90: -8080674168026905539
+      NCS_ConvoBox_Symbol Sheet_91: 4819584739595952180
+      NCS_ConvoBox_Symbol Sheet_92: 3294767807404293108
+      NCS_ConvoBox_Symbol Sheet_93: 6806763597440960406
+      NCS_ConvoBox_Symbol Sheet_94: 2704057458510279304
+      NCS_ConvoBox_Symbol Sheet_95: -3860149833212175719
+      NCS_ConvoBox_Symbol Sheet_96: 661992933579459027
+      NCS_ConvoBox_Symbol Sheet_97: -6212383630344408125
+      NCS_ConvoBox_Symbol Sheet_98: 6441727488743443865
+      NCS_ConvoBox_Symbol Sheet_99: 5345877169112521968
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
