@@ -1394,6 +1394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PDFViewer
       objectReference: {fileID: 0}
+    - target: {fileID: 7178834276582647159, guid: 2c95533e278bf2640bc7872029d7a001, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7553638961635568209, guid: 2c95533e278bf2640bc7872029d7a001, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
