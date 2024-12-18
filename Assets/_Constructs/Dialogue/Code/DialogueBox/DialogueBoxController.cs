@@ -30,6 +30,12 @@ namespace NameChangeSimulator.Constructs.Dialogue.DialogueBox
             ToggleButtons(showBackButton, showNextButton);
         }
 
+        public void CloseDialogueBox()
+        {
+            AudioManager.Instance.PlaySfx(closeWindowSFX);
+            container.gameObject.SetActive(false);
+        }
+
         private void ToggleButtons(bool showBackButton, bool showNextButton)
         {
             backButton.SetActive(showBackButton);

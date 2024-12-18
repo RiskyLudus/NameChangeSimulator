@@ -7,6 +7,7 @@ using iTextSharp.text.pdf;
 using NameChangeSimulator.Shared;
 using NameChangeSimulator.Shared.Shared.Classes;
 using NameChangeSimulator.Shared.Shared.ScriptableObjects;
+using UnityEditor;
 using UnityEngine;
 
 namespace NameChangeSimulator.Constructs.FormDataFiller
@@ -45,15 +46,57 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
             {
                 Debug.LogError($"Failed to load form data {formDataToLoad}");
             }
+            
+            _fieldData.ClearValues();
+            
+            // Set Dead Name Fields
+            _fieldData.SetOverrideValue("FullDeadName", _fullDeadName);
+            _fieldData.SetOverrideValue("FirstDeadName", _deadFirstName);
+            _fieldData.SetOverrideValue("MiddleDeadName", _deadMiddleName);
+            _fieldData.SetOverrideValue("LastDeadName", _deadLastName);
+            
+            // Set New Name Fields
+            _fieldData.SetOverrideValue("NewFullName", _newFullName);
+            _fieldData.SetOverrideValue("NewFirstName", _newFirstName);
+            _fieldData.SetOverrideValue("NewMiddleName", _newMiddleName);
+            _fieldData.SetOverrideValue("NewLastName", _newLastName);
+            
+            ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(0, _fieldData.Fields.Length);
         }
         
         private void OnSubmit(string keyword, string value)
         {
-            _fieldData.SetValue(keyword, value);
+            switch (keyword)
+            {
+                case "Dead Name Input":
+                {
+                    string[] parsedValues = value.Split('~');
+                    _deadFirstName = parsedValues[0];
+                    _deadMiddleName = parsedValues[1];
+                    _deadLastName = parsedValues[2];
+                    break;
+                }
+                case "New Name Input":
+                {
+                    string[] parsedValues = value.Split('~');
+                    _newFirstName = parsedValues[0];
+                    _newMiddleName = parsedValues[1];
+                    _newLastName = parsedValues[2];
+                    break;
+                }
+                default:
+                    Debug.Log($"Keyword {keyword}");
+                    _fieldData.SetValue(keyword, value);
+                    ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(
+                        _fieldData.Fields.Count(field => !string.IsNullOrEmpty(field.fieldValue))
+                    );
+                    break;
+            }
         }
         
         private void OnApplyToPDF()
         {
+            ConstructBindings.Send_ProgressBarData_CloseProgressBar?.Invoke();
             RunDataFiller(Path.Combine(Application.streamingAssetsPath, _fieldData.PdfFileName + ".pdf"), _fieldData);
         }
         
@@ -114,6 +157,12 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 
                 Debug.Log("PDF fields updated successfully!");
                 Debug.Log($"Updated PDF saved to: {outputFilePath}");
+
+#if UNITY_EDITOR
+                AssetDatabase.Refresh();
+#endif
+                
+                ConstructBindings.Send_PDFViewerData_Load?.Invoke(outputFilePath);
             }
             catch (Exception e)
             {

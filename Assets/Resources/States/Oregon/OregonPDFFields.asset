@@ -15,7 +15,7 @@ MonoBehaviour:
   PdfFileName: OregonPDF
   fields:
   - fieldName: Which COUNTY is this being filed?
-    fieldValue: '      '
+    fieldValue: BENTON
     fieldType: Dropdown
     options:
     - '      '
@@ -73,29 +73,29 @@ MonoBehaviour:
     options: []
     overrideKey: DeadLastName
   - fieldName: Are you changing your GENDER?
-    fieldValue: 
+    fieldValue: Off
     fieldType: Radio Button
     options:
     - Off
     - Yes
     overrideKey: 
   - fieldName: What is your new FIRST Name?
-    fieldValue: 
+    fieldValue: awerg
     fieldType: Text Field
     options: []
     overrideKey: NewFirstName
   - fieldName: What is your new MIDDLE Name?
-    fieldValue: 
+    fieldValue: aweg
     fieldType: Text Field
     options: []
     overrideKey: NewMiddleName
   - fieldName: What is your new LAST Name?
-    fieldValue: 
+    fieldValue: aweg
     fieldType: Text Field
     options: []
     overrideKey: NewLastName
   - fieldName: What is your NEW GENDER?
-    fieldValue: 
+    fieldValue: Female
     fieldType: Radio Button
     options:
     - Male
@@ -104,7 +104,7 @@ MonoBehaviour:
     - Nonbinary
     overrideKey: 
   - fieldName: Do you owe child support or current ordered to pay child support?
-    fieldValue: 
+    fieldValue: Off
     fieldType: Radio Button
     options:
     - Off
@@ -112,92 +112,92 @@ MonoBehaviour:
     overrideKey: 
   - fieldName: Do you current have a protective order, stalking order, or restraining
       order against you?
-    fieldValue: 
+    fieldValue: Yes
     fieldType: Radio Button
     options:
     - Off
     - Yes
     overrideKey: 
   - fieldName: Are you currently on probation, parole, or under post-prison supervision?
-    fieldValue: 
+    fieldValue: Yes
     fieldType: Radio Button
     options:
     - Off
     - Yes
     overrideKey: 
   - fieldName: Are you required to register as a sex offender?
-    fieldValue: 
+    fieldValue: Yes
     fieldType: Radio Button
     options:
     - Off
     - Yes
     overrideKey: 
   - fieldName: 'Explain the Child Support: (include the State and Case Number)'
-    fieldValue: 
+    fieldValue: aserg
     fieldType: Text Field
     options: []
     overrideKey: 
   - fieldName: 'Explain the Order: (include the State and Case Number)'
-    fieldValue: 
+    fieldValue: awerg
     fieldType: Text Field
     options: []
     overrideKey: 
   - fieldName: 'Explain the Conditions:'
-    fieldValue: 
+    fieldValue: awegaweg
     fieldType: Text Field
     options: []
     overrideKey: 
   - fieldName: 'Explain the Reason for being labeled a Sex Offender:'
-    fieldValue: 
+    fieldValue: awegaweg
     fieldType: Text Field
     options: []
     overrideKey: 
   - fieldName: Have you ever LEGALLY used another name?
-    fieldValue: 
+    fieldValue: Yes
     fieldType: Radio Button
     options:
     - Off
     - Yes
     overrideKey: 
   - fieldName: Enter a Former Name (1)
-    fieldValue: 
+    fieldValue: awgewaeg
     fieldType: Text Field
     options: []
     overrideKey: 
   - fieldName: Enter a Former Name (2)
-    fieldValue: 
+    fieldValue: awegwaeg
     fieldType: Text Field
     options: []
     overrideKey: 
   - fieldName: Enter a Former Name (3)
-    fieldValue: 
+    fieldValue: awegawge
     fieldType: Text Field
     options: []
     overrideKey: 
   - fieldName: Enter a Former Name (5)
-    fieldValue: 
+    fieldValue: awegaweg
     fieldType: Text Field
     options: []
     overrideKey: 
   - fieldName: Enter a Former Name (4)
-    fieldValue: 
+    fieldValue: awegwa
     fieldType: Text Field
     options: []
     overrideKey: 
   - fieldName: Enter a Former Name (6)
-    fieldValue: 
+    fieldValue: aweg
     fieldType: Text Field
     options: []
     overrideKey: 
   - fieldName: Do you want this Name Change Record to be sealed?
-    fieldValue: 
+    fieldValue: Off
     fieldType: Radio Button
     options:
     - Off
     - Yes
     overrideKey: 
   - fieldName: What is the reason?
-    fieldValue: 
+    fieldValue: I am requesting a Change of Sex and I want the record to be sealed.
     fieldType: Radio Button
     options:
     - I am a participant in the Address Confidentiality Program under ORS 192.826
@@ -227,7 +227,8 @@ MonoBehaviour:
   - fieldName: 'Confirm your Gender selection:'
     fieldValue: 
     fieldType: Checkbox
-    options: []
+    options:
+    - Yes
     overrideKey: 
   keywords:
   - Which COUNTY is this being filed?

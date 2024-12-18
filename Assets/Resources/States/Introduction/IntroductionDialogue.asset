@@ -37,7 +37,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -1019616558664767743}
+        node: {fileID: -3169315211772560619}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -97,6 +97,54 @@ MonoBehaviour:
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
+--- !u!114 &-7290725073778468104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -264, y: 1336}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -7290725073778468104}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 2194691853557886345}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -7290725073778468104}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -7080890097183893353}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: Ahhhhhh~ What a great name for you to pick!
+  Keyword: 
+  Input: {fileID: 0}
+  Output: {fileID: 0}
 --- !u!114 &-7080890097183893353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +158,7 @@ MonoBehaviour:
   m_Name: Show State Picker
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -40, y: 216}
+  position: {x: 440, y: 344}
   ports:
     keys:
     - Input
@@ -122,7 +170,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: -6623252552080027897}
+        node: {fileID: -7290725073778468104}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -158,7 +206,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 200, y: 344}
+  position: {x: 680, y: 472}
   ports:
     keys:
     - Input
@@ -194,54 +242,6 @@ MonoBehaviour:
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
---- !u!114 &-6623252552080027897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -472, y: 632}
-  ports:
-    keys:
-    - Input
-    - Output
-    values:
-    - _fieldName: Input
-      _node: {fileID: -6623252552080027897}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -1019616558664767743}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Output
-      _node: {fileID: -6623252552080027897}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -7080890097183893353}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  SpriteType: 1
-  DialogueText: Thanks for that! Now can you please give me your new name?
-  Keyword: 
-  Input: {fileID: 0}
-  Output: {fileID: 0}
 --- !u!114 &-6164172195419980325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +272,54 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+  Output: {fileID: 0}
+--- !u!114 &-5381289060681385017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -264, y: 488}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -5381289060681385017}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -3169315211772560619}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -5381289060681385017}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 8548697591805939645}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: YES! BURN DARN YOU! BURNNNNNN! AHAHAHAHAHAHAAAA....
+  Keyword: 
+  Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-3407814042780526513
 MonoBehaviour:
@@ -319,6 +367,55 @@ MonoBehaviour:
   SpriteType: 1
   DialogueText: 2. Currently we only support Players over 18. If there is enough
     support however, we may add the option for minors in the future.
+  Keyword: 
+  Input: {fileID: 0}
+  Output: {fileID: 0}
+--- !u!114 &-3169315211772560619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b361acebae00a64b9c67bb5d92d2724, type: 3}
+  m_Name: Dead Name Input
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -264, y: 216}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -3169315211772560619}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -8982625221297377304}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -3169315211772560619}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -5381289060681385017}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: Could you please enter your dead name here? (Don't worry, you won't
+    see it again). <3
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -370,55 +467,6 @@ MonoBehaviour:
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
---- !u!114 &-1019616558664767743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -888, y: 872}
-  ports:
-    keys:
-    - Input
-    - Output
-    values:
-    - _fieldName: Input
-      _node: {fileID: -1019616558664767743}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -8982625221297377304}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Output
-      _node: {fileID: -1019616558664767743}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -6623252552080027897}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  SpriteType: 1
-  DialogueText: What is your deadname? (Don't worry, this is the only time you'll
-    see it) <3
-  Keyword: 
-  Input: {fileID: 0}
-  Output: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,8 +492,11 @@ MonoBehaviour:
   - {fileID: -7080890097183893353}
   - {fileID: -6681513358996728978}
   - {fileID: 7777717249031983762}
-  - {fileID: -1019616558664767743}
-  - {fileID: -6623252552080027897}
+  - {fileID: -3169315211772560619}
+  - {fileID: 2194691853557886345}
+  - {fileID: -5381289060681385017}
+  - {fileID: 8548697591805939645}
+  - {fileID: -7290725073778468104}
 --- !u!114 &1736345343012585427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +596,54 @@ MonoBehaviour:
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
+--- !u!114 &2194691853557886345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efedda8df66edeb4eb8e91cf5c81a1de, type: 3}
+  m_Name: New Name Input
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -264, y: 1048}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 2194691853557886345}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 8548697591805939645}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 2194691853557886345}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -7290725073778468104}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: Now let's see that awesome new name!
+  Keyword: 
+  Input: {fileID: 0}
+  Output: {fileID: 0}
 --- !u!114 &5662798566677275321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +705,7 @@ MonoBehaviour:
   m_Name: Load State Graph
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 584, y: 408}
+  position: {x: 1064, y: 536}
   ports:
     keys:
     - Input
@@ -624,6 +723,55 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Input: {fileID: 0}
+--- !u!114 &8548697591805939645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -264, y: 760}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 8548697591805939645}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -5381289060681385017}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 8548697591805939645}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 2194691853557886345}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: '*ahem* Apologies, I just tend to get excited to see deadnames burn
+    up.'
+  Keyword: 
+  Input: {fileID: 0}
+  Output: {fileID: 0}
 --- !u!114 &8719481727178769938
 MonoBehaviour:
   m_ObjectHideFlags: 0

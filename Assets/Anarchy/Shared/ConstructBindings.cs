@@ -18,16 +18,15 @@ namespace Anarchy.Shared
         // Events for DialogueData
         public static UnityEvent<string> Send_DialogueData_Load = new UnityEvent<string>();
 
-        // Events for FormCheckerData
-        public static UnityEvent<string> Send_FormCheckerData_ShowForm = new UnityEvent<string>();
-        public static UnityEvent Send_FormCheckerData_CloseForm = new UnityEvent();
-
         // Events for FormDataFillerData
         public static UnityEvent<string> Send_FormDataFillerData_Load = new UnityEvent<string>();
         public static UnityEvent<string, string> Send_FormDataFillerData_Submit = new UnityEvent<string, string>();
         public static UnityEvent Send_FormDataFillerData_ApplyToPDF = new UnityEvent();
 
         // Events for OptionsData
+
+        // Events for PDFViewerData
+        public static UnityEvent<string> Send_PDFViewerData_Load = new UnityEvent<string>();
 
         // Events for ProgressBarData
         public static UnityEvent<int, int> Send_ProgressBarData_ShowProgressBar = new UnityEvent<int, int>();

@@ -6,6 +6,7 @@ using NameChangeSimulator.Constructs.Dialogue.DialogueBox;
 using NameChangeSimulator.Constructs.Dialogue.DropdownBox;
 using NameChangeSimulator.Constructs.Dialogue.InputBox;
 using NameChangeSimulator.Constructs.Dialogue.StatePickerBox;
+using NameChangeSimulator.Shared;
 using NameChangeSimulator.Shared.Node;
 using UnityEngine;
 using XNode;
@@ -17,6 +18,8 @@ namespace NameChangeSimulator.Constructs.Dialogue
         public string StateToLoad { get; set; }
         
         [SerializeField] private DialogueBoxController dialogueBox;
+        [SerializeField] private DeadNameInputBoxController deadNameInputBox;
+        [SerializeField] private NewNameInputBoxController newNameInputBox;
         [SerializeField] private StatePickerBoxController statePickerBox;
         [SerializeField] private InputBoxController inputBox;
         [SerializeField] private DropdownBoxController dropdownBox;
@@ -121,6 +124,18 @@ namespace NameChangeSimulator.Constructs.Dialogue
             }
             if (dialogueNode != null) dialogueBox.DisplayConversation(dialogueNode.DialogueText, showBackButton, showNextButton);
         }
+
+        private void SetDeadNameInputNode(DeadNameInputNode deadNameInputNode)
+        {
+            SetDialogueNode(deadNameInputNode, true, false);
+            deadNameInputBox.DisplayDeadNameInputWindow();
+        }
+
+        private void SetNewNameInputNode(NewNameInputNode newNameInputNode)
+        {
+            SetDialogueNode(newNameInputNode, true, false);
+            newNameInputBox.DisplayNewNameInputWindow();
+        }
         
         // A state picker conversation. We ask the Player to select a state from a dropdown. We have the next button on the form itself. We have a back button active in its normal place.
         private void SetShowStatePickerNode(ShowStatePickerNode statePickerNode)
@@ -132,6 +147,7 @@ namespace NameChangeSimulator.Constructs.Dialogue
         private void SetLoadStateGraphNode()
         {
             ConstructBindings.Send_DialogueData_Load?.Invoke(StateToLoad);
+            ConstructBindings.Send_FormDataFillerData_Load?.Invoke(StateToLoad);
         }
         
         // An input conversation. We ask the Player to input some text in a window. We have the next button on the form itself. We have a back button active in its normal place.
@@ -164,6 +180,12 @@ namespace NameChangeSimulator.Constructs.Dialogue
                 case "DialogueNode":
                     SetDialogueNode(_currentNode);
                     break;
+                case "DeadNameInputNode":
+                    SetDeadNameInputNode(node as DeadNameInputNode);
+                    break;
+                case "NewNameInputNode":
+                    SetNewNameInputNode(node as NewNameInputNode);
+                    break;
                 case "ShowStatePickerNode":
                     SetShowStatePickerNode(node as ShowStatePickerNode);
                     break;
@@ -180,6 +202,7 @@ namespace NameChangeSimulator.Constructs.Dialogue
                     SetChoiceNode(node as ChoiceNode);
                     break;
                 case "EndNode":
+                    dialogueBox.CloseDialogueBox();
                     ConstructBindings.Send_FormDataFillerData_ApplyToPDF?.Invoke();
                     break;
                 default:
