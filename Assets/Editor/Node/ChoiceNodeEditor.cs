@@ -1,7 +1,9 @@
 using NameChangeSimulator.Shared;
 using NameChangeSimulator.Shared.Node;
 using UnityEditor;
+using UnityEditorInternal;
 using UnityEngine;
+using XNode;
 using XNodeEditor;
 
 [CustomNodeEditor(typeof(ChoiceNode))]
@@ -14,7 +16,7 @@ public class ChoiceNodeEditor : NodeEditor
         serializedObject.Update();
 
         ChoiceNode node = target as ChoiceNode;
-
+        
         // Explicitly draw input port from base class
         var inputPort = target.GetInputPort("Input");
         if (inputPort != null)
@@ -42,27 +44,17 @@ public class ChoiceNodeEditor : NodeEditor
         node.Keyword = EditorGUILayout.TextField(node.Keyword);
 
         GUILayout.Space(10);
-
-        // Foldout for Options
-        showOptions = EditorGUILayout.Foldout(showOptions, "Options", true, EditorStyles.foldoutHeader);
-        if (showOptions && node.Options != null)
-        {
-            EditorGUI.indentLevel++;
-            for (int i = 0; i < node.Options.Length; i++)
-            {
-                EditorGUILayout.LabelField($"Option {i + 1}: {node.Options[i]}");
-            }
-            EditorGUI.indentLevel--;
-        }
+        
+        // Draw GUI
+        NodeEditorGUILayout.DynamicPortList(
+            "Options", // field name
+            typeof(string), // field type
+            serializedObject, // serializable object
+            NodePort.IO.Output, // new port i/o
+            Node.ConnectionType.Override, // new port connection type
+            Node.TypeConstraint.None); // onCreate override. This is where the magic happens.
 
         GUILayout.Space(10);
-
-        // Explicitly draw output port from base class
-        var outputPort = target.GetOutputPort("Output");
-        if (outputPort != null)
-            NodeEditorGUILayout.PortField(new GUIContent("Output"), outputPort, GUILayout.MinWidth(0));
-        else
-            EditorGUILayout.LabelField("Output Port not found!");
 
         serializedObject.ApplyModifiedProperties();
     }

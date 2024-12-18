@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: What is your current FIRST Name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -500, y: 600}
+  position: {x: -888, y: 584}
   ports:
     keys:
     - Input
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: Enter a Former Name (3)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1000, y: 3600}
+  position: {x: 1272, y: 1992}
   ports:
     keys:
     - Input
@@ -96,6 +96,65 @@ MonoBehaviour:
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
+--- !u!114 &-8215322052189868933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 24, y: 1336}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -8215322052189868933}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Options 0
+        node: {fileID: 2120197859699329685}
+        reroutePoints: []
+      - fieldName: Options 1
+        node: {fileID: 2120197859699329685}
+        reroutePoints: []
+      - fieldName: Options 2
+        node: {fileID: 2120197859699329685}
+        reroutePoints: []
+      - fieldName: Options 0
+        node: {fileID: -8202301885593932624}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -8215322052189868933}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6589353945326074590}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: So for this next section, I will need to ask you some sensitive questions.
+    We are not here to judge and you will still recieve your forms regardless of
+    your answers, okay?
+  Keyword: 
+  Input: {fileID: 0}
+  Output: {fileID: 0}
 --- !u!114 &-8202301885593932624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,11 +168,17 @@ MonoBehaviour:
   m_Name: Are you changing your GENDER?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1000, y: 1200}
+  position: {x: -936, y: 1304}
   ports:
     keys:
     - Input
     - Output
+    - Options
+    - myFloatList 0
+    - myFloatList 1
+    - myFloatList 2
+    - Options 0
+    - Options 1
     values:
     - _fieldName: Input
       _node: {fileID: -8202301885593932624}
@@ -121,7 +186,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: 6753430459784517704}
+        node: {fileID: 6672154522022877519}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -139,6 +204,66 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Options
+      _node: {fileID: -8202301885593932624}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: myFloatList 0
+      _node: {fileID: -8202301885593932624}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: myFloatList 1
+      _node: {fileID: -8202301885593932624}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: myFloatList 2
+      _node: {fileID: -8202301885593932624}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 0
+      _node: {fileID: -8202301885593932624}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -8215322052189868933}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 1
+      _node: {fileID: -8202301885593932624}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: 2120197859699329685}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   SpriteType: 1
   DialogueText: Are you changing your GENDER?
   Keyword: 
@@ -160,7 +285,7 @@ MonoBehaviour:
   m_Name: Enter a Former Name (1)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 0, y: 3000}
+  position: {x: 328, y: 1992}
   ports:
     keys:
     - Input
@@ -172,6 +297,9 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
+        node: {fileID: 8353449374087225633}
+        reroutePoints: []
+      - fieldName: Options 1
         node: {fileID: 8353449374087225633}
         reroutePoints: []
       _direction: 0
@@ -208,7 +336,7 @@ MonoBehaviour:
   m_Name: What is your current MIDDLE name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 0, y: 600}
+  position: {x: -504, y: 584}
   ports:
     keys:
     - Input
@@ -256,7 +384,7 @@ MonoBehaviour:
   m_Name: 'Explain the Child Support: (include the State and Case Number)'
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -500, y: 2400}
+  position: {x: -456, y: 1784}
   ports:
     keys:
     - Input
@@ -270,6 +398,9 @@ MonoBehaviour:
       - fieldName: Output
         node: {fileID: -6015935852157025409}
         reroutePoints: []
+      - fieldName: Options 1
+        node: {fileID: -6589353945326074590}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -280,7 +411,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 8373636747789299081}
+        node: {fileID: -7478159831886932904}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -305,11 +436,14 @@ MonoBehaviour:
     order against you?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 0, y: 1800}
+  position: {x: -936, y: 2200}
   ports:
     keys:
     - Input
     - Output
+    - Options
+    - Options 0
+    - Options 1
     values:
     - _fieldName: Input
       _node: {fileID: -7478159831886932904}
@@ -317,6 +451,12 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
+        node: {fileID: -6589353945326074590}
+        reroutePoints: []
+      - fieldName: Output
+        node: {fileID: -7620498514955507522}
+        reroutePoints: []
+      - fieldName: Options 0
         node: {fileID: -6589353945326074590}
         reroutePoints: []
       _direction: 0
@@ -335,6 +475,39 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Options
+      _node: {fileID: -7478159831886932904}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Options 0
+      _node: {fileID: -7478159831886932904}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: 1884247849386897618}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 1
+      _node: {fileID: -7478159831886932904}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: 8373636747789299081}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   SpriteType: 1
   DialogueText: Do you current have a protective order, stalking order, or restraining
     order against you?
@@ -357,11 +530,14 @@ MonoBehaviour:
   m_Name: Do you owe child support or current ordered to pay child support?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -500, y: 1800}
+  position: {x: -936, y: 1752}
   ports:
     keys:
     - Input
     - Output
+    - Options
+    - Options 0
+    - Options 1
     values:
     - _fieldName: Input
       _node: {fileID: -6589353945326074590}
@@ -370,6 +546,9 @@ MonoBehaviour:
       connections:
       - fieldName: Output
         node: {fileID: 2120197859699329685}
+        reroutePoints: []
+      - fieldName: Output
+        node: {fileID: -8215322052189868933}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -387,6 +566,39 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Options
+      _node: {fileID: -6589353945326074590}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Options 0
+      _node: {fileID: -6589353945326074590}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -7478159831886932904}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 1
+      _node: {fileID: -6589353945326074590}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -7620498514955507522}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   SpriteType: 1
   DialogueText: Do you owe child support or current ordered to pay child support?
   Keyword: 
@@ -408,7 +620,7 @@ MonoBehaviour:
   m_Name: Enter a Former Name (4)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 0, y: 3600}
+  position: {x: 2280, y: 1992}
   ports:
     keys:
     - Input
@@ -456,11 +668,14 @@ MonoBehaviour:
   m_Name: Are you required to register as a sex offender?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1000, y: 2400}
+  position: {x: -936, y: 3032}
   ports:
     keys:
     - Input
     - Output
+    - Options
+    - Options 0
+    - Options 1
     values:
     - _fieldName: Input
       _node: {fileID: -6015935852157025409}
@@ -469,6 +684,12 @@ MonoBehaviour:
       connections:
       - fieldName: Output
         node: {fileID: 1884247849386897618}
+        reroutePoints: []
+      - fieldName: Options 0
+        node: {fileID: 1884247849386897618}
+        reroutePoints: []
+      - fieldName: Output
+        node: {fileID: -4198503505088122024}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -486,6 +707,36 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Options
+      _node: {fileID: -6015935852157025409}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Options 0
+      _node: {fileID: -6015935852157025409}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 1
+      _node: {fileID: -6015935852157025409}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -2161337018147134915}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   SpriteType: 1
   DialogueText: Are you required to register as a sex offender?
   Keyword: 
@@ -507,7 +758,7 @@ MonoBehaviour:
   m_Name: What is your City, State, and Zip Code?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1000, y: 4800}
+  position: {x: 1272, y: 3192}
   ports:
     keys:
     - Input
@@ -555,11 +806,14 @@ MonoBehaviour:
   m_Name: Do you want this Name Change Record to be sealed?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1000, y: 4200}
+  position: {x: 968, y: 2520}
   ports:
     keys:
     - Input
     - Output
+    - Options
+    - Options 0
+    - Options 1
     values:
     - _fieldName: Input
       _node: {fileID: -4295306337960960722}
@@ -568,6 +822,9 @@ MonoBehaviour:
       connections:
       - fieldName: Output
         node: {fileID: -1021318969256904608}
+        reroutePoints: []
+      - fieldName: Options 0
+        node: {fileID: 8353449374087225633}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -585,6 +842,39 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Options
+      _node: {fileID: -4295306337960960722}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Options 0
+      _node: {fileID: -4295306337960960722}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -2753629973460356407}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 1
+      _node: {fileID: -4295306337960960722}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: 2985270080905465202}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   SpriteType: 1
   DialogueText: Do you want this Name Change Record to be sealed?
   Keyword: 
@@ -606,7 +896,7 @@ MonoBehaviour:
   m_Name: 'Explain the Conditions:'
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1500, y: 3000}
+  position: {x: -456, y: 2648}
   ports:
     keys:
     - Input
@@ -617,8 +907,8 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Output
-        node: {fileID: 8373636747789299081}
+      - fieldName: Options 1
+        node: {fileID: 1884247849386897618}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -630,7 +920,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -2161337018147134915}
+        node: {fileID: -6015935852157025409}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -654,7 +944,7 @@ MonoBehaviour:
   m_Name: What is your Phone Number?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -500, y: 4800}
+  position: {x: 1784, y: 3192}
   ports:
     keys:
     - Input
@@ -678,7 +968,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 7237509657191080668}
+        node: {fileID: -985301824976188241}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -702,7 +992,7 @@ MonoBehaviour:
   m_Name: What is your Street Address (only)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1500, y: 4800}
+  position: {x: 776, y: 3192}
   ports:
     keys:
     - Input
@@ -715,6 +1005,15 @@ MonoBehaviour:
       connections:
       - fieldName: Output
         node: {fileID: 2985270080905465202}
+        reroutePoints: []
+      - fieldName: Options 1
+        node: {fileID: 2985270080905465202}
+        reroutePoints: []
+      - fieldName: Options 0
+        node: {fileID: 2985270080905465202}
+        reroutePoints: []
+      - fieldName: Options 0
+        node: {fileID: -4295306337960960722}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -750,7 +1049,7 @@ MonoBehaviour:
   m_Name: 'Explain the Reason for being labeled a Sex Offender:'
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1000, y: 3000}
+  position: {x: -440, y: 3048}
   ports:
     keys:
     - Input
@@ -761,8 +1060,8 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Output
-        node: {fileID: -4198503505088122024}
+      - fieldName: Options 1
+        node: {fileID: -6015935852157025409}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -774,7 +1073,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 8353449374087225633}
+        node: {fileID: 8752289299363725083}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -782,6 +1081,55 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   DialogueText: 'Explain the Reason for being labeled a Sex Offender:'
+  Keyword: 
+  Input: {fileID: 0}
+  Output: {fileID: 0}
+--- !u!114 &-1143220440489700948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -504, y: 248}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -1143220440489700948}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -421845860843251390}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -1143220440489700948}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 1301748460958256437}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: It looks like you can change your name AND gender on a single form.
+    Nice!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -798,7 +1146,7 @@ MonoBehaviour:
   m_Name: Enter a Former Name (6)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1500, y: 4200}
+  position: {x: 2808, y: 1992}
   ports:
     keys:
     - Input
@@ -830,6 +1178,102 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   DialogueText: Enter a Former Name (6)
+  Keyword: 
+  Input: {fileID: 0}
+  Output: {fileID: 0}
+--- !u!114 &-985301824976188241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1040.3909, y: 3758.5034}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -985301824976188241}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -3614788054001788322}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -985301824976188241}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 7237509657191080668}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: Wahoo!!! You did it! Now then let's see those forms :3
+  Keyword: 
+  Input: {fileID: 0}
+  Output: {fileID: 0}
+--- !u!114 &-421845860843251390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -904, y: 248}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -421845860843251390}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 6667754576716536312}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -421845860843251390}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -1143220440489700948}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: Hello and welcome to the Oregon Name Change Form Creator!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -877,6 +1321,11 @@ MonoBehaviour:
   - {fileID: -4318118662876065259}
   - {fileID: -3614788054001788322}
   - {fileID: 7237509657191080668}
+  - {fileID: -421845860843251390}
+  - {fileID: -1143220440489700948}
+  - {fileID: -8215322052189868933}
+  - {fileID: 8752289299363725083}
+  - {fileID: -985301824976188241}
 --- !u!114 &97061848774190809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,7 +1339,7 @@ MonoBehaviour:
   m_Name: Enter a Former Name (2)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1500, y: 3600}
+  position: {x: 776, y: 1992}
   ports:
     keys:
     - Input
@@ -938,7 +1387,7 @@ MonoBehaviour:
   m_Name: Which COUNTY is this being filed?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1000, y: 600}
+  position: {x: -104, y: 216}
   ports:
     keys:
     - Input
@@ -950,7 +1399,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: 6667754576716536312}
+        node: {fileID: -1143220440489700948}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1025,11 +1474,14 @@ MonoBehaviour:
   m_Name: Are you currently on probation, parole, or under post-prison supervision?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1500, y: 2400}
+  position: {x: -936, y: 2616}
   ports:
     keys:
     - Input
     - Output
+    - Options
+    - Options 0
+    - Options 1
     values:
     - _fieldName: Input
       _node: {fileID: 1884247849386897618}
@@ -1038,6 +1490,12 @@ MonoBehaviour:
       connections:
       - fieldName: Output
         node: {fileID: -7478159831886932904}
+        reroutePoints: []
+      - fieldName: Options 0
+        node: {fileID: -7478159831886932904}
+        reroutePoints: []
+      - fieldName: Output
+        node: {fileID: 8373636747789299081}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1055,6 +1513,39 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Options
+      _node: {fileID: 1884247849386897618}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Options 0
+      _node: {fileID: 1884247849386897618}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -6015935852157025409}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 1
+      _node: {fileID: 1884247849386897618}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -4198503505088122024}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   SpriteType: 1
   DialogueText: Are you currently on probation, parole, or under post-prison supervision?
   Keyword: 
@@ -1076,19 +1567,23 @@ MonoBehaviour:
   m_Name: What is your NEW GENDER?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1000, y: 1800}
+  position: {x: -472, y: 1304}
   ports:
     keys:
     - Input
     - Output
+    - Options
+    - Options 0
+    - Options 1
+    - Options 2
     values:
     - _fieldName: Input
       _node: {fileID: 2120197859699329685}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Output
-        node: {fileID: 6672154522022877519}
+      - fieldName: Options 1
+        node: {fileID: -8202301885593932624}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1106,6 +1601,51 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Options
+      _node: {fileID: 2120197859699329685}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Options 0
+      _node: {fileID: 2120197859699329685}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -8215322052189868933}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 1
+      _node: {fileID: 2120197859699329685}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -8215322052189868933}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 2
+      _node: {fileID: 2120197859699329685}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -8215322052189868933}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   SpriteType: 1
   DialogueText: What is your NEW GENDER?
   Keyword: 
@@ -1113,7 +1653,6 @@ MonoBehaviour:
   Output: {fileID: 0}
   Options:
   - Male
-  - Off
   - Female
   - Nonbinary
 --- !u!114 &2926993368146666056
@@ -1129,7 +1668,7 @@ MonoBehaviour:
   m_Name: What is your new FIRST Name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -500, y: 1200}
+  position: {x: -888, y: 952}
   ports:
     keys:
     - Input
@@ -1142,6 +1681,9 @@ MonoBehaviour:
       connections:
       - fieldName: Output
         node: {fileID: -8202301885593932624}
+        reroutePoints: []
+      - fieldName: Output
+        node: {fileID: 6753430459784517704}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1177,11 +1719,14 @@ MonoBehaviour:
   m_Name: What is the reason?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -500, y: 4200}
+  position: {x: 1592, y: 2504}
   ports:
     keys:
     - Input
     - Output
+    - Options
+    - Options 0
+    - Options 1
     values:
     - _fieldName: Input
       _node: {fileID: 2985270080905465202}
@@ -1189,6 +1734,9 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
+        node: {fileID: -4295306337960960722}
+        reroutePoints: []
+      - fieldName: Options 1
         node: {fileID: -4295306337960960722}
         reroutePoints: []
       _direction: 0
@@ -1207,6 +1755,39 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Options
+      _node: {fileID: 2985270080905465202}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Options 0
+      _node: {fileID: 2985270080905465202}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -2753629973460356407}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 1
+      _node: {fileID: 2985270080905465202}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -2753629973460356407}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   SpriteType: 1
   DialogueText: What is the reason?
   Keyword: 
@@ -1214,7 +1795,6 @@ MonoBehaviour:
   Output: {fileID: 0}
   Options:
   - I am a participant in the Address Confidentiality Program under ORS 192.826
-  - Off
   - I am requesting a Change of Sex and I want the record to be sealed.
 --- !u!114 &6667754576716536312
 MonoBehaviour:
@@ -1240,7 +1820,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 1301748460958256437}
+        node: {fileID: -421845860843251390}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1260,7 +1840,7 @@ MonoBehaviour:
   m_Name: What is your new LAST Name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1500, y: 1800}
+  position: {x: -104, y: 952}
   ports:
     keys:
     - Input
@@ -1284,7 +1864,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 2120197859699329685}
+        node: {fileID: -8202301885593932624}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1308,7 +1888,7 @@ MonoBehaviour:
   m_Name: What is your current LAST name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1500, y: 1200}
+  position: {x: -104, y: 584}
   ports:
     keys:
     - Input
@@ -1332,7 +1912,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -8202301885593932624}
+        node: {fileID: 2926993368146666056}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1356,7 +1936,7 @@ MonoBehaviour:
   m_Name: EndNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -8, y: 4904}
+  position: {x: 1464, y: 3864}
   ports:
     keys:
     - Input
@@ -1367,7 +1947,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: -3614788054001788322}
+        node: {fileID: -985301824976188241}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1387,7 +1967,7 @@ MonoBehaviour:
   m_Name: What is your new MIDDLE Name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 0, y: 1200}
+  position: {x: -504, y: 952}
   ports:
     keys:
     - Input
@@ -1435,11 +2015,14 @@ MonoBehaviour:
   m_Name: Have you ever LEGALLY used another name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -500, y: 3000}
+  position: {x: -440, y: 3576}
   ports:
     keys:
     - Input
     - Output
+    - Options
+    - Options 0
+    - Options 1
     values:
     - _fieldName: Input
       _node: {fileID: 8353449374087225633}
@@ -1447,7 +2030,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: -2161337018147134915}
+        node: {fileID: 8752289299363725083}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1465,6 +2048,39 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Options
+      _node: {fileID: 8353449374087225633}
+      _typeQualifiedName: System.String[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Options 0
+      _node: {fileID: 8353449374087225633}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -4295306337960960722}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Options 1
+      _node: {fileID: 8353449374087225633}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Input
+        node: {fileID: -7874623585430634254}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   SpriteType: 1
   DialogueText: Have you ever LEGALLY used another name?
   Keyword: 
@@ -1486,7 +2102,7 @@ MonoBehaviour:
   m_Name: 'Explain the Order: (include the State and Case Number)'
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 0, y: 2400}
+  position: {x: -456, y: 2264}
   ports:
     keys:
     - Input
@@ -1497,8 +2113,8 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Output
-        node: {fileID: -7620498514955507522}
+      - fieldName: Options 1
+        node: {fileID: -7478159831886932904}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1510,7 +2126,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -4198503505088122024}
+        node: {fileID: 1884247849386897618}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1518,6 +2134,54 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   DialogueText: 'Explain the Order: (include the State and Case Number)'
+  Keyword: 
+  Input: {fileID: 0}
+  Output: {fileID: 0}
+--- !u!114 &8752289299363725083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -936, y: 3576}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 8752289299363725083}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -2161337018147134915}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 8752289299363725083}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 8353449374087225633}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: Phew, that's it! Now for the home stretch!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -1534,7 +2198,7 @@ MonoBehaviour:
   m_Name: Enter a Former Name (5)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -500, y: 3600}
+  position: {x: 1784, y: 1992}
   ports:
     keys:
     - Input

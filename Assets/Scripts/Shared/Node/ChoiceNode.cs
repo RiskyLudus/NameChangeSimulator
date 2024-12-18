@@ -8,7 +8,7 @@ using Node = XNode.Node;
 [NodeWidth(400)]
 public class ChoiceNode : DialogueNode
 {
-    public string[] Options;
+    [Output(dynamicPortList = true)] public string[] Options;
 
     public override object GetValue(NodePort port)
     {
