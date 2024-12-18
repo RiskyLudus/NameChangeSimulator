@@ -81,7 +81,7 @@ public class PDFViewerController : MonoBehaviour
     
         // Run the conversion synchronously (on the main thread, avoids thread issues)
         ConvertPDF converter = new ConvertPDF();
-        converter.Convert(pdfPath, outputPattern, 1, _totalPageCount, "jpeg", 1920, 1080);
+        converter.Convert(pdfPath, outputPattern, 1, _totalPageCount, "jpeg", 1063, 1375);
 
         Debug.Log("PDF conversion complete. Loading images...");
 
@@ -101,7 +101,6 @@ public class PDFViewerController : MonoBehaviour
                     var imageObject = Instantiate(pdfImageTemplate, layoutContainer);
                     var rawImage = imageObject.GetComponent<RawImage>();
                     rawImage.texture = texture;
-                    rawImage.SetNativeSize();
                 }
             }
             else
