@@ -13,7 +13,6 @@ namespace Anarchy.Shared
         public static UnityEvent<Sprite> Send_CharacterData_ChangeCharacterSprite = new UnityEvent<Sprite>();
         public static UnityEvent<string> Send_CharacterData_ChangeCharacterName = new UnityEvent<string>();
         public static UnityEvent<bool> Send_CharacterData_ToggleCharacterSprite = new UnityEvent<bool>();
-        public static UnityEvent<string> Send_CharacterData_characterName_Changed = new UnityEvent<string>();
 
         // Events for DialogueData
         public static UnityEvent<string> Send_DialogueData_Load = new UnityEvent<string>();
@@ -26,7 +25,7 @@ namespace Anarchy.Shared
         // Events for OptionsData
 
         // Events for PDFViewerData
-        public static UnityEvent<string> Send_PDFViewerData_Load = new UnityEvent<string>();
+        public static UnityEvent<byte[]> Send_PDFViewerData_Load = new UnityEvent<byte[]>();
 
         // Events for ProgressBarData
         public static UnityEvent<int, int> Send_ProgressBarData_ShowProgressBar = new UnityEvent<int, int>();

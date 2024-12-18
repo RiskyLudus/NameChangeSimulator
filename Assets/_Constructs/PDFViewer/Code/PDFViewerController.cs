@@ -9,12 +9,12 @@ using UnityEngine.UI;
 
 public class PDFViewerController : MonoBehaviour
 {
-    public List<Texture2D> pdfPages; // UI RawImage to display the PDF page
+    public List<Texture2D> pdfPages = new List<Texture2D>(); // Store PDF pages as Texture2D
 
     [SerializeField] private GameObject container;
     [SerializeField] private Transform layoutContainer;
     [SerializeField] private GameObject pdfImageTemplate;
-    
+
     private int _totalPageCount = 0;
 
     private void OnEnable()
@@ -27,45 +27,64 @@ public class PDFViewerController : MonoBehaviour
         ConstructBindings.Send_PDFViewerData_Load?.RemoveListener(OnLoad);
     }
 
-    private void OnLoad(string pdfFilePath)
+    /// <summary>
+    /// Handles incoming raw PDF data.
+    /// </summary>
+    /// <param name="pdfBytes">Raw PDF data as a byte array.</param>
+    private void OnLoad(byte[] pdfBytes)
     {
-        _totalPageCount = GetPDFPageCount(pdfFilePath);
+        _totalPageCount = GetPDFPageCount(pdfBytes);
         Debug.Log($"Total pages in PDF: {_totalPageCount}");
 
         if (_totalPageCount > 0)
         {
-            for (int i = 0; i < _totalPageCount; i++)
+            for (int i = 1; i <= _totalPageCount; i++) // PDF pages are 1-based
             {
-                Debug.Log($"Page {i + 1}");
-                LoadPDFPageAsImage(pdfFilePath, i);
+                Debug.Log($"Rendering Page {i}");
+                LoadPDFPageAsImage(pdfBytes, i);
                 var image = Instantiate(pdfImageTemplate, layoutContainer);
-                image.GetComponent<RawImage>().texture = pdfPages[i];
+                image.GetComponent<RawImage>().texture = pdfPages[i - 1];
                 image.GetComponent<RawImage>().SetNativeSize();
             }
         }
-        
+
         container.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Gets the total number of pages in a PDF from raw data.
+    /// </summary>
+    /// <param name="pdfBytes">Raw PDF data as a byte array.</param>
+    /// <returns>Total number of pages in the PDF.</returns>
+    public int GetPDFPageCount(byte[] pdfBytes)
+    {
+        try
+        {
+            using (var pdfStream = new MemoryStream(pdfBytes))
+            using (var reader = new PdfReader(pdfStream))
+            {
+                return reader.NumberOfPages;
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Error getting PDF page count: {e.Message}");
+            return 0;
+        }
+    }
 
     /// <summary>
-    /// Renders a PDF page to an image using SkiaSharp and displays it as a Texture2D.
+    /// Renders a PDF page to an image using SkiaSharp and adds it to the Texture2D list.
     /// </summary>
-    /// <param name="path">PDF file path</param>
-    /// <param name="pageNumber">Page number to render</param>
-    public void LoadPDFPageAsImage(string path, int pageNumber)
+    /// <param name="pdfBytes">Raw PDF data as a byte array.</param>
+    /// <param name="pageNumber">Page number to render.</param>
+    private void LoadPDFPageAsImage(byte[] pdfBytes, int pageNumber)
     {
-        if (!File.Exists(path))
-        {
-            Debug.LogError("PDF file not found: " + path);
-            return;
-        }
-
-        // Use SkiaSharp to render PDF to an SKBitmap
-        SKBitmap bitmap = RenderPDFPageToBitmap(path, pageNumber);
+        // Render PDF to SKBitmap
+        SKBitmap bitmap = RenderPDFPageToBitmap(pdfBytes, pageNumber);
         if (bitmap == null)
         {
-            Debug.LogError("Failed to render PDF page.");
+            Debug.LogError($"Failed to render PDF page {pageNumber}.");
             return;
         }
 
@@ -74,40 +93,43 @@ public class PDFViewerController : MonoBehaviour
         if (texture != null)
         {
             pdfPages.Add(texture);
-            Debug.Log("PDF page displayed successfully.");
+            Debug.Log($"PDF Page {pageNumber} rendered successfully.");
         }
     }
 
     /// <summary>
     /// Renders a specific PDF page to an SKBitmap using SkiaSharp.
     /// </summary>
-    private SKBitmap RenderPDFPageToBitmap(string pdfPath, int pageNumber)
+    /// <param name="pdfBytes">Raw PDF data as a byte array.</param>
+    /// <param name="pageNumber">Page number to render.</param>
+    /// <returns>Rendered SKBitmap of the page.</returns>
+    private SKBitmap RenderPDFPageToBitmap(byte[] pdfBytes, int pageNumber)
     {
         try
         {
-            using var pdfDocument = SKDocument.CreatePdf(new SKFileWStream(pdfPath)); // Open the PDF
-            using var pdfStream = new FileStream(pdfPath, FileMode.Open, FileAccess.Read);
-            using var reader = new PdfReader(pdfStream);
-
-            if (pageNumber < 1 || pageNumber > reader.NumberOfPages)
+            using (var pdfStream = new MemoryStream(pdfBytes))
+            using (var reader = new PdfReader(pdfStream))
             {
-                Debug.LogError("Invalid page number.");
-                return null;
+                if (pageNumber < 1 || pageNumber > reader.NumberOfPages)
+                {
+                    Debug.LogError($"Invalid page number {pageNumber}. Total pages: {reader.NumberOfPages}");
+                    return null;
+                }
+
+                // SkiaSharp Canvas to render PDF
+                SKBitmap bitmap = new SKBitmap(612, 792); // Standard PDF page size
+                using var canvas = new SKCanvas(bitmap);
+                canvas.Clear(SKColors.White);
+
+                // Render the page (placeholder)
+                canvas.DrawText($"PDF Page {pageNumber}", 50, 50, new SKPaint { Color = SKColors.Black, TextSize = 24 });
+
+                return bitmap;
             }
-
-            // SkiaSharp Canvas to render PDF
-            SKBitmap bitmap = new SKBitmap(612, 792); // Standard PDF page size
-            using var canvas = new SKCanvas(bitmap);
-            canvas.Clear(SKColors.White);
-
-            // Render the page as text or graphics
-            canvas.DrawText($"PDF Page {pageNumber}", 50, 50, new SKPaint { Color = SKColors.Black, TextSize = 24 });
-
-            return bitmap;
         }
-        catch (System.Exception e)
+        catch (Exception e)
         {
-            Debug.LogError($"Error rendering PDF: {e.Message}");
+            Debug.LogError($"Error rendering PDF page {pageNumber}: {e.Message}");
             return null;
         }
     }
@@ -129,37 +151,4 @@ public class PDFViewerController : MonoBehaviour
         texture.Apply();
         return texture;
     }
-    
-    /// <summary>
-    /// Gets the total number of pages in a PDF from raw data.
-    /// </summary>
-    /// <param name="pdfFilePath">Path to the PDF file.</param>
-    /// <returns>Total number of pages in the PDF.</returns>
-    public int GetPDFPageCount(string pdfFilePath)
-    {
-        if (!File.Exists(pdfFilePath))
-        {
-            Debug.LogError("PDF file not found: " + pdfFilePath);
-            return 0;
-        }
-
-        try
-        {
-            // Load the entire PDF file into a byte array to avoid sharing violations
-            byte[] pdfData = File.ReadAllBytes(pdfFilePath);
-
-            // Use MemoryStream to read the PDF data
-            using (var pdfStream = new MemoryStream(pdfData))
-            using (var reader = new PdfReader(pdfStream))
-            {
-                return reader.NumberOfPages;
-            }
-        }
-        catch (Exception e)
-        {
-            Debug.LogError($"Error getting PDF page count: {e.Message}");
-            return 0;
-        }
-    }
-
 }

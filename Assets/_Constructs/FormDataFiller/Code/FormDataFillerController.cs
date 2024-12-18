@@ -130,39 +130,50 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 // Define output file path
                 string outputFilePath = Path.Combine(Path.GetDirectoryName(originalFilePath), "Updated_" + Path.GetFileName(originalFilePath));
 
-                // Load the PDF into a reader
-                using MemoryStream inputStream = new MemoryStream(pdfBytes);
-                using PdfReader reader = new PdfReader(inputStream);
-                using FileStream outputStream = new FileStream(outputFilePath, FileMode.Create);
-                using PdfStamper stamper = new PdfStamper(reader, outputStream);
+                byte[] updatedPdfBytes;
 
-                // Get the AcroFields from the PDF
-                AcroFields form = stamper.AcroFields;
-
-                foreach (var field in pdfFields)
+                // Load the PDF into a reader and modify in memory
+                using (MemoryStream inputStream = new MemoryStream(pdfBytes))
+                using (PdfReader reader = new PdfReader(inputStream))
+                using (MemoryStream outputStream = new MemoryStream())
+                using (PdfStamper stamper = new PdfStamper(reader, outputStream))
                 {
-                    if (form.Fields.ContainsKey(field.fieldName))
+                    // Get the AcroFields from the PDF
+                    AcroFields form = stamper.AcroFields;
+
+                    foreach (var field in pdfFields)
                     {
-                        form.SetField(field.fieldName, field.fieldValue);
-                        Debug.Log($"Field '{field.fieldName}' set to '{field.fieldValue}'.");
+                        if (form.Fields.ContainsKey(field.fieldName))
+                        {
+                            form.SetField(field.fieldName, field.fieldValue);
+                            Debug.Log($"Field '{field.fieldName}' set to '{field.fieldValue}'.");
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"Field '{field.fieldName}' not found in the PDF.");
+                        }
                     }
-                    else
-                    {
-                        Debug.LogWarning($"Field '{field.fieldName}' not found in the PDF.");
-                    }
+
+                    // Finalize changes (flatten the form if needed, optional)
+                    stamper.FormFlattening = true;
+
+                    // Convert the modified PDF back into a byte array
+                    stamper.Close();
+                    updatedPdfBytes = outputStream.ToArray();
                 }
 
-                // Finalize changes (flatten the form if needed, optional)
-                stamper.FormFlattening = true;
+                // Save the updated PDF to a file
+                File.WriteAllBytes(outputFilePath, updatedPdfBytes);
 
                 Debug.Log("PDF fields updated successfully!");
                 Debug.Log($"Updated PDF saved to: {outputFilePath}");
 
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
                 AssetDatabase.Refresh();
-#endif
-                
-                ConstructBindings.Send_PDFViewerData_Load?.Invoke(outputFilePath);
+        #endif
+
+                // Optionally load the updated PDF into the viewer
+                ConstructBindings.Send_PDFViewerData_Load?.Invoke(updatedPdfBytes);
             }
             catch (Exception e)
             {
