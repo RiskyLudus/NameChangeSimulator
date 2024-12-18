@@ -275,6 +275,54 @@ PrefabInstance:
       propertyPath: dialogueController
       value: 
       objectReference: {fileID: 5395397762979273417}
+    - target: {fileID: 907565316011508763, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718594771602583299, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570561636162144192, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785843872465730765, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845131406241527958, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869454533020088419, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012267855565629049, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507863264093324879, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862108364005698145, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791502111408388526, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890096169037347230, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6309045932341204936, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -655,42 +703,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6264159551128321219}
     m_Modifications:
-    - target: {fileID: 5082222815705079928, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
+    - target: {fileID: 2028529265227870992, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5082222815705079928, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
+    - target: {fileID: 2051260383881770713, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5082222815705079928, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
+    - target: {fileID: 3356397070021245576, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5082222815705079928, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
+    - target: {fileID: 5072882346278177772, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5082222815705079928, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 528.7124
+    - target: {fileID: 5879728895322468016, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5082222815705079928, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 187.37805
+    - target: {fileID: 6914536865159501949, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5082222815705079928, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.0000038146973
-      objectReference: {fileID: 0}
-    - target: {fileID: 5082222815705079928, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 180
+    - target: {fileID: 7621982030548023215, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7796770249344375909, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
       propertyPath: dialogueController
       value: 
       objectReference: {fileID: 5395397762979273417}
+    - target: {fileID: 7873808300733334186, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8423752709516562710, guid: 037d3e8f1fa5b7443b6670f8ee0f7f93, type: 3}
       propertyPath: m_Name
       value: InputBox
