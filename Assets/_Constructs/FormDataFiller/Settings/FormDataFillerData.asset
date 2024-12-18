@@ -13,8 +13,18 @@ MonoBehaviour:
   m_Name: FormDataFillerData
   m_EditorClassIdentifier: 
   anarchyEvents:
-  - eventName: LoadFormFiller
+  - eventName: Load
     type1: 2
+    type2: 0
+    type3: 0
+    type4: 0
+  - eventName: Submit
+    type1: 2
+    type2: 2
+    type3: 0
+    type4: 0
+  - eventName: ApplyToPDF
+    type1: 0
     type2: 0
     type3: 0
     type4: 0

@@ -38,7 +38,6 @@ namespace NameChangeSimulator.Constructs.Character
         private void OnCharacterNameChange(string characterName)
         {
             characterData.characterName = characterName;
-            ConstructBindings.Send_CharacterData_characterName_Changed?.Invoke(characterData.characterName);
         }
         
         private void OnToggleCharacterSprite(bool toggle)

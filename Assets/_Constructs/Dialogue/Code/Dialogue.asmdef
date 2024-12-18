@@ -1,0 +1,20 @@
+{
+    "name": "NameChangeSimulator.Constructs.Dialogue",
+    "rootNamespace": "NameChangeSimulator.Constructs.Dialogue",
+    "references": [
+        "Anarchy",
+        "Anarchy.Shared",
+        "Unity.TextMeshPro",
+        "XNode",
+        "NameChangeSimulator.Shared"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
