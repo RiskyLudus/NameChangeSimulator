@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -119,26 +120,21 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 
             if (pdfBytes != null)
             {
-                SetPDFFields(pdfBytes, fieldData.Fields, pdfFilePath);
+                StartCoroutine(SetPDFFields(pdfBytes, fieldData.Fields, pdfFilePath));
             }
         }
 
-        private void SetPDFFields(byte[] pdfBytes, PDFField[] pdfFields, string originalFilePath)
+        private IEnumerator SetPDFFields(byte[] pdfBytes, PDFField[] pdfFields, string originalFilePath)
         {
-            try
+            string outputFilePath = Path.Combine(Path.GetDirectoryName(originalFilePath), "Updated_" + Path.GetFileName(originalFilePath));
+            byte[] updatedPdfBytes;
+
+            using (MemoryStream inputStream = new MemoryStream(pdfBytes))
+            using (PdfReader reader = new PdfReader(inputStream))
+            using (MemoryStream outputStream = new MemoryStream())
             {
-                // Define output file path
-                string outputFilePath = Path.Combine(Path.GetDirectoryName(originalFilePath), "Updated_" + Path.GetFileName(originalFilePath));
-
-                byte[] updatedPdfBytes;
-
-                // Load the PDF into a reader and modify in memory
-                using (MemoryStream inputStream = new MemoryStream(pdfBytes))
-                using (PdfReader reader = new PdfReader(inputStream))
-                using (MemoryStream outputStream = new MemoryStream())
                 using (PdfStamper stamper = new PdfStamper(reader, outputStream))
                 {
-                    // Get the AcroFields from the PDF
                     AcroFields form = stamper.AcroFields;
 
                     foreach (var field in pdfFields)
@@ -154,31 +150,21 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                         }
                     }
 
-                    // Finalize changes (flatten the form if needed, optional)
-                    stamper.FormFlattening = true;
-
-                    // Convert the modified PDF back into a byte array
-                    stamper.Close();
-                    updatedPdfBytes = outputStream.ToArray();
-                }
-
-                // Save the updated PDF to a file
-                File.WriteAllBytes(outputFilePath, updatedPdfBytes);
-
-                Debug.Log("PDF fields updated successfully!");
-                Debug.Log($"Updated PDF saved to: {outputFilePath}");
-
-        #if UNITY_EDITOR
-                AssetDatabase.Refresh();
-        #endif
-
-                // Optionally load the updated PDF into the viewer
-                ConstructBindings.Send_PDFViewerData_Load?.Invoke(updatedPdfBytes);
+                    stamper.FormFlattening = true; // Flatten form (optional)
+                } // Ensure PdfStamper is closed
+                updatedPdfBytes = outputStream.ToArray();
             }
-            catch (Exception e)
-            {
-                Debug.LogError($"Error updating PDF fields: {e.Message}");
-            }
+
+            File.WriteAllBytes(outputFilePath, updatedPdfBytes); // Save updated PDF
+            Debug.Log($"Updated PDF saved to: {outputFilePath}");
+            yield return new WaitForSeconds(2);
+
+#if UNITY_EDITOR
+            UnityEditor.AssetDatabase.Refresh();
+#endif
+            yield return new WaitForSeconds(2);
+            // Load the updated PDF for viewing
+            ConstructBindings.Send_PDFViewerData_Load?.Invoke(updatedPdfBytes);
         }
     }
 }

@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pdfPages: []
-  container: {fileID: 642287408}
+  container: {fileID: 0}
   layoutContainer: {fileID: 1533263020}
   pdfImageTemplate: {fileID: 5569478132001171331, guid: 25c9d2f3f9718ea46bb3bc860663fa0c, type: 3}
 --- !u!1 &1164520156
@@ -1598,7 +1598,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1533263020}
   - component: {fileID: 1533263023}
-  - component: {fileID: 1533263021}
   m_Layer: 5
   m_Name: Layout
   m_TagString: Untagged
@@ -1625,32 +1624,6 @@ RectTransform:
   m_AnchoredPosition: {x: -234.22, y: 0}
   m_SizeDelta: {x: -468.43, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1533263021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533263019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 1
-  m_ChildScaleHeight: 1
-  m_ReverseArrangement: 0
 --- !u!222 &1533263023
 CanvasRenderer:
   m_ObjectHideFlags: 0
