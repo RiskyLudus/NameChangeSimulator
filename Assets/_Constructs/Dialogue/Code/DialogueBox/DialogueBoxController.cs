@@ -13,7 +13,6 @@ namespace NameChangeSimulator.Constructs.Dialogue.DialogueBox
         [SerializeField] private TMP_Text conversationPromptText;
         [SerializeField] private GameObject backButton;
         [SerializeField] private GameObject nextButton;
-        [SerializeField] private AudioClip showWindowSFX, closeWindowSFX, textBlipSFX;
 
         private bool _textIsScrolling = false;
         private string _currentText = string.Empty;
@@ -22,7 +21,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.DialogueBox
         public void DisplayConversation(string dialogueText, bool showBackButton, bool showNextButton)
         {
             Debug.Log($"Showing Dialogue node");
-            AudioManager.Instance.PlaySfx(showWindowSFX);
+            AudioManager.Instance.PlayShowWindow_SFX();
             conversationPromptText.text = string.Empty;
             _currentText = dialogueText;
             ScrollText(_currentText);
@@ -32,7 +31,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.DialogueBox
 
         public void CloseDialogueBox()
         {
-            AudioManager.Instance.PlaySfx(closeWindowSFX);
+            AudioManager.Instance.PlayCloseWindow_SFX();
             container.gameObject.SetActive(false);
         }
 
@@ -86,7 +85,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.DialogueBox
             foreach (var character in textChars)
             {
                 conversationPromptText.text += character;
-                AudioManager.Instance.PlaySfx(textBlipSFX);
+                AudioManager.Instance.PlayTextBlip_SFX();
                 yield return wait;
             }
 

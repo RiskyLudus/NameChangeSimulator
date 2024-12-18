@@ -1,5 +1,6 @@
 using System.Collections;
 using Anarchy.Shared;
+using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -15,6 +16,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
         
         private void Start()
         {
+            AudioManager.Instance.PlayNCS_Music();
             GenerateRandomFlavorText();
             ClearCoroutine();
             _co = StartCoroutine(PingPongFlavorText());
@@ -29,6 +31,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
         public void StartGame()
         {
             ClearCoroutine();
+            AudioManager.Instance.PlayStartSound_SFX();
             ConstructBindings.Send_DialogueData_Load?.Invoke("Introduction");
             Destroy(gameObject);
         }

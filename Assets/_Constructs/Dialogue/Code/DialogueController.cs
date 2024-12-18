@@ -42,6 +42,7 @@ namespace NameChangeSimulator.Constructs.Dialogue
 
         private void OnLoad(string dialogueToLoad)
         {
+            AudioManager.Instance.PlayWhoAreYou_Music();
             Debug.Log($"Loading Dialogue: {dialogueToLoad}");
             
             // Load the Dialogue Graph

@@ -21,11 +21,13 @@ namespace NameChangeSimulator.Constructs.Dialogue.StatePickerBox
         public void DisplayStatePicker()
         {
             Debug.Log($"Showing StatePicker node");
+            AudioManager.Instance.PlayShowWindow_SFX();
             container.SetActive(true);
         }
 
         public void SubmitStatePick()
         {
+            AudioManager.Instance.PlayCloseWindow_SFX();
             dialogueController.StateToLoad = dropdownText.text;
             dialogueController.GoToNext();
             container.SetActive(false);
