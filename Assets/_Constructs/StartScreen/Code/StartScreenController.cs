@@ -3,6 +3,7 @@ using Anarchy.Shared;
 using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -12,14 +13,15 @@ namespace NameChangeSimulator.Constructs.StartScreen
     {
         [SerializeField] private float startDelayTime = 10.0f;
         [SerializeField] private float logoSpinStrength = 1.0f;
-        
+
         [SerializeField] private StartScreenData startScreenData;
         [SerializeField] private TMP_Text flavorText;
         [SerializeField] private GameObject startPanel;
         [SerializeField] private GameObject logo;
+        [SerializeField] private Button startButton;
 
         private Coroutine _co = null;
-        
+
         private void Start()
         {
             AudioManager.Instance.PlayNCS_Music();
@@ -28,7 +30,17 @@ namespace NameChangeSimulator.Constructs.StartScreen
             _co = StartCoroutine(PingPongFlavorText());
         }
 
-        private void GenerateRandomFlavorText()
+        public void PlayOnHoverSFX()
+        {
+            AudioManager.Instance.PlayUIHover_SFX();
+        }
+
+        public void PlayOnExitSFX()
+        {
+            AudioManager.Instance.PlayUICancel_SFX();
+        }
+
+    private void GenerateRandomFlavorText()
         {
             int rand = Random.Range(0, startScreenData.flavorTextStrings.Length - 1);
             flavorText.text = startScreenData.flavorTextStrings[rand];
@@ -72,7 +84,6 @@ namespace NameChangeSimulator.Constructs.StartScreen
             {
                 yield return null;
                 t += Time.deltaTime;
-                Debug.Log($"game intro time: {t}");
                 logo.transform.Rotate(Vector3.up, logoSpinStrength * t);
                 float newAlpha = Mathf.Lerp(startColor.a, 1.0f, t / startDelayTime);
                 image.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);

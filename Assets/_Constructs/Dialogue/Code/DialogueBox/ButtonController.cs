@@ -15,13 +15,13 @@ namespace NameChangeSimulator.Constructs.Conversation
         private void OnMouseEnter()
         {
             animator.SetTrigger(HoverOn);
-            AudioManager.Instance.PlayButtonEnter_SFX();
+            AudioManager.Instance.PlayUIHover_SFX();
         }
 
         private void OnMouseExit()
         {
             animator.SetTrigger(HoverOff);
-            AudioManager.Instance.PlayButtonExit_SFX();
+            AudioManager.Instance.PlayUICancel_SFX();
         }
 
         private void OnMouseDown()
