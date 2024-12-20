@@ -3,14 +3,20 @@ using Anarchy.Shared;
 using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace NameChangeSimulator.Constructs.StartScreen
 {
     public class StartScreenController : MonoBehaviour
     {
+        [SerializeField] private float startDelayTime = 10.0f;
+        [SerializeField] private float logoSpinStrength = 1.0f;
+        
         [SerializeField] private StartScreenData startScreenData;
         [SerializeField] private TMP_Text flavorText;
+        [SerializeField] private GameObject startPanel;
+        [SerializeField] private GameObject logo;
 
         private Coroutine _co = null;
         
@@ -30,10 +36,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
 
         public void StartGame()
         {
-            ClearCoroutine();
-            AudioManager.Instance.PlayStartSound_SFX();
-            ConstructBindings.Send_DialogueData_Load?.Invoke("Introduction");
-            Destroy(gameObject);
+            StartCoroutine(StartGameIntro());
         }
 
         private void ClearCoroutine()
@@ -55,6 +58,28 @@ namespace NameChangeSimulator.Constructs.StartScreen
                 timeElapsed += Time.deltaTime;
                 yield return null;
             }
+        }
+        
+        private IEnumerator StartGameIntro()
+        {
+            AudioManager.Instance.PlayStartSound_SFX();
+            float t = 0.0f;
+            Image image = startPanel.GetComponent<Image>();
+            image.raycastTarget = true;
+            Color startColor = image.color;
+            
+            while (t < startDelayTime)
+            {
+                yield return null;
+                t += Time.deltaTime;
+                Debug.Log($"game intro time: {t}");
+                logo.transform.Rotate(Vector3.up, logoSpinStrength * t);
+                float newAlpha = Mathf.Lerp(startColor.a, 1.0f, t / startDelayTime);
+                image.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);
+            }
+            
+            ConstructBindings.Send_DialogueData_Load?.Invoke("Introduction");
+            Destroy(gameObject);
         }
     }
 }
