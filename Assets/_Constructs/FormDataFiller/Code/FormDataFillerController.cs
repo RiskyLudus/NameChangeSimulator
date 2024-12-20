@@ -157,14 +157,14 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 
             File.WriteAllBytes(outputFilePath, updatedPdfBytes); // Save updated PDF
             Debug.Log($"Updated PDF saved to: {outputFilePath}");
-            yield return new WaitForSeconds(2);
 
 #if UNITY_EDITOR
             UnityEditor.AssetDatabase.Refresh();
 #endif
-            yield return new WaitForSeconds(2);
             // Load the updated PDF for viewing
             ConstructBindings.Send_PDFViewerData_Load?.Invoke(updatedPdfBytes);
+
+            yield return null;
         }
     }
 }

@@ -1,7 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using Anarchy.Shared;
 using iTextSharp.text.pdf;
 using NameChangeSimulator.Shared.Utils;
@@ -14,7 +14,7 @@ public class PDFViewerController : MonoBehaviour
     [SerializeField] private GameObject container;
     [SerializeField] private Transform layoutContainer;
     [SerializeField] private GameObject pdfImageTemplate;
-    
+
     private int _totalPageCount = 0;
 
     private void OnEnable()
@@ -29,6 +29,11 @@ public class PDFViewerController : MonoBehaviour
 
     private void OnLoad(byte[] pdfBytes)
     {
+        OnLoadAsync(pdfBytes, Application.persistentDataPath);
+    }
+
+    private async void OnLoadAsync(byte[] pdfBytes, string persistentPath)
+    {
         if (pdfBytes == null || pdfBytes.Length == 0)
         {
             Debug.LogError("PDF data is empty or null.");
@@ -36,17 +41,18 @@ public class PDFViewerController : MonoBehaviour
         }
 
         // Write the PDF bytes to a temporary file
-        string tempPdfPath = Path.Combine(Application.persistentDataPath, "temp.pdf");
-        File.WriteAllBytes(tempPdfPath, pdfBytes);
+        string tempPdfPath = Path.Combine(persistentPath, "temp.pdf");
+        await File.WriteAllBytesAsync(tempPdfPath, pdfBytes);
         Debug.Log($"Temporary PDF saved at: {tempPdfPath}");
 
         // Get page count using iTextSharp
         _totalPageCount = GetPDFPageCount(tempPdfPath);
+        ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(0, _totalPageCount);
         Debug.Log($"Total Pages: {_totalPageCount}");
 
         if (_totalPageCount > 0)
         {
-            StartCoroutine(RenderAndLoadPDFPages(tempPdfPath));
+            await RenderAndLoadPDFPagesAsync(tempPdfPath, persistentPath);
         }
         else
         {
@@ -72,73 +78,81 @@ public class PDFViewerController : MonoBehaviour
         }
     }
 
-    private IEnumerator RenderAndLoadPDFPages(string pdfPath)
+    private async Task RenderAndLoadPDFPagesAsync(string pdfPath, string persistentPath)
     {
         Debug.Log("Starting PDF conversion...");
 
         // Output pattern for image files
-        string outputPattern = Path.Combine(Application.persistentDataPath, "output-%d.jpg");
-    
-        // Run the conversion synchronously (on the main thread, avoids thread issues)
-        ConvertPDF converter = new ConvertPDF();
-        converter.Convert(pdfPath, outputPattern, 1, _totalPageCount, "jpeg", 1063, 1375);
+        string outputPattern = Path.Combine(persistentPath, "output-%d.jpg");
+
+        // Run the conversion on a separate thread to avoid blocking the main thread
+        await Task.Run(() =>
+        {
+            ConvertPDF converter = new ConvertPDF();
+            converter.Convert(pdfPath, outputPattern, 1, _totalPageCount, "jpeg", 1063, 1375);
+        });
 
         Debug.Log("PDF conversion complete. Loading images...");
 
         // Load generated images one by one
         for (int i = 1; i <= _totalPageCount; i++)
         {
-            string imagePath = Path.Combine(Application.persistentDataPath, $"output-{i}.jpg");
+            string imagePath = Path.Combine(persistentPath, $"output-{i}.jpg");
 
             if (File.Exists(imagePath))
             {
-                Texture2D texture = LoadImageAsTexture2D(imagePath);
-                if (texture != null)
-                {
-                    pdfPages.Add(texture);
+                // Read the image data on a background thread
+                byte[] imageData = await File.ReadAllBytesAsync(imagePath);
+                
+                ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(i);
 
-                    // Instantiate the image in the layout container
-                    var imageObject = Instantiate(pdfImageTemplate, layoutContainer);
-                    var rawImage = imageObject.GetComponent<RawImage>();
-                    rawImage.texture = texture;
-                }
+                // Process the image creation and UI update on the main thread
+                await LoadImageOnMainThread(imageData, imagePath);
             }
             else
             {
                 Debug.LogError($"Image file not found: {imagePath}");
             }
-
-            // Yield to prevent blocking the main thread completely
-            yield return null;
         }
 
         container.SetActive(true);
+        ConstructBindings.Send_ProgressBarData_CloseProgressBar?.Invoke();
         Debug.Log("All PDF pages loaded.");
     }
 
-
-    private Texture2D LoadImageAsTexture2D(string imagePath)
+    private async Task LoadImageOnMainThread(byte[] imageData, string imagePath)
     {
+        await Task.Yield(); // Ensure this runs on the main thread
         try
         {
-            byte[] fileData = File.ReadAllBytes(imagePath);
             Texture2D texture = new Texture2D(2, 2, TextureFormat.RGB24, false);
-            if (texture.LoadImage(fileData, false)) // Load image without mipmaps
+            if (texture.LoadImage(imageData, false)) // Load image without mipmaps
             {
                 texture.Apply(false, true); // Compress and mark as non-readable
                 Debug.Log($"Image loaded: {imagePath}");
-                return texture;
+
+                pdfPages.Add(texture);
+                
+                // Instantiate the image in the layout container on the main thread
+                CreateImageObject(texture);
             }
             else
             {
                 Debug.LogError($"Failed to load image as texture: {imagePath}");
-                return null;
             }
         }
         catch (Exception e)
         {
-            Debug.LogError($"Error loading image file '{imagePath}': {e.Message}");
-            return null;
+            Debug.LogError($"Error loading image as texture: {e.Message}");
         }
+    }
+
+    private void CreateImageObject(Texture2D texture)
+    {
+        if (texture == null) return;
+
+        var imageObject = Instantiate(pdfImageTemplate, layoutContainer);
+        var rawImage = imageObject.GetComponent<RawImage>();
+        rawImage.texture = texture;
     }
 }
