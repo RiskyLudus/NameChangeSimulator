@@ -460,7 +460,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8597201056847986756, guid: 565fbbf53f520b04b82adbbd39a519cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1642,6 +1642,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 7298473337112110898, guid: 30dfd6f251282ee448ad42025256a195, type: 2}
+    - target: {fileID: 5082228538959138406, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5226342802388268888, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 204
@@ -1778,6 +1782,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8562572501881960612, guid: a1fd68f1c4def274cbd7419dc2987ee9, type: 3}
+    - target: {fileID: 7023233452580676751, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 221
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023233452580676751, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -15
+      objectReference: {fileID: 0}
     - target: {fileID: 7612924023453227640, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
       propertyPath: m_IsActive
       value: 1
