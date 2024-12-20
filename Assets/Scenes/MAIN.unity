@@ -1451,14 +1451,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue
       objectReference: {fileID: 0}
-    - target: {fileID: 5251976472745530678, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5395397762979273417, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
-      propertyPath: dropdownBox
-      value: 
-      objectReference: {fileID: 6863870288202265257}
     - target: {fileID: 6264159551128321219, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1540,8 +1532,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3328547364026744130, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
@@ -1659,27 +1650,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1814530260}
     m_Modifications:
-    - target: {fileID: 2164641626118089801, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
-      propertyPath: m_text
-      value: 'Made By:
-
-        Riza Resnick (she/they)
-
-        Ezra Kirsch (she/her)
-
-        Kelby
-        Martin (they/them)
-
-        Charlotte Denton (she/her)
-
-        Ace Luke
-        (she/her)
-
-        LavenderVA (she/her)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164641626118089801, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
-      propertyPath: m_fontSize
-      value: 20.3
+    - target: {fileID: 1700695124671249158, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -325
       objectReference: {fileID: 0}
     - target: {fileID: 4303376781819564880, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
       propertyPath: m_Pivot.x
@@ -1760,22 +1733,6 @@ PrefabInstance:
     - target: {fileID: 4303376781819564880, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6385202398065290722, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 285.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6385202398065290722, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 221.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 6385202398065290722, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -13
-      objectReference: {fileID: 0}
-    - target: {fileID: 6385202398065290722, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7843621709460030365, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
       propertyPath: m_Name
@@ -1883,17 +1840,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f146882455789f40a8f28509479a8d0, type: 3}
---- !u!114 &6863870288202265257 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3651467082809289615, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
-  m_PrefabInstance: {fileID: 51455773177567181}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 670a4931787c1db4eb1241922486c92f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
