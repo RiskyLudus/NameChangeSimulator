@@ -1,3 +1,4 @@
+using NameChangeSimulator.Shared;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,27 +9,25 @@ namespace NameChangeSimulator.Constructs.Conversation
         private static readonly int HoverOn = Animator.StringToHash("HoverOn");
         private static readonly int HoverOff = Animator.StringToHash("HoverOff");
         private static readonly int Click = Animator.StringToHash("Click");
-        
-        [SerializeField] private AudioSource onHoverAudioSource, offHoverAudioSource, onClickAudioSource;
         [SerializeField] private UnityEvent onClick;
         [SerializeField] private Animator animator;
 
         private void OnMouseEnter()
         {
             animator.SetTrigger(HoverOn);
-            onHoverAudioSource.Play();
+            AudioManager.Instance.PlayButtonEnter_SFX();
         }
 
         private void OnMouseExit()
         {
             animator.SetTrigger(HoverOff);
-            offHoverAudioSource.Play();
+            AudioManager.Instance.PlayButtonExit_SFX();
         }
 
         private void OnMouseDown()
         {
             animator.SetTrigger(Click);
-            onClickAudioSource.Play();
+            AudioManager.Instance.PlayUIConfirm_SFX();
             onClick?.Invoke();
         }
     }
