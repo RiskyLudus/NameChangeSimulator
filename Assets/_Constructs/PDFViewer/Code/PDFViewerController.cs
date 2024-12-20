@@ -16,6 +16,7 @@ public class PDFViewerController : MonoBehaviour
     [SerializeField] private GameObject pdfImageTemplate;
 
     private int _totalPageCount = 0;
+    private string _tempPDFPath;
 
     private void OnEnable()
     {
@@ -41,18 +42,18 @@ public class PDFViewerController : MonoBehaviour
         }
 
         // Write the PDF bytes to a temporary file
-        string tempPdfPath = Path.Combine(persistentPath, "temp.pdf");
-        await File.WriteAllBytesAsync(tempPdfPath, pdfBytes);
-        Debug.Log($"Temporary PDF saved at: {tempPdfPath}");
+        _tempPDFPath = Path.Combine(persistentPath, "temp.pdf");
+        await File.WriteAllBytesAsync(_tempPDFPath, pdfBytes);
+        Debug.Log($"Temporary PDF saved at: {_tempPDFPath}");
 
         // Get page count using iTextSharp
-        _totalPageCount = GetPDFPageCount(tempPdfPath);
+        _totalPageCount = GetPDFPageCount(_tempPDFPath);
         ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(0, _totalPageCount);
         Debug.Log($"Total Pages: {_totalPageCount}");
 
         if (_totalPageCount > 0)
         {
-            await RenderAndLoadPDFPagesAsync(tempPdfPath, persistentPath);
+            await RenderAndLoadPDFPagesAsync(_tempPDFPath, persistentPath);
         }
         else
         {
@@ -154,5 +155,18 @@ public class PDFViewerController : MonoBehaviour
         var imageObject = Instantiate(pdfImageTemplate, layoutContainer);
         var rawImage = imageObject.GetComponent<RawImage>();
         rawImage.texture = texture;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SavePDF();
+        }
+    }
+
+    public void SavePDF()
+    {
+        SaveFunctions.SaveOnWindows(_tempPDFPath);
     }
 }
