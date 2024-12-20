@@ -868,9 +868,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10fafc9913757574ea1435b1e3b31402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverAudioSource: {fileID: 0}
-  offHoverAudioSource: {fileID: 0}
-  onClickAudioSource: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
