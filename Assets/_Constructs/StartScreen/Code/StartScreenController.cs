@@ -22,6 +22,8 @@ namespace NameChangeSimulator.Constructs.StartScreen
 
         private Coroutine _co = null;
 
+        private bool isStarting = false;
+
         private void Start()
         {
             AudioManager.Instance.PlayNCS_Music();
@@ -37,7 +39,8 @@ namespace NameChangeSimulator.Constructs.StartScreen
 
         public void PlayOnExitSFX()
         {
-            AudioManager.Instance.PlayUICancel_SFX();
+            if (!isStarting)
+                AudioManager.Instance.PlayUICancel_SFX();
         }
 
     private void GenerateRandomFlavorText()
@@ -74,6 +77,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
         
         private IEnumerator StartGameIntro()
         {
+            isStarting = true;
             AudioManager.Instance.PlayStartSound_SFX();
             float t = 0.0f;
             Image image = startPanel.GetComponent<Image>();

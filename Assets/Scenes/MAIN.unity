@@ -1195,6 +1195,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2049599672758680703, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
   m_PrefabInstance: {fileID: 4879962825118320192}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1833636582 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 896023480104355294, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
+  m_PrefabInstance: {fileID: 4879962825118320192}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833636580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1833636585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,6 +1244,23 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: NameChangeSimulator.Constructs.StartScreen.StartScreenController,
             NameChangeSimulator.Constructs.StartScreen
           m_MethodName: PlayOnExitSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1814152069}
+          m_TargetAssemblyTypeName: NameChangeSimulator.Constructs.StartScreen.StartScreenController,
+            NameChangeSimulator.Constructs.StartScreen
+          m_MethodName: StartGame
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1459,6 +1487,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1814530260}
     m_Modifications:
+    - target: {fileID: 1677094083776377069, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3205268242030973409, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
       propertyPath: m_Name
       value: Dialogue
@@ -1541,6 +1573,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6264159551128321219, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8430093130607980574, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1662,6 +1698,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1814530260}
     m_Modifications:
+    - target: {fileID: 896023480104355294, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1700695124671249158, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -325
@@ -1754,6 +1794,10 @@ PrefabInstance:
       propertyPath: startPanel
       value: 
       objectReference: {fileID: 2095702517}
+    - target: {fileID: 5679902564965205395, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
+      propertyPath: startButton
+      value: 
+      objectReference: {fileID: 1833636582}
     - target: {fileID: 5679902564965205395, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
       propertyPath: startDelayTime
       value: 5
