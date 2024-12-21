@@ -40,7 +40,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
         public void PlayOnExitSFX()
         {
             if (!isStarting)
-                AudioManager.Instance.PlayUICancel_SFX();
+                AudioManager.Instance.PlayUIHoverExit_SFX();
         }
 
     private void GenerateRandomFlavorText()
@@ -79,6 +79,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
         {
             isStarting = true;
             AudioManager.Instance.PlayStartSound_SFX();
+            AudioManager.Instance.StopMusic();
             float t = 0.0f;
             Image image = startPanel.GetComponent<Image>();
             image.raycastTarget = true;
