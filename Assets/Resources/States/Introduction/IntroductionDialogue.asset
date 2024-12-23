@@ -93,7 +93,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   DialogueText: 1. All your data for this is local to your computer. We do not send
-    your data to anyone.
+    your data to anyone. Ever!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: 1336}
+  position: {x: -248, y: 1368}
   ports:
     keys:
     - Input
@@ -141,7 +141,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Ahhhhhh~ What a great name for you to pick!
+  DialogueText: Ahhh~ It's so beautiful! What a wonderful name you picked!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -189,7 +189,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Please select the state we will be filling out.
+  DialogueText: Next, please select the state whose form you'll be filling out.
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -365,8 +365,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: 2. Currently we only support Players over 18. If there is enough
-    support however, we may add the option for minors in the future.
+  DialogueText: 2. Currently, we only support Players over 18. If we get enough support,
+    however, we may change this in the future!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -463,7 +463,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 0
-  DialogueText: Hold on just a moment! I'll be right there!
+  DialogueText: Oh! Hold on just a moment! I'll be riiiiight there...
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -542,8 +542,8 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   DialogueText: 3. Our information on state forms is currently only set for 2024-2025.
-    If you are playing this in the future, hello! Please let us know if any of our
-    information is out of date.
+    If you are playing this in the future, then hello! Please let us know if any
+    of our information is out of date.
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -591,8 +591,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Before we begin though, there are three things to let you know before
-    we start...
+  DialogueText: Look, I know you're chomping at the bit to get started, but just
+    hold on a sec! There's 3 big things we need to go over first.
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Name: New Name Input
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: 1048}
+  position: {x: -248, y: 1080}
   ports:
     keys:
     - Input
@@ -640,7 +640,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Now let's see that awesome new name!
+  DialogueText: Anyway, puns about burning deadnames aside, let's see that fabulous
+    new name!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -767,8 +768,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: '*ahem* Apologies, I just tend to get excited to see deadnames burn
-    up.'
+  DialogueText: '*ahem* Apologies, watching deadnames get burnt to a crisp just FIRES
+    me up! '
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}

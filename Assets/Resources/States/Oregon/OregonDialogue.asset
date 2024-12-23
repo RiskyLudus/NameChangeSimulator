@@ -85,14 +85,15 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 9104511388327189199}
+        node: {fileID: -6030331047188066459}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Enter a Former Name (3)
+  DialogueText: (3 of 6) List any other names, if you've had them. If not, leave
+    this blank and keep going!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -227,7 +228,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:
-  - Off
+  - No
   - Yes
 --- !u!114 &-7874623585430634254
 MonoBehaviour:
@@ -276,7 +277,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Enter a Former Name (1)
+  DialogueText: Enter your former name.
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -355,7 +356,7 @@ MonoBehaviour:
       - fieldName: Output
         node: {fileID: -6015935852157025409}
         reroutePoints: []
-      - fieldName: Options 1
+      - fieldName: Options 0
         node: {fileID: -6589353945326074590}
         reroutePoints: []
       _direction: 0
@@ -412,9 +413,6 @@ MonoBehaviour:
       - fieldName: Output
         node: {fileID: -7620498514955507522}
         reroutePoints: []
-      - fieldName: Options 0
-        node: {fileID: -6589353945326074590}
-        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -462,7 +460,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:
-  - Off
+  - No
   - Yes
 --- !u!114 &-6589353945326074590
 MonoBehaviour:
@@ -521,7 +519,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: Input
-        node: {fileID: -7478159831886932904}
+        node: {fileID: -7620498514955507522}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -531,10 +529,7 @@ MonoBehaviour:
       _node: {fileID: -6589353945326074590}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: Input
-        node: {fileID: -7620498514955507522}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -545,7 +540,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:
-  - Off
+  - No
   - Yes
 --- !u!114 &-6030331047188066459
 MonoBehaviour:
@@ -560,7 +555,7 @@ MonoBehaviour:
   m_Name: Enter a Former Name (4)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2280, y: 1992}
+  position: {x: 1672, y: 1992}
   ports:
     keys:
     - Input
@@ -572,7 +567,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: 9104511388327189199}
+        node: {fileID: -8232973923272083625}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -584,14 +579,15 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -1021318969256904608}
+        node: {fileID: 9104511388327189199}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Enter a Former Name (4)
+  DialogueText: (4 of 6) List any other names, if you've had them. If not, leave
+    this blank and keep going!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -676,7 +672,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:
-  - Off
+  - No
   - Yes
 --- !u!114 &-4318118662876065259
 MonoBehaviour:
@@ -722,7 +718,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: What is your City, State, and Zip Code?
+  DialogueText: 'Now: what is your city, state, and zip code?'
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -804,7 +800,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:
-  - Off
+  - No
   - Yes
 --- !u!114 &-4198503505088122024
 MonoBehaviour:
@@ -898,7 +894,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: What is your Phone Number?
+  DialogueText: 'Great! Next: what''s your phone number? And I promise I won''t prank
+    call you...'
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -955,7 +952,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: What is your Street Address (only)
+  DialogueText: What is your street address? Don't include the city, state, or zip
+    code. We'll do that in a sec!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -1020,7 +1018,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -504, y: 248}
+  position: {x: -872, y: 232}
   ports:
     keys:
     - Input
@@ -1044,7 +1042,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 1301748460958256437}
+        node: {fileID: 5288519570457508582}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1069,7 +1067,7 @@ MonoBehaviour:
   m_Name: Enter a Former Name (6)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2808, y: 1992}
+  position: {x: 2552, y: 1992}
   ports:
     keys:
     - Input
@@ -1081,7 +1079,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: -6030331047188066459}
+        node: {fileID: 9104511388327189199}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1100,7 +1098,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Enter a Former Name (6)
+  DialogueText: (6 of 6) List any other names, if you've had them. If not, leave
+    this blank and keep going!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -1165,7 +1164,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -904, y: 248}
+  position: {x: -1272, y: 232}
   ports:
     keys:
     - Input
@@ -1249,6 +1248,7 @@ MonoBehaviour:
   - {fileID: -8215322052189868933}
   - {fileID: 8752289299363725083}
   - {fileID: -985301824976188241}
+  - {fileID: 5288519570457508582}
 --- !u!114 &97061848774190809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,7 +1293,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Enter a Former Name (2)
+  DialogueText: (2 of 6) Great, now list any other names, if you've had them. If
+    not, leave this blank and keep going!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
@@ -1322,7 +1323,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: -1143220440489700948}
+        node: {fileID: 5288519570457508582}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1465,7 +1466,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:
-  - Off
+  - No
   - Yes
 --- !u!114 &2120197859699329685
 MonoBehaviour:
@@ -1689,6 +1690,54 @@ MonoBehaviour:
   Options:
   - I am a participant in the Address Confidentiality Program under ORS 192.826
   - I am requesting a Change of Sex and I want the record to be sealed.
+--- !u!114 &5288519570457508582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -488, y: 232}
+  ports:
+    keys:
+    - Input
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 5288519570457508582}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1143220440489700948}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 5288519570457508582}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 1301748460958256437}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: Welp, without further ado, let's get this show rollin'!~
+  Keyword: 
+  Input: {fileID: 0}
+  Output: {fileID: 0}
 --- !u!114 &6667754576716536312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1970,7 +2019,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:
-  - Off
+  - No
   - Yes
 --- !u!114 &8373636747789299081
 MonoBehaviour:
@@ -2084,7 +2133,7 @@ MonoBehaviour:
   m_Name: Enter a Former Name (5)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1784, y: 1992}
+  position: {x: 2088, y: 1992}
   ports:
     keys:
     - Input
@@ -2096,7 +2145,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: -8232973923272083625}
+        node: {fileID: -6030331047188066459}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2108,14 +2157,15 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -6030331047188066459}
+        node: {fileID: -1021318969256904608}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Enter a Former Name (5)
+  DialogueText: (5 of 6) List any other names, if you've had them. If not, leave
+    this blank and keep going!
   Keyword: 
   Input: {fileID: 0}
   Output: {fileID: 0}
