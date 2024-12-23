@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_Name: Which COUNTY is this being filed?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: 200}
+  position: {x: 360, y: 104}
   ports:
     keys:
     - Input
@@ -1347,7 +1347,6 @@ MonoBehaviour:
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:
-  - '      '
   - BAKER
   - BENTON
   - CLACKAMAS
