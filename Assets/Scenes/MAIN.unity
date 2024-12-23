@@ -1706,6 +1706,28 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -325
       objectReference: {fileID: 0}
+    - target: {fileID: 2164641626118089801, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
+      propertyPath: m_text
+      value: 'Made By:
+
+        Riza Resnick (she/they)
+
+        Ezra Kirsch (she/her)
+
+        Kelby
+        "Aina" Martin (they/them)
+
+        Charlotte Denton (she/her)
+
+        Ace
+        Luke (she/her)
+
+        LavenderVA (she/her)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2164641626118089801, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
+      propertyPath: m_fontSize
+      value: 18.55
+      objectReference: {fileID: 0}
     - target: {fileID: 4303376781819564880, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1801,6 +1823,14 @@ PrefabInstance:
     - target: {fileID: 5679902564965205395, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
       propertyPath: startDelayTime
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385202398065290722, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 320.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385202398065290722, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200.41
       objectReference: {fileID: 0}
     - target: {fileID: 7843621709460030365, guid: 345c2e385688a2a4d8c9d92227b4cdf9, type: 3}
       propertyPath: m_Name
