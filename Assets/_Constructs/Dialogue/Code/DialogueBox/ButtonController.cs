@@ -21,7 +21,7 @@ namespace NameChangeSimulator.Constructs.Conversation
         private void OnMouseExit()
         {
             animator.SetTrigger(HoverOff);
-            AudioManager.Instance.PlayUICancel_SFX();
+            AudioManager.Instance.PlayUIHoverExit_SFX();
         }
 
         private void OnMouseDown()
