@@ -63,6 +63,8 @@ namespace NameChangeSimulator.Constructs.Dialogue
         public void GoToBack()
         {
             if (_currentNode == null) return;
+         
+            CloseAll();
             
             var previousNode = _currentNode.GetInputPort("Input").Connection.node;
 
@@ -72,7 +74,9 @@ namespace NameChangeSimulator.Constructs.Dialogue
                 // We then iterate to the previous node and try again.
                 if (dialogueNode.Keyword != string.Empty)
                 {
-                    _currentNode = dialogueNode;
+                    Debug.Log($"Going back to {previousNode.GetInputPort("OverrideInput").Connection.node.name}");
+                    previousNode = previousNode.GetInputPort("OverrideInput").Connection.node;
+                    _currentNode = previousNode as DialogueNode;
                     GoToBack();
                 }
                 else
@@ -234,6 +238,17 @@ namespace NameChangeSimulator.Constructs.Dialogue
                     Debug.LogError($"Unknown node type: {typeName}");
                     break;
             }
+        }
+
+        private void CloseAll()
+        {
+            dialogueBox.CloseDialogueBox();
+            deadNameInputBox.Close();
+            newNameInputBox.Close();
+            statePickerBox.Close();
+            inputBox.Close();
+            dropdownBox.Close();
+            choiceBox.Close();
         }
     }
 }

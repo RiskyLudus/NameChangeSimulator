@@ -11,7 +11,7 @@ public class InputNodeEditor : NodeEditor
         serializedObject.Update();
 
         InputNode node = target as InputNode;
-
+        NodeEditorGUILayout.PortField(new GUIContent("OverrideInput"), target.GetInputPort("OverrideInput"), GUILayout.MinWidth(0));
         // Display input port
         NodeEditorGUILayout.PortField(new GUIContent("Input"), target.GetInputPort("Input"), GUILayout.MinWidth(0));
         

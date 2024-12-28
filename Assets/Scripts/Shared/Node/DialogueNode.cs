@@ -11,6 +11,7 @@ public class DialogueNode : Node
     public string Keyword;
 
     // Define input and output ports
+    [Input(backingValue = ShowBackingValue.Never)] public DialogueNode OverrideInput;
     [Input(backingValue = ShowBackingValue.Never)] public DialogueNode Input;
     [Output(backingValue = ShowBackingValue.Never)] public DialogueNode Output;
 
