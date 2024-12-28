@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Anarchy.Shared;
 using iTextSharp.text.pdf;
 using NameChangeSimulator.Shared.Utils;
+using NameChangeSimulator.Shared;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -123,6 +124,7 @@ public class PDFViewerController : MonoBehaviour
 
     private async Task LoadImageOnMainThread(byte[] imageData, string imagePath)
     {
+        AudioManager.Instance.PlayForm_SFX();
         await Task.Yield(); // Ensure this runs on the main thread
         try
         {
