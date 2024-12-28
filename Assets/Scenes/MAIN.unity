@@ -919,12 +919,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7825183087509056759, guid: d4206093fb0d8af4ca57c4d333664ec9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 114.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825183087509056759, guid: d4206093fb0d8af4ca57c4d333664ec9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825183087509056759, guid: d4206093fb0d8af4ca57c4d333664ec9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -41
+      value: -39
       objectReference: {fileID: 0}
     - target: {fileID: 7825183087509056759, guid: d4206093fb0d8af4ca57c4d333664ec9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -38
+      value: -24
       objectReference: {fileID: 0}
     - target: {fileID: 8296202274498290691, guid: d4206093fb0d8af4ca57c4d333664ec9, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2121,6 +2129,34 @@ PrefabInstance:
     - target: {fileID: 3383964806069678523, guid: 9f146882455789f40a8f28509479a8d0, type: 3}
       propertyPath: m_Name
       value: ProgressBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781141553011841498, guid: 9f146882455789f40a8f28509479a8d0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781141553011841498, guid: 9f146882455789f40a8f28509479a8d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287885021845712946, guid: 9f146882455789f40a8f28509479a8d0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -366.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287885021845712946, guid: 9f146882455789f40a8f28509479a8d0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -24.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287885021845712946, guid: 9f146882455789f40a8f28509479a8d0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287885021845712946, guid: 9f146882455789f40a8f28509479a8d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 12.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446117460352979460, guid: 9f146882455789f40a8f28509479a8d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

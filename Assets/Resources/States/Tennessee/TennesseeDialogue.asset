@@ -57,7 +57,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: What is your NAME as written on your Birth Certificate?
+  DialogueText: What is your NAME as written on your birth certificate?
   Keyword: FullDeadName
   OverrideInput: {fileID: 0}
   Input: {fileID: 0}
@@ -116,7 +116,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: What is your Date of Birth?
+  DialogueText: What is your date of birth?
   Keyword: 
   OverrideInput: {fileID: 0}
   Input: {fileID: 0}
@@ -178,7 +178,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: What is your Address? Don't include the city, state or zip code!
+  DialogueText: What is your address? Don't include the city, state or zip code!
     We'll do that later.
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -242,7 +242,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   DialogueText: Why are you changing your name? List your REASON for embarking on
-    this.
+    this journey.
   Keyword: 
   OverrideInput: {fileID: 0}
   Input: {fileID: 0}
@@ -299,7 +299,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: Input
-        node: {fileID: -379015676911571181}
+        node: {fileID: 7344539993076122982}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
@@ -311,7 +311,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: Input
-        node: {fileID: 7344539993076122982}
+        node: {fileID: -379015676911571181}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
@@ -334,8 +334,8 @@ MonoBehaviour:
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:
-  - No
   - Yes
+  - No
 --- !u!114 &-3122222891582267273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: What is your NEW or REQUESTED Name?
+  DialogueText: What is your NEW or REQUESTED name?
   Keyword: FullNewName
   OverrideInput: {fileID: 0}
   Input: {fileID: 0}
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 344, y: 2344}
+  position: {x: 600, y: 2504}
   ports:
     keys:
     - Input
@@ -618,7 +618,7 @@ MonoBehaviour:
       - fieldName: Output
         node: {fileID: 7344539993076122982}
         reroutePoints: []
-      - fieldName: Options 0
+      - fieldName: Options 1
         node: {fileID: -6155845871951307423}
         reroutePoints: []
       _direction: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: 'PLACEHOLDER: If you''re seeing me! Someone screwed up...or the flow
+  DialogueText: 'PLACEHOLDER: If you''re seeing me, someone screwed up...or the flow
     isn''t finished yet!'
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Name: 'If you have been convicted of a Felony, describe:'
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -40, y: 2680}
+  position: {x: -24, y: 2248}
   ports:
     keys:
     - Input
@@ -899,7 +899,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Options 1
+      - fieldName: Options 0
         node: {fileID: -6155845871951307423}
         reroutePoints: []
       _direction: 0
@@ -991,7 +991,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: What is your CURRENT Name?
+  DialogueText: What is your CURRENT name?
   Keyword: FullDeadName
   OverrideInput: {fileID: 0}
   Input: {fileID: 0}
@@ -1109,8 +1109,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  DialogueText: Which COUNTY is this being filed? This may or may not be different
-    from my earlier question, which is where you were BORN!
+  DialogueText: Which COUNTY is this form being filed for? This may or may not be
+    different from my earlier question, which is where you were BORN!
   Keyword: 
   OverrideInput: {fileID: 0}
   Input: {fileID: 0}
