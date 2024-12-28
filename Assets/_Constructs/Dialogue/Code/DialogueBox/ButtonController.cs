@@ -30,7 +30,7 @@ namespace NameChangeSimulator.Constructs.Conversation
         private void OnMouseDown()
         {
             animator.SetTrigger(Click);
-            if (input.backButton)
+            if (backButton)
             AudioManager.Instance.PlayUICancel_SFX();
             else
             {            
