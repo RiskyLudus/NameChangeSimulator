@@ -1,6 +1,8 @@
+using NameChangeSimulator.Shared;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace NameChangeSimulator.Constructs.Dialogue.DropdownBox
 {
@@ -21,6 +23,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.DropdownBox
 
         public void SubmitOption()
         {
+            AudioManager.Instance.PlayUIConfirm_SFX();
             dialogueController.GoToNext(dropdownText.text);
             container.SetActive(false);
         }

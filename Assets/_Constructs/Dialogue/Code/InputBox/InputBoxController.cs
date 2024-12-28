@@ -1,6 +1,8 @@
+using NameChangeSimulator.Shared;
 using Anarchy.Shared;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace NameChangeSimulator.Constructs.Dialogue.InputBox
 {
@@ -20,6 +22,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         public void SubmitInput()
         {
             container.SetActive(false);
+            AudioManager.Instance.PlayUIConfirm_SFX();
             dialogueController.GoToNext(inputField.text);
         }
 

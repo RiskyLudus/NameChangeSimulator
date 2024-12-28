@@ -1,8 +1,10 @@
+using NameChangeSimulator.Shared;
 using System;
 using Anarchy.Shared;
 using NameChangeSimulator.Constructs.Dialogue;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace NameChangeSimulator.Constructs.Dialogue.ChoiceBox
 {
@@ -30,6 +32,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.ChoiceBox
         }
         public void Submit(string optionSelected)
         {
+            AudioManager.Instance.PlayUIConfirm_SFX();
             container.SetActive(false);
             dialogueController.GoToNext(optionSelected);
         }

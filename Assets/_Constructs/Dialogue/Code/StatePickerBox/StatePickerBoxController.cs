@@ -1,6 +1,7 @@
 using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace NameChangeSimulator.Constructs.Dialogue.StatePickerBox
 {
@@ -25,8 +26,19 @@ namespace NameChangeSimulator.Constructs.Dialogue.StatePickerBox
             container.SetActive(true);
         }
 
+         private void OnMouseEnter()
+        {
+            AudioManager.Instance.PlayUIHover_SFX();
+        }
+
+        private void OnMouseExit()
+        {
+            AudioManager.Instance.PlayUIHoverExit_SFX();
+        }
+
         public void SubmitStatePick()
         {
+            AudioManager.Instance.PlayUIConfirm_SFX();
             AudioManager.Instance.PlayCloseWindow_SFX();
             dialogueController.StateToLoad = dropdownText.text;
             dialogueController.GoToNext();

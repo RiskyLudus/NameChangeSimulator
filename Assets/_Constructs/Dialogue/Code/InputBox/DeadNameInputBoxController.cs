@@ -1,5 +1,7 @@
+using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace NameChangeSimulator.Constructs.Dialogue.InputBox
 {
@@ -20,6 +22,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         
         public void SubmitInput()
         {
+            AudioManager.Instance.PlayUIConfirm_SFX();
             container.SetActive(false);
             var fullDeadName = $"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}";
             dialogueController.GoToNext(fullDeadName);
