@@ -284,9 +284,6 @@ MonoBehaviour:
   conversationPromptText: {fileID: 6674629558120651250}
   backButton: {fileID: 5954912510509618776}
   nextButton: {fileID: 8477703921340435041}
-  showWindowSFX: {fileID: 8300000, guid: 2b85e3f2f92ba2d459e7773188667bf3, type: 3}
-  closeWindowSFX: {fileID: 8300000, guid: 220cca26e5c25f8419d5045c16713a9d, type: 3}
-  textBlipSFX: {fileID: 8300000, guid: fe7713efb313e6e44820341bd61315d6, type: 3}
 --- !u!1 &969603824173249273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,9 +1594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10fafc9913757574ea1435b1e3b31402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverAudioSource: {fileID: 5069774028656532501}
-  offHoverAudioSource: {fileID: 7534581418319861525}
-  onClickAudioSource: {fileID: 6135493607546685735}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -1617,6 +1611,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   animator: {fileID: 6706748384382317764}
+  buttonType: 0
 --- !u!61 &312988002019337405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2273,7 +2268,7 @@ SpriteRenderer:
   m_Size: {x: 7.6, y: 2.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8477703921340435041
@@ -2355,9 +2350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10fafc9913757574ea1435b1e3b31402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHoverAudioSource: {fileID: 114823642083760317}
-  offHoverAudioSource: {fileID: 8911651948829169881}
-  onClickAudioSource: {fileID: 6827789817314142895}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -2375,6 +2367,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   animator: {fileID: 6926035035977592309}
+  buttonType: 1
 --- !u!61 &5761705264646952492
 BoxCollider2D:
   m_ObjectHideFlags: 0

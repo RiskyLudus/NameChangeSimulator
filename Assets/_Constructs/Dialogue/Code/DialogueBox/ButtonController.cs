@@ -12,8 +12,7 @@ namespace NameChangeSimulator.Constructs.Conversation
         private static readonly int Click = Animator.StringToHash("Click");
         [SerializeField] private UnityEvent onClick;
         [SerializeField] private Animator animator;
-        [SerializeField] private Button nextButton;
-        [SerializeField] private Button backButton;
+        [SerializeField] private ButtonSoundType buttonType = ButtonSoundType.Cancel;
 
         private void OnMouseEnter()
         {
@@ -30,14 +29,28 @@ namespace NameChangeSimulator.Constructs.Conversation
         private void OnMouseDown()
         {
             animator.SetTrigger(Click);
-            if (backButton)
-            AudioManager.Instance.PlayUICancel_SFX();
-            else
-            {            
-                AudioManager.Instance.PlayUIConfirm_SFX();
+
+            switch (buttonType)
+            {
+                case ButtonSoundType.Cancel:
+                    AudioManager.Instance.PlayUICancel_SFX();
+                    break;
+                case ButtonSoundType.Confirm:
+                    AudioManager.Instance.PlayUIConfirm_SFX();
+                    break;
+                default:
+                    AudioManager.Instance.PlayUICancel_SFX();
+                    break;
             }
+            
             onClick?.Invoke();
 
         }
+    }
+
+    public enum ButtonSoundType
+    {
+        Cancel,
+        Confirm,
     }
 }
