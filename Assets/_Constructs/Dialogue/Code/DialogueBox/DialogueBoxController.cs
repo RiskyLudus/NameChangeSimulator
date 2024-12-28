@@ -81,11 +81,16 @@ namespace NameChangeSimulator.Constructs.Dialogue.DialogueBox
             
             WaitForSeconds wait = new WaitForSeconds(scollSpeed);
             var textChars = textToScroll.ToCharArray();
-
+            bool playSound = false;
+            
             foreach (var character in textChars)
             {
                 conversationPromptText.text += character;
-                AudioManager.Instance.PlayTextBlip_SFX();
+                playSound = !playSound;
+                if (playSound)
+                {
+                    AudioManager.Instance.PlayTextBlip_SFX();
+                }
                 yield return wait;
             }
 
