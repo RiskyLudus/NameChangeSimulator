@@ -1,6 +1,7 @@
 using NameChangeSimulator.Shared;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace NameChangeSimulator.Constructs.Conversation
 {
@@ -11,6 +12,8 @@ namespace NameChangeSimulator.Constructs.Conversation
         private static readonly int Click = Animator.StringToHash("Click");
         [SerializeField] private UnityEvent onClick;
         [SerializeField] private Animator animator;
+        [SerializeField] private Button nextButton;
+        [SerializeField] private Button backButton;
 
         private void OnMouseEnter()
         {
@@ -27,8 +30,14 @@ namespace NameChangeSimulator.Constructs.Conversation
         private void OnMouseDown()
         {
             animator.SetTrigger(Click);
-            AudioManager.Instance.PlayUIConfirm_SFX();
+            if (input.backButton)
+            AudioManager.Instance.PlayUICancel_SFX();
+            else
+            {            
+                AudioManager.Instance.PlayUIConfirm_SFX();
+            }
             onClick?.Invoke();
+
         }
     }
 }
