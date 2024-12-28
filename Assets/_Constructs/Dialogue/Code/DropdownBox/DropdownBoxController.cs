@@ -24,5 +24,10 @@ namespace NameChangeSimulator.Constructs.Dialogue.DropdownBox
             dialogueController.GoToNext(dropdownText.text);
             container.SetActive(false);
         }
+
+        public void Close()
+        {
+            container.SetActive(false);
+        }
     }
 }

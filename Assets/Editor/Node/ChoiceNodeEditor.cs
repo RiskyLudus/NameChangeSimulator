@@ -16,7 +16,7 @@ public class ChoiceNodeEditor : NodeEditor
         serializedObject.Update();
 
         ChoiceNode node = target as ChoiceNode;
-        
+        NodeEditorGUILayout.PortField(new GUIContent("OverrideInput"), target.GetInputPort("OverrideInput"), GUILayout.MinWidth(0));
         // Explicitly draw input port from base class
         var inputPort = target.GetInputPort("Input");
         if (inputPort != null)

@@ -18,6 +18,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: -8639638385069801238}
@@ -43,9 +44,22 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -8639638385069801238}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -527860821828737474}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: What is your NAME as written on your Birth Certificate?
   Keyword: FullDeadName
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-8598446456710127884
@@ -66,6 +80,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: -8598446456710127884}
@@ -91,9 +106,19 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -8598446456710127884}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: What is your Date of Birth?
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-7861458267915267146
@@ -114,6 +139,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: -7861458267915267146}
@@ -139,10 +165,23 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -7861458267915267146}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 3301989401581751763}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: What is your Address? Don't include the city, state or zip code!
     We'll do that later.
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-6828929931701385988
@@ -163,6 +202,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: -6828929931701385988}
@@ -188,10 +228,23 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -6828929931701385988}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1778081205401984700}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: Why are you changing your name? List your REASON for embarking on
     this.
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-6155845871951307423
@@ -214,6 +267,7 @@ MonoBehaviour:
     - Output
     - Options 0
     - Options 1
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: -6155845871951307423}
@@ -263,10 +317,20 @@ MonoBehaviour:
       _connectionType: 1
       _typeConstraint: 0
       _dynamic: 1
+    - _fieldName: OverrideInput
+      _node: {fileID: -6155845871951307423}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: Sorry to ask, but I have to -- If you have been convicted of a felony,
     describe it. If not, leave this blank.
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:
@@ -290,6 +354,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: -3122222891582267273}
@@ -315,9 +380,22 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -3122222891582267273}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1778081205401984700}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: What is your NEW or REQUESTED Name?
   Keyword: FullNewName
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-1778081205401984700
@@ -338,6 +416,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: -1778081205401984700}
@@ -359,13 +438,32 @@ MonoBehaviour:
       - fieldName: Input
         node: {fileID: -3122222891582267273}
         reroutePoints: []
+      - fieldName: OverrideInput
+        node: {fileID: -3122222891582267273}
+        reroutePoints: []
+      - fieldName: OverrideInput
+        node: {fileID: -6828929931701385988}
+        reroutePoints: []
       _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -1778081205401984700}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -527860821828737474}
+        reroutePoints: []
+      _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
   DialogueText: What STATE were you born in?
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-1236592588090712824
@@ -386,6 +484,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: -1236592588090712824}
@@ -411,9 +510,19 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -1236592588090712824}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: Of what country are you a citizen of?
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-527860821828737474
@@ -434,6 +543,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: -527860821828737474}
@@ -455,13 +565,29 @@ MonoBehaviour:
       - fieldName: Input
         node: {fileID: -8639638385069801238}
         reroutePoints: []
+      - fieldName: OverrideInput
+        node: {fileID: -8639638385069801238}
+        reroutePoints: []
+      - fieldName: OverrideInput
+        node: {fileID: -1778081205401984700}
+        reroutePoints: []
       _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -527860821828737474}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
   DialogueText: What COUNTY (not country) were you born in?
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-379015676911571181
@@ -482,6 +608,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: -379015676911571181}
@@ -510,10 +637,20 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -379015676911571181}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: 'PLACEHOLDER: If you''re seeing me! Someone screwed up...or the flow
     isn''t finished yet!'
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &11400000
@@ -565,6 +702,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: 3301989401581751763}
@@ -586,7 +724,22 @@ MonoBehaviour:
       - fieldName: Input
         node: {fileID: 7607091641319571546}
         reroutePoints: []
+      - fieldName: OverrideInput
+        node: {fileID: 7607091641319571546}
+        reroutePoints: []
+      - fieldName: OverrideInput
+        node: {fileID: -7861458267915267146}
+        reroutePoints: []
       _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 3301989401581751763}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
@@ -594,6 +747,7 @@ MonoBehaviour:
   DialogueText: Tennessee? I see! Alright, without further ado, let's get started
     on changing your name.
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &3767823199982830644
@@ -614,6 +768,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: 3767823199982830644}
@@ -639,9 +794,19 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 3767823199982830644}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: What CITY were you born in?
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &5006371145316571203
@@ -727,6 +892,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: 7344539993076122982}
@@ -752,10 +918,20 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 7344539993076122982}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: I know it's a sensitive subject, but try to tell me a bit about what
     happened. This is strictly required by the form, I'm sorry...
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &7607091641319571546
@@ -776,6 +952,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: 7607091641319571546}
@@ -801,9 +978,22 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 7607091641319571546}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 3301989401581751763}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: What is your CURRENT Name?
   Keyword: FullDeadName
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &8473180190780473511
@@ -824,6 +1014,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: 8473180190780473511}
@@ -849,9 +1040,19 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 8473180190780473511}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: If you have any former names or aliases - what are they?
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &9173295657495436073
@@ -872,6 +1073,7 @@ MonoBehaviour:
     keys:
     - Input
     - Output
+    - OverrideInput
     values:
     - _fieldName: Input
       _node: {fileID: 9173295657495436073}
@@ -897,10 +1099,20 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 9173295657495436073}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   SpriteType: 1
   DialogueText: Which COUNTY is this being filed? This may or may not be different
     from my earlier question, which is where you were BORN!
   Keyword: 
+  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
   Output: {fileID: 0}
   Options:

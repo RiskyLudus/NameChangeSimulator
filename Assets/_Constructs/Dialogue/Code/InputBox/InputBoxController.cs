@@ -22,5 +22,10 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             container.SetActive(false);
             dialogueController.GoToNext(inputField.text);
         }
+
+        public void Close()
+        {
+            container.SetActive(false);
+        }
     }
 }

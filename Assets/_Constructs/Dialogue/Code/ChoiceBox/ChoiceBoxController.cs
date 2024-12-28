@@ -33,5 +33,10 @@ namespace NameChangeSimulator.Constructs.Dialogue.ChoiceBox
             container.SetActive(false);
             dialogueController.GoToNext(optionSelected);
         }
+
+        public void Close()
+        {
+            container.SetActive(false);
+        }
     }
 }

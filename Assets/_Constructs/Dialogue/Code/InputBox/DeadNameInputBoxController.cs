@@ -24,5 +24,10 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             var fullDeadName = $"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}";
             dialogueController.GoToNext(fullDeadName);
         }
+
+        public void Close()
+        {
+            container.SetActive(false);
+        }
     }
 }
