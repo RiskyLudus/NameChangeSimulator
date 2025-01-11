@@ -27,6 +27,7 @@ namespace NameChangeSimulator.Shared
         [SerializeField] private AudioClip closeWindowSound;
         [SerializeField] private AudioClip successSound;
         [SerializeField] private AudioClip formSound;
+        [SerializeField] private AudioClip burnSound;
         [SerializeField] private AudioClip uiCancelSound;
         [SerializeField] private AudioClip uiConfirmSound;
         [SerializeField] private AudioClip uiHoverSound;
@@ -147,6 +148,7 @@ namespace NameChangeSimulator.Shared
         public void PlayCloseWindow_SFX() => PlaySfx(closeWindowSound);
         public void PlaySuccess_SFX() => PlaySfx(successSound);
         public void PlayForm_SFX() => PlaySfx(formSound);
+        public void PlayBurn_SFX() => PlaySfx(burnSound);
         public void PlayUICancel_SFX() => PlaySfx(uiCancelSound);
         public void PlayUIConfirm_SFX() => PlaySfx(uiConfirmSound);
         public void PlayUIHover_SFX() => PlaySfx(uiHoverSound);
