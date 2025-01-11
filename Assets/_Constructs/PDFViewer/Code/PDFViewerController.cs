@@ -181,7 +181,30 @@ public class PDFViewerController : MonoBehaviour
 
     public void Save()
     {
-        SaveFunctions.SaveOnWindows(_tempPDFPath);
+        try
+        {
+            // Get the path to the desktop (works on Windows, Mac, etc.)
+            string desktopPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop);
+
+            // Decide on a filename for the saved PDF
+            string newFileName = "NameChangeForm.pdf";
+            string newFilePath = Path.Combine(desktopPath, newFileName);
+
+            // Make sure we actually have a PDF to save
+            if (!File.Exists(_tempPDFPath))
+            {
+                Debug.LogError("No PDF file found at _tempPDFPath to save!");
+                return;
+            }
+
+            // Copy the file to Desktop, overwriting if the file already exists
+            File.Copy(_tempPDFPath, newFilePath, true);
+            Debug.Log($"PDF saved to Desktop: {newFilePath}");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Failed to save PDF to Desktop: {e.Message}");
+        }
     }
 
     public void Redo()
