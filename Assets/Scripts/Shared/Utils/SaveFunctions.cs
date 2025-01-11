@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.IO;
-using System.Windows.Forms; // Requires System.Windows.Forms reference
-using Application = System.Windows.Forms.Application;
+using System.Windows.Forms;
 
 namespace NameChangeSimulator.Shared.Utils
 {
@@ -15,7 +14,7 @@ namespace NameChangeSimulator.Shared.Utils
                 Debug.LogError($"File not found at path: {filePathOfObjectToSave}");
                 return;
             }
-
+            
             // Initialize SaveFileDialog
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {

@@ -43,7 +43,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
                 AudioManager.Instance.PlayUIHoverExit_SFX();
         }
 
-    private void GenerateRandomFlavorText()
+        public void GenerateRandomFlavorText()
         {
             int rand = Random.Range(0, startScreenData.flavorTextStrings.Length - 1);
             flavorText.text = startScreenData.flavorTextStrings[rand];

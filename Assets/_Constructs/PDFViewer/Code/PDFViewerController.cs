@@ -13,11 +13,11 @@ public class PDFViewerController : MonoBehaviour
 {
     public List<Texture2D> pdfPages = new List<Texture2D>(); // Store PDF pages as Texture2D
     [SerializeField] private GameObject container;
-    [SerializeField] private Transform layoutContainer;
-    [SerializeField] private GameObject pdfImageTemplate;
+    [SerializeField] private RawImage prevPageImage, nextPageImage, mainPageImage;
 
     private int _totalPageCount = 0;
     private string _tempPDFPath;
+    private int _currentPage = 0;
 
     private void OnEnable()
     {
@@ -117,9 +117,41 @@ public class PDFViewerController : MonoBehaviour
             }
         }
 
+        _currentPage = 0;
+        LoadCarousel();
+        
         container.SetActive(true);
         ConstructBindings.Send_ProgressBarData_CloseProgressBar?.Invoke();
         Debug.Log("All PDF pages loaded.");
+    }
+
+    private void LoadCarousel()
+    {
+        if (_currentPage == pdfPages.Count)
+        {
+            _currentPage = 0;
+            
+        } else if (_currentPage < 0)
+        {
+            _currentPage = pdfPages.Count - 1;
+        }
+        
+        int nextPage = _currentPage + 1;
+        if (nextPage >= pdfPages.Count)
+        {
+            nextPage = 0;
+        }
+        
+        int previousPage = _currentPage - 1;
+        if (previousPage < 0)
+        {
+            previousPage = pdfPages.Count - 1;
+        }
+        
+        
+        prevPageImage.texture = pdfPages[previousPage];
+        nextPageImage.texture = pdfPages[nextPage];
+        mainPageImage.texture = pdfPages[_currentPage];
     }
 
     private async Task LoadImageOnMainThread(byte[] imageData, string imagePath)
@@ -135,9 +167,6 @@ public class PDFViewerController : MonoBehaviour
                 Debug.Log($"Image loaded: {imagePath}");
 
                 pdfPages.Add(texture);
-                
-                // Instantiate the image in the layout container on the main thread
-                CreateImageObject(texture);
             }
             else
             {
@@ -150,25 +179,25 @@ public class PDFViewerController : MonoBehaviour
         }
     }
 
-    private void CreateImageObject(Texture2D texture)
-    {
-        if (texture == null) return;
-
-        var imageObject = Instantiate(pdfImageTemplate, layoutContainer);
-        var rawImage = imageObject.GetComponent<RawImage>();
-        rawImage.texture = texture;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SavePDF();
-        }
-    }
-
-    public void SavePDF()
+    public void Save()
     {
         SaveFunctions.SaveOnWindows(_tempPDFPath);
+    }
+
+    public void Redo()
+    {
+        
+    }
+
+    public void NextPage()
+    {
+        _currentPage++;
+        LoadCarousel();
+    }
+
+    public void PreviousPage()
+    {
+        _currentPage--;
+        LoadCarousel();
     }
 }
