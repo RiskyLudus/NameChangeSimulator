@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9132399373240868625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 792, y: 2536}
+  ports:
+    keys:
+    - OverrideInput
+    - Input
+    - Output
+    values:
+    - _fieldName: OverrideInput
+      _node: {fileID: -9132399373240868625}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: -9132399373240868625}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 5774349558834199823}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -9132399373240868625}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 5006371145316571203}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: Presto! Here's your Tennessee Name Change forms! If anything doesn't
+    look right, you can go back and re-enter details, or simply try again.
+  Keyword: 
+  OverrideInput: {fileID: 0}
+  Input: {fileID: 0}
+  Output: {fileID: 0}
 --- !u!114 &-8639638385069801238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +371,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: Input
-        node: {fileID: -379015676911571181}
+        node: {fileID: 5774349558834199823}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
@@ -603,7 +663,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 600, y: 2504}
+  position: {x: 856, y: 1896}
   ports:
     keys:
     - Input
@@ -614,13 +674,7 @@ MonoBehaviour:
       _node: {fileID: -379015676911571181}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: 7344539993076122982}
-        reroutePoints: []
-      - fieldName: Options 1
-        node: {fileID: -6155845871951307423}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -629,10 +683,7 @@ MonoBehaviour:
       _node: {fileID: -379015676911571181}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 5006371145316571203}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -684,6 +735,8 @@ MonoBehaviour:
   - {fileID: 5006371145316571203}
   - {fileID: 3301989401581751763}
   - {fileID: -379015676911571181}
+  - {fileID: 5774349558834199823}
+  - {fileID: -9132399373240868625}
 --- !u!114 &3301989401581751763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,7 +875,7 @@ MonoBehaviour:
   m_Name: EndNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1208, y: 2584}
+  position: {x: 1304, y: 2728}
   ports:
     keys:
     - Input
@@ -836,13 +889,76 @@ MonoBehaviour:
         node: {fileID: -6155845871951307423}
         reroutePoints: []
       - fieldName: Output
-        node: {fileID: -379015676911571181}
+        node: {fileID: -9132399373240868625}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   Input: {fileID: 0}
+--- !u!114 &5774349558834199823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 344, y: 2616}
+  ports:
+    keys:
+    - OverrideInput
+    - Input
+    - Output
+    values:
+    - _fieldName: OverrideInput
+      _node: {fileID: 5774349558834199823}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: 5774349558834199823}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 7344539993076122982}
+        reroutePoints: []
+      - fieldName: Options 1
+        node: {fileID: -6155845871951307423}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 5774349558834199823}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -9132399373240868625}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  DialogueText: Okay! That should be everything! Now to just put this information
+    in and...
+  Keyword: 
+  OverrideInput: {fileID: 0}
+  Input: {fileID: 0}
+  Output: {fileID: 0}
 --- !u!114 &6024860079011940064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,7 +1003,7 @@ MonoBehaviour:
   m_Name: 'If you have been convicted of a Felony, describe:'
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -24, y: 2248}
+  position: {x: -40, y: 2200}
   ports:
     keys:
     - Input
@@ -912,7 +1028,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -379015676911571181}
+        node: {fileID: 5774349558834199823}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
