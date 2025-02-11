@@ -20,7 +20,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
         private string _deadFirstName, _deadMiddleName, _deadLastName;
         
         
-        private string _newFullName => $"{_newFirstName} {_newMiddleName} {_newLastName}";
+        private string _fullNewName => $"{_newFirstName} {_newMiddleName} {_newLastName}";
         private string _newFirstName, _newMiddleName, _newLastName;
         
         private void OnEnable()
@@ -52,12 +52,12 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
             
             // Set Dead Name Fields
             _fieldData.SetOverrideValue("FullDeadName", _fullDeadName);
-            _fieldData.SetOverrideValue("FirstDeadName", _deadFirstName);
-            _fieldData.SetOverrideValue("MiddleDeadName", _deadMiddleName);
-            _fieldData.SetOverrideValue("LastDeadName", _deadLastName);
+            _fieldData.SetOverrideValue("DeadFirstName", _deadFirstName);
+            _fieldData.SetOverrideValue("DeadMiddleName", _deadMiddleName);
+            _fieldData.SetOverrideValue("DeadLastName", _deadLastName);
             
             // Set New Name Fields
-            _fieldData.SetOverrideValue("NewFullName", _newFullName);
+            _fieldData.SetOverrideValue("FullNewName", _fullNewName);
             _fieldData.SetOverrideValue("NewFirstName", _newFirstName);
             _fieldData.SetOverrideValue("NewMiddleName", _newMiddleName);
             _fieldData.SetOverrideValue("NewLastName", _newLastName);
