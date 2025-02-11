@@ -16,6 +16,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         {
             Debug.Log("Showing input window");
             inputField.text = string.Empty;
+                inputField.characterLimit = 32;
             container.SetActive(true);
         }
         

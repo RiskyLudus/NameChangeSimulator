@@ -2,6 +2,7 @@ using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace NameChangeSimulator.Constructs.Dialogue.InputBox
 {
@@ -13,10 +14,14 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         
         public void DisplayNewNameInputWindow()
         {
+            // I hate doing individual char limits, but if you have a better idea, I'm all ears. -Ai
             Debug.Log("Showing input window");
             firstNameInputField.text = string.Empty;
+                firstNameInputField.characterLimit = 16;
             middleNameInputField.text = string.Empty;
+                middleNameInputField.characterLimit = 16;
             lastNameInputField.text = string.Empty;
+                lastNameInputField.characterLimit = 16;
             container.SetActive(true);
         }
         
