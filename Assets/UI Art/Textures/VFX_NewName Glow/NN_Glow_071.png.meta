@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 94b206bdb24dc954b85b02ca53eac59c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6330379848105609753
+    second: NN_Glow_071_0
+  - first:
+      213: -2709087704501156398
+    second: NN_Glow_071_1
+  - first:
+      213: 8154019223897896725
+    second: NN_Glow_071_2
+  - first:
+      213: 2691406630529725855
+    second: NN_Glow_071_3
+  - first:
+      213: 733589279493828962
+    second: NN_Glow_071_4
+  - first:
+      213: -7972280110016916440
+    second: NN_Glow_071_5
+  - first:
+      213: 8523540687968454074
+    second: NN_Glow_071_6
+  - first:
+      213: 6899247224248294600
+    second: NN_Glow_071_7
+  - first:
+      213: 7220623628119295778
+    second: NN_Glow_071_8
+  - first:
+      213: -8643782142652327892
+    second: NN_Glow_071_9
+  - first:
+      213: -3060441024186249287
+    second: NN_Glow_071_10
+  - first:
+      213: -8894557174790223995
+    second: NN_Glow_071_11
+  - first:
+      213: 5279275632578121852
+    second: NN_Glow_071_12
+  - first:
+      213: 7227304555597932096
+    second: NN_Glow_071_13
+  - first:
+      213: -6415245312011778941
+    second: NN_Glow_071_14
+  - first:
+      213: -313972617634312575
+    second: NN_Glow_071_15
+  - first:
+      213: 3112315366293125188
+    second: NN_Glow_071_16
+  - first:
+      213: 5718771217880860210
+    second: NN_Glow_071_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NN_Glow_071_0
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 784
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a40ab9ee60ad750800000000000000
+      internalID: 6330379848105609753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_1
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 792
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d584db0613676ad0800000000000000
+      internalID: -2709087704501156398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 518
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517f3244845e82170800000000000000
+      internalID: 8154019223897896725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_3
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 545
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95fade121cc95520800000000000000
+      internalID: 2691406630529725855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_4
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 320
+        width: 1047
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261b34f109b3e2a00800000000000000
+      internalID: 733589279493828962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_5
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 556
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82497889a75cc5190800000000000000
+      internalID: -7972280110016916440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_6
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 529
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab5c2f69813b94670800000000000000
+      internalID: 8523540687968454074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_7
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 482
+        width: 78
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc5be2fbcc0fbf50800000000000000
+      internalID: 6899247224248294600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_8
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 494
+        width: 57
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227c7daeeeec43460800000000000000
+      internalID: 7220623628119295778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_9
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 422
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28d75f10fd1b0880800000000000000
+      internalID: -8643782142652327892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_10
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 426
+        width: 64
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf88597a112785d0800000000000000
+      internalID: -3060441024186249287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_11
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 406
+        width: 53
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5870a3aff5f209480800000000000000
+      internalID: -8894557174790223995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_12
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 435
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70d13f8731c34940800000000000000
+      internalID: 5279275632578121852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_13
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 430
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0462aff833b8c4460800000000000000
+      internalID: 7227304555597932096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_14
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 391
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3844c8ec06878f6a0800000000000000
+      internalID: -6415245312011778941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_15
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 343
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e05b8519b84abf0800000000000000
+      internalID: -313972617634312575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_16
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 189
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44834ecf55a213b20800000000000000
+      internalID: 3112315366293125188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NN_Glow_071_17
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 205
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23644819f182d5f40800000000000000
+      internalID: 5718771217880860210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      NN_Glow_071_0: 6330379848105609753
+      NN_Glow_071_1: -2709087704501156398
+      NN_Glow_071_10: -3060441024186249287
+      NN_Glow_071_11: -8894557174790223995
+      NN_Glow_071_12: 5279275632578121852
+      NN_Glow_071_13: 7227304555597932096
+      NN_Glow_071_14: -6415245312011778941
+      NN_Glow_071_15: -313972617634312575
+      NN_Glow_071_16: 3112315366293125188
+      NN_Glow_071_17: 5718771217880860210
+      NN_Glow_071_2: 8154019223897896725
+      NN_Glow_071_3: 2691406630529725855
+      NN_Glow_071_4: 733589279493828962
+      NN_Glow_071_5: -7972280110016916440
+      NN_Glow_071_6: 8523540687968454074
+      NN_Glow_071_7: 6899247224248294600
+      NN_Glow_071_8: 7220623628119295778
+      NN_Glow_071_9: -8643782142652327892
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
