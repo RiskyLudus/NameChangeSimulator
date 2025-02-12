@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   supportedStates:
   - Alabama
+  - Arkansas
+  - Kentucky
   - Oregon
   - Tennessee
   nonSupportedStates:
   - Alaska
   - American Samoa
   - Arizona
-  - Arkansas
   - California
   - Colorado
   - Connecticut
@@ -36,7 +37,6 @@ MonoBehaviour:
   - Introduction
   - Iowa
   - Kansas
-  - Kentucky
   - Louisiana
   - Maine
   - Maryland

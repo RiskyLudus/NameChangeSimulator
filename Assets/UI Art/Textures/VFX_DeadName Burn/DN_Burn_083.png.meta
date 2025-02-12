@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 2c706dd14fd3c8941930358878c5cfd3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8690217625057520240
+    second: DN_Burn_083_0
+  - first:
+      213: -8686447107335836791
+    second: DN_Burn_083_1
+  - first:
+      213: 7681025474690207317
+    second: DN_Burn_083_2
+  - first:
+      213: -2719060239451224198
+    second: DN_Burn_083_3
+  - first:
+      213: -8739819112384831333
+    second: DN_Burn_083_4
+  - first:
+      213: 5955947510863426340
+    second: DN_Burn_083_5
+  - first:
+      213: -3541629421175737701
+    second: DN_Burn_083_6
+  - first:
+      213: -4609541444042405077
+    second: DN_Burn_083_7
+  - first:
+      213: -1987068305002554499
+    second: DN_Burn_083_8
+  - first:
+      213: 1975315453693275259
+    second: DN_Burn_083_9
+  - first:
+      213: 2629489813876798296
+    second: DN_Burn_083_10
+  - first:
+      213: -6210013975366693875
+    second: DN_Burn_083_11
+  - first:
+      213: -2621265103600660960
+    second: DN_Burn_083_12
+  - first:
+      213: -4844982461300357658
+    second: DN_Burn_083_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DN_Burn_083_0
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 707
+        width: 178
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0959b9ddc15266780800000000000000
+      internalID: -8690217625057520240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_1
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 867
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b270fe06a837780800000000000000
+      internalID: -8686447107335836791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_2
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 830
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ec2a139fb789a60800000000000000
+      internalID: 7681025474690207317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_3
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 212
+        width: 1014
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a770f905e15f34ad0800000000000000
+      internalID: -2719060239451224198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_4
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 679
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b90e125a2dce5b680800000000000000
+      internalID: -8739819112384831333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 603
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423f2e584b6c7a250800000000000000
+      internalID: 5955947510863426340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_6
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 517
+        width: 63
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b927fb84eca99dec0800000000000000
+      internalID: -3541629421175737701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_7
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 336
+        width: 49
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b4962aa7e9700c0800000000000000
+      internalID: -4609541444042405077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_8
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 446
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b92ef87e38c64e0800000000000000
+      internalID: -1987068305002554499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_9
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 412
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c2ab080fab96b10800000000000000
+      internalID: 1975315453693275259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_10
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 392
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85372a8dd03dd7420800000000000000
+      internalID: 2629489813876798296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_11
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 210
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c8e04013991d9a0800000000000000
+      internalID: -6210013975366693875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_12
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 169
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e41cdb6456f9bd0800000000000000
+      internalID: -2621265103600660960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DN_Burn_083_13
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 153
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5c13b0f1a23ccb0800000000000000
+      internalID: -4844982461300357658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DN_Burn_083_0: -8690217625057520240
+      DN_Burn_083_1: -8686447107335836791
+      DN_Burn_083_10: 2629489813876798296
+      DN_Burn_083_11: -6210013975366693875
+      DN_Burn_083_12: -2621265103600660960
+      DN_Burn_083_13: -4844982461300357658
+      DN_Burn_083_2: 7681025474690207317
+      DN_Burn_083_3: -2719060239451224198
+      DN_Burn_083_4: -8739819112384831333
+      DN_Burn_083_5: 5955947510863426340
+      DN_Burn_083_6: -3541629421175737701
+      DN_Burn_083_7: -4609541444042405077
+      DN_Burn_083_8: -1987068305002554499
+      DN_Burn_083_9: 1975315453693275259
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
