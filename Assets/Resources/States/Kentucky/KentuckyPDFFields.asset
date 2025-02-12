@@ -1,0 +1,318 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d8c8bff4fcba944bef3fddcb0dfdbc, type: 3}
+  m_Name: KentuckyPDFFields
+  m_EditorClassIdentifier: 
+  PdfFileName: KentuckyPDF
+  fields:
+  - fieldName: 1
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 2
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 3
+    fieldValue: ' '
+    fieldType: Dropdown
+    options:
+    - ' '
+    - Adair
+    - Allen
+    - Anderson
+    - Ballard
+    - Barren
+    - Bath
+    - Bell
+    - Boone
+    - Bourbon
+    - Boyd
+    - Boyle
+    - Bracken
+    - Breathitt
+    - Breckinridge
+    - Bullitt
+    - Butler
+    - Caldwell
+    - Calloway
+    - Campbell
+    - Carlisle
+    - Carroll
+    - Carter
+    - Casey
+    - Christian
+    - Clark
+    - Clay
+    - Clinton
+    - Crittenden
+    - Cumberland
+    - Daviess
+    - Edmonson
+    - Elliott
+    - Estill
+    - Fayette
+    - Fleming
+    - Floyd
+    - Franklin
+    - Fulton
+    - Gallatin
+    - Garrard
+    - Grant
+    - Graves
+    - Grayson
+    - Green
+    - Greenup
+    - Hancock
+    - Hardin
+    - Harlan
+    - Harrison
+    - Hart
+    - Henderson
+    - Henry
+    - Hickman
+    - Hopkins
+    - Jackson
+    - Jefferson
+    - Jessamine
+    - Johnson
+    - Kenton
+    - Knott
+    - Knox
+    - Larue
+    - Laurel
+    - Lawrence
+    - Lee
+    - Leslie
+    - Letcher
+    - Lewis
+    - Lincoln
+    - Livingston
+    - Logan
+    - Lyon
+    - Madison
+    - Magoffin
+    - Marion
+    - Marshall
+    - Martin
+    - Mason
+    - McCracken
+    - McCreary
+    - McLean
+    - Meade
+    - Menifee
+    - Mercer
+    - Metcalfe
+    - Monroe
+    - Montgomery
+    - Morgan
+    - Muhlenberg
+    - Nelson
+    - Nicholas
+    - Ohio
+    - Oldham
+    - Owen
+    - Owsley
+    - Pendleton
+    - Perry
+    - Pike
+    - Powell
+    - Pulaski
+    - Robertson
+    - Rockcastle
+    - Rowan
+    - Russell
+    - Scott
+    - Shelby
+    - Simpson
+    - Spencer
+    - Taylor
+    - Todd
+    - Trigg
+    - Trimble
+    - Union
+    - Warren
+    - Washington
+    - Wayne
+    - Webster
+    - Whitley
+    - Wolfe
+    - Woodford
+    overrideKey: 
+  - fieldName: 4
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 5
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 6
+    fieldValue: Off
+    fieldType: Checkbox
+    options: []
+    overrideKey: 
+  - fieldName: 7
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 8
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 9
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 10
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 11
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 12
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 13
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 14
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 15
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 16
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 17
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 18
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 19
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 20
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 21
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 22
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 23
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 24
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 25
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 26
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 27
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: 28
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Print Form
+    fieldValue: 
+    fieldType: Button
+    options: []
+    overrideKey: 
+  - fieldName: Reset Form
+    fieldValue: 
+    fieldType: Button
+    options: []
+    overrideKey: 
+  keywords:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - Print Form
+  - Reset Form
