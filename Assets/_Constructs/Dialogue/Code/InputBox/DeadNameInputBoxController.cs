@@ -30,6 +30,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             container.SetActive(false);
             var fullDeadName = $"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}";
             dialogueController.GoToNext(fullDeadName);
+            AudioManager.Instance.PlayBurn_SFX();
         }
 
         public void Close()
