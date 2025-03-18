@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 using Utils;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace NameChangeSimulator.Shared
 {
@@ -130,6 +132,29 @@ namespace NameChangeSimulator.Shared
         {
             voAudioSource.clip = clip;
             voAudioSource.Play();
+        }
+
+        public void PlayVoiceOver(string voiceLine)
+        {
+            if (string.IsNullOrEmpty(voiceLine) || voiceLine == "None")
+                return;
+            
+            string fullVoiceLine = "vo" + voiceLine;
+            Type thisClass = this.GetType();
+
+            try
+            {
+                FieldInfo voiceLineField = thisClass.GetField(fullVoiceLine,
+                    BindingFlags.NonPublic | BindingFlags.Instance);
+                object voiceLineValue = voiceLineField.GetValue(this);
+                PlayVoiceOver(voiceLineValue as AudioClip);
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning($"Could not find voice over {fullVoiceLine}: {e.Message}");
+                PlayVO_Ah();
+            }
+            
         }
 
         public void StopVoiceOver()

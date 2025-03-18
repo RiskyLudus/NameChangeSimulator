@@ -152,6 +152,11 @@ namespace NameChangeSimulator.Constructs.Dialogue
                 showBackButton = false;
             }
             if (dialogueNode != null) dialogueBox.DisplayConversation(dialogueNode.DialogueText, showBackButton, showNextButton);
+
+            if (dialogueNode.VoiceLine != VoiceLineType.None)
+            {
+                AudioManager.Instance.PlayVoiceOver(dialogueNode.VoiceLine.ToString());
+            }
         }
 
         private void SetDeadNameInputNode(DeadNameInputNode deadNameInputNode)

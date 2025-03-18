@@ -21,6 +21,11 @@ public class DialogueNodeEditor : NodeEditor
         // Display Character Sprite Type
         node.SpriteType = (CharacterSpriteType)EditorGUILayout.EnumPopup("Sprite:", node.SpriteType);
         
+        GUILayout.Space(10);
+        
+        // Display Voice Line Type
+        node.VoiceLine = (VoiceLineType)EditorGUILayout.EnumPopup("Voice Line:", node.VoiceLine);
+        
         GUIStyle style = new GUIStyle(EditorStyles.textArea);
         style.wordWrap = true;
         style.richText = true;

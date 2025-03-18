@@ -7,6 +7,7 @@ using Node = XNode.Node;
 public class DialogueNode : Node
 {
     public CharacterSpriteType SpriteType = CharacterSpriteType.Idle;
+    public VoiceLineType VoiceLine = VoiceLineType.None;
     [TextArea] public string DialogueText;
     public string Keyword;
 

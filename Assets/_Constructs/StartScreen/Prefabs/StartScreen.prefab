@@ -277,7 +277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3810499376013642809, guid: 3ee6aa1b9ef783b41a2ffdd7bc691e11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ee6aa1b9ef783b41a2ffdd7bc691e11, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -316,8 +316,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -2835026052097541668, guid: 51c5fa7c5537ad34e94d38d70523fe7f, type: 3}
-    m_PressedSprite: {fileID: 3259432550642894601, guid: caa7f9acc48d50f48a30451b23b707b7, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 51c5fa7c5537ad34e94d38d70523fe7f, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: caa7f9acc48d50f48a30451b23b707b7, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -947,7 +947,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3810499376013642809, guid: 3ee6aa1b9ef783b41a2ffdd7bc691e11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ee6aa1b9ef783b41a2ffdd7bc691e11, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -986,8 +986,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -2835026052097541668, guid: 51c5fa7c5537ad34e94d38d70523fe7f, type: 3}
-    m_PressedSprite: {fileID: 3259432550642894601, guid: caa7f9acc48d50f48a30451b23b707b7, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 51c5fa7c5537ad34e94d38d70523fe7f, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: caa7f9acc48d50f48a30451b23b707b7, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1165,7 +1165,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9047011486348311582}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1220,7 +1220,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 795253509541260221, guid: 0a25b6371f57d9e4297f74ca74048ac2, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 795253509541260221, guid: 0a25b6371f57d9e4297f74ca74048ac2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -271836491
       objectReference: {fileID: 0}
     - target: {fileID: 2796681592669665799, guid: 0a25b6371f57d9e4297f74ca74048ac2, type: 3}
       propertyPath: m_LocalScale.x
