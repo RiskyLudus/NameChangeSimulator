@@ -54,6 +54,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Why else are you changing your name?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -113,6 +114,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What zip code?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -175,6 +177,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Why are you changing your name?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -234,6 +237,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Current_Middle_Name1
   Keyword: DeadMiddleName
   OverrideInput: {fileID: 0}
@@ -293,6 +297,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Current_Last_Name1
   Keyword: DeadLastName
   OverrideInput: {fileID: 0}
@@ -352,6 +357,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: ID#
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -411,6 +417,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: New_Middle_Name
   Keyword: NewMiddleName
   OverrideInput: {fileID: 0}
@@ -470,6 +477,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Why else are you changing your name?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -529,6 +537,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What city do you live in?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -588,6 +597,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Birth_First_Name
   Keyword: DeadFirstName
   OverrideInput: {fileID: 0}
@@ -647,6 +657,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Current_First_Name2
   Keyword: DeadFirstName
   OverrideInput: {fileID: 0}
@@ -706,6 +717,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Current_Middle_Name2
   Keyword: DeadMiddleName
   OverrideInput: {fileID: 0}
@@ -765,6 +777,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What state do you live in?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -824,6 +837,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 4
   DialogueText: Now please give you date of birth.
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -883,6 +897,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: New_First_Name
   Keyword: NewFirstName
   OverrideInput: {fileID: 0}
@@ -968,6 +983,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   SpriteType: 1
+  VoiceLine: 2
   DialogueText: Would you prefer to use you Driver's License or a State ID number
     for verification?
   Keyword: 
@@ -1031,6 +1047,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What's your street address?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1132,6 +1149,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 5
   DialogueText: What county do you live in?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1191,6 +1209,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Current_Last_Name2
   Keyword: DeadLastName
   OverrideInput: {fileID: 0}
@@ -1250,6 +1269,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Enter a work phone number if you have one.
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1309,6 +1329,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Current_First_Name1
   Keyword: DeadFirstName
   OverrideInput: {fileID: 0}
@@ -1368,6 +1389,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: County_Name2
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1489,6 +1511,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Birth_Last_Name
   Keyword: DeadLastName
   OverrideInput: {fileID: 0}
@@ -1548,6 +1571,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: New_Last_Name
   Keyword: NewLastName
   OverrideInput: {fileID: 0}
@@ -1607,6 +1631,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Okay now what is your home phone number?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1666,6 +1691,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Birth_Middle_Name
   Keyword: DeadMiddleName
   OverrideInput: {fileID: 0}
@@ -1728,6 +1754,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: DL#
   Keyword: 
   OverrideInput: {fileID: 0}

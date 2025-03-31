@@ -54,6 +54,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 4
   DialogueText: Okay that's everything! Let's get started with some basic information...
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -113,6 +114,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 1. All your data for this is local to your computer. Nothing you
     enter goes to an outside server. We do not send your data to anyone. Ever!
   Keyword: 
@@ -173,6 +175,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 1
   DialogueText: Ahhh~ It's so beautiful! What a wonderful name you picked!
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -232,6 +235,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Next, please select the state whose form you'll be filling out.
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -291,6 +295,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 3
   DialogueText: Great work~! Now let's pop you over to finish your state's specific
     information!
   Keyword: 
@@ -382,6 +387,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: YES! BURN DARN YOU! BURNNNNNN! AHAHAHAHAHAHAAAA....
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -441,6 +447,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 2. Currently, we only support Players over 18. If we get enough support,
     however, we may change this in the future!
   Keyword: 
@@ -501,6 +508,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 2
   DialogueText: Could you please enter your dead name here? (Don't worry, you won't
     see it again). <3
   Keyword: 
@@ -561,6 +569,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 0
+  VoiceLine: 0
   DialogueText: 'What''s that? You say you wanna change your name? Well, my friend,
     you''re in the right place!
 
@@ -654,6 +663,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 3. Our information on state forms is currently only set for 2024-2025.
     If you are playing this in the future, then hello! Please let us know if any
     of our information is out of date.
@@ -715,6 +725,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Look, I know you're chomping at the bit to get started, but just
     hold on a sec! There's 3 big things we need to go over first.
   Keyword: 
@@ -775,6 +786,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Anyway, puns about burning deadnames aside, let's see that fabulous
     new name!
   Keyword: 
@@ -835,6 +847,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 5
   DialogueText: Hmm? Who's there?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -925,6 +938,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: '*ahem* Apologies, watching deadnames get burnt to a crisp just FIRES
     me up! '
   Keyword: 
@@ -985,6 +999,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 1
   DialogueText: Hi there! I'm Lauren Ipsem, Attorney at Law! And I'm here to help
     with your name change!
   Keyword: 

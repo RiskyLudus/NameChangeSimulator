@@ -38,19 +38,10 @@ namespace NameChangeSimulator.Shared
 
         [Header("VO Clips")]
         [SerializeField] private AudioClip voAh;
-        [SerializeField] private AudioClip voDisgust;
-        [SerializeField] private AudioClip voGuh;
-        [SerializeField] private AudioClip voGuh2;
-        [SerializeField] private AudioClip voLaugh;
-        [SerializeField] private AudioClip voMhm1;
-        [SerializeField] private AudioClip voMhm2;
-        [SerializeField] private AudioClip voMm1;
-        [SerializeField] private AudioClip voMm2;
-        [SerializeField] private AudioClip voMm3;
-        [SerializeField] private AudioClip voMmmm;
+        [SerializeField] private AudioClip voHmmm;
+        [SerializeField] private AudioClip voMhm;
+        [SerializeField] private AudioClip voMm;
         [SerializeField] private AudioClip voMmQ;
-        [SerializeField] private AudioClip voScoff;
-        [SerializeField] private AudioClip voSigh;
 
         protected override void Awake()
         {
@@ -184,19 +175,10 @@ namespace NameChangeSimulator.Shared
 
         #region VO Sounds
         public void PlayVO_Ah() => PlayVoiceOver(voAh);
-        public void PlayVO_Disgust() => PlayVoiceOver(voDisgust);
-        public void PlayVO_Guh() => PlayVoiceOver(voGuh);
-        public void PlayVO_Guh2() => PlayVoiceOver(voGuh2);
-        public void PlayVO_Laugh() => PlayVoiceOver(voLaugh);
-        public void PlayVO_Mhm1() => PlayVoiceOver(voMhm1);
-        public void PlayVO_Mhm2() => PlayVoiceOver(voMhm2);
-        public void PlayVO_Mm1() => PlayVoiceOver(voMm1);
-        public void PlayVO_Mm2() => PlayVoiceOver(voMm2);
-        public void PlayVO_Mm3() => PlayVoiceOver(voMm3);
-        public void PlayVO_Mmmm() => PlayVoiceOver(voMmmm);
+        public void PlayVO_Hmmm() => PlayVoiceOver(voHmmm);
+        public void PlayVO_Mhm1() => PlayVoiceOver(voMhm);
+        public void PlayVO_Mm1() => PlayVoiceOver(voMm);
         public void PlayVO_MmQ() => PlayVoiceOver(voMmQ);
-        public void PlayVO_Scoff() => PlayVoiceOver(voScoff);
-        public void PlayVO_Sigh() => PlayVoiceOver(voSigh);
         #endregion
     }
 }

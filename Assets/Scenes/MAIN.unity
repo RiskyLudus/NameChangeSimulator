@@ -1239,20 +1239,11 @@ MonoBehaviour:
   uiConfirmSound: {fileID: 8300000, guid: 4b41b435bc750294c93099606aa35b4a, type: 3}
   uiHoverSound: {fileID: 8300000, guid: f16ed49e42b9de94c9e7406dfb36ecbc, type: 3}
   uiHoverExitSound: {fileID: 8300000, guid: 7361854614414504091333145e2431c1, type: 3}
-  voAh: {fileID: 8300000, guid: 446027e478818384290d2291f72b7265, type: 3}
-  voDisgust: {fileID: 8300000, guid: fd531147040e8a34b9e1696a8c31be38, type: 3}
-  voGuh: {fileID: 8300000, guid: cb462f796d11d9c4dbd2a6103488ee5d, type: 3}
-  voGuh2: {fileID: 8300000, guid: 2009eb4f2cf5cd4488b541ac8a5c9f11, type: 3}
-  voLaugh: {fileID: 8300000, guid: dd49a4356a2e9c748975317b52aeae82, type: 3}
-  voMhm1: {fileID: 8300000, guid: 341e97e1a9275754b8d68eb0f3ba985e, type: 3}
-  voMhm2: {fileID: 8300000, guid: 378364d03953c434cb0d54f94a8c3ae0, type: 3}
-  voMm1: {fileID: 8300000, guid: a6e0c00e1625e1241b0a0d287cd4acd1, type: 3}
-  voMm2: {fileID: 8300000, guid: 4666978676fce2e418219f7d8b3b17d5, type: 3}
-  voMm3: {fileID: 8300000, guid: cf2fab7e698c7974b9028c18ee788879, type: 3}
-  voMmmm: {fileID: 8300000, guid: 6f38077115255994f8d03c1141b334dc, type: 3}
-  voMmQ: {fileID: 8300000, guid: abc217ebae5ea7d4d856ce9c77959081, type: 3}
-  voScoff: {fileID: 8300000, guid: 8c6ec6e2ffd15494e98afa5db13d770b, type: 3}
-  voSigh: {fileID: 8300000, guid: f40360d4ac72489459c3f7244f143c12, type: 3}
+  voAh: {fileID: 8300000, guid: dde32b74985c25f408f3668d07e90d65, type: 3}
+  voHmmm: {fileID: 8300000, guid: 5908fb21ce4512744877576ec8912609, type: 3}
+  voMhm: {fileID: 8300000, guid: 6178925633129a24d8a1b1ae7af0845e, type: 3}
+  voMm: {fileID: 8300000, guid: 2106405e748d87646aaead84310ac658, type: 3}
+  voMmQ: {fileID: 8300000, guid: a232d18a89b05714e84c4490164e56c6, type: 3}
 --- !u!1 &1708519434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3205268242030973409, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}

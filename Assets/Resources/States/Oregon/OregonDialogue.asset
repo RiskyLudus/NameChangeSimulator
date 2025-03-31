@@ -54,6 +54,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'However, in some states, this can prolong or complicate the process
     further. Ultimately, it''s up to you on whether or not you want to seal.
 
@@ -118,6 +119,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your current FIRST Name?
   Keyword: DeadFirstName
   OverrideInput: {fileID: 0}
@@ -177,6 +179,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: (3 of 6) List any other names, if you've had them. If not, leave
     this blank and keep going!
   Keyword: 
@@ -246,6 +249,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 2
   DialogueText: "So, for this next section, I will need to ask you some sensitive
     questions. \n\nI know it's uncomfortable, but you will NOT be judged will still
     recieve your forms regardless of your answers. Now, let's go!"
@@ -333,6 +337,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Are you changing your GENDER?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -398,6 +403,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 4
   DialogueText: Enter your former name.
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -457,6 +463,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your current MIDDLE name?
   Keyword: DeadMiddleName
   OverrideInput: {fileID: 0}
@@ -519,6 +526,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Explain the Child Support: (include the State and Case Number)'
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -611,6 +619,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Do you currently have a protective order, stalking order, or restraining
     order against you?
   Keyword: 
@@ -706,6 +715,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Do you owe child support or current ordered to pay child support?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -768,6 +778,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: (4 of 6) List any other names, if you've had them. If not, leave
     this blank and keep going!
   Keyword: 
@@ -860,6 +871,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Are you required to register as a sex offender?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -922,6 +934,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 4
   DialogueText: 'To "seal" your records means to keep the legal document detailing
     the change of your name private and inaccessible to the public. '
   Keyword: 
@@ -982,6 +995,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Now: what is your city, state, and zip code?'
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1086,6 +1100,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Do you want this Name Change Record to be Sealed?
 
 
@@ -1152,6 +1167,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Explain the conditions of your supervision:'
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1211,6 +1227,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Great! Next: what''s your phone number? And I promise I won''t prank
     call you...'
   Keyword: 
@@ -1280,6 +1297,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your street address? Don't include the city, state, or zip
     code. We'll do that in a sec!
   Keyword: 
@@ -1340,6 +1358,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Please briefly explain the reason for being registered as a SO.
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1399,6 +1418,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 1
   DialogueText: It looks like you can change your name AND gender on a single form.
     Nice!
   Keyword: 
@@ -1459,6 +1479,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: (6 of 6) List any other names, if you've had them. If not, leave
     this blank and keep going!
   Keyword: 
@@ -1519,6 +1540,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Wahoo!!! You did it! Now then let's see those forms :3
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1578,6 +1600,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Hello! Welcome to the Oregon Name Change Form Creator!
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1690,6 +1713,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: (2 of 6) Great, now list any other names, if you've had them. If
     not, leave this blank and keep going!
   Keyword: 
@@ -1756,6 +1780,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 5
   DialogueText: Which COUNTY is this being filed?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1885,6 +1910,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Are you currently on probation, parole, or under post-prison supervision?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1986,6 +2012,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your NEW GENDER?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -2052,6 +2079,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your new FIRST Name?
   Keyword: NewFirstName
   OverrideInput: {fileID: 0}
@@ -2140,6 +2168,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: List your reason for sealing your records.
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -2202,6 +2231,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: There are various reasons as to why you'd want to do this. For instance,
     if your record is sealed, you don't need to publish your name change in a newspaper
     or notify anyone about what you're doing!
@@ -2263,6 +2293,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Welp, without further ado, let's get this show rollin'!~
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -2356,6 +2387,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your new LAST Name?
   Keyword: NewLastName
   OverrideInput: {fileID: 0}
@@ -2415,6 +2447,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your current LAST name?
   Keyword: DeadLastName
   OverrideInput: {fileID: 0}
@@ -2505,6 +2538,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your new MIDDLE Name?
   Keyword: NewMiddleName
   OverrideInput: {fileID: 0}
@@ -2590,6 +2624,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Have you ever LEGALLY used another name?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -2652,6 +2687,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Explain the Order: (include the State and Case Number)'
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -2714,6 +2750,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Phew, that's it! Now for the home stretch!
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -2773,6 +2810,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: (5 of 6) List any other names, if you've had them. If not, leave
     this blank and keep going!
   Keyword: 

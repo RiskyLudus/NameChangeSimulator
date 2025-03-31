@@ -54,6 +54,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Presto! Here's your Tennessee Name Change forms! If anything doesn't
     look right, you can go back and re-enter details, or simply try again.
   Keyword: 
@@ -117,6 +118,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your NAME as written on your birth certificate?
   Keyword: FullDeadName
   OverrideInput: {fileID: 0}
@@ -176,6 +178,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your date of birth?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -238,6 +241,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your address? Don't include the city, state or zip code!
     We'll do that later.
   Keyword: 
@@ -301,6 +305,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Why are you changing your name? List your REASON for embarking on
     this journey.
   Keyword: 
@@ -387,6 +392,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 2
   DialogueText: Sorry to ask, but I have to -- If you have been convicted of a felony,
     describe it. If not, leave this blank.
   Keyword: 
@@ -453,6 +459,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your NEW or REQUESTED name?
   Keyword: FullNewName
   OverrideInput: {fileID: 0}
@@ -521,6 +528,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What STATE were you born in?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -580,6 +588,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Of what country are you a citizen of?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -645,6 +654,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What COUNTY (not country) were you born in?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -698,6 +708,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'PLACEHOLDER: If you''re seeing me, someone screwed up...or the flow
     isn''t finished yet!'
   Keyword: 
@@ -797,6 +808,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 1
   DialogueText: Tennessee? I see! Alright, without further ado, let's get started
     on changing your name.
   Keyword: 
@@ -857,6 +869,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What CITY were you born in?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -953,6 +966,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 4
   DialogueText: Okay! That should be everything! Now to just put this information
     in and...
   Keyword: 
@@ -1044,6 +1058,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: I know it's a sensitive subject, but try to tell me a bit about what
     happened. This is strictly required by the form, I'm sorry...
   Keyword: 
@@ -1107,6 +1122,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What is your CURRENT name?
   Keyword: FullDeadName
   OverrideInput: {fileID: 0}
@@ -1166,6 +1182,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: If you have any former names or aliases - what are they?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1225,6 +1242,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Which COUNTY is this form being filed for? This may or may not be
     different from my earlier question, which is where you were BORN!
   Keyword: 
