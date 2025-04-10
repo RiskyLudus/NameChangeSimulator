@@ -249,7 +249,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 2
+  VoiceLine: 11
   DialogueText: "So, for this next section, I will need to ask you some sensitive
     questions. \n\nI know it's uncomfortable, but you will NOT be judged will still
     recieve your forms regardless of your answers. Now, let's go!"
@@ -337,7 +337,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 0
+  VoiceLine: 9
   DialogueText: Are you changing your GENDER?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -934,7 +934,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 4
+  VoiceLine: 0
   DialogueText: 'To "seal" your records means to keep the legal document detailing
     the change of your name private and inaccessible to the public. '
   Keyword: 
@@ -1100,7 +1100,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   SpriteType: 1
-  VoiceLine: 0
+  VoiceLine: 2
   DialogueText: 'Do you want this Name Change Record to be Sealed?
 
 
@@ -1540,7 +1540,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 0
+  VoiceLine: 10
   DialogueText: Wahoo!!! You did it! Now then let's see those forms :3
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -1780,7 +1780,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 5
+  VoiceLine: 8
   DialogueText: Which COUNTY is this being filed?
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -2750,7 +2750,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 0
+  VoiceLine: 7
   DialogueText: Phew, that's it! Now for the home stretch!
   Keyword: 
   OverrideInput: {fileID: 0}

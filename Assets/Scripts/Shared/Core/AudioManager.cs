@@ -38,10 +38,16 @@ namespace NameChangeSimulator.Shared
 
         [Header("VO Clips")]
         [SerializeField] private AudioClip voAh;
+        [SerializeField] private AudioClip voAhQ;
         [SerializeField] private AudioClip voHmmm;
+        [SerializeField] private AudioClip voHmmmQ;
+        [SerializeField] private AudioClip voLaugh;
         [SerializeField] private AudioClip voMhm;
         [SerializeField] private AudioClip voMm;
         [SerializeField] private AudioClip voMmQ;
+        [SerializeField] private AudioClip voOhQ;
+        [SerializeField] private AudioClip voRelief;
+        [SerializeField] private AudioClip voUmmQ;
 
         protected override void Awake()
         {
@@ -175,10 +181,16 @@ namespace NameChangeSimulator.Shared
 
         #region VO Sounds
         public void PlayVO_Ah() => PlayVoiceOver(voAh);
+        public void PlayVO_AhQ() => PlayVoiceOver(voAhQ);
         public void PlayVO_Hmmm() => PlayVoiceOver(voHmmm);
+        public void PlayVO_HmmmQ() => PlayVoiceOver(voHmmmQ);
+        public void PlayVO_Laugh() => PlayVoiceOver(voLaugh);
         public void PlayVO_Mhm1() => PlayVoiceOver(voMhm);
         public void PlayVO_Mm1() => PlayVoiceOver(voMm);
         public void PlayVO_MmQ() => PlayVoiceOver(voMmQ);
+        public void PlayVO_OhQ() => PlayVoiceOver(voOhQ);
+        public void PlayVO_Relief() => PlayVoiceOver(voRelief);
+        public void PlayVO_UmmQ() => PlayVoiceOver(voUmmQ);
         #endregion
     }
 }

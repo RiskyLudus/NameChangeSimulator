@@ -54,7 +54,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 0
+  VoiceLine: 10
   DialogueText: Presto! Here's your Tennessee Name Change forms! If anything doesn't
     look right, you can go back and re-enter details, or simply try again.
   Keyword: 
@@ -392,7 +392,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 2
+  VoiceLine: 11
   DialogueText: Sorry to ask, but I have to -- If you have been convicted of a felony,
     describe it. If not, leave this blank.
   Keyword: 
@@ -966,7 +966,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 4
+  VoiceLine: 7
   DialogueText: Okay! That should be everything! Now to just put this information
     in and...
   Keyword: 
@@ -1122,7 +1122,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 0
+  VoiceLine: 8
   DialogueText: What is your CURRENT name?
   Keyword: FullDeadName
   OverrideInput: {fileID: 0}
@@ -1242,7 +1242,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 0
+  VoiceLine: 4
   DialogueText: Which COUNTY is this form being filed for? This may or may not be
     different from my earlier question, which is where you were BORN!
   Keyword: 

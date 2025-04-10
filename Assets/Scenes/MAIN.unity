@@ -1240,10 +1240,16 @@ MonoBehaviour:
   uiHoverSound: {fileID: 8300000, guid: f16ed49e42b9de94c9e7406dfb36ecbc, type: 3}
   uiHoverExitSound: {fileID: 8300000, guid: 7361854614414504091333145e2431c1, type: 3}
   voAh: {fileID: 8300000, guid: dde32b74985c25f408f3668d07e90d65, type: 3}
+  voAhQ: {fileID: 8300000, guid: e9144ca23bc733b449dddfd9a5db513e, type: 3}
   voHmmm: {fileID: 8300000, guid: 5908fb21ce4512744877576ec8912609, type: 3}
+  voHmmmQ: {fileID: 8300000, guid: a771ced7922efa948b8fda0dc291565b, type: 3}
+  voLaugh: {fileID: 8300000, guid: b25603d01517f3f46916331d02a6d846, type: 3}
   voMhm: {fileID: 8300000, guid: 6178925633129a24d8a1b1ae7af0845e, type: 3}
   voMm: {fileID: 8300000, guid: 2106405e748d87646aaead84310ac658, type: 3}
   voMmQ: {fileID: 8300000, guid: a232d18a89b05714e84c4490164e56c6, type: 3}
+  voOhQ: {fileID: 8300000, guid: 0ad8bba8e5f13804c80f21cf8512d9c8, type: 3}
+  voRelief: {fileID: 8300000, guid: 28e125296bd26da4ba947e6f9705c028, type: 3}
+  voUmmQ: {fileID: 8300000, guid: 1a1481655bffbcd4a9c634b56255ba54, type: 3}
 --- !u!1 &1708519434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3205268242030973409, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}

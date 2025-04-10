@@ -54,7 +54,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 4
+  VoiceLine: 6
   DialogueText: Okay that's everything! Let's get started with some basic information...
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -175,7 +175,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 1
+  VoiceLine: 10
   DialogueText: Ahhh~ It's so beautiful! What a wonderful name you picked!
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -295,7 +295,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 3
+  VoiceLine: 7
   DialogueText: Great work~! Now let's pop you over to finish your state's specific
     information!
   Keyword: 
@@ -387,7 +387,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 0
+  VoiceLine: 5
   DialogueText: YES! BURN DARN YOU! BURNNNNNN! AHAHAHAHAHAHAAAA....
   Keyword: 
   OverrideInput: {fileID: 0}
@@ -508,7 +508,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 2
+  VoiceLine: 0
   DialogueText: Could you please enter your dead name here? (Don't worry, you won't
     see it again). <3
   Keyword: 
@@ -847,7 +847,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 5
+  VoiceLine: 4
   DialogueText: Hmm? Who's there?
   Keyword: 
   OverrideInput: {fileID: 0}
