@@ -9,6 +9,7 @@ namespace NameChangeSimulator.Constructs.Conversation
     {
         private static readonly int HoverOn = Animator.StringToHash("HoverOn");
         private static readonly int HoverOff = Animator.StringToHash("HoverOff");
+        private static readonly int InputEnter = Animator.StringToHash("InputEnter");
         private static readonly int Click = Animator.StringToHash("Click");
         [SerializeField] private UnityEvent onClick;
         [SerializeField] private Animator animator;
@@ -28,6 +29,7 @@ namespace NameChangeSimulator.Constructs.Conversation
 
         private void OnMouseDown()
         {
+            
             animator.SetTrigger(Click);
 
             switch (buttonType)
