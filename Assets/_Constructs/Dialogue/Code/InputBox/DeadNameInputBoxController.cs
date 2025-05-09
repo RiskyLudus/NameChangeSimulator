@@ -1,3 +1,4 @@
+using System.Collections;
 using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
@@ -7,9 +8,12 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
 {
     public class DeadNameInputBoxController : MonoBehaviour
     {
+        private static readonly int Burn = Animator.StringToHash("Burn");
         [SerializeField] private DialogueController dialogueController;
         [SerializeField] private GameObject container;
         [SerializeField] private TMP_InputField firstNameInputField, middleNameInputField, lastNameInputField;
+        [SerializeField] private Animator burnAnimator;
+        private bool isPressed = false;
         
         public void DisplayDeadNameInputWindow()
         {
@@ -26,11 +30,23 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         
         public void SubmitInput()
         {
-            AudioManager.Instance.PlayUIConfirm_SFX();
-            container.SetActive(false);
+            if (isPressed)
+                return;
+            
+            isPressed = true;
             var fullDeadName = $"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}";
-            dialogueController.GoToNext(fullDeadName);
+            
+            // Play the "Burn" animation before moving on
+            burnAnimator.SetTrigger(Burn);
             AudioManager.Instance.PlayBurn_SFX();
+            StartCoroutine(WaitForBurn_Co(fullDeadName));
+        }
+
+        private IEnumerator WaitForBurn_Co(string fullDeadName)
+        {
+            yield return new WaitForSeconds(5f);
+            container.SetActive(false);
+            dialogueController.GoToNext(fullDeadName);
         }
 
         public void Close()
