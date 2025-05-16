@@ -9,19 +9,19 @@ namespace NameChangeSimulator.Constructs.Options
         [SerializeField] private AudioMixer mixer;
         [SerializeField] private GameObject[] objectsToToggle;
 
-        public void ChangeMasterVolume(float volume)
+        public void ChangeMasterVolume(float slidervalue)
         {
-            mixer.SetFloat("MasterVolume", volume);
+            mixer.SetFloat("MasterVolume", Mathf.Log10(slidervalue) * 20);
         }
         
-        public void ChangeMusicVolume(float volume)
+        public void ChangeMusicVolume(float slidervalue)
         {
-            mixer.SetFloat("MusicVolume", volume);
+            mixer.SetFloat("MusicVolume", Mathf.Log10(slidervalue) * 20);
         }
 
-        public void ChangeSFXVolume(float volume)
+        public void ChangeSFXVolume(float slidervalue)
         {
-            mixer.SetFloat("SFXVolume", volume);
+            mixer.SetFloat("SFXVolume", Mathf.Log10(slidervalue) * 20);
         }
 
         public void ShowOptionsMenu()
