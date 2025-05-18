@@ -30,6 +30,7 @@ namespace NameChangeSimulator.Shared
         [SerializeField] private AudioClip successSound;
         [SerializeField] private AudioClip formSound;
         [SerializeField] private AudioClip burnSound;
+        [SerializeField] private AudioClip glowSound;
         [SerializeField] private AudioClip sparkleSound;
         [SerializeField] private AudioClip uiCancelSound;
         [SerializeField] private AudioClip uiConfirmSound;
@@ -93,6 +94,12 @@ namespace NameChangeSimulator.Shared
 
         public void PlaySfx(AudioClip clip)
         {
+            // Return in case the SFX is already playing to avoid overlap - Risky
+            foreach (var source in sfxAudioSources)
+            {
+                if (source.clip == clip) return;
+            }
+            
             AudioSource audioSource = GetAvailableAudioSource();
             audioSource.clip = clip;
             audioSource.Play();
@@ -177,6 +184,7 @@ namespace NameChangeSimulator.Shared
         public void PlayUIConfirm_SFX() => PlaySfx(uiConfirmSound);
         public void PlayUIHover_SFX() => PlaySfx(uiHoverSound);
         public void PlayUIHoverExit_SFX() => PlaySfx(uiHoverExitSound);
+        public void PlayGlow_SFX() => PlaySfx(glowSound);
         #endregion
 
         #region VO Sounds

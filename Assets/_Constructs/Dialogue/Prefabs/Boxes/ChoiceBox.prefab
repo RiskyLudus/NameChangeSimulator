@@ -32,10 +32,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 580701193139929291}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 728.64, y: 370.6}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4486168396366693198
 CanvasRenderer:
@@ -58,14 +58,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 100
+    m_Right: 100
+    m_Top: 100
+    m_Bottom: 100
   m_ChildAlignment: 1
   m_Spacing: 25
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 1
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6684496506278773337, guid: daa66e88186cce74484b90eb733c1d68, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 435b556e546c9d04291e44937bb6966f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -174,8 +174,8 @@ RectTransform:
   m_GameObject: {fileID: 7799408563567689493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 580701193139929291}
   m_Father: {fileID: 0}
@@ -207,5 +207,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueController: {fileID: 0}
   container: {fileID: 7788344631279258653}
-  choicePrefab: {fileID: 9000849506919007579, guid: 455d53ad1bed1b546acbe09b6695cd4a, type: 3}
+  choicePrefab: {fileID: 4376384856985969287, guid: 0bf573713cf0ade4890983c94111a3c3, type: 3}
   choiceLayout: {fileID: 3886443335860541279}
