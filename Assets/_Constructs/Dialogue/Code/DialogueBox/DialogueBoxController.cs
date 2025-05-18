@@ -37,6 +37,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.DialogueBox
 
         private void ToggleButtons(bool showBackButton, bool showNextButton)
         {
+            Debug.Log($"Showing back button {showBackButton} and showing next button {showNextButton}");
             backButton.SetActive(showBackButton);
             nextButton.SetActive(showNextButton);
         }
