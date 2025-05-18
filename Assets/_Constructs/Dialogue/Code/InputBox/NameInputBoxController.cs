@@ -1,37 +1,45 @@
 using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
 namespace NameChangeSimulator.Constructs.Dialogue.InputBox
 {
-    public class NewNameInputBoxController : MonoBehaviour
+    public class NameInputBoxController : MonoBehaviour
     {
         [SerializeField] private DialogueController dialogueController;
         [SerializeField] private GameObject container;
         [SerializeField] private TMP_InputField firstNameInputField, middleNameInputField, lastNameInputField;
+        [SerializeField] private Animator[] animators;
+        [SerializeField] private string triggerName;
+
+        private bool _goToNextRunning = false; // I hate doing stuff like this for animation control but ah well -Risky
         
-        public void DisplayNewNameInputWindow()
+        public void DisplayNameInputWindow()
         {
-            // I hate doing individual char limits, but if you have a better idea, I'm all ears. -Ai
-            Debug.Log("Showing input window");
+            Debug.Log("Showing name input window");
             firstNameInputField.text = string.Empty;
-                firstNameInputField.characterLimit = 16;
             middleNameInputField.text = string.Empty;
-                middleNameInputField.characterLimit = 16;
             lastNameInputField.text = string.Empty;
-                lastNameInputField.characterLimit = 16;
             container.SetActive(true);
         }
         
         public void SubmitInput()
         {
+            Debug.Log("Submit name input");
             AudioManager.Instance.PlayUIConfirm_SFX();
+            foreach (var animator in animators)
+            {
+                animator.SetTrigger(triggerName);
+            }
+        }
+
+        public void GoToNext()
+        {
+            if (_goToNextRunning) return;
+            
+            _goToNextRunning = true;
             container.SetActive(false);
-            var fullDeadName = $"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}";
-            dialogueController.GoToNext(fullDeadName);
-            AudioManager.Instance.PlaySparkle_SFX();
+            dialogueController.GoToNext($"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}");
         }
 
         public void Close()

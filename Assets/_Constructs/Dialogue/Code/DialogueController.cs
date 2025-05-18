@@ -19,8 +19,8 @@ namespace NameChangeSimulator.Constructs.Dialogue
         public string StateToLoad { get; set; }
         
         [SerializeField] private DialogueBoxController dialogueBox;
-        [SerializeField] private DeadNameInputBoxController deadNameInputBox;
-        [SerializeField] private NewNameInputBoxController newNameInputBox;
+        [SerializeField] private NameInputBoxController deadNameInputBox;
+        [SerializeField] private NameInputBoxController newNameInputBox;
         [SerializeField] private StatePickerBoxController statePickerBox;
         [SerializeField] private InputBoxController inputBox;
         [SerializeField] private DropdownBoxController dropdownBox;
@@ -162,13 +162,13 @@ namespace NameChangeSimulator.Constructs.Dialogue
         private void SetDeadNameInputNode(DeadNameInputNode deadNameInputNode)
         {
             SetDialogueNode(deadNameInputNode, true, false);
-            deadNameInputBox.DisplayDeadNameInputWindow();
+            deadNameInputBox.DisplayNameInputWindow();
         }
 
         private void SetNewNameInputNode(NewNameInputNode newNameInputNode)
         {
             SetDialogueNode(newNameInputNode, true, false);
-            newNameInputBox.DisplayNewNameInputWindow();
+            newNameInputBox.DisplayNameInputWindow();
         }
         
         // A state picker conversation. We ask the Player to select a state from a dropdown. We have the next button on the form itself. We have a back button active in its normal place.

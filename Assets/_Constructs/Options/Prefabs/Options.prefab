@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 8296202274498290691}
   - component: {fileID: 8890356704798677123}
   m_Layer: 5
-  m_Name: Slider (2)
+  m_Name: SFXSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +177,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2211701396486800486}
   - {fileID: 6374926535144824519}
@@ -186,8 +186,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: -113}
-  m_SizeDelta: {x: 633.73, y: 79.22}
+  m_AnchoredPosition: {x: 7, y: -21.940002}
+  m_SizeDelta: {x: 823.03, y: 37.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8890356704798677123
 MonoBehaviour:
@@ -239,7 +239,20 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6296537921940826672}
+        m_TargetAssemblyTypeName: NameChangeSimulator.Constructs.Options.OptionsController,
+          NameChangeSimulator.Constructs.Options
+        m_MethodName: ChangeSFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &790899375416910005
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +266,7 @@ GameObject:
   - component: {fileID: 349252684173768086}
   - component: {fileID: 2206944629195217325}
   m_Layer: 5
-  m_Name: StartButton (1)
+  m_Name: CloseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,10 +374,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NameChangeSimulator.Constructs.StartScreen.StartScreenController,
-          NameChangeSimulator.Constructs.StartScreen
-        m_MethodName: StartGame
+      - m_Target: {fileID: 6296537921940826672}
+        m_TargetAssemblyTypeName: NameChangeSimulator.Constructs.Options.OptionsController,
+          NameChangeSimulator.Constructs.Options
+        m_MethodName: CloseOptionsMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -407,11 +420,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3068776436440439211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 60, y: 28}
-  m_SizeDelta: {x: 104, y: 110}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -39, y: -24}
+  m_SizeDelta: {x: 138, y: 146}
+  m_Pivot: {x: 1, y: 1}
 --- !u!222 &5619335002316057564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -440,7 +453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4191062754677447102, guid: ebb02bf138d6f81438d3b34667e1e85f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af4032c8e79fb4c4aafceccc427dc4e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -479,7 +492,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -4458693072840298117, guid: af37443fd40207f4ba16d65c1065139a, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: cefa5b614240333458c28f7e48e1ad7a, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -493,7 +506,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6292366912490462423}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6296537921940826672}
+        m_TargetAssemblyTypeName: NameChangeSimulator.Constructs.Options.OptionsController,
+          NameChangeSimulator.Constructs.Options
+        m_MethodName: ShowOptionsMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1310052183411264522
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +589,7 @@ RectTransform:
   m_Father: {fileID: 3892970428037291224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -638,7 +664,7 @@ RectTransform:
   m_Father: {fileID: 4126531066795839980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -713,7 +739,7 @@ RectTransform:
   m_Father: {fileID: 6374926535144824519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -845,7 +871,7 @@ GameObject:
   - component: {fileID: 2825558377321888461}
   - component: {fileID: 6717406658538309368}
   m_Layer: 5
-  m_Name: Slider (1)
+  m_Name: MusicSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -861,7 +887,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6969382121473101876}
   - {fileID: 4126531066795839980}
@@ -870,8 +896,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: 30}
-  m_SizeDelta: {x: 633.73, y: 79.22}
+  m_AnchoredPosition: {x: 7, y: 45.449997}
+  m_SizeDelta: {x: 823.03, y: 37.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6717406658538309368
 MonoBehaviour:
@@ -923,7 +949,20 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6296537921940826672}
+        m_TargetAssemblyTypeName: NameChangeSimulator.Constructs.Options.OptionsController,
+          NameChangeSimulator.Constructs.Options
+        m_MethodName: ChangeMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4034820757645856455
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +974,7 @@ GameObject:
   - component: {fileID: 4845167532641795104}
   - component: {fileID: 9215356533412233340}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: MasterSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -951,7 +990,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3324066045407694508}
   - {fileID: 7440641884615183729}
@@ -960,8 +999,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: 167}
-  m_SizeDelta: {x: 633.73, y: 79.22}
+  m_AnchoredPosition: {x: 7, y: 110}
+  m_SizeDelta: {x: 823.03, y: 37.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9215356533412233340
 MonoBehaviour:
@@ -1013,7 +1052,20 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6296537921940826672}
+        m_TargetAssemblyTypeName: NameChangeSimulator.Constructs.Options.OptionsController,
+          NameChangeSimulator.Constructs.Options
+        m_MethodName: ChangeMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4286224804095245885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,6 +1075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3068776436440439211}
+  - component: {fileID: 6296537921940826672}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -1051,6 +1104,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6296537921940826672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286224804095245885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd41e581a4bb6cb4a960ba434f921025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionsMenu: {fileID: 5094254345772010931}
+  mixer: {fileID: 24100000, guid: 30dfd6f251282ee448ad42025256a195, type: 2}
+  objectsToToggle:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4910912335538650939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1155,7 @@ RectTransform:
   m_Father: {fileID: 365195724224781756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1371,7 +1442,7 @@ RectTransform:
   m_Father: {fileID: 7440641884615183729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1482,7 +1553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.000061, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7201709824682119709
@@ -1629,7 +1700,7 @@ RectTransform:
   m_Father: {fileID: 1480358509398042182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1704,7 +1775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.000061, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9040834716737751482
@@ -1740,6 +1811,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.000061, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
