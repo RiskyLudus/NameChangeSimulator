@@ -1524,6 +1524,8 @@ PrefabInstance:
     - {fileID: 6760748274478647947, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
     - {fileID: 8850069217777079986, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
     - {fileID: -7727327167458050014, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
+    - {fileID: 1958086550965365320, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
+    - {fileID: 1720298033597189612, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6264159551128321219, guid: 81500d6796158ef48a9571e0bccebe79, type: 3}
       insertIndex: 5
@@ -1825,10 +1827,6 @@ PrefabInstance:
     - target: {fileID: 9047011486348311582, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_Name
       value: StartScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 9047011486348311582, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
