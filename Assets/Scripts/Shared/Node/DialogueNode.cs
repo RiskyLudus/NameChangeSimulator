@@ -12,8 +12,9 @@ public class DialogueNode : Node
     public string Keyword;
 
     // Define input and output ports
-    [Input(backingValue = ShowBackingValue.Never)] public DialogueNode OverrideInput;
+    // Order of operations matters here. Input needs to come before Overrideinput, otherwise new nodes will default to Overrideinputs. -Ai
     [Input(backingValue = ShowBackingValue.Never)] public DialogueNode Input;
+    [Input(backingValue = ShowBackingValue.Never)] public DialogueNode OverrideInput;
     [Output(backingValue = ShowBackingValue.Never)] public DialogueNode Output;
 
     public override object GetValue(NodePort port)
