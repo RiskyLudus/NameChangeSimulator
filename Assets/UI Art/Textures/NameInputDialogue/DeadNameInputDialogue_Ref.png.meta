@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6c802e0f43c51be448dd1c601d9b1627
+guid: ab8d020b68c6d78479d49135ce4c66a8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2184929056336727833
-    second: PdfPreviousPage_Ref_0
+      213: 9052688311330345047
+    second: DeadNameInputDialogue_Ref_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PdfPreviousPage_Ref_0
+      name: DeadNameInputDialogue_Ref_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 26
         y: 0
-        width: 263
-        height: 257
+        width: 2441
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e0be9979929da1e0800000000000000
-      internalID: -2184929056336727833
+      spriteID: 7501d235e0c91ad70800000000000000
+      internalID: 9052688311330345047
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PdfPreviousPage_Ref_0: -2184929056336727833
+      DeadNameInputDialogue_Ref_0: 9052688311330345047
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
