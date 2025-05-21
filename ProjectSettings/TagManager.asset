@@ -44,11 +44,17 @@ TagManager:
   - name: Background
     uniqueID: 3990229431
     locked: 0
-  - name: DialogueBox
+  - name: StartScreen
+    uniqueID: 3014920051
+    locked: 0
+  - name: Popups
     uniqueID: 4023130805
     locked: 0
-  - name: Text
-    uniqueID: 175601611
+  - name: Options
+    uniqueID: 3614628183
+    locked: 0
+  - name: Credits
+    uniqueID: 4261153685
     locked: 0
   m_RenderingLayers:
   - Default

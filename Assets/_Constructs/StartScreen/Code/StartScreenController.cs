@@ -3,7 +3,6 @@ using Anarchy.Shared;
 using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -18,7 +17,6 @@ namespace NameChangeSimulator.Constructs.StartScreen
         [SerializeField] private TMP_Text flavorText;
         [SerializeField] private GameObject startPanel;
         [SerializeField] private GameObject logo;
-        [SerializeField] private Button startButton;
 
         private Coroutine _co = null;
 

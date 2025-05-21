@@ -17,6 +17,8 @@ namespace NameChangeSimulator.Constructs.Dialogue
     public class DialogueController : MonoBehaviour
     {
         public string StateToLoad { get; set; }
+
+        [SerializeField] private GameObject container;
         
         [SerializeField] private DialogueBoxController dialogueBox;
         [SerializeField] private NameInputBoxController deadNameInputBox;
@@ -42,6 +44,8 @@ namespace NameChangeSimulator.Constructs.Dialogue
 
         private void OnLoad(string dialogueToLoad)
         {
+            container.SetActive(true);
+            
             AudioManager.Instance.PlayWhoAreYou_Music();
             Debug.Log($"Loading Dialogue: {dialogueToLoad}");
             
