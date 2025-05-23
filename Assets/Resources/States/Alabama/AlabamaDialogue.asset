@@ -57,12 +57,13 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: "Explain why you want to change your name. \n\n(Putting something
     like, \"I want a name that more accurately represents my gender\" is totally
     fine here!)"
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-8704850307883774337
 MonoBehaviour:
@@ -118,10 +119,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Aaaaand your zip code?
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-7386258429828715793
 MonoBehaviour:
@@ -177,14 +179,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Middle Name (Deadname)
 
 
     If you''re seeing this, report this
     to the dev team!'
   Keyword: DeadMiddleName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-7070107052188709947
 MonoBehaviour:
@@ -240,11 +243,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 5
   DialogueText: Anyway! Enough of that, though. Let's take a peek at your shiny new
     Name Change forms! <3
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-6809163481683696807
 MonoBehaviour:
@@ -300,14 +304,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Last Name (Deadname)
 
 
     If you''re seeing this, report this to
     the dev team!'
   Keyword: DeadLastName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-6746434647609466219
 MonoBehaviour:
@@ -363,10 +368,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Enter your State ID Number here.
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-6631252384335470657
 MonoBehaviour:
@@ -422,14 +428,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Middle Name (newName)
 
 
     If you''re seeing this, report this
     to the dev team!'
   Keyword: NewMiddleName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-6601098342270960634
 MonoBehaviour:
@@ -485,14 +492,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'If you have any other details on changing your name, add them here.
     This is the second line on the form.
 
 
     You can also just leave this blank.'
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-6263098343143556662
 MonoBehaviour:
@@ -548,11 +556,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 3. 2 Proofs of Residence - these can be a lease agreement, a utility
     bill, some mail with your name and address on it, anything.
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-5992385641201013351
 MonoBehaviour:
@@ -608,10 +617,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: And what city is that in, hm?
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-5657536818640863997
 MonoBehaviour:
@@ -667,11 +677,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Once you print your form, there's a few things you'll need to do.
     Take notes!
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-5196523100652358112
 MonoBehaviour:
@@ -727,11 +738,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 10
   DialogueText: Aaaaand we're done! Congrats! We're ready to generate your Alabama
     PS-12 Request to Change Name form!
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-4985158571817111954
 MonoBehaviour:
@@ -787,14 +799,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'First Name (Deadname)
 
 
     If you''re seeing this, report this
     to the dev team!'
   Keyword: DeadFirstName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-4734781866472935256
 MonoBehaviour:
@@ -850,14 +863,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'First Name (Deadname)
 
 
     If you''re seeing this, report this
     to the dev team!'
   Keyword: DeadFirstName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-3542929830240714573
 MonoBehaviour:
@@ -913,14 +927,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Middle Name (Deadname)
 
 
     If you''re seeing this, report this
     to the dev team!'
   Keyword: DeadMiddleName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-3322082829544681533
 MonoBehaviour:
@@ -976,11 +991,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 1. The PS-12 Form (The one you're about to print! You'll also need
     to get this signed by a notary while you're there!)
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-2742748475307713584
 MonoBehaviour:
@@ -1036,11 +1052,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: What state is this address in? (This is usually going to be Alabama,
     but the form requires you to put it down anyway. Better safe than sorry!)
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-2707781507395084085
 MonoBehaviour:
@@ -1099,11 +1116,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: "Okie dokie. Next, give me your date of birth. \nMake sure it's in
     mm/dd/yyyy format!"
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-2110784465463654629
 MonoBehaviour:
@@ -1159,14 +1177,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'First Name (newName)
 
 
     If you''re seeing this, report this to
     the dev team!'
   Keyword: NewFirstName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-1334865764412088124
 MonoBehaviour:
@@ -1248,11 +1267,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Would you prefer to use you Driver's License or a State ID number
     for verification?
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
   Options:
   - Driver's License
@@ -1311,11 +1331,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 2
   DialogueText: Now, enter your Street Address. Don't include the City, State, or
     Zip Code yet!
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &-270956369372485923
 MonoBehaviour:
@@ -1371,11 +1392,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 5. Your birth certificate and a filing fee. That fee can range anywhere
     from $25-95.
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -1484,10 +1506,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 8
   DialogueText: First things first, what county do you live in?
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &401571315143168076
 MonoBehaviour:
@@ -1543,11 +1566,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 7
   DialogueText: Firstly, check with your local court to see if you need to submit
     a background check. Not every court requires one.
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &820373529870723678
 MonoBehaviour:
@@ -1603,14 +1627,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Last Name (Deadname)
 
 
     If you''re seeing this, report this to
     the dev team!'
   Keyword: DeadLastName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &1556155457314165791
 MonoBehaviour:
@@ -1689,11 +1714,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Do you have a separate number you want to enter for your work phone
     number?
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
   Options:
   - Yes
@@ -1752,10 +1778,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 1
   DialogueText: Alright, Alabama! Let's dive right in with the questions.
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &2734591533143075379
 MonoBehaviour:
@@ -1811,11 +1838,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Alrighty, then, let's hear that work phone number! Same format as
     before.
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &2865094089926110383
 MonoBehaviour:
@@ -1871,14 +1899,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'First Name (Deadname)
 
 
     If you''re seeing this, report this
     to the dev team!'
   Keyword: DeadFirstName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &4363967053390131346
 MonoBehaviour:
@@ -1934,11 +1963,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'When you head down to the Probate Court, you''ll need the following
     items:'
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &4381969860481313589
 MonoBehaviour:
@@ -1994,10 +2024,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: County_Name2
   Keyword: County_Name1
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &5236160180441992543
 MonoBehaviour:
@@ -2084,10 +2115,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 2. The background check as previously mentioned.
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &5706560076236870429
 MonoBehaviour:
@@ -2174,14 +2206,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Last Name (Deadname)
 
 
     If you''re seeing this, report this to
     the dev team!'
   Keyword: DeadLastName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &7224142497032173734
 MonoBehaviour:
@@ -2237,14 +2270,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Last Name (newName)
 
 
     If you''re seeing this, report this to
     the dev team!'
   Keyword: NewLastName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &7392405599856358333
 MonoBehaviour:
@@ -2300,11 +2334,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 4
   DialogueText: 'Alright - next up: phone numbers. What''s your home phone number?
     Enter it in the following format: (123) 123-4567.'
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &9088896919082838870
 MonoBehaviour:
@@ -2360,14 +2395,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 'Middle Name (Deadname)
 
 
     If you''re seeing this, report this
     to the dev team!'
   Keyword: DeadMiddleName
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &9189954719558115704
 MonoBehaviour:
@@ -2423,10 +2459,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: 4. Your Photo ID (A driver's license will do just fine)...
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &9222760895698229904
 MonoBehaviour:
@@ -2485,8 +2522,9 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
+  VoiceLine: 0
   DialogueText: Enter your Driver's License number here.
   Keyword: 
-  OverrideInput: {fileID: 0}
   Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
