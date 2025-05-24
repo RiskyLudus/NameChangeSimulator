@@ -6,9 +6,13 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
 {
     public class NameInputBoxController : MonoBehaviour
     {
+        private static readonly int OpenTrigger = Animator.StringToHash("Open");
+        private static readonly int CloseTrigger = Animator.StringToHash("Close");
+        
         [SerializeField] private DialogueController dialogueController;
         [SerializeField] private GameObject container;
         [SerializeField] private TMP_InputField firstNameInputField, middleNameInputField, lastNameInputField;
+        [SerializeField] private Animator nameInputAnimator;
         [SerializeField] private Animator[] animators;
         [SerializeField] private string triggerName;
 
@@ -20,7 +24,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             firstNameInputField.text = string.Empty;
             middleNameInputField.text = string.Empty;
             lastNameInputField.text = string.Empty;
-            container.SetActive(true);
+            nameInputAnimator.SetTrigger(OpenTrigger);
         }
         
         public void SubmitInput()
@@ -38,13 +42,13 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             if (_goToNextRunning) return;
             
             _goToNextRunning = true;
-            container.SetActive(false);
             dialogueController.GoToNext($"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}");
+            nameInputAnimator.SetTrigger(CloseTrigger);
         }
 
         public void Close()
         {
-            container.SetActive(false);
+            
         }
     }
 }
