@@ -17,6 +17,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
         [SerializeField] private TMP_Text flavorText;
         [SerializeField] private GameObject startPanel;
         [SerializeField] private GameObject logo;
+        [SerializeField] private SpriteRenderer fade;
 
         private Coroutine _co = null;
 
@@ -79,9 +80,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
             AudioManager.Instance.PlayStartSound_SFX();
             AudioManager.Instance.StopMusic();
             float t = 0.0f;
-            Image image = startPanel.GetComponent<Image>();
-            image.raycastTarget = true;
-            Color startColor = image.color;
+            Color startColor = fade.color;
             
             while (t < startDelayTime)
             {
@@ -89,7 +88,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
                 t += Time.deltaTime;
                 logo.transform.Rotate(Vector3.up, logoSpinStrength * t);
                 float newAlpha = Mathf.Lerp(startColor.a, 1.0f, t / startDelayTime);
-                image.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);
+                fade.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);
             }
             
             ConstructBindings.Send_DialogueData_Load?.Invoke("Introduction");
