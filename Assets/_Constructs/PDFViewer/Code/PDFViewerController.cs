@@ -11,7 +11,8 @@ using UnityEngine.UI;
 
 public class PDFViewerController : MonoBehaviour
 {
-    public List<Texture2D> pdfPages = new List<Texture2D>(); // Store PDF pages as Texture2D
+	private const string TEMP_PDF_FILE = "temp.pdf";
+	public List<Texture2D> pdfPages = new List<Texture2D>(); // Store PDF pages as Texture2D
     [SerializeField] private GameObject container;
     [SerializeField] private RawImage prevPageImage, nextPageImage, mainPageImage;
 
@@ -43,7 +44,7 @@ public class PDFViewerController : MonoBehaviour
         }
 
         // Write the PDF bytes to a temporary file
-        _tempPDFPath = Path.Combine(persistentPath, "temp.pdf");
+        _tempPDFPath = Path.Combine(persistentPath, TEMP_PDF_FILE);
         await File.WriteAllBytesAsync(_tempPDFPath, pdfBytes);
         Debug.Log($"Temporary PDF saved at: {_tempPDFPath}");
 

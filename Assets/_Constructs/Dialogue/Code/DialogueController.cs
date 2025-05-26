@@ -47,7 +47,7 @@ namespace NameChangeSimulator.Constructs.Dialogue
             container.SetActive(true);
             
             AudioManager.Instance.PlayWhoAreYou_Music();
-            Debug.Log($"Loading Dialogue: {dialogueToLoad}");
+            Debug.Log($"[START]Loading Dialogue: {dialogueToLoad}");
             
             // Load the Dialogue Graph
             var graph = Resources.LoadAll<DialogueGraph>("States/" + dialogueToLoad).First();
@@ -100,7 +100,8 @@ namespace NameChangeSimulator.Constructs.Dialogue
 
             if (valueEntered != null)
             {
-                ConstructBindings.Send_FormDataFillerData_Submit?.Invoke(_currentNode.name, valueEntered);
+	            Debug.Log($"<color=green>[SAVE]</color> : {_currentNode.name}={valueEntered}");
+				ConstructBindings.Send_FormDataFillerData_Submit?.Invoke(_currentNode.name, valueEntered);
             }
 
             Node nextNode = _currentNode;

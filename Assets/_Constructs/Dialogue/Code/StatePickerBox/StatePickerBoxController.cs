@@ -21,7 +21,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.StatePickerBox
         
         public void DisplayStatePicker()
         {
-            Debug.Log($"Showing StatePicker node");
+            Debug.Log($"<color=cyan>[UI]</color>Showing StatePicker node");
             AudioManager.Instance.PlayShowWindow_SFX();
             container.SetActive(true);
         }
@@ -40,7 +40,10 @@ namespace NameChangeSimulator.Constructs.Dialogue.StatePickerBox
         {
             AudioManager.Instance.PlayUIConfirm_SFX();
             AudioManager.Instance.PlayCloseWindow_SFX();
+
             dialogueController.StateToLoad = dropdownText.text;
+            Debug.Log("<color=lightblue>[SUBMIT]</color> state=" + dropdownText.text);
+
             dialogueController.GoToNext();
             container.SetActive(false);
         }
