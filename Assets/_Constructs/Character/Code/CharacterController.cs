@@ -8,7 +8,7 @@ namespace NameChangeSimulator.Constructs.Character
     public class CharacterController : MonoBehaviour
     {
         [SerializeField] private CharacterData characterData;
-        [SerializeField] private Image characterImage;
+        [SerializeField] private SpriteRenderer characterImage;
 
         private void OnEnable()
         {
