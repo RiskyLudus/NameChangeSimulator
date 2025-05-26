@@ -7,6 +7,7 @@ using iTextSharp.text.pdf;
 using NameChangeSimulator.Shared.Utils;
 using NameChangeSimulator.Shared;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PDFViewerController : MonoBehaviour
@@ -210,7 +211,7 @@ public class PDFViewerController : MonoBehaviour
 
     public void Redo()
     {
-        
+        SceneManager.LoadScene(0);
     }
 
     public void NextPage()
