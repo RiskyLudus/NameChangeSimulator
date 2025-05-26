@@ -2885,6 +2885,42 @@ PrefabInstance:
       propertyPath: dialogueController
       value: 
       objectReference: {fileID: 5356613311611096324}
+    - target: {fileID: 4929729457320374796, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611206141889755912, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613809293288962151, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674629558120651250, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674629558120651250, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674629558120651250, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_margin.w
+      value: -3.1698992
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674629558120651250, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674629558120651250, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674629558120651250, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4242,11 +4278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1819093482871744602, guid: 74473108915728a40a6597cdfab84d95, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -615
+      value: -441.36
       objectReference: {fileID: 0}
     - target: {fileID: 1819093482871744602, guid: 74473108915728a40a6597cdfab84d95, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -203
+      value: 247
       objectReference: {fileID: 0}
     - target: {fileID: 1819093482871744602, guid: 74473108915728a40a6597cdfab84d95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
