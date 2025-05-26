@@ -20,7 +20,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         
         public void DisplayNameInputWindow()
         {
-            Debug.Log("Showing name input window");
+            Debug.Log("<color=lightblue>[INPUT]</color>Showing name input window");
             firstNameInputField.text = string.Empty;
             middleNameInputField.text = string.Empty;
             lastNameInputField.text = string.Empty;
@@ -29,7 +29,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         
         public void SubmitInput()
         {
-            Debug.Log("Submit name input");
+            Debug.Log("<color=lightblue>[SUBMIT]</color> name input");
             AudioManager.Instance.PlayUIConfirm_SFX();
             foreach (var animator in animators)
             {

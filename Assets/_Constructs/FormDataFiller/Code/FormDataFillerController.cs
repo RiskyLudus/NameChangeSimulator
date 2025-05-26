@@ -39,7 +39,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 
         private void OnLoad(string formDataToLoad)
         {
-            Debug.Log($"Loading Form Data: {formDataToLoad}");
+            Debug.Log($"<color=silver>[LOAD]</color> Form Data: {formDataToLoad}");
             
             // Load the Form Data
             _fieldData = Resources.LoadAll<PDFFieldData>("States/" + formDataToLoad).First();

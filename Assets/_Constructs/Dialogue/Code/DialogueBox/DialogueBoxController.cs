@@ -20,7 +20,8 @@ namespace NameChangeSimulator.Constructs.Dialogue.DialogueBox
 
         public void DisplayConversation(string dialogueText, bool showBackButton, bool showNextButton)
         {
-            Debug.Log($"Showing Dialogue node");
+            Debug.Log($"<color=cyan>[UI]</color>Showing Dialogue node \n" +
+                      $"Showing back button {showBackButton} and showing next button {showNextButton}");
             AudioManager.Instance.PlayShowWindow_SFX();
             conversationPromptText.text = string.Empty;
             _currentText = dialogueText;
@@ -37,7 +38,6 @@ namespace NameChangeSimulator.Constructs.Dialogue.DialogueBox
 
         private void ToggleButtons(bool showBackButton, bool showNextButton)
         {
-            Debug.Log($"Showing back button {showBackButton} and showing next button {showNextButton}");
             backButton.SetActive(showBackButton);
             nextButton.SetActive(showNextButton);
         }

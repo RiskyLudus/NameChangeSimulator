@@ -152,6 +152,16 @@ MonoBehaviour:
     fieldType: Text Field
     options: []
     overrideKey: NewLastName
+  - fieldName: Birth_Full_Name
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: FullDeadName
+  - fieldName: New_Full_Name
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: FullNewName
   keywords:
   - County_Name1
   - Current_First_Name1
