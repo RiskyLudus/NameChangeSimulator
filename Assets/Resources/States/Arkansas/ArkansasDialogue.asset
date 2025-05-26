@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: newName
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1500, y: 3000}
+  position: {x: -1496, y: 3000}
   ports:
     keys:
     - OverrideInput
@@ -268,7 +268,7 @@ MonoBehaviour:
   SpriteType: 1
   VoiceLine: 0
   DialogueText: newName
-  Keyword: 
+  Keyword: FullNewName
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
@@ -453,7 +453,7 @@ MonoBehaviour:
   SpriteType: 1
   VoiceLine: 0
   DialogueText: birthName
-  Keyword: DeadFirstName
+  Keyword: FullDeadName
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
