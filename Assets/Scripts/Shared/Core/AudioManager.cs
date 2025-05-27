@@ -123,6 +123,8 @@ namespace NameChangeSimulator.Shared
         // Music playback methods remain the same
         public void PlayMusic(AudioClip clip)
         {
+            if (musicAudioSource.clip == clip) return;
+            
             musicAudioSource.clip = clip;
             musicAudioSource.Play();
         }
