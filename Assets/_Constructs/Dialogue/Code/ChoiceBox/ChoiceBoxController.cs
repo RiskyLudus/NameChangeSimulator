@@ -14,12 +14,25 @@ namespace NameChangeSimulator.Constructs.Dialogue.ChoiceBox
         [SerializeField] private GameObject container;
         [SerializeField] private GameObject choicePrefab;
         [SerializeField] private Transform choiceLayout;
+        [SerializeField] private GameObject defaultChoiceObject;
+        [SerializeField] private GameObject yesNoChoiceObject;
 
         public void DisplayChoicesWindow(string[] options)
         {
-            for (int i = 0; i < choiceLayout.transform.childCount; i++)
+            defaultChoiceObject.SetActive(false);
+            yesNoChoiceObject.SetActive(false);
+            
+            if (options.Length == 2 && options[0] == "Yes" && options[1] == "No")
             {
-                Destroy(choiceLayout.transform.GetChild(i).gameObject);
+                yesNoChoiceObject.SetActive(true);
+            }
+            else
+            {
+                defaultChoiceObject.SetActive(true);
+                for (int i = 0; i < choiceLayout.transform.childCount; i++)
+                {
+                    Destroy(choiceLayout.transform.GetChild(i).gameObject);
+                }
             }
 
             foreach (var option in options)

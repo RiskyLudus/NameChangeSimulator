@@ -1,53 +1,58 @@
 using System;
 using Anarchy.Shared;
+using NameChangeSimulator.Shared;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace NameChangeSimulator.Constructs.Character
 {
+    [Serializable]
+    public class CharacterSprite
+    {
+        public CharacterSpriteType spriteType = CharacterSpriteType.None;
+        public GameObject spriteObject;
+    }
+    
     public class CharacterController : MonoBehaviour
     {
-        [SerializeField] private CharacterData characterData;
-        [SerializeField] private SpriteRenderer characterImage;
+        [SerializeField] private GameObject currentCharacterSprite;
+        [SerializeField] private CharacterSprite[] characterSprites;
 
         private void OnEnable()
         {
             ConstructBindings.Send_CharacterData_ChangeCharacterSprite.AddListener(OnCharacterSpriteChange);
-            ConstructBindings.Send_CharacterData_ChangeCharacterName.AddListener(OnCharacterNameChange);
             ConstructBindings.Send_CharacterData_ToggleCharacterSprite?.AddListener(OnToggleCharacterSprite);
         }
 
         private void OnDisable()
         {
             ConstructBindings.Send_CharacterData_ChangeCharacterSprite.RemoveListener(OnCharacterSpriteChange);
-            ConstructBindings.Send_CharacterData_ChangeCharacterName.RemoveListener(OnCharacterNameChange);
             ConstructBindings.Send_CharacterData_ToggleCharacterSprite?.RemoveListener(OnToggleCharacterSprite);
         }
 
-        private void Start()
+        private void OnCharacterSpriteChange(string characterSpriteTypeString)
         {
-            LoadCharacterSprite();
+            if (characterSpriteTypeString != CharacterSpriteType.None.ToString())
+            {
+                foreach (var characterSprite in characterSprites)
+                {
+                    characterSprite.spriteObject.SetActive(false);
+                    if (characterSprite.spriteType.ToString() == characterSpriteTypeString)
+                    {
+                        currentCharacterSprite = characterSprite.spriteObject;
+                        currentCharacterSprite.SetActive(true);
+                    }
+                }
+            }
+            else
+            {
+                currentCharacterSprite.SetActive(false);
+            }
         }
-        
-        private void OnCharacterSpriteChange(Sprite characterSprite)
-        {
-            characterData.characterSprite = characterSprite;
-            LoadCharacterSprite();
-        }
-        
-        private void OnCharacterNameChange(string characterName)
-        {
-            characterData.characterName = characterName;
-        }
-        
+
         private void OnToggleCharacterSprite(bool toggle)
         {
-            characterImage.enabled = toggle;
-        }
-        
-        private void LoadCharacterSprite()
-        {
-            characterImage.sprite = characterData.characterSprite;
+            currentCharacterSprite.SetActive(toggle);
         }
     }
 }

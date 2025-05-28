@@ -1,6 +1,7 @@
 using NameChangeSimulator.Constructs.Dialogue.InputBox;
 using NameChangeSimulator.Shared;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewNameGlowAnimationEventController : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class NewNameGlowAnimationEventController : MonoBehaviour
     public void OnGlowComplete()
     {
         nameInputBoxController.GoToNext();
+    }
+
+    public void ChangeToGlowTexture()
+    {
+        nameInputBoxController.ChangeTexture();
     }
 }

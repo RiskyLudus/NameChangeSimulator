@@ -686,6 +686,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 3.1666667
+    functionName: BurnAwayTextFields
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 5.9666667
     functionName: OnBurnComplete
     data: 

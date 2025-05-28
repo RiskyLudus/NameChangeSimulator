@@ -6,5 +6,7 @@ namespace NameChangeSimulator.Shared
     {
         None = 0,
         Idle = 1,
+        Teacup = 2,
+        Excited = 3,
     }
 }

@@ -1,6 +1,7 @@
 using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace NameChangeSimulator.Constructs.Dialogue.InputBox
 {
@@ -15,15 +16,14 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         [SerializeField] private Animator nameInputAnimator;
         [SerializeField] private Animator[] animators;
         [SerializeField] private string triggerName;
+        [SerializeField] private Sprite textureSwapImage;
 
         private bool _goToNextRunning = false; // I hate doing stuff like this for animation control but ah well -Risky
         
         public void DisplayNameInputWindow()
         {
             Debug.Log("<color=lightblue>[INPUT]</color>Showing name input window");
-            firstNameInputField.text = string.Empty;
-            middleNameInputField.text = string.Empty;
-            lastNameInputField.text = string.Empty;
+            ClearTextFields();
             nameInputAnimator.SetTrigger(OpenTrigger);
         }
         
@@ -35,12 +35,12 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             {
                 animator.SetTrigger(triggerName);
             }
+            
         }
 
         public void GoToNext()
         {
             if (_goToNextRunning) return;
-            
             _goToNextRunning = true;
             dialogueController.GoToNext($"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}");
             nameInputAnimator.SetTrigger(CloseTrigger);
@@ -49,6 +49,32 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         public void Close()
         {
             
+        }
+
+        public void ClearTextFields()
+        {
+            firstNameInputField.text = string.Empty;
+            middleNameInputField.text = string.Empty;
+            lastNameInputField.text = string.Empty;
+        }
+
+        public void TurnOffInputFields()
+        {
+            firstNameInputField.gameObject.SetActive(false);
+            middleNameInputField.gameObject.SetActive(false);
+            lastNameInputField.gameObject.SetActive(false);
+        }
+
+        public void ChangeTexture()
+        {
+            firstNameInputField.GetComponent<TMP_InputField>().enabled = false;
+            firstNameInputField.GetComponent<Image>().sprite = textureSwapImage;
+            
+            middleNameInputField.GetComponent<TMP_InputField>().enabled = false;
+            middleNameInputField.GetComponent<Image>().sprite = textureSwapImage;
+            
+            lastNameInputField.GetComponent<TMP_InputField>().enabled = false;
+            lastNameInputField.GetComponent<Image>().sprite = textureSwapImage;
         }
     }
 }

@@ -50,7 +50,11 @@ namespace NameChangeSimulator.Constructs.StartScreen
 
         public void StartGame()
         {
-            StartCoroutine(StartGameIntro());
+            if (!isStarting)
+            {
+                isStarting = true;
+                StartCoroutine(StartGameIntro());
+            }
         }
 
         private void ClearCoroutine()
@@ -76,7 +80,6 @@ namespace NameChangeSimulator.Constructs.StartScreen
         
         private IEnumerator StartGameIntro()
         {
-            isStarting = true;
             AudioManager.Instance.PlayStartSound_SFX();
             AudioManager.Instance.StopMusic();
             float t = 0.0f;

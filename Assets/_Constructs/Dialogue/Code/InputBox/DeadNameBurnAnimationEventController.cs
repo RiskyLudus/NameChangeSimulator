@@ -15,4 +15,9 @@ public class DeadNameBurnAnimationEventController : MonoBehaviour
     {
         nameInputBoxController.GoToNext();
     }
+
+    public void BurnAwayTextFields()
+    {
+        nameInputBoxController.TurnOffInputFields();
+    }
 }

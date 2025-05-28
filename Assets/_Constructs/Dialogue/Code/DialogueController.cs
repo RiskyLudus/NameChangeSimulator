@@ -27,6 +27,7 @@ namespace NameChangeSimulator.Constructs.Dialogue
         [SerializeField] private InputBoxController inputBox;
         [SerializeField] private DropdownBoxController dropdownBox;
         [SerializeField] private ChoiceBoxController choiceBox;
+        [SerializeField] private CharacterController characterController;
         
         private DialogueGraph _currentDialogue;
         private StartNode _startNode;
@@ -161,6 +162,11 @@ namespace NameChangeSimulator.Constructs.Dialogue
             if (dialogueNode.VoiceLine != VoiceLineType.None)
             {
                 AudioManager.Instance.PlayVoiceOver(dialogueNode.VoiceLine.ToString());
+            }
+
+            if (dialogueNode.SpriteType != CharacterSpriteType.None)
+            {
+                ConstructBindings.Send_CharacterData_ChangeCharacterSprite?.Invoke(dialogueNode.SpriteType.ToString());
             }
         }
 
