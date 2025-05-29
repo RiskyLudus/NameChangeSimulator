@@ -250,6 +250,9 @@ namespace NameChangeSimulator.Constructs.Dialogue
                     dialogueBox.CloseDialogueBox();
                     ConstructBindings.Send_FormDataFillerData_ApplyToPDF?.Invoke();
                     break;
+                case "StartNode":
+                    SetLoadStateGraphNode();
+                    break;
                 default:
                     Debug.LogError($"Unknown node type: {typeName}");
                     break;
