@@ -147,7 +147,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 0
+  VoiceLine: 1
   DialogueText: Kentucky. Alright! Let's get to business.
   Keyword: 
   Input: {fileID: 0}
@@ -723,7 +723,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   SpriteType: 1
-  VoiceLine: 0
+  VoiceLine: 9
   DialogueText: 'Now, tell me: why do you want to change your name?
 
 
