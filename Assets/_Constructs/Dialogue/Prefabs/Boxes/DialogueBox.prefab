@@ -259,15 +259,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 90f099489491be140be195af3111451b, type: 2}
-  m_sharedMaterial: {fileID: 5102275285987350965, guid: 90f099489491be140be195af3111451b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: eef12642a315aee45860f5e4e1f7fa19, type: 2}
+  m_sharedMaterial: {fileID: -1593158873134797465, guid: eef12642a315aee45860f5e4e1f7fa19, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -553,6 +553,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2163932655513295711}
     m_Modifications:
+    - target: {fileID: 480363982866740491, guid: ca9e5366d6f84ca469675df97b439f3f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 627540116011952913, guid: ca9e5366d6f84ca469675df97b439f3f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 921929404752975026, guid: ca9e5366d6f84ca469675df97b439f3f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945509687296735507, guid: ca9e5366d6f84ca469675df97b439f3f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5479156229464319301, guid: ca9e5366d6f84ca469675df97b439f3f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -752,9 +768,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2749712779894311401, guid: fdeb0143c82e78642a771d55ba22a345, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2950858413246919126, guid: fdeb0143c82e78642a771d55ba22a345, type: 3}
       propertyPath: m_Offset.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3735770136962279311, guid: fdeb0143c82e78642a771d55ba22a345, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122727193682966024, guid: fdeb0143c82e78642a771d55ba22a345, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327023950383226692, guid: fdeb0143c82e78642a771d55ba22a345, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
