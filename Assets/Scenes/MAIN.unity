@@ -1079,6 +1079,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3181153041100490919, guid: 326107b9c6f3d984f9881830fedd7844, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 265637827}
+    - target: {fileID: 3181153041100490919, guid: 326107b9c6f3d984f9881830fedd7844, type: 3}
       propertyPath: dialogueController
       value: 
       objectReference: {fileID: 5356613311611096324}
@@ -3806,10 +3810,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1856660036160842329}
-    - target: {fileID: 6911692464095037898, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: m_Name
-      value: CreditsButton
-      objectReference: {fileID: 0}
     - target: {fileID: 9047011486348311582, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_Name
       value: StartScreen
@@ -5336,6 +5336,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3586216809045742283, guid: 93038f9b96e4d9d4f8e3239ee6f8e8f6, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 562038438}
     - target: {fileID: 3586216809045742283, guid: 93038f9b96e4d9d4f8e3239ee6f8e8f6, type: 3}
       propertyPath: textureSwapImage
       value: 

@@ -17,13 +17,14 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         [SerializeField] private Animator[] animators;
         [SerializeField] private string triggerName;
         [SerializeField] private Sprite textureSwapImage;
+        [SerializeField] private GameObject button;
 
         private bool _goToNextRunning = false; // I hate doing stuff like this for animation control but ah well -Risky
         
         public void DisplayNameInputWindow()
         {
             Debug.Log("<color=lightblue>[INPUT]</color>Showing name input window");
-            ClearTextFields();
+            ResetBox();
             nameInputAnimator.SetTrigger(OpenTrigger);
         }
         
@@ -51,8 +52,13 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             
         }
 
-        public void ClearTextFields()
+        public void ResetBox()
         {
+            firstNameInputField.gameObject.SetActive(true);
+            middleNameInputField.gameObject.SetActive(true);
+            lastNameInputField.gameObject.SetActive(true);
+            button.SetActive(true);
+            _goToNextRunning = false;
             firstNameInputField.text = string.Empty;
             middleNameInputField.text = string.Empty;
             lastNameInputField.text = string.Empty;
