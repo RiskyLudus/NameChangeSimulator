@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 696, y: 3496}
+  position: {x: 744, y: 3720}
   ports:
     keys:
     - OverrideInput
@@ -60,7 +60,7 @@ MonoBehaviour:
 
 
     So,
-    that being said --'
+    that being said...'
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -122,6 +122,66 @@ MonoBehaviour:
   VoiceLine: 0
   DialogueText: What is your current FIRST Name?
   Keyword: DeadFirstName
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+--- !u!114 &-8584649401298321197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4616, y: 2552}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -8584649401298321197}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1187615724110205184}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -8584649401298321197}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -8584649401298321197}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 7237509657191080668}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: But enough jib-jab! Let's see those shiny new forms! :3
+  Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
@@ -482,7 +542,7 @@ MonoBehaviour:
   m_Name: 'Explain the Child Support: (include the State and Case Number)'
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -456, y: 1784}
+  position: {x: -424, y: 1800}
   ports:
     keys:
     - Input
@@ -546,7 +606,7 @@ MonoBehaviour:
     order against you?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -936, y: 2200}
+  position: {x: -824, y: 2296}
   ports:
     keys:
     - Input
@@ -642,7 +702,7 @@ MonoBehaviour:
   m_Name: Do you owe child support or current ordered to pay child support?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -936, y: 1752}
+  position: {x: -904, y: 1768}
   ports:
     keys:
     - Input
@@ -798,7 +858,7 @@ MonoBehaviour:
   m_Name: Are you required to register as a sex offender?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -936, y: 3032}
+  position: {x: -856, y: 3368}
   ports:
     keys:
     - Input
@@ -893,7 +953,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 696, y: 2904}
+  position: {x: 744, y: 3032}
   ports:
     keys:
     - OverrideInput
@@ -1126,7 +1186,7 @@ MonoBehaviour:
   m_Name: 'Explain the Conditions:'
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -456, y: 2648}
+  position: {x: -376, y: 2984}
   ports:
     keys:
     - Input
@@ -1317,7 +1377,7 @@ MonoBehaviour:
   m_Name: 'Explain the Reason for being labeled a Sex Offender:'
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -440, y: 3048}
+  position: {x: -360, y: 3384}
   ports:
     keys:
     - Input
@@ -1360,6 +1420,67 @@ MonoBehaviour:
   SpriteType: 1
   VoiceLine: 0
   DialogueText: Please briefly explain the reason for being registered as a SO.
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+--- !u!114 &-1187615724110205184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4136, y: 2568}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -1187615724110205184}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -349264832431278385}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -1187615724110205184}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -1187615724110205184}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -8584649401298321197}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: When you get your forms, check the back page; I've left a handy checklist
+    that will detail what else you'll need to take care of outside my office.
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -1524,7 +1645,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 7237509657191080668}
+        node: {fileID: -349264832431278385}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1541,7 +1662,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 10
-  DialogueText: Wahoo!!! You did it! Now then let's see those forms :3
+  DialogueText: Wahoo!!! You did it!
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -1606,6 +1727,67 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+--- !u!114 &-349264832431278385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3672, y: 2568}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -349264832431278385}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -985301824976188241}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -349264832431278385}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -349264832431278385}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -1187615724110205184}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Just one last thing! Just having your forms in-hand is just one step
+    of the process.
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1659,6 +1841,9 @@ MonoBehaviour:
   - {fileID: -5421054430184567860}
   - {fileID: 4928396297427303610}
   - {fileID: -9031051102430007013}
+  - {fileID: -349264832431278385}
+  - {fileID: -1187615724110205184}
+  - {fileID: -8584649401298321197}
 --- !u!114 &97061848774190809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1837,7 +2022,7 @@ MonoBehaviour:
   m_Name: Are you currently on probation, parole, or under post-prison supervision?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -936, y: 2616}
+  position: {x: -856, y: 2952}
   ports:
     keys:
     - Input
@@ -2100,7 +2285,7 @@ MonoBehaviour:
   m_Name: What is the reason?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1224, y: 2392}
+  position: {x: 1208, y: 2440}
   ports:
     keys:
     - Input
@@ -2192,7 +2377,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 696, y: 3192}
+  position: {x: 744, y: 3416}
   ports:
     keys:
     - OverrideInput
@@ -2314,7 +2499,7 @@ MonoBehaviour:
   m_Name: StartNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1500, y: 600}
+  position: {x: -1496, y: 296}
   ports:
     keys:
     - Output
@@ -2468,7 +2653,7 @@ MonoBehaviour:
   m_Name: EndNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3672, y: 2648}
+  position: {x: 5384, y: 2520}
   ports:
     keys:
     - Input
@@ -2479,7 +2664,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: -985301824976188241}
+        node: {fileID: -8584649401298321197}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2559,7 +2744,7 @@ MonoBehaviour:
   m_Name: Have you ever LEGALLY used another name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -440, y: 3576}
+  position: {x: -360, y: 3912}
   ports:
     keys:
     - Input
@@ -2648,7 +2833,7 @@ MonoBehaviour:
   m_Name: 'Explain the Order: (include the State and Case Number)'
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -456, y: 2264}
+  position: {x: -344, y: 2360}
   ports:
     keys:
     - Input
@@ -2708,7 +2893,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -936, y: 3576}
+  position: {x: -856, y: 3912}
   ports:
     keys:
     - Input
