@@ -41,20 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 3990229431
-    locked: 0
-  - name: StartScreen
-    uniqueID: 3014920051
-    locked: 0
-  - name: Popups
-    uniqueID: 4023130805
-    locked: 0
-  - name: Options
-    uniqueID: 3614628183
-    locked: 0
-  - name: Credits
-    uniqueID: 4261153685
+  - name: Overlay
+    uniqueID: 1486006933
     locked: 0
   m_RenderingLayers:
   - Default
+  - BehindWindows
