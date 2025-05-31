@@ -1,3 +1,4 @@
+using Anarchy.Shared;
 using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
@@ -38,6 +39,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
                 foreach (var animator in animators)
                 {
                     animator.SetTrigger(triggerName);
+                    ConstructBindings.Send_ScreenBlockerData_ToggleScreenBlocker?.Invoke(true);
                 }
             }
         }
@@ -47,6 +49,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             if (_goToNextRunning) return;
             _goToNextRunning = true;
             dialogueController.GoToNext($"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}");
+            ConstructBindings.Send_ScreenBlockerData_ToggleScreenBlocker?.Invoke(false);
             nameInputAnimator.SetTrigger(CloseTrigger);
         }
 
