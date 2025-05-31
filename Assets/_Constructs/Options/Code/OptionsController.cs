@@ -15,18 +15,6 @@ namespace NameChangeSimulator.Constructs.Options
         [SerializeField] private Slider sfxVolumeSlider;
         [SerializeField] private Slider voVolumeSlider;
 
-        private void OnEnable()
-        {
-            mixer.GetFloat("MusicVolume", out float musicVolume);
-            musicVolumeSlider.value = musicVolume;
-            
-            mixer.GetFloat("SFXVolume", out float sfxVolume);
-            sfxVolumeSlider.value = sfxVolume;
-            
-            mixer.GetFloat("VOVolume", out float voVolume);
-            voVolumeSlider.value = voVolume;
-        }
-
         public void ChangeVoiceOverVolume(float slidervalue)
         {
             mixer.SetFloat("VOVolume", Mathf.Log10(slidervalue) * 20);
