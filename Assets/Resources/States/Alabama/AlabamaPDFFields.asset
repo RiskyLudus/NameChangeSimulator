@@ -18,7 +18,7 @@ MonoBehaviour:
     fieldValue: COUNTY
     fieldType: Text Field
     options: []
-    overrideKey: 
+    overrideKey: county
   - fieldName: Current_First_Name1
     fieldValue: Dead Firrst
     fieldType: Text Field
@@ -103,7 +103,7 @@ MonoBehaviour:
     fieldValue: 
     fieldType: Text Field
     options: []
-    overrideKey: 
+    overrideKey: county
   - fieldName: PhotoID
     fieldValue: Driver's License
     fieldType: Radio Button

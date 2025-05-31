@@ -5,10 +5,8 @@ using System.IO;
 using System.Linq;
 using Anarchy.Shared;
 using iTextSharp.text.pdf;
-using NameChangeSimulator.Shared;
 using NameChangeSimulator.Shared.Shared.Classes;
 using NameChangeSimulator.Shared.Shared.ScriptableObjects;
-using UnityEditor;
 using UnityEngine;
 
 namespace NameChangeSimulator.Constructs.FormDataFiller
@@ -67,28 +65,38 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
         
         private void OnSubmit(string keyword, string value)
         {
-            switch (keyword)
+            if (keyword.Contains("&"))
             {
-                case "Dead Name Input":
+                foreach (var keywordPart in keyword.Split('&'))
                 {
-                    string[] parsedValues = value.Split('~');
-                    _deadFirstName = parsedValues[0];
-                    _deadMiddleName = parsedValues[1];
-                    _deadLastName = parsedValues[2];
-                    break;
+                    OnSubmit(keywordPart, value);
                 }
-                case "New Name Input":
+            }
+            else
+            {
+                switch (keyword)
                 {
-                    string[] parsedValues = value.Split('~');
-                    _newFirstName = parsedValues[0];
-                    _newMiddleName = parsedValues[1];
-                    _newLastName = parsedValues[2];
-                    break;
+                    case "Dead Name Input":
+                    {
+                        string[] parsedValues = value.Split('~');
+                        _deadFirstName = parsedValues[0];
+                        _deadMiddleName = parsedValues[1];
+                        _deadLastName = parsedValues[2];
+                        break;
+                    }
+                    case "New Name Input":
+                    {
+                        string[] parsedValues = value.Split('~');
+                        _newFirstName = parsedValues[0];
+                        _newMiddleName = parsedValues[1];
+                        _newLastName = parsedValues[2];
+                        break;
+                    }
+                    default:
+                        Debug.Log($"Keyword {keyword} with Value {value}");
+                        _fieldData.SetValue(keyword, value);
+                        break;
                 }
-                default:
-                    Debug.Log($"Keyword {keyword} with Value {value}");
-                    _fieldData.SetValue(keyword, value);
-                    break;
             }
         }
         

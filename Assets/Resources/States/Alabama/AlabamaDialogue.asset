@@ -213,7 +213,10 @@ MonoBehaviour:
       _node: {fileID: -7386258429828715793}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: 2865094089926110383}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -222,10 +225,7 @@ MonoBehaviour:
       _node: {fileID: -7386258429828715793}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: 2865094089926110383}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: -6809163481683696807}
         reroutePoints: []
       _direction: 1
@@ -338,7 +338,10 @@ MonoBehaviour:
       _node: {fileID: -6809163481683696807}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: -7386258429828715793}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -347,10 +350,7 @@ MonoBehaviour:
       _node: {fileID: -6809163481683696807}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -7386258429828715793}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: -4734781866472935256}
         reroutePoints: []
       _direction: 1
@@ -842,7 +842,10 @@ MonoBehaviour:
       _node: {fileID: -4734781866472935256}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: -6809163481683696807}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -851,10 +854,7 @@ MonoBehaviour:
       _node: {fileID: -4734781866472935256}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -6809163481683696807}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -864,7 +864,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: -3542929830240714573}
         reroutePoints: []
       _direction: 1
@@ -968,7 +968,10 @@ MonoBehaviour:
       _node: {fileID: -3542929830240714573}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: -4734781866472935256}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -977,10 +980,7 @@ MonoBehaviour:
       _node: {fileID: -3542929830240714573}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -4734781866472935256}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -990,7 +990,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: 820373529870723678}
         reroutePoints: []
       _direction: 1
@@ -1240,7 +1240,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: 4381969860481313589}
+        node: {fileID: 6527457984479825290}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1447,7 +1447,6 @@ MonoBehaviour:
   - {fileID: -4985158571817111954}
   - {fileID: 9088896919082838870}
   - {fileID: 6527457984479825290}
-  - {fileID: 4381969860481313589}
   - {fileID: -1334865764412088124}
   - {fileID: 9222760895698229904}
   - {fileID: -6746434647609466219}
@@ -1475,7 +1474,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
-  m_Name: County_Name1
+  m_Name: County_Name1&County_Name2
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1000, y: 600}
@@ -1511,7 +1510,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: 2865094089926110383}
         reroutePoints: []
       _direction: 1
@@ -1550,7 +1549,10 @@ MonoBehaviour:
       _node: {fileID: 820373529870723678}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: -3542929830240714573}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1559,10 +1561,7 @@ MonoBehaviour:
       _node: {fileID: 820373529870723678}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -3542929830240714573}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1824,7 +1823,10 @@ MonoBehaviour:
       _node: {fileID: 2865094089926110383}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: 268738431059048172}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1833,10 +1835,7 @@ MonoBehaviour:
       _node: {fileID: 2865094089926110383}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: 268738431059048172}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1846,7 +1845,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: -7386258429828715793}
         reroutePoints: []
       _direction: 1
@@ -1861,67 +1860,6 @@ MonoBehaviour:
     If you''re seeing this, report this
     to the dev team!'
   Keyword: DeadFirstName
-  Input: {fileID: 0}
-  OverrideInput: {fileID: 0}
-  Output: {fileID: 0}
-  CanLeaveBlank: 0
---- !u!114 &4381969860481313589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
-  m_Name: County_Name2
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -500, y: 3000}
-  ports:
-    keys:
-    - OverrideInput
-    - Input
-    - Output
-    values:
-    - _fieldName: OverrideInput
-      _node: {fileID: 4381969860481313589}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: 6527457984479825290}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: 4381969860481313589}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Output
-      _node: {fileID: 4381969860481313589}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -1334865764412088124}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  SpriteType: 1
-  VoiceLine: 0
-  DialogueText: County_Name2
-  Keyword: County_Name1
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
@@ -2034,8 +1972,8 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: OverrideInput
-        node: {fileID: 4381969860481313589}
+      - fieldName: Input
+        node: {fileID: -1334865764412088124}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
