@@ -49,7 +49,7 @@ namespace NameChangeSimulator.Constructs.ProgressBar
         private void UpdateText()
         {
             var percentage = (progressBar.value / progressBar.maxValue) * 100;
-            progressText.text = $"{percentage:N0}% Completed";
+            progressText.text = $"{percentage:N0}%";
         }
     }
 }
