@@ -1440,12 +1440,13 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: If you have any former names or aliases - what are they?
+  DialogueText: If you have any former names or aliases - what are they? If not,
+    leave this blank.
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
-  CanLeaveBlank: 0
+  CanLeaveBlank: 1
 --- !u!114 &9173295657495436073
 MonoBehaviour:
   m_ObjectHideFlags: 0
