@@ -77,8 +77,18 @@ namespace NameChangeSimulator.Constructs.Dialogue
             if (_currentNode == null) return;
          
             CloseAll();
+
+            Node previousNode;
+
+            try
+            {
+                previousNode = _currentNode.GetInputPort("Input").Connection.node;
+            }
+            catch (NullReferenceException)
+            {
+                previousNode = _currentNode.GetInputPort("OverrideInput").Connection.node;
+            }
             
-            var previousNode = _currentNode.GetInputPort("Input").Connection.node;
 
             if (previousNode is DialogueNode dialogueNode)
             {
