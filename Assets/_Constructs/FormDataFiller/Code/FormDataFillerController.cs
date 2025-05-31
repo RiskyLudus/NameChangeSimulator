@@ -62,7 +62,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
             _fieldData.SetOverrideValue("NewMiddleName", _newMiddleName);
             _fieldData.SetOverrideValue("NewLastName", _newLastName);
             
-            _fieldData.SetOverrideValue("IsAdult", "Yes");
+            _fieldData.SetOverrideValue("IsAdult", "True");
         }
         
         private void OnSubmit(string keyword, string value)

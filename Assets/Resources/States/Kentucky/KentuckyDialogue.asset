@@ -334,6 +334,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-3618240370890854740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,6 +395,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-3149029733987701354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,7 +656,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: 3379416609708397588}
         reroutePoints: []
       _direction: 1
@@ -669,6 +671,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &2647497734738148744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,6 +736,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &2656184009602035104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,6 +801,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &3379416609708397588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,7 +826,10 @@ MonoBehaviour:
       _node: {fileID: 3379416609708397588}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: 2210195282191614784}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -830,10 +838,7 @@ MonoBehaviour:
       _node: {fileID: 3379416609708397588}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: 2210195282191614784}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -856,10 +861,11 @@ MonoBehaviour:
 
 
     //Need to get this dummied out...'
-  Keyword: 
+  Keyword: IsAdult
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &4318426696218924838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,6 +1078,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &8260398040992083417
 MonoBehaviour:
   m_ObjectHideFlags: 0
