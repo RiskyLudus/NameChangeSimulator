@@ -62,6 +62,8 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
             _fieldData.SetOverrideValue("NewMiddleName", _newMiddleName);
             _fieldData.SetOverrideValue("NewLastName", _newLastName);
             
+            _fieldData.SetOverrideValue("IsAdult", "Yes");
+            
             ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(0, _fieldData.Fields.Length);
         }
         
