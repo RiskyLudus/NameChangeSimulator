@@ -87,7 +87,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
             
             while (t < startDelayTime)
             {
-                yield return null;
+                yield return new WaitForFixedUpdate();
                 t += Time.deltaTime;
                 logo.transform.Rotate(Vector3.up, logoSpinStrength * t);
                 float newAlpha = Mathf.Lerp(startColor.a, 1.0f, t / startDelayTime);

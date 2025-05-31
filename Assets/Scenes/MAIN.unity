@@ -5715,6 +5715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 9158869190965287129, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: logoSpinStrength
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4783081910683973192, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
     m_RemovedGameObjects: []
