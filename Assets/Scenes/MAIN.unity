@@ -2149,7 +2149,7 @@ SpriteRenderer:
   m_Size: {x: 38.399998, y: 9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1814530259
@@ -4195,6 +4195,42 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7225054654184439761, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_fontSize
+      value: 48.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225054654184439761, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: eef12642a315aee45860f5e4e1f7fa19, type: 2}
+    - target: {fileID: 7225054654184439761, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225054654184439761, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225054654184439761, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225054654184439761, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225054654184439761, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1593158873134797465, guid: eef12642a315aee45860f5e4e1f7fa19, type: 2}
+    - target: {fileID: 7225054654184439761, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225054654184439761, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7289640184663251789, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -4202,6 +4238,14 @@ PrefabInstance:
     - target: {fileID: 7289640184663251789, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_SortingLayerID
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799356665372945496, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -51
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799356665372945496, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 12.2
       objectReference: {fileID: 0}
     - target: {fileID: 7877436805315749839, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_SortingOrder
