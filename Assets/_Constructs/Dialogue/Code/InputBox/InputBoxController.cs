@@ -22,12 +22,9 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         
         public void SubmitInput()
         {
-            if (!string.IsNullOrEmpty(inputField.text))
-            {
-                container.SetActive(false);
-                AudioManager.Instance.PlayUIConfirm_SFX();
-                dialogueController.GoToNext(inputField.text);
-            }
+            container.SetActive(false);
+            AudioManager.Instance.PlayUIConfirm_SFX();
+            dialogueController.GoToNext(inputField.text);
         }
 
         public void Close()

@@ -1,4 +1,3 @@
-using System;
 using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
@@ -31,16 +30,13 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         
         public void SubmitInput()
         {
-            if (!string.IsNullOrEmpty(firstNameInputField.text) && !string.IsNullOrEmpty(lastNameInputField.text))
+            Debug.Log("<color=lightblue>[SUBMIT]</color> name input");
+            AudioManager.Instance.PlayUIConfirm_SFX();
+            foreach (var animator in animators)
             {
-                Debug.Log("<color=lightblue>[SUBMIT]</color> name input");
-                AudioManager.Instance.PlayUIConfirm_SFX();
-                button.SetActive(false);
-                foreach (var animator in animators)
-                {
-                    animator.SetTrigger(triggerName);
-                }
+                animator.SetTrigger(triggerName);
             }
+            
         }
 
         public void GoToNext()
@@ -61,11 +57,11 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             firstNameInputField.gameObject.SetActive(true);
             middleNameInputField.gameObject.SetActive(true);
             lastNameInputField.gameObject.SetActive(true);
+            button.SetActive(true);
             _goToNextRunning = false;
             firstNameInputField.text = string.Empty;
             middleNameInputField.text = string.Empty;
             lastNameInputField.text = string.Empty;
-            button.SetActive(true);
         }
 
         public void TurnOffInputFields()
