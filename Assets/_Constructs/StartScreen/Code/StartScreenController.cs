@@ -91,6 +91,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
         
         private IEnumerator StartGameIntro()
         {
+            fade.gameObject.SetActive(true);
             AudioManager.Instance.PlayStartSound_SFX();
             AudioManager.Instance.StopMusic();
             float t = 0.0f;
@@ -106,6 +107,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
             }
             
             ConstructBindings.Send_DialogueData_Load?.Invoke("Introduction");
+            fade.gameObject.SetActive(false);
             Destroy(gameObject);
         }
     }

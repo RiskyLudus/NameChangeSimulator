@@ -52,7 +52,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
 
         public void Close()
         {
-            nameInputAnimator.SetTrigger(CloseTrigger);
+            
         }
 
         public void ResetBox()
