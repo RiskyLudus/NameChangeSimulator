@@ -209,7 +209,7 @@ namespace NameChangeSimulator.Constructs.Dialogue
         private void SetInputNode(InputNode inputNode)
         {
             SetDialogueNode(inputNode, true, false);
-            inputBox.DisplayInputWindow();
+            inputBox.DisplayInputWindow(inputNode.CanLeaveBlank);
         }
 
         private void SetDropdownNode(DropdownNode dropdownNode)

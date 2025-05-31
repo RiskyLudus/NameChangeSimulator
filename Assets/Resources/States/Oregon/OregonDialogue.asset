@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: What is your current FIRST Name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -888, y: 584}
+  position: {x: -1160, y: 520}
   ports:
     keys:
     - Input
@@ -125,6 +125,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-8584649401298321197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +247,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 1
 --- !u!114 &-8215322052189868933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +474,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 1
 --- !u!114 &-7638433886309337437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,7 +488,7 @@ MonoBehaviour:
   m_Name: What is your current MIDDLE name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -504, y: 584}
+  position: {x: -568, y: 488}
   ports:
     keys:
     - Input
@@ -532,6 +535,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-7620498514955507522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +599,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-7478159831886932904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,6 +850,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 1
 --- !u!114 &-6015935852157025409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,6 +1067,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-4295306337960960722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,6 +1240,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-3614788054001788322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,6 +1302,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-2753629973460356407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1364,6 +1373,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-2161337018147134915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,6 +1434,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-1187615724110205184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,6 +1618,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 1
 --- !u!114 &-985301824976188241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1905,6 +1917,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 1
 --- !u!114 &1301748460958256437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2222,7 +2235,7 @@ MonoBehaviour:
   m_Name: What is your new FIRST Name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -888, y: 952}
+  position: {x: -1064, y: 968}
   ports:
     keys:
     - Input
@@ -2272,6 +2285,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &2985270080905465202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2580,6 +2594,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &6753430459784517704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2593,7 +2608,7 @@ MonoBehaviour:
   m_Name: What is your current LAST name?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -104, y: 584}
+  position: {x: -120, y: 488}
   ports:
     keys:
     - Input
@@ -2640,6 +2655,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &7237509657191080668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2731,6 +2747,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &8353449374087225633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2880,6 +2897,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &8752289299363725083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3004,3 +3022,4 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 1
