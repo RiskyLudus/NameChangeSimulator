@@ -119,7 +119,7 @@ RectTransform:
   m_GameObject: {fileID: 557779273910983809}
   m_LocalRotation: {x: -0, y: -0, z: 0.13839509, w: 0.9903771}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1259172, y: 1.1259172, z: 1.1259172}
+  m_LocalScale: {x: 0.83731085, y: 0.83731085, z: 0.83731085}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7799356665372945496}
@@ -389,8 +389,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Trans Rights are Human Rights!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eef12642a315aee45860f5e4e1f7fa19, type: 2}
-  m_sharedMaterial: {fileID: -1593158873134797465, guid: eef12642a315aee45860f5e4e1f7fa19, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 67f1402b46f206740847c9aeb91f5773, type: 2}
+  m_sharedMaterial: {fileID: -1593158873134797465, guid: 67f1402b46f206740847c9aeb91f5773, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -665,18 +665,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 9047011486348311582}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!223 &789152575022956678
 Canvas:
   m_ObjectHideFlags: 0
@@ -778,7 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDelayTime: 3.5
-  logoSpinStrength: 1
+  logoSpinStrength: 3
   startScreenData: {fileID: 11400000, guid: a246c1313a8f04042b1cd4e18a5a8d7e, type: 2}
   flavorText: {fileID: 7225054654184439761}
   startPanel: {fileID: 9047011486348311582}
@@ -1238,18 +1226,6 @@ MonoBehaviour:
           NameChangeSimulator.Constructs.Credits
         m_MethodName: Show
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9047011486348311582}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1730,11 +1706,41 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1280047245
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4380779858190672315, guid: ee85a84401aec7b498684aac1ca7868d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6560341627026621996, guid: ee85a84401aec7b498684aac1ca7868d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7439303988089177658}
   m_SourcePrefab: {fileID: 100100000, guid: ee85a84401aec7b498684aac1ca7868d, type: 3}
+--- !u!1 &2711237646737166815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6560341627026621996, guid: ee85a84401aec7b498684aac1ca7868d, type: 3}
+  m_PrefabInstance: {fileID: 9127463518747891699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7439303988089177658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711237646737166815}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.01, y: 2.87, z: 0.7}
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!224 &8505626734158800846 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 621863739822960701, guid: ee85a84401aec7b498684aac1ca7868d, type: 3}

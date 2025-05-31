@@ -9,7 +9,6 @@ namespace NameChangeSimulator.Constructs.Options
     {
         [SerializeField] private GameObject optionsMenu;
         [SerializeField] private AudioMixer mixer;
-        [SerializeField] private GameObject[] objectsToToggle;
         
         [SerializeField] private Slider musicVolumeSlider;
         [SerializeField] private Slider sfxVolumeSlider;
@@ -32,22 +31,12 @@ namespace NameChangeSimulator.Constructs.Options
 
         public void ShowOptionsMenu()
         {
-            ToggleObjects(false);
             optionsMenu.SetActive(true);
         }
 
         public void CloseOptionsMenu()
         {
-            ToggleObjects(true);
             optionsMenu.SetActive(false);
-        }
-
-        private void ToggleObjects(bool toggle)
-        {
-            foreach (var toggleObject in objectsToToggle)
-            {
-                toggleObject.SetActive(toggle);
-            }
         }
     }
 }
