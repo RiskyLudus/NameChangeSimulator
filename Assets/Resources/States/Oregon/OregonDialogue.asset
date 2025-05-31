@@ -1498,7 +1498,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -872, y: 232}
+  position: {x: -1224, y: 120}
   ports:
     keys:
     - Input
@@ -1680,7 +1680,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1272, y: 232}
+  position: {x: -1624, y: 120}
   ports:
     keys:
     - Input
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_Name: Which COUNTY is this being filed?
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 360, y: 104}
+  position: {x: -312, y: 72}
   ports:
     keys:
     - Input
@@ -2439,7 +2439,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -488, y: 232}
+  position: {x: -840, y: 120}
   ports:
     keys:
     - Input
@@ -2499,7 +2499,7 @@ MonoBehaviour:
   m_Name: StartNode
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1496, y: 296}
+  position: {x: -1848, y: 184}
   ports:
     keys:
     - Output

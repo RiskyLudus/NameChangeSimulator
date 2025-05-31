@@ -63,6 +63,13 @@ namespace NameChangeSimulator.Constructs.Dialogue
                 _startNode = startNode;
                 SetCurrentNode(startNode.GetOutputPort("Output").Connection.node);
             }
+            
+            _currentDialogue = graph;
+
+            /*if (dialogueToLoad != "Introduction")
+            {
+                ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(0, _currentDialogue.nodes.Count);
+            }*/
         }
 
         public void GoToBack()
@@ -101,25 +108,25 @@ namespace NameChangeSimulator.Constructs.Dialogue
 
             if (valueEntered != null)
             {
-	            Debug.Log($"<color=green>[SAVE]</color> : {_currentNode.name}={valueEntered}");
-				ConstructBindings.Send_FormDataFillerData_Submit?.Invoke(_currentNode.name, valueEntered);
+                Debug.Log($"<color=green>[SAVE]</color> : {_currentNode.name}={valueEntered}");
+                ConstructBindings.Send_FormDataFillerData_Submit?.Invoke(_currentNode.name, valueEntered);
             }
 
             Node nextNode = _currentNode;
-            
+
             if (_currentNode is ChoiceNode choiceNode)
             {
                 Dictionary<string, string> outputData = new Dictionary<string, string>();
-            
+
                 foreach (var iOutput in _currentNode.DynamicOutputs)
                 {
                     int index = int.Parse(iOutput.fieldName.Replace("Options ", string.Empty));
                     string optionValue = choiceNode.Options[index];
-                    
+
                     Debug.Log($"Adding option {iOutput.fieldName} to outputdata: {optionValue}");
                     outputData.Add(iOutput.fieldName, optionValue);
                 }
-                
+
                 foreach (var output in outputData.Where(output => output.Value == valueEntered))
                 {
                     nextNode = _currentNode.DynamicOutputs.First(op => op.fieldName == output.Key).Connection.node;
@@ -148,8 +155,11 @@ namespace NameChangeSimulator.Constructs.Dialogue
             {
                 SetCurrentNode(nextNode);
             }
+            
+           // ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(0);
         }
-        
+
+
         // A standard conversation with back and next buttons.
         private void SetDialogueNode(DialogueNode dialogueNode, bool showBackButton = true, bool showNextButton = true)
         {

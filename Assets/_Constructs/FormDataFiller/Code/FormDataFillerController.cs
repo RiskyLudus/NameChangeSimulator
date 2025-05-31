@@ -63,8 +63,6 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
             _fieldData.SetOverrideValue("NewLastName", _newLastName);
             
             _fieldData.SetOverrideValue("IsAdult", "Yes");
-            
-            ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(0, _fieldData.Fields.Length);
         }
         
         private void OnSubmit(string keyword, string value)
@@ -90,9 +88,6 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                 default:
                     Debug.Log($"Keyword {keyword} with Value {value}");
                     _fieldData.SetValue(keyword, value);
-                    ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(
-                        _fieldData.Fields.Count(field => !string.IsNullOrEmpty(field.fieldValue))
-                    );
                     break;
             }
         }
