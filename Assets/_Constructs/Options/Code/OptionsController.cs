@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 namespace NameChangeSimulator.Constructs.Options
 {
@@ -8,10 +10,26 @@ namespace NameChangeSimulator.Constructs.Options
         [SerializeField] private GameObject optionsMenu;
         [SerializeField] private AudioMixer mixer;
         [SerializeField] private GameObject[] objectsToToggle;
+        
+        [SerializeField] private Slider musicVolumeSlider;
+        [SerializeField] private Slider sfxVolumeSlider;
+        [SerializeField] private Slider voVolumeSlider;
 
-        public void ChangeMasterVolume(float slidervalue)
+        private void OnEnable()
         {
-            mixer.SetFloat("MasterVolume", Mathf.Log10(slidervalue) * 20);
+            mixer.GetFloat("MusicVolume", out float musicVolume);
+            musicVolumeSlider.value = musicVolume;
+            
+            mixer.GetFloat("SFXVolume", out float sfxVolume);
+            sfxVolumeSlider.value = sfxVolume;
+            
+            mixer.GetFloat("VOVolume", out float voVolume);
+            voVolumeSlider.value = voVolume;
+        }
+
+        public void ChangeVoiceOverVolume(float slidervalue)
+        {
+            mixer.SetFloat("VOVolume", Mathf.Log10(slidervalue) * 20);
         }
         
         public void ChangeMusicVolume(float slidervalue)
