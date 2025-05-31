@@ -4920,6 +4920,10 @@ PrefabInstance:
       propertyPath: dialogueController
       value: 
       objectReference: {fileID: 5356613311611096324}
+    - target: {fileID: 5459442732798413115, guid: 9d80749c7806bc84c8fbd747b376d613, type: 3}
+      propertyPath: buttonType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5533137429210529962, guid: 9d80749c7806bc84c8fbd747b376d613, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
