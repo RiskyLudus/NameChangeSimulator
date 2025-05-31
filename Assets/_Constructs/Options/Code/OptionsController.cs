@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace NameChangeSimulator.Constructs.Options
@@ -37,6 +38,16 @@ namespace NameChangeSimulator.Constructs.Options
         public void CloseOptionsMenu()
         {
             optionsMenu.SetActive(false);
+        }
+
+        public void Restart()
+        {
+            SceneManager.LoadScene(0);
+        }
+
+        public void Quit()
+        {
+            Application.Quit();
         }
     }
 }

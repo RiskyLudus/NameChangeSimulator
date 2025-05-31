@@ -193,7 +193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6835144256624630549
 RectTransform:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ RectTransform:
   m_Father: {fileID: 8271976138726149400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -808,7 +808,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3311582355431021486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -17}
+  m_LocalPosition: {x: 0, y: 0, z: -133.00003}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -965,9 +965,9 @@ RectTransform:
   - {fileID: 4554415132956651888}
   m_Father: {fileID: 156732898306853630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -446.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4511094290649489041
@@ -1097,7 +1097,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4533187865502497216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 48.6396}
+  m_LocalPosition: {x: 0, y: 0, z: -130}
   m_LocalScale: {x: 42.775322, y: 42.775322, z: 42.775322}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1254,7 +1254,7 @@ RectTransform:
   m_Father: {fileID: 295938594040720133}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1577,7 +1577,7 @@ RectTransform:
   m_Father: {fileID: 3766548905814863764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1787,9 +1787,9 @@ RectTransform:
   - {fileID: 3953960339742486656}
   m_Father: {fileID: 156732898306853630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7589185190038633153
@@ -1824,9 +1824,9 @@ RectTransform:
   - {fileID: 2954379516066012215}
   m_Father: {fileID: 156732898306853630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -248.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7881416831185094280
@@ -2275,7 +2275,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 618858307988366886, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Name
-      value: ResumeButton (1)
+      value: RestartButton
       objectReference: {fileID: 0}
     - target: {fileID: 2949697308507543715, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Pivot.x
@@ -2331,7 +2331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2949697308507543715, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27
+      value: -143
       objectReference: {fileID: 0}
     - target: {fileID: 2949697308507543715, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2467,16 +2467,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 877387849868591517}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2487,7 +2491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -2495,7 +2499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: NameChangeSimulator.Constructs.Options.OptionsController, NameChangeSimulator.Constructs.Options
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -2503,7 +2507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2533,7 +2537,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 618858307988366886, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Name
-      value: ResumeButton
+      value: ExitButton
       objectReference: {fileID: 0}
     - target: {fileID: 2949697308507543715, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Pivot.x
@@ -2589,7 +2593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2949697308507543715, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27
+      value: -143.00003
       objectReference: {fileID: 0}
     - target: {fileID: 2949697308507543715, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2725,16 +2729,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 877387849868591517}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2745,7 +2753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: Quit
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -2753,7 +2761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: NameChangeSimulator.Constructs.Options.OptionsController, NameChangeSimulator.Constructs.Options
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -2761,7 +2769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8941470214255186469, guid: 2869f0531b3709b4ca9a7a29390716f3, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2980,10 +2988,10 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NameChangeSimulator.Constructs.Credits.CreditsController,
-          NameChangeSimulator.Constructs.Credits
-        m_MethodName: Close
+      - m_Target: {fileID: 877387849868591517}
+        m_TargetAssemblyTypeName: NameChangeSimulator.Constructs.Options.OptionsController,
+          NameChangeSimulator.Constructs.Options
+        m_MethodName: CloseOptionsMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -27,10 +27,14 @@ namespace NameChangeSimulator.Constructs.StartScreen
 
         private void OnEnable()
         {
-            AudioManager.Instance.PlayNCS_Music();
             GenerateRandomFlavorText();
             ClearCoroutine();
             _co = StartCoroutine(PingPongFlavorText());
+        }
+
+        private void Start()
+        {
+            AudioManager.Instance.PlayNCS_Music();
         }
 
         public void PlayOnHoverSFX()
