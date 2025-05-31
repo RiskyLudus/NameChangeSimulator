@@ -1527,6 +1527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 419495849601963870, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.15
+      objectReference: {fileID: 0}
     - target: {fileID: 903101664688852066, guid: ef7dfa8b62ea4c745a9571664d9088fd, type: 3}
       propertyPath: dialogueController
       value: 
