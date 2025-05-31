@@ -5194,7 +5194,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: https://bsky.app/profile/firaza.bsky.social
+          m_StringArgument: https://bsky.app/profile/firaza.tgirl.gay
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &5140261080390965824
@@ -6884,6 +6884,10 @@ PrefabInstance:
       propertyPath: dialogueController
       value: 
       objectReference: {fileID: 5356613311611096324}
+    - target: {fileID: 5459442732798413115, guid: 9d80749c7806bc84c8fbd747b376d613, type: 3}
+      propertyPath: buttonType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5533137429210529962, guid: 9d80749c7806bc84c8fbd747b376d613, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
