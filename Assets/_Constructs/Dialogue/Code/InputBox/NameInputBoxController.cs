@@ -30,13 +30,16 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         
         public void SubmitInput()
         {
-            Debug.Log("<color=lightblue>[SUBMIT]</color> name input");
-            AudioManager.Instance.PlayUIConfirm_SFX();
-            foreach (var animator in animators)
+            if (!string.IsNullOrEmpty(firstNameInputField.text) && !string.IsNullOrEmpty(lastNameInputField.text))
             {
-                animator.SetTrigger(triggerName);
+                Debug.Log("<color=lightblue>[SUBMIT]</color> name input");
+                button.SetActive(false);
+                AudioManager.Instance.PlayUIConfirm_SFX();
+                foreach (var animator in animators)
+                {
+                    animator.SetTrigger(triggerName);
+                }
             }
-            
         }
 
         public void GoToNext()

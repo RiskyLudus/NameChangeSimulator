@@ -16,15 +16,18 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         {
             Debug.Log("Showing input window");
             inputField.text = string.Empty;
-                inputField.characterLimit = 64;
+            inputField.characterLimit = 64;
             container.SetActive(true);
         }
         
         public void SubmitInput()
         {
-            container.SetActive(false);
-            AudioManager.Instance.PlayUIConfirm_SFX();
-            dialogueController.GoToNext(inputField.text);
+            if (!string.IsNullOrEmpty(inputField.text))
+            {
+                container.SetActive(false);
+                AudioManager.Instance.PlayUIConfirm_SFX();
+                dialogueController.GoToNext(inputField.text);
+            }
         }
 
         public void Close()
