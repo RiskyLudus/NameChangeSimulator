@@ -845,6 +845,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 2645576310572710115, guid: d5537992efb6e8745a18382c8a0661bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2827955068010830467, guid: d5537992efb6e8745a18382c8a0661bd, type: 3}
       propertyPath: m_Name
       value: Options
@@ -988,7 +992,15 @@ PrefabInstance:
     - target: {fileID: 8510153892597180890, guid: d5537992efb6e8745a18382c8a0661bd, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 435604217}
+      objectReference: {fileID: 1263592163}
+    - target: {fileID: 8510153892597180890, guid: d5537992efb6e8745a18382c8a0661bd, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseOptionsMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510153892597180890, guid: d5537992efb6e8745a18382c8a0661bd, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NameChangeSimulator.Constructs.Options.OptionsController, NameChangeSimulator.Constructs.Options
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2727,6 +2739,10 @@ PrefabInstance:
     - target: {fileID: 1456061828882731673, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_Name
       value: Credits
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517511139879488299, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3093323585371638097, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
