@@ -2731,10 +2731,18 @@ PrefabInstance:
     - target: {fileID: 111263338712670774, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 435604217}
+    - target: {fileID: 111263338712670774, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSocialLink
       objectReference: {fileID: 0}
     - target: {fileID: 1441161539434617142, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 435604217}
+    - target: {fileID: 1441161539434617142, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSocialLink
       objectReference: {fileID: 0}
     - target: {fileID: 1456061828882731673, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_Name
@@ -2747,30 +2755,58 @@ PrefabInstance:
     - target: {fileID: 3093323585371638097, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 435604217}
+    - target: {fileID: 3093323585371638097, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSocialLink
       objectReference: {fileID: 0}
     - target: {fileID: 4029232600995866430, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 435604217}
+    - target: {fileID: 4029232600995866430, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSocialLink
       objectReference: {fileID: 0}
     - target: {fileID: 4261925312854448540, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 435604217}
+    - target: {fileID: 4261925312854448540, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSocialLink
       objectReference: {fileID: 0}
     - target: {fileID: 4403236879917045516, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 435604217}
+    - target: {fileID: 4403236879917045516, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSocialLink
       objectReference: {fileID: 0}
     - target: {fileID: 4601277813246988494, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 435604217}
+    - target: {fileID: 4601277813246988494, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSocialLink
       objectReference: {fileID: 0}
     - target: {fileID: 5004516651213813708, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 435604217}
+    - target: {fileID: 5004516651213813708, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSocialLink
       objectReference: {fileID: 0}
     - target: {fileID: 6510521364509001258, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 435604217}
+    - target: {fileID: 6510521364509001258, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSocialLink
       objectReference: {fileID: 0}
     - target: {fileID: 7898249215353491833, guid: d68c8ada53d60a142b9e7c71c1b4161c, type: 3}
       propertyPath: m_Pivot.x
