@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Why_change_name2
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -344, y: 3688}
+  position: {x: 488, y: 3800}
   ports:
     keys:
     - OverrideInput
@@ -65,6 +65,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-8704850307883774337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +126,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-7704800632370742340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +253,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-7070107052188709947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +378,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-6746434647609466219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,7 +392,7 @@ MonoBehaviour:
   m_Name: ID#
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1176, y: 3368}
+  position: {x: 456, y: 3384}
   ports:
     keys:
     - OverrideInput
@@ -435,6 +439,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-6631252384335470657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,7 +464,10 @@ MonoBehaviour:
       _node: {fileID: -6631252384335470657}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: -2110784465463654629}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -468,10 +476,7 @@ MonoBehaviour:
       _node: {fileID: -6631252384335470657}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -2110784465463654629}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -481,7 +486,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: 7224142497032173734}
         reroutePoints: []
       _direction: 1
@@ -499,6 +504,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-6601098342270960634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,7 +551,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: -2110784465463654629}
         reroutePoints: []
       _direction: 1
@@ -563,6 +569,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 1
 --- !u!114 &-5992385641201013351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,6 +630,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-5657536818640863997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,7 +777,10 @@ MonoBehaviour:
       _node: {fileID: -4985158571817111954}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: -2707781507395084085}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -778,10 +789,7 @@ MonoBehaviour:
       _node: {fileID: -4985158571817111954}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -2707781507395084085}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -791,7 +799,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: 9088896919082838870}
         reroutePoints: []
       _direction: 1
@@ -809,6 +817,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-4734781866472935256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,6 +882,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-4521431130581746676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -998,6 +1008,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-2742748475307713584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,6 +1070,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-2707781507395084085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,7 +1120,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: -4985158571817111954}
         reroutePoints: []
       _direction: 1
@@ -1125,6 +1137,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-2110784465463654629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1149,7 +1162,10 @@ MonoBehaviour:
       _node: {fileID: -2110784465463654629}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: -6601098342270960634}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1158,10 +1174,7 @@ MonoBehaviour:
       _node: {fileID: -2110784465463654629}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -6601098342270960634}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1171,7 +1184,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: -6631252384335470657}
         reroutePoints: []
       _direction: 1
@@ -1189,6 +1202,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-1334865764412088124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,6 +1415,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1510,6 +1525,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &820373529870723678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,6 +1590,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &1556155457314165791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1782,6 +1799,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &2865094089926110383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1846,6 +1864,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &4381969860481313589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1870,7 +1889,10 @@ MonoBehaviour:
       _node: {fileID: 4381969860481313589}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: 6527457984479825290}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1879,10 +1901,7 @@ MonoBehaviour:
       _node: {fileID: 4381969860481313589}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: 6527457984479825290}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1906,6 +1925,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &5236160180441992543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1992,7 +2012,10 @@ MonoBehaviour:
       _node: {fileID: 6527457984479825290}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: 9088896919082838870}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2001,10 +2024,7 @@ MonoBehaviour:
       _node: {fileID: 6527457984479825290}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: 9088896919082838870}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2014,7 +2034,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: 4381969860481313589}
         reroutePoints: []
       _direction: 1
@@ -2032,6 +2052,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &7224142497032173734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2056,7 +2077,10 @@ MonoBehaviour:
       _node: {fileID: 7224142497032173734}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: -6631252384335470657}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2065,10 +2089,7 @@ MonoBehaviour:
       _node: {fileID: 7224142497032173734}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -6631252384335470657}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2096,6 +2117,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &7392405599856358333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2157,6 +2179,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &9088896919082838870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2181,7 +2204,10 @@ MonoBehaviour:
       _node: {fileID: 9088896919082838870}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: -4985158571817111954}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2190,10 +2216,7 @@ MonoBehaviour:
       _node: {fileID: 9088896919082838870}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -4985158571817111954}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2203,7 +2226,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: 6527457984479825290}
         reroutePoints: []
       _direction: 1
@@ -2221,6 +2244,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &9222760895698229904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2234,7 +2258,7 @@ MonoBehaviour:
   m_Name: DL#
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1144, y: 3752}
+  position: {x: -120, y: 3544}
   ports:
     keys:
     - OverrideInput
@@ -2284,3 +2308,4 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
