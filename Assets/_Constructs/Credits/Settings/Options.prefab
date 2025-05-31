@@ -662,10 +662,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionsMenu: {fileID: 1392028801511803303}
   mixer: {fileID: 24100000, guid: 30dfd6f251282ee448ad42025256a195, type: 2}
-  objectsToToggle:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   musicVolumeSlider: {fileID: 1228123101496897316}
   sfxVolumeSlider: {fileID: 2316634590720371147}
   voVolumeSlider: {fileID: 3816953116186254010}
