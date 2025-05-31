@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Anarchy.Shared;
 using NameChangeSimulator.Shared;
@@ -20,10 +21,11 @@ namespace NameChangeSimulator.Constructs.StartScreen
         [SerializeField] private SpriteRenderer fade;
 
         private Coroutine _co = null;
+        private Vector3 _startingFlavorTextSize = Vector3.zero;
 
         private bool isStarting = false;
 
-        private void Start()
+        private void OnEnable()
         {
             AudioManager.Instance.PlayNCS_Music();
             GenerateRandomFlavorText();
@@ -66,13 +68,18 @@ namespace NameChangeSimulator.Constructs.StartScreen
 
         private IEnumerator PingPongFlavorText()
         {
-            Vector3 originalScale = flavorText.transform.localScale;
+            if (_startingFlavorTextSize == Vector3.zero)
+            {
+                _startingFlavorTextSize = logo.transform.localScale;
+            }
+            
+            flavorText.transform.localScale = _startingFlavorTextSize;
             float timeElapsed = 0.0f;
 
             while (true)
             {
                 float scaleFactor = Mathf.Lerp(1.0f, startScreenData.flavorTextScaleFactor, Mathf.PingPong(timeElapsed * startScreenData.flavorTextSpeed, 1.0f));
-                flavorText.transform.localScale = originalScale * scaleFactor;
+                flavorText.transform.localScale = _startingFlavorTextSize * scaleFactor;
                 timeElapsed += Time.deltaTime;
                 yield return null;
             }
@@ -87,7 +94,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
             
             while (t < startDelayTime)
             {
-                yield return null;
+                yield return new WaitForFixedUpdate();
                 t += Time.deltaTime;
                 logo.transform.Rotate(Vector3.up, logoSpinStrength * t);
                 float newAlpha = Mathf.Lerp(startColor.a, 1.0f, t / startDelayTime);
