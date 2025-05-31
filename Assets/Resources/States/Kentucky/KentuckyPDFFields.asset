@@ -23,12 +23,12 @@ MonoBehaviour:
     fieldValue: 4
     fieldType: Checkbox
     options: []
-    overrideKey: 
+    overrideKey: IsAdult
   - fieldName: chosenName
     fieldValue: 
     fieldType: Text Field
     options: []
-    overrideKey: 
+    overrideKey: FullNewName
   - fieldName: birthDate
     fieldValue: 
     fieldType: Text Field

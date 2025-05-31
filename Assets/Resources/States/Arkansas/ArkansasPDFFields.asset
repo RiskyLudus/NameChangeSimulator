@@ -33,7 +33,7 @@ MonoBehaviour:
     fieldValue: 
     fieldType: Text Field
     options: []
-    overrideKey: 
+    overrideKey: DeadLastName
   - fieldName: Suffix
     fieldValue: 
     fieldType: Text Field
@@ -83,7 +83,7 @@ MonoBehaviour:
     fieldValue: 
     fieldType: Text Field
     options: []
-    overrideKey: 
+    overrideKey: FullDeadName
   - fieldName: county
     fieldValue: 
     fieldType: Text Field
@@ -108,7 +108,7 @@ MonoBehaviour:
     fieldValue: 
     fieldType: Text Field
     options: []
-    overrideKey: 
+    overrideKey: FullDeadName
   - fieldName: Name Change
     fieldValue: 
     fieldType: Text Field
@@ -118,7 +118,7 @@ MonoBehaviour:
     fieldValue: 
     fieldType: Text Field
     options: []
-    overrideKey: 
+    overrideKey: FullNewName
   keywords:
   - County
   - (NC) Name Change

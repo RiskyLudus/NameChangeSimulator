@@ -124,6 +124,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-8598446456710127884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +185,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-7861458267915267146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +250,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-6828929931701385988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +315,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-6155845871951307423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,6 +590,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-3019311410015025539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,6 +720,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-1236592588090712824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,6 +781,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-527860821828737474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,6 +848,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &-379015676911571181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,7 +1015,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1400, y: 616}
+  position: {x: -1416, y: 600}
   ports:
     keys:
     - Input
@@ -1121,6 +1129,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &5006371145316571203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,6 +1320,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &7607091641319571546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1374,6 +1384,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &8473180190780473511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,6 +1445,7 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+  CanLeaveBlank: 0
 --- !u!114 &9173295657495436073
 MonoBehaviour:
   m_ObjectHideFlags: 0
