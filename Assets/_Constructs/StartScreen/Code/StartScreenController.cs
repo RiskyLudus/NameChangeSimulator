@@ -4,6 +4,7 @@ using Anarchy.Shared;
 using NameChangeSimulator.Shared;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -19,6 +20,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
         [SerializeField] private GameObject startPanel;
         [SerializeField] private GameObject logo;
         [SerializeField] private SpriteRenderer fade;
+        [SerializeField] private EventSystem eventSystem;
 
         private Coroutine _co = null;
         private Vector3 _startingFlavorTextSize = Vector3.zero;
@@ -92,6 +94,8 @@ namespace NameChangeSimulator.Constructs.StartScreen
         private IEnumerator StartGameIntro()
         {
             fade.gameObject.SetActive(true);
+            eventSystem.gameObject.SetActive(false);
+            
             AudioManager.Instance.PlayStartSound_SFX();
             AudioManager.Instance.StopMusic();
             float t = 0.0f;
@@ -107,6 +111,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
             }
             
             ConstructBindings.Send_DialogueData_Load?.Invoke("Introduction");
+            eventSystem.gameObject.SetActive(true);
             fade.gameObject.SetActive(false);
             Destroy(gameObject);
         }
