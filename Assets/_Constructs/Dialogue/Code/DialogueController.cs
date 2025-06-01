@@ -166,8 +166,9 @@ namespace NameChangeSimulator.Constructs.Dialogue
             {
                 SetCurrentNode(nextNode);
             }
-            
-           // ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(0);
+
+            LogDialogueProgress();
+
         }
 
 
@@ -296,5 +297,73 @@ namespace NameChangeSimulator.Constructs.Dialogue
             dropdownBox.Close();
             choiceBox.Close();
         }
-    }
+
+        [ContextMenu("Log Dialogue Progress")]
+        private void LogDialogueProgress() {
+	        if (_currentDialogue == null || _currentNode == null) {
+		        Debug.LogWarning("Dialogue graph or current node is null.");
+		        return;
+	        }
+
+	        int pastCount = CountPreviousNodes(_currentNode);
+	        int futureCount = CountRemainingNodes(_currentNode);
+
+	        string graphName = _currentDialogue.name;
+	        string nodeName = _currentNode.name;
+
+	        Debug.Log($"<color=purple>[Dialogue Progress]</color> Graph='{graphName}', CurrentNode='{nodeName}', PreviousNodes={pastCount}, RemainingNodes={futureCount}");
+        }
+
+        private int CountRemainingNodes(Node current) {
+	        var visited = new HashSet<Node>();
+	        int count = 0;
+	        Node node = current;
+
+	        while (node != null) {
+		        // Get all output ports on this node
+		        var outputPorts = node.Ports.Where(p => p.IsOutput && p.IsConnected);
+
+		        // Pick the first connected output port
+		        var firstConnectedOutput = outputPorts.FirstOrDefault();
+		        if (firstConnectedOutput == null)
+			        break;
+
+		        var next = firstConnectedOutput.Connection.node as Node;
+		        if (next == null || visited.Contains(next))
+			        break;
+
+		        visited.Add(next);
+		        count++;
+		        node = next;
+	        }
+
+	        return count;
+        }
+
+        private int CountPreviousNodes(Node current) {
+	        var visited = new HashSet<Node>();
+	        int count = 0;
+	        Node node = current;
+
+	        while (node != null) {
+		        // Skip override input ports
+		        var inputPorts = node.Ports
+			        .Where(p => p.IsInput && p.IsConnected && !p.fieldName.ToLower().Contains("override"));
+
+		        var mainInput = inputPorts.FirstOrDefault();
+		        if (mainInput == null)
+			        break;
+
+		        var prev = mainInput.Connection.node as Node;
+		        if (prev == null || visited.Contains(prev))
+			        break;
+
+		        visited.Add(prev);
+		        count++;
+		        node = prev;
+	        }
+
+	        return count;
+        }
+	}
 }
