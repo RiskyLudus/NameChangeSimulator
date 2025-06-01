@@ -46,7 +46,10 @@ namespace NameChangeSimulator.Constructs.Character
             }
             else
             {
-                currentCharacterSprite.SetActive(false);
+                foreach (var characterSprite in characterSprites)
+                {
+                    characterSprite.spriteObject.SetActive(false);
+                }
             }
         }
 
