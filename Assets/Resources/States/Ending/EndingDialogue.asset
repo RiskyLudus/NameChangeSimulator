@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -872, y: -360}
+  position: {x: -1656, y: -424}
   ports:
     keys:
     - Output
@@ -387,12 +387,73 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
+        node: {fileID: -1230147951696755177}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Output: {fileID: 0}
+--- !u!114 &-1230147951696755177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f3edeb539662745a8aca88791358d2, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1240, y: -376}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -1230147951696755177}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1895587907515219168}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -1230147951696755177}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -1230147951696755177}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
         node: {fileID: 6657019418455809620}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+  SpriteType: 2
+  VoiceLine: 7
+  DialogueText: Alrighty! Well, here's your forms. I've taken the liberty of placing
+    them on your computer's desktop. Free of charge! No need to thank me.
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
   Output: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -418,6 +479,7 @@ MonoBehaviour:
   - {fileID: 2867232248310616376}
   - {fileID: -3663730787552466922}
   - {fileID: -4647107330147109784}
+  - {fileID: -1230147951696755177}
 --- !u!114 &109527761200287348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,7 +554,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 776, y: 888}
+  position: {x: 1096, y: 936}
   ports:
     keys:
     - Input
@@ -596,7 +658,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: -1895587907515219168}
+        node: {fileID: -1230147951696755177}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
