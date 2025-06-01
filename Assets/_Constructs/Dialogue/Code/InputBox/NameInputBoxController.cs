@@ -21,6 +21,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
         [SerializeField] private GameObject button;
 
         private bool _goToNextRunning = false; // I hate doing stuff like this for animation control but ah well -Risky
+        private bool _open = false;
         
         public void DisplayNameInputWindow()
         {
@@ -55,7 +56,10 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
 
         public void Close()
         {
-            
+            if (_open)
+            {
+                nameInputAnimator.SetTrigger(CloseTrigger);
+            }
         }
 
         public void ResetBox()
@@ -87,6 +91,16 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             
             lastNameInputField.GetComponent<TMP_InputField>().enabled = false;
             lastNameInputField.GetComponent<Image>().sprite = textureSwapImage;
+        }
+        
+        public void ToggleOpenStateOn()
+        {
+            _open = true;
+        }
+
+        public void ToggleOpenStateOff()
+        {
+            _open = false;
         }
     }
 }
