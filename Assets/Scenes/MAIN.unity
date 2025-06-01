@@ -1524,10 +1524,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1146448326806805531, guid: c36aebecf172d4a46b7290a51bea1ade, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146448326806805531, guid: c36aebecf172d4a46b7290a51bea1ade, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2226671947098656120, guid: c36aebecf172d4a46b7290a51bea1ade, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2820453282183152701, guid: c36aebecf172d4a46b7290a51bea1ade, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6914242437309873063, guid: d42360db227ad0e428810930d6022f53, type: 3}
     - target: {fileID: 3323869240474721994, guid: c36aebecf172d4a46b7290a51bea1ade, type: 3}
       propertyPath: m_LocalPosition.x
       value: -391
@@ -1571,6 +1583,10 @@ PrefabInstance:
     - target: {fileID: 3602950237155471036, guid: c36aebecf172d4a46b7290a51bea1ade, type: 3}
       propertyPath: m_Name
       value: LaurenIpsum
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395130173856143938, guid: c36aebecf172d4a46b7290a51bea1ade, type: 3}
+      propertyPath: m_Name
+      value: Lauren_Excited
       objectReference: {fileID: 0}
     - target: {fileID: 8395130173856143938, guid: c36aebecf172d4a46b7290a51bea1ade, type: 3}
       propertyPath: m_IsActive
