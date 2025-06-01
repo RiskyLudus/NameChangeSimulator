@@ -27,6 +27,7 @@ namespace NameChangeSimulator.Constructs.Dialogue
         [SerializeField] private InputBoxController inputBox;
         [SerializeField] private DropdownBoxController dropdownBox;
         [SerializeField] private ChoiceBoxController choiceBox;
+        [SerializeField] private GameObject quitBox;
         [SerializeField] private CharacterController characterController;
         
         private DialogueGraph _currentDialogue;
@@ -230,6 +231,12 @@ namespace NameChangeSimulator.Constructs.Dialogue
             SetDialogueNode(choiceNode, true, false);
             choiceBox.DisplayChoicesWindow(choiceNode.Options);
         }
+
+        private void SetQuitNode()
+        {
+            CloseAll();
+            quitBox.SetActive(true);
+        }
         
         // Check what kind of node we're getting and parse it for data
         private void SetCurrentNode(Node node)
@@ -269,6 +276,9 @@ namespace NameChangeSimulator.Constructs.Dialogue
                     break;
                 case "StartNode":
                     SetLoadStateGraphNode();
+                    break;
+                case "QuitNode":
+                    SetQuitNode();
                     break;
                 default:
                     Debug.LogError($"Unknown node type: {typeName}");

@@ -110,7 +110,7 @@ namespace NameChangeSimulator.Editor
                 // Get folders and filter out "Introduction"
                 folderNames = Directory.GetDirectories(path)
                     .Select(folder => Path.GetFileName(folder)) // Get folder names only
-                    .Where(name => name != "Introduction")     // Filter out the Introduction folder
+                    .Where(name => name != "Introduction" || name != "Ending")     // Filter out the Introduction folder
                     .ToArray();
             }
             else

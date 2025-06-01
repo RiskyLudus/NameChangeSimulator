@@ -168,7 +168,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 978178934099198045}
+        node: {fileID: 8516995407348964286}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  SpriteType: 1
+  SpriteType: 2
   VoiceLine: 0
   DialogueText: Changing your name is a HUGE step. It's nothing to balk at. It's
     a step towards happiness. Towards living authentically...
@@ -469,7 +469,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -1895587907515219168}
-  - {fileID: 978178934099198045}
   - {fileID: 6657019418455809620}
   - {fileID: 109527761200287348}
   - {fileID: -6726060210580164746}
@@ -480,6 +479,7 @@ MonoBehaviour:
   - {fileID: -3663730787552466922}
   - {fileID: -4647107330147109784}
   - {fileID: -1230147951696755177}
+  - {fileID: 8516995407348964286}
 --- !u!114 &109527761200287348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,37 +541,6 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
---- !u!114 &978178934099198045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5da56fbd6bc41446b731f00ed086781, type: 3}
-  m_Name: End
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1096, y: 936}
-  ports:
-    keys:
-    - Input
-    values:
-    - _fieldName: Input
-      _node: {fileID: 978178934099198045}
-      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -4647107330147109784}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  Input: {fileID: 0}
 --- !u!114 &2867232248310616376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,3 +662,34 @@ MonoBehaviour:
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
+--- !u!114 &8516995407348964286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb03417ad78deb4188e7c85b9d4ef68, type: 3}
+  m_Name: Quit
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 776, y: 920}
+  ports:
+    keys:
+    - Input
+    values:
+    - _fieldName: Input
+      _node: {fileID: 8516995407348964286}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -4647107330147109784}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Input: {fileID: 0}

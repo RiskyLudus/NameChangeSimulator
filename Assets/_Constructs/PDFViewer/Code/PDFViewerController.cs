@@ -211,6 +211,9 @@ public class PDFViewerController : MonoBehaviour
         {
             Debug.LogError($"Failed to save PDF to Desktop: {e.Message}");
         }
+        
+        ConstructBindings.Send_DialogueData_Load?.Invoke("Ending");
+        container.SetActive(false);
     }
 
     public void Redo()
