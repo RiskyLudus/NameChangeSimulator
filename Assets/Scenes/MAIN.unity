@@ -2324,31 +2324,6 @@ PrefabInstance:
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 435604217}
-    - target: {fileID: 1086890221356173468, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: m_text
-      value: "Disclaimer:\n\tName Change Simulator is an auto-filling tool for PDF
-        forms intended to be submitted to state and/or county authorities for the
-        purpose of applying to update or change name and/or gender information on
-        personal identifying documents.\r\n\tName Change Simulator does not collect
-        or create legal forms, personal information, or any other data not included
-        in the software application itself upon download. Name Change Simulator is
-        solely a tool for users to fill out existing PDF forms publicly provided
-        by state and county authorities. All personal information featured in auto-filled
-        PDFs produced by Name Change Simulator is directly provided by and is fully
-        the responsibility of the user and is not provided by, created by, or the
-        responsibility of Name Change Simulator and/or its development team. The
-        user is fully responsible for the accuracy of information as it is presented
-        in auto-filled PDF forms produced by Name Change Simulator, and the user
-        is fully responsible for verifying the accuracy of this information before
-        submitting to state and/or county authorities.\r\n\tFurthermore, Name Change
-        Simulator does not and will never store or share any personal or identifying
-        information. Name Change Simulator does not possess any means of storing
-        or transmitting data, and any and all user input is discarded as soon as
-        auto-filled PDF forms are produced.\r\n\tAdditionally, the contents and messaging
-        of Name Change Simulator are not purported to be legal or personal advice.
-        The developers of Name Change Simulator are not and do not claim to be legal
-        professionals.\r\n"
-      objectReference: {fileID: 0}
     - target: {fileID: 1189509416976769873, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2429,21 +2404,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3063570101329031332, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+    - target: {fileID: 5646384983976247635, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2453,52 +2416,17 @@ PrefabInstance:
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 908444283}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 9047011486348311582, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_Name
       value: StartScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 9047011486348311582, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9158869190965287129, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 908444285}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3801731158140550555, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
@@ -3305,6 +3233,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1075761611331465038, guid: 30797df9ad88d40498d0df3c47d3821a, type: 3}
+      propertyPath: m_lineSpacing
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2495359321621214076, guid: 30797df9ad88d40498d0df3c47d3821a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3420,6 +3352,10 @@ PrefabInstance:
     - target: {fileID: 5827009695518104440, guid: 30797df9ad88d40498d0df3c47d3821a, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907397349656576982, guid: 30797df9ad88d40498d0df3c47d3821a, type: 3}
+      propertyPath: m_Color.a
+      value: 0.98039216
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
