@@ -139,7 +139,7 @@ MonoBehaviour:
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: Input
+      - fieldName: OverrideInput
         node: {fileID: 2210195282191614784}
         reroutePoints: []
       _direction: 1
@@ -690,7 +690,10 @@ MonoBehaviour:
       _node: {fileID: 2210195282191614784}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Output
+        node: {fileID: -7281297285763824052}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -699,10 +702,7 @@ MonoBehaviour:
       _node: {fileID: 2210195282191614784}
       _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Output
-        node: {fileID: -7281297285763824052}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
