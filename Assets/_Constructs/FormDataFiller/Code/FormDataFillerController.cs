@@ -14,7 +14,6 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
 {
     public class FormDataFillerController : MonoBehaviour
     {
-        
         private PDFFieldData _fieldData;
         private string _fullDeadName => $"{_deadFirstName} {_deadMiddleName} {_deadLastName}";
         private string _deadFirstName, _deadMiddleName, _deadLastName;
@@ -90,6 +89,7 @@ namespace NameChangeSimulator.Constructs.FormDataFiller
                     {
                         string[] parsedValues = value.Split('~');
                         _newFirstName = parsedValues[0];
+                        PlayerPrefs.SetString("NewFirstName", _newFirstName);
                         _newMiddleName = parsedValues[1];
                         _newLastName = parsedValues[2];
                         break;

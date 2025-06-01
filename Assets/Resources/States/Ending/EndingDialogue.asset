@@ -297,7 +297,10 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: So...enjoy your future. You're gonna love it.
+  DialogueText: 'So enjoy your future. You''re gonna love it.
+
+
+    ...$NewFirstName.'
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
