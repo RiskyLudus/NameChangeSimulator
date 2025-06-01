@@ -184,10 +184,7 @@ namespace NameChangeSimulator.Constructs.Dialogue
                 AudioManager.Instance.PlayVoiceOver(dialogueNode.VoiceLine.ToString());
             }
 
-            if (dialogueNode.SpriteType != CharacterSpriteType.None)
-            {
-                ConstructBindings.Send_CharacterData_ChangeCharacterSprite?.Invoke(dialogueNode.SpriteType.ToString());
-            }
+            ConstructBindings.Send_CharacterData_ChangeCharacterSprite?.Invoke(dialogueNode.SpriteType.ToString());
         }
 
         private void SetDeadNameInputNode(DeadNameInputNode deadNameInputNode)
