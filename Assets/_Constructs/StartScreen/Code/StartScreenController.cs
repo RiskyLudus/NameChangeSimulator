@@ -12,7 +12,8 @@ namespace NameChangeSimulator.Constructs.StartScreen
 {
     public class StartScreenController : MonoBehaviour
     {
-        [SerializeField] private float startDelayTime = 10.0f;
+        [SerializeField] private float fadeOutDelayTime = 3.5f;
+        [SerializeField] private float fadeInDelayTime = 2.0f;
         [SerializeField] private float logoSpinStrength = 1.0f;
 
         [SerializeField] private StartScreenData startScreenData;
@@ -21,6 +22,9 @@ namespace NameChangeSimulator.Constructs.StartScreen
         [SerializeField] private GameObject logo;
         [SerializeField] private SpriteRenderer fade;
         [SerializeField] private EventSystem eventSystem;
+        [SerializeField] private GameObject mainGameContainer;
+        [SerializeField] private GameObject creditsButton;
+        [SerializeField] private GameObject readmeButton;
 
         private Coroutine _co = null;
         private Vector3 _startingFlavorTextSize = Vector3.zero;
@@ -99,20 +103,40 @@ namespace NameChangeSimulator.Constructs.StartScreen
             AudioManager.Instance.PlayStartSound_SFX();
             AudioManager.Instance.StopMusic();
             float t = 0.0f;
-            Color startColor = fade.color;
+            SpriteRenderer logoSprite = logo.transform.GetChild(0).GetComponent<SpriteRenderer>();
             
-            while (t < startDelayTime)
+            Color startFadeColor = fade.color;
+            Color startLogoColor = logoSprite.color;
+            
+            while (t < fadeOutDelayTime)
             {
                 yield return new WaitForFixedUpdate();
                 t += Time.deltaTime;
                 logo.transform.Rotate(Vector3.up, logoSpinStrength * t);
-                float newAlpha = Mathf.Lerp(startColor.a, 1.0f, t / startDelayTime);
-                fade.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);
+                float newFadeAlpha = Mathf.Lerp(startFadeColor.a, 1.0f, t / fadeOutDelayTime);
+                float newLogoAlpha = Mathf.Lerp(startLogoColor.a, 0.0f, t / fadeOutDelayTime);
+                fade.color = new Color(startFadeColor.r, startFadeColor.g, startFadeColor.b, newFadeAlpha);
+                logoSprite.color = new Color(startLogoColor.r, startLogoColor.g, startLogoColor.b, newLogoAlpha);
             }
             
-            ConstructBindings.Send_DialogueData_Load?.Invoke("Introduction");
+            logo.SetActive(false);
+            creditsButton.SetActive(false);
+            readmeButton.SetActive(false);
+            mainGameContainer.SetActive(true);
+            
+            t = 0.0f;
+            startFadeColor = fade.color;
+            
+            while (t < fadeInDelayTime)
+            {
+                yield return new WaitForFixedUpdate();
+                t += Time.deltaTime;
+                float newFadeAlpha = Mathf.Lerp(startFadeColor.a, 0.0f, t / fadeInDelayTime);
+                fade.color = new Color(startFadeColor.r, startFadeColor.g, startFadeColor.b, newFadeAlpha);
+            }
+            
             eventSystem.gameObject.SetActive(true);
-            fade.gameObject.SetActive(false);
+            ConstructBindings.Send_DialogueData_Load?.Invoke("Introduction");
             Destroy(gameObject);
         }
     }

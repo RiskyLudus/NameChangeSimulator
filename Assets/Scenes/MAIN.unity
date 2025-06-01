@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &62294206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6911692464095037898, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+  m_PrefabInstance: {fileID: 5727356484712354320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &127545368 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3864679323388973858, guid: 9f146882455789f40a8f28509479a8d0, type: 3}
@@ -412,6 +417,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &701398621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8857524480817310095, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+  m_PrefabInstance: {fileID: 5727356484712354320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &707505792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,6 +2429,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1814530260}
     m_Modifications:
+    - target: {fileID: 168196374705151718, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 311724436716756903, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_text
       value: Developed by DollWorx Interactive
@@ -2507,9 +2521,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1443627741749658674, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -440
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443627741749658674, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694683084986772342, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5646384983976247635, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468855738490705728, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289640184663251789, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289640184663251789, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289640184663251789, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289640184663251789, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -33813611
       objectReference: {fileID: 0}
     - target: {fileID: 7364927489691163295, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2519,6 +2565,10 @@ PrefabInstance:
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 908444283}
+    - target: {fileID: 8359665832004437754, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9047011486348311582, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
       propertyPath: m_Name
       value: StartScreen
@@ -2527,6 +2577,22 @@ PrefabInstance:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 908444285}
+    - target: {fileID: 9158869190965287129, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: readmeButton
+      value: 
+      objectReference: {fileID: 701398621}
+    - target: {fileID: 9158869190965287129, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: creditsButton
+      value: 
+      objectReference: {fileID: 62294206}
+    - target: {fileID: 9158869190965287129, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: fadeInDelayTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9158869190965287129, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
+      propertyPath: mainGameContainer
+      value: 
+      objectReference: {fileID: 730850258}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3801731158140550555, guid: 29db9a50bb23e22408fcb0064e943b90, type: 3}
