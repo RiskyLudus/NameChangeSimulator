@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   supportedStates:
   - Alabama
-  - Arizona
   - Arkansas
   - Kentucky
   - Oregon
@@ -22,6 +21,7 @@ MonoBehaviour:
   nonSupportedStates:
   - Alaska
   - American Samoa
+  - Arizona
   - California
   - Colorado
   - Connecticut

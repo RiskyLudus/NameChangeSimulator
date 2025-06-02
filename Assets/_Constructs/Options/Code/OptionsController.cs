@@ -1,5 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace NameChangeSimulator.Constructs.Options
 {
@@ -7,11 +10,14 @@ namespace NameChangeSimulator.Constructs.Options
     {
         [SerializeField] private GameObject optionsMenu;
         [SerializeField] private AudioMixer mixer;
-        [SerializeField] private GameObject[] objectsToToggle;
+        
+        [SerializeField] private Slider musicVolumeSlider;
+        [SerializeField] private Slider sfxVolumeSlider;
+        [SerializeField] private Slider voVolumeSlider;
 
-        public void ChangeMasterVolume(float slidervalue)
+        public void ChangeVoiceOverVolume(float slidervalue)
         {
-            mixer.SetFloat("MasterVolume", Mathf.Log10(slidervalue) * 20);
+            mixer.SetFloat("VOVolume", Mathf.Log10(slidervalue) * 20);
         }
         
         public void ChangeMusicVolume(float slidervalue)
@@ -26,22 +32,22 @@ namespace NameChangeSimulator.Constructs.Options
 
         public void ShowOptionsMenu()
         {
-            ToggleObjects(false);
             optionsMenu.SetActive(true);
         }
 
         public void CloseOptionsMenu()
         {
-            ToggleObjects(true);
             optionsMenu.SetActive(false);
         }
 
-        private void ToggleObjects(bool toggle)
+        public void Restart()
         {
-            foreach (var toggleObject in objectsToToggle)
-            {
-                toggleObject.SetActive(toggle);
-            }
+            SceneManager.LoadScene(0);
+        }
+
+        public void Quit()
+        {
+            Application.Quit();
         }
     }
 }

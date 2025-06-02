@@ -1,12 +1,13 @@
+using System;
 using UnityEngine;
 
 public class DropdownList : MonoBehaviour
 {
-    [SerializeField]
     private Canvas canvas;
 
     private void OnEnable()
     {
+        canvas = GetComponent<Canvas>();
         canvas.sortingLayerName = "Popups";
     }
 }
