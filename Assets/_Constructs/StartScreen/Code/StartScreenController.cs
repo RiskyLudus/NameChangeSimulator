@@ -56,7 +56,7 @@ namespace NameChangeSimulator.Constructs.StartScreen
 
         public void GenerateRandomFlavorText()
         {
-            int rand = Random.Range(0, startScreenData.flavorTextStrings.Length - 1);
+            int rand = Random.Range(0, startScreenData.flavorTextStrings.Length);
             flavorText.text = startScreenData.flavorTextStrings[rand];
         }
 

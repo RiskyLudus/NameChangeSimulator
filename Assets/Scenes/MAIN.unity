@@ -3486,6 +3486,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3966179739125215342, guid: 30797df9ad88d40498d0df3c47d3821a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -762
+      objectReference: {fileID: 0}
     - target: {fileID: 5827009695518104440, guid: 30797df9ad88d40498d0df3c47d3821a, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -3521,6 +3525,10 @@ PrefabInstance:
     - target: {fileID: 5827009695518104440, guid: 30797df9ad88d40498d0df3c47d3821a, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737760530213307558, guid: 30797df9ad88d40498d0df3c47d3821a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -758
       objectReference: {fileID: 0}
     - target: {fileID: 8907397349656576982, guid: 30797df9ad88d40498d0df3c47d3821a, type: 3}
       propertyPath: m_Color.a
