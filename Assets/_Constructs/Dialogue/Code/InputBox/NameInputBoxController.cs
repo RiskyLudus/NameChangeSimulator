@@ -37,6 +37,7 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
                 Debug.Log("<color=lightblue>[SUBMIT]</color> name input");
                 button.SetActive(false);
                 AudioManager.Instance.PlayUIConfirm_SFX();
+                middleNameInputField.placeholder.GetComponent<TMP_Text>().enabled = false;
                 foreach (var animator in animators)
                 {
                     animator.SetTrigger(triggerName);
