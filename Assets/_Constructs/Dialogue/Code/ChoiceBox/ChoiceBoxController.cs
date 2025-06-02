@@ -45,7 +45,6 @@ namespace NameChangeSimulator.Constructs.Dialogue.ChoiceBox
         }
         public void Submit(string optionSelected)
         {
-            AudioManager.Instance.PlayUIConfirm_SFX();
             container.SetActive(false);
             dialogueController.GoToNext(optionSelected);
         }

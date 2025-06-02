@@ -24,6 +24,12 @@ namespace NameChangeSimulator.Constructs.Dialogue.DialogueBox
                       $"Showing back button {showBackButton} and showing next button {showNextButton}");
             AudioManager.Instance.PlayShowWindow_SFX();
             conversationPromptText.text = string.Empty;
+
+            if (dialogueText.Contains("$NewFirstName"))
+            {
+                dialogueText = dialogueText.Replace("$NewFirstName", PlayerPrefs.GetString("NewFirstName"));
+            }
+            
             _currentText = dialogueText;
             ScrollText(_currentText);
             container.gameObject.SetActive(true);

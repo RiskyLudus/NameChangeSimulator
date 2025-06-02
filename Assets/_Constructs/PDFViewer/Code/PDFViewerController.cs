@@ -16,6 +16,7 @@ public class PDFViewerController : MonoBehaviour
 	public List<Texture2D> pdfPages = new List<Texture2D>(); // Store PDF pages as Texture2D
     [SerializeField] private GameObject container;
     [SerializeField] private RawImage prevPageImage, nextPageImage, mainPageImage;
+    [SerializeField] private GameObject waitingText; 
 
     private int _totalPageCount = 0;
     private string _tempPDFPath;
@@ -33,6 +34,7 @@ public class PDFViewerController : MonoBehaviour
 
     private void OnLoad(byte[] pdfBytes)
     {
+        waitingText.SetActive(true);
         OnLoadAsync(pdfBytes, Application.persistentDataPath);
     }
 
@@ -119,6 +121,8 @@ public class PDFViewerController : MonoBehaviour
             }
         }
 
+        waitingText.SetActive(false);
+        
         _currentPage = 0;
         LoadCarousel();
         
@@ -207,6 +211,9 @@ public class PDFViewerController : MonoBehaviour
         {
             Debug.LogError($"Failed to save PDF to Desktop: {e.Message}");
         }
+        
+        ConstructBindings.Send_DialogueData_Load?.Invoke("Ending");
+        container.SetActive(false);
     }
 
     public void Redo()

@@ -31,6 +31,9 @@ namespace Anarchy.Shared
         public static UnityEvent Send_ProgressBarData_CloseProgressBar = new UnityEvent();
         public static UnityEvent<int> Send_ProgressBarData_UpdateProgress = new UnityEvent<int>();
 
+        // Events for ScreenBlockerData
+        public static UnityEvent<bool> Send_ScreenBlockerData_ToggleScreenBlocker = new UnityEvent<bool>();
+
         // Events for StartScreenData
 
     }

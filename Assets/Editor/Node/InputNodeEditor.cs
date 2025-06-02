@@ -37,6 +37,10 @@ public class InputNodeEditor : NodeEditor
         EditorGUILayout.LabelField("Keyword", EditorStyles.boldLabel);
         node.Keyword = EditorGUILayout.TextField(node.Keyword);
         
+        // Optional Leave Blank
+        EditorGUILayout.LabelField("Can Leave Blank?", EditorStyles.boldLabel);
+        node.CanLeaveBlank = EditorGUILayout.Toggle(node.CanLeaveBlank);
+        
         GUILayout.Space(10);
 
         // Display output port

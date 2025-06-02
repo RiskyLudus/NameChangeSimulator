@@ -1,17 +1,19 @@
 {
-  "name": "NameChangeSimulator.Constructs.FormDataFiller",
-  "rootNamespace": "NameChangeSimulator.Constructs.FormDataFiller",
-  "references": [
-    "Anarchy",
-    "Anarchy.Shared",
-    "NameChangeSimulator.Shared"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": []
+    "name": "NameChangeSimulator.Constructs.FormDataFiller",
+    "rootNamespace": "NameChangeSimulator.Constructs.FormDataFiller",
+    "references": [
+        "Anarchy",
+        "Anarchy.Shared",
+        "NameChangeSimulator.Shared",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
