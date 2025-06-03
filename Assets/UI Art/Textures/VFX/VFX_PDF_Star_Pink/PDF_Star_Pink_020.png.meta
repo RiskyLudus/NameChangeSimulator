@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: ca57707e99976234bb0ad5bf232c7ae8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 635093621442270235
+    second: PDF_Star_Pink_020_0
+  - first:
+      213: 5896885966573152456
+    second: PDF_Star_Pink_020_1
+  - first:
+      213: -6671519170796126615
+    second: PDF_Star_Pink_020_2
+  - first:
+      213: -4893654565800864466
+    second: PDF_Star_Pink_020_3
+  - first:
+      213: 6882886304462374635
+    second: PDF_Star_Pink_020_4
+  - first:
+      213: -9139156797314248367
+    second: PDF_Star_Pink_020_5
+  - first:
+      213: 9099813866964983589
+    second: PDF_Star_Pink_020_6
+  - first:
+      213: 1539499704448529355
+    second: PDF_Star_Pink_020_7
+  - first:
+      213: -1426645294171217373
+    second: PDF_Star_Pink_020_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PDF_Star_Pink_020_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 356
+        width: 97
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14de29a84e40d800800000000000000
+      internalID: 635093621442270235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Star_Pink_020_1
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 351
+        width: 90
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c824962b82f5d150800000000000000
+      internalID: 5896885966573152456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Star_Pink_020_2
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 317
+        width: 108
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96efc7059a00a63a0800000000000000
+      internalID: -6671519170796126615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Star_Pink_020_3
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 188
+        width: 187
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2598ff991f361cb0800000000000000
+      internalID: -4893654565800864466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Star_Pink_020_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 129
+        width: 85
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be681e670ace48f50800000000000000
+      internalID: 6882886304462374635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Star_Pink_020_5
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 164
+        width: 133
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151dc7d60513b2180800000000000000
+      internalID: -9139156797314248367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Star_Pink_020_6
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 60
+        width: 134
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f1f96cf78094e70800000000000000
+      internalID: 9099813866964983589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Star_Pink_020_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 35
+        width: 86
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3397713d66d5510800000000000000
+      internalID: 1539499704448529355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Star_Pink_020_8
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 2
+        width: 93
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3222174e9a9833ce0800000000000000
+      internalID: -1426645294171217373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PDF_Star_Pink_020_0: 635093621442270235
+      PDF_Star_Pink_020_1: 5896885966573152456
+      PDF_Star_Pink_020_2: -6671519170796126615
+      PDF_Star_Pink_020_3: -4893654565800864466
+      PDF_Star_Pink_020_4: 6882886304462374635
+      PDF_Star_Pink_020_5: -9139156797314248367
+      PDF_Star_Pink_020_6: 9099813866964983589
+      PDF_Star_Pink_020_7: 1539499704448529355
+      PDF_Star_Pink_020_8: -1426645294171217373
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

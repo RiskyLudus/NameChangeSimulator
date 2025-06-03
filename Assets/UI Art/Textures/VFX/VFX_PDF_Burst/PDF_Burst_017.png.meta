@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 2eeb36ff7af7d3846938b178ebf70ce1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2632762901063706838
+    second: PDF_Burst_017_0
+  - first:
+      213: 2933427341369958870
+    second: PDF_Burst_017_1
+  - first:
+      213: 3823167150993065818
+    second: PDF_Burst_017_2
+  - first:
+      213: 7960581014752413013
+    second: PDF_Burst_017_3
+  - first:
+      213: -1490753270593279994
+    second: PDF_Burst_017_4
+  - first:
+      213: 3119633503567827296
+    second: PDF_Burst_017_5
+  - first:
+      213: 5662251819330869474
+    second: PDF_Burst_017_6
+  - first:
+      213: -1390645299240974960
+    second: PDF_Burst_017_7
+  - first:
+      213: -8235425062997226900
+    second: PDF_Burst_017_8
+  - first:
+      213: 6478415673791890383
+    second: PDF_Burst_017_9
+  - first:
+      213: 4446003662217636613
+    second: PDF_Burst_017_10
+  - first:
+      213: -5234243478461306520
+    second: PDF_Burst_017_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PDF_Burst_017_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 724
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d8aab7d8e3798420800000000000000
+      internalID: 2632762901063706838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 775
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d166c000a0a5b820800000000000000
+      internalID: 2933427341369958870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 626
+        width: 58
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5742ef844e9e0530800000000000000
+      internalID: 3823167150993065818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_3
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 690
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5554906814aa97e60800000000000000
+      internalID: 7960581014752413013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 983
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608298a7cc7cf4be0800000000000000
+      internalID: -1490753270593279994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_5
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 577
+        width: 74
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0615199942a2b4b20800000000000000
+      internalID: 3119633503567827296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_6
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 567
+        width: 57
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e89600a70c549e40800000000000000
+      internalID: 5662251819330869474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_7
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 597
+        width: 96
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 095cc22e77f63bce0800000000000000
+      internalID: -1390645299240974960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_8
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 566
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6a83b1d984e5bd80800000000000000
+      internalID: -8235425062997226900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_9
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 573
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc340bf2bb4f7e950800000000000000
+      internalID: 6478415673791890383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_10
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 248
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b619c56c063bd30800000000000000
+      internalID: 4446003662217636613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDF_Burst_017_11
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 199
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869a86ed94b3c57b0800000000000000
+      internalID: -5234243478461306520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PDF_Burst_017_0: 2632762901063706838
+      PDF_Burst_017_1: 2933427341369958870
+      PDF_Burst_017_10: 4446003662217636613
+      PDF_Burst_017_11: -5234243478461306520
+      PDF_Burst_017_2: 3823167150993065818
+      PDF_Burst_017_3: 7960581014752413013
+      PDF_Burst_017_4: -1490753270593279994
+      PDF_Burst_017_5: 3119633503567827296
+      PDF_Burst_017_6: 5662251819330869474
+      PDF_Burst_017_7: -1390645299240974960
+      PDF_Burst_017_8: -8235425062997226900
+      PDF_Burst_017_9: 6478415673791890383
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
