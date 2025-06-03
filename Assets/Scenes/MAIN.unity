@@ -3162,6 +3162,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 730850259}
     m_Modifications:
+    - target: {fileID: 1616519818279515801, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616519818279515801, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616519818279515801, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891397261379109962, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3830529388859075797, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6653208434979001274, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
       propertyPath: m_Name
       value: PDFViewer
@@ -3244,6 +3264,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755525744110057491, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269357969154359204, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269357969154359204, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269357969154359204, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
