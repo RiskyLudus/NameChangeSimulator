@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -16,7 +17,8 @@ public class PDFViewerController : MonoBehaviour
 	public List<Texture2D> pdfPages = new List<Texture2D>(); // Store PDF pages as Texture2D
     [SerializeField] private GameObject container;
     [SerializeField] private RawImage prevPageImage, nextPageImage, mainPageImage;
-    [SerializeField] private GameObject waitingText; 
+    [SerializeField] private GameObject waitingText;
+    [SerializeField] private GameObject celebrationObject;
 
     private int _totalPageCount = 0;
     private string _tempPDFPath;
@@ -129,6 +131,14 @@ public class PDFViewerController : MonoBehaviour
         container.SetActive(true);
         ConstructBindings.Send_ProgressBarData_CloseProgressBar?.Invoke();
         Debug.Log("All PDF pages loaded.");
+
+        StartCoroutine(PlayCelebrationCoroutine());
+    }
+
+    private IEnumerator PlayCelebrationCoroutine()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        celebrationObject.SetActive(true);
     }
 
     private void LoadCarousel()

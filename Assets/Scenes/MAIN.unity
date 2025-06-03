@@ -1628,11 +1628,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3323869240474721994, guid: c36aebecf172d4a46b7290a51bea1ade, type: 3}
   m_PrefabInstance: {fileID: 1523649960}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1638748210 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8408310035112585624, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
-  m_PrefabInstance: {fileID: 7457878972615041839}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1754631719
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,22 +3162,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 730850259}
     m_Modifications:
-    - target: {fileID: 1616519818279515801, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1616519818279515801, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1616519818279515801, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.1954757
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891397261379109962, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6653208434979001274, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
       propertyPath: m_Name
       value: PDFViewer
@@ -3267,22 +3246,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7269357969154359204, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7269357969154359204, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7269357969154359204, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -48.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8163981984887827283, guid: f680ba6a9d23e3e429dfca65d2ac3a0f, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1638748210}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
