@@ -139,6 +139,7 @@ public class PDFViewerController : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1f);
         celebrationObject.SetActive(true);
+        AudioManager.Instance.PlayCelebrate_SFX();
     }
 
     private void LoadCarousel()
