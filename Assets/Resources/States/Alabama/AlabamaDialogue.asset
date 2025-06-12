@@ -58,9 +58,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: "Explain why you want to change your name. \n\n(Putting something
-    like, \"I want a name that more accurately represents my gender\" is totally
-    fine here!)"
+  DialogueText: 'Explain why you want to change your name. '
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -560,11 +558,8 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: 'If you have any other details on changing your name, add them here.
-    This is the second line on the form.
-
-
-    You can also just leave this blank.'
+  DialogueText: If you have any other details on changing your name, add them here.
+    This is the second line on the form. This line can be left blank.
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -687,7 +682,7 @@ MonoBehaviour:
   SpriteType: 1
   VoiceLine: 0
   DialogueText: But printing your forms is only one step of the process; there's
-    more that you'll need to do outside my office.
+    more that you'll need to do in your local community.
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}

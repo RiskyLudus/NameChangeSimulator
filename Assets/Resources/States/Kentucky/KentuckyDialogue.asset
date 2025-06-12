@@ -55,9 +55,9 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: That checklist will contain info on what you'll need to do outside
-    my office, including where to bring your papers, other procedures, and any fees
-    you'll need to pay.
+  DialogueText: That checklist will contain info on what you'll need to do next,
+    including where to bring your papers, other procedures, and any fees you'll need
+    to pay.
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -568,7 +568,7 @@ MonoBehaviour:
   SpriteType: 2
   VoiceLine: 6
   DialogueText: Let's crack open these brand new Name Change Forms. Thanks again
-    for coming by my office. You're gonna love your new name. :3
+    for dropping by! You're gonna love your new name. :3
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -783,11 +783,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 9
-  DialogueText: 'Now, tell me: why do you want to change your name?
-
-
-    (Answering,
-    "I want a name that more closely matches my gender identity" is totally ok!)'
+  DialogueText: Explain why you want to change your name.
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
