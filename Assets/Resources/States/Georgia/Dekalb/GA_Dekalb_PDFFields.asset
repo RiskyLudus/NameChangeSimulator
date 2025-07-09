@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d8c8bff4fcba944bef3fddcb0dfdbc, type: 3}
+  m_Name: GA_Dekalb_PDFFields
+  m_EditorClassIdentifier: 
+  PdfFileName: GA_Dekalb_PDF
+  fields:
+  - fieldName: LegalFullName
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: BirthYear
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: birthCounty
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: birthState
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: BirthCountry
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: ChosenFullName
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: ReasonForChangingName
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Name
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Address 1
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Address 2
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Area Code
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Phone No#
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Email
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  keywords:
+  - LegalFullName
+  - BirthYear
+  - birthCounty
+  - birthState
+  - BirthCountry
+  - ChosenFullName
+  - ReasonForChangingName
+  - Name
+  - Address 1
+  - Address 2
+  - Area Code
+  - Phone No#
+  - Email

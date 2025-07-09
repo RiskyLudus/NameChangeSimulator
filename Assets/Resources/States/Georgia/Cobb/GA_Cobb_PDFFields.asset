@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d8c8bff4fcba944bef3fddcb0dfdbc, type: 3}
+  m_Name: GA_Cobb_PDFFields
+  m_EditorClassIdentifier: 
+  PdfFileName: GA_Cobb_PDF
+  fields:
+  - fieldName: LegalFullName
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: BirthDate
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: ChosenFullName
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: ReasonForChangingName
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: BirthCounty
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: BirthState
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: BirthCountry
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Address
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: PhoneNumber
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  keywords:
+  - LegalFullName
+  - BirthDate
+  - ChosenFullName
+  - ReasonForChangingName
+  - BirthCounty
+  - BirthState
+  - BirthCountry
+  - Address
+  - PhoneNumber
