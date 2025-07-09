@@ -117,7 +117,7 @@ MonoBehaviour:
   SpriteType: 1
   VoiceLine: 0
   DialogueText: LegalFullName
-  Keyword: 
+  Keyword: FullDeadName
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
@@ -238,7 +238,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: BirthCounty
+  DialogueText: What COUNTY were you BORN in?
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -299,7 +299,8 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: ReasonForChangingName
+  DialogueText: Why do you want to change your name? List your REASON for doing so
+    here.
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -384,7 +385,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: BirthDate
+  DialogueText: What's your Birth Date? Enter it in (mm/dd/yyyy format!)
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -446,7 +447,7 @@ MonoBehaviour:
   SpriteType: 1
   VoiceLine: 0
   DialogueText: ChosenFullName
-  Keyword: 
+  Keyword: FullNewName
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
   Output: {fileID: 0}
@@ -506,7 +507,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: BirthState
+  DialogueText: What STATE were you born in?
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}

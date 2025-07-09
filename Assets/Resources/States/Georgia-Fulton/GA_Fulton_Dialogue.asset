@@ -1,0 +1,4977 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9171935103135999646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Suffix_4
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 4200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -9171935103135999646}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -3844955273536826535}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -9171935103135999646}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -9171935103135999646}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -5498974351119677773}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Suffix_4
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-8890051618210049999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Last_6
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 4800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -8890051618210049999}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -8463351267917278911}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -8890051618210049999}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -8890051618210049999}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 4916252074877331653}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Last_6
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-8640566437882576019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box22
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 10200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -8640566437882576019}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -6568410978032312131}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -8640566437882576019}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -8640566437882576019}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 525008316067470930}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box22
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-8463351267917278911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Prefix_5
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 4800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -8463351267917278911}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 4044268475337176718}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -8463351267917278911}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -8463351267917278911}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -8890051618210049999}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Prefix_5
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-8017427667428640637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Suffix_6
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 5400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -8017427667428640637}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 6168514670585546369}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -8017427667428640637}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -8017427667428640637}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -239400351414519154}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Suffix_6
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-7490028779596602777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box13
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 9000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -7490028779596602777}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 8594485423450314895}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -7490028779596602777}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -7490028779596602777}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 2182728818246448046}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box13
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-6942822684139482904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: State Bar Number
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 7200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -6942822684139482904}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -3157060648557967212}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -6942822684139482904}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -6942822684139482904}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 255150160854178167}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: State Bar Number
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-6578738591330520278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Prefix
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 1800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -6578738591330520278}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 9207181523076361043}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -6578738591330520278}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -6578738591330520278}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 3095499515734539615}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Prefix
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-6568410978032312131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box21
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 10200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -6568410978032312131}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -3520988174087174561}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -6568410978032312131}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -6568410978032312131}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -8640566437882576019}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box21
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-6554241209624581176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box28
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 11400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -6554241209624581176}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 6885173995202744231}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -6554241209624581176}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -6554241209624581176}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -4355800731878091085}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box28
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-6446758249669020353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box11
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 9000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -6446758249669020353}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -2791182912992849674}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -6446758249669020353}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -6446758249669020353}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 8594485423450314895}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box11
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-6295774062892165201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Middle I_7
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 6000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -6295774062892165201}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1682278449136564833}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -6295774062892165201}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -6295774062892165201}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 5282596629392760066}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Middle I_7
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-6111311852055318669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box34
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 12000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -6111311852055318669}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 2737425865422845102}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -6111311852055318669}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -6111311852055318669}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 2647640719810060150}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box34
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-5685888655579853509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Middle I_5
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 4800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -5685888655579853509}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 2270013692850172019}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -5685888655579853509}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -5685888655579853509}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 4044268475337176718}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Middle I_5
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-5498974351119677773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Prefix_4
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 4200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -5498974351119677773}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -9171935103135999646}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -5498974351119677773}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -5498974351119677773}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 4950845400202198028}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Prefix_4
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-5384562321398197491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Last
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 1200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -5384562321398197491}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -4712143709405680281}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -5384562321398197491}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -5384562321398197491}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -1825439406389282208}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Last
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-4712143709405680281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Case Number
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 1200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -4712143709405680281}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 1284258135261780484}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -4712143709405680281}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -4712143709405680281}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -5384562321398197491}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Case Number
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-4355800731878091085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box29
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 11400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -4355800731878091085}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -6554241209624581176}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -4355800731878091085}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -4355800731878091085}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 2078697916937303457}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box29
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-3844955273536826535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Middle I_4
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 3600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -3844955273536826535}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -569087673897599619}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -3844955273536826535}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -3844955273536826535}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -9171935103135999646}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Middle I_4
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-3821544064752274641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box9
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 8400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -3821544064752274641}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 1609252467131851113}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -3821544064752274641}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -3821544064752274641}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -2791182912992849674}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box9
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-3733202645551510176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box16
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 9600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -3733202645551510176}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 6581352070496633033}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -3733202645551510176}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -3733202645551510176}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 2041964683298779551}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box16
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-3700748607180476889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Prefix_2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 2400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -3700748607180476889}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 7803276284485392258}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -3700748607180476889}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -3700748607180476889}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -1599602283127920728}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Prefix_2
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-3520988174087174561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box20
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 10200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -3520988174087174561}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 8852317114998369897}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -3520988174087174561}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -3520988174087174561}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6568410978032312131}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box20
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-3157060648557967212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Suffix_8
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 7200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -3157060648557967212}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 3586586334482780865}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -3157060648557967212}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -3157060648557967212}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6942822684139482904}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Suffix_8
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-3102693932531837989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: First_2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 2400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -3102693932531837989}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 3095499515734539615}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -3102693932531837989}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -3102693932531837989}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 4209735629256136237}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: First_2
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-2791182912992849674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box10
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 8400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -2791182912992849674}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -3821544064752274641}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -2791182912992849674}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -2791182912992849674}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6446758249669020353}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box10
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-2774411348788477178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c425a473c6e6745961b76b62049233, type: 3}
+  m_Name: StartNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 600}
+  ports:
+    keys:
+    - Output
+    values:
+    - _fieldName: Output
+      _node: {fileID: -2774411348788477178}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 7950784095049828700}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Output: {fileID: 0}
+--- !u!114 &-1825439406389282208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: First
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 1200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -1825439406389282208}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -5384562321398197491}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -1825439406389282208}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -1825439406389282208}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 4929230910386923155}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: First
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-1682278449136564833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: First_7
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 6000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -1682278449136564833}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1054940476288486972}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -1682278449136564833}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -1682278449136564833}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6295774062892165201}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: First_7
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-1621492975303262627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box32
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 12000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -1621492975303262627}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 5693977511018239879}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -1621492975303262627}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -1621492975303262627}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 2737425865422845102}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box32
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-1599602283127920728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Last_3
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 3000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -1599602283127920728}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -3700748607180476889}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -1599602283127920728}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -1599602283127920728}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 8867469249027409361}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Last_3
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-1433456000469672441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box25
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 10800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -1433456000469672441}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 330467698095033538}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -1433456000469672441}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -1433456000469672441}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 4720325234589290415}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box25
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-1054940476288486972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Last_7
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 6000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -1054940476288486972}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -239400351414519154}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -1054940476288486972}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -1054940476288486972}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -1682278449136564833}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Last_7
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-940253712344606344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Languages Required
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 8400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -940253712344606344}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 6850797890168413727}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -940253712344606344}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -940253712344606344}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 1609252467131851113}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Languages Required
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-800749779452853868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Contempt
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 7800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -800749779452853868}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 698163937831037823}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -800749779452853868}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -800749779452853868}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -248693691459295712}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Contempt
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-569087673897599619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: First_4
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 3600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -569087673897599619}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 6945085467749870999}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -569087673897599619}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -569087673897599619}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -3844955273536826535}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: First_4
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &-248693691459295712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Modification
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 7800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -248693691459295712}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -800749779452853868}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -248693691459295712}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -248693691459295712}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 6829727547318371035}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Modification
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &-239400351414519154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Prefix_6
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 5400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: -239400351414519154}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -8017427667428640637}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: -239400351414519154}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: -239400351414519154}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -1054940476288486972}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Prefix_6
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fca9d4d54328444c8f75d4e7f5453fe, type: 3}
+  m_Name: GA_Fulton_Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2774411348788477178}
+  - {fileID: 7950784095049828700}
+  - {fileID: 4538445939530091627}
+  - {fileID: 4890064911606113759}
+  - {fileID: 1284258135261780484}
+  - {fileID: -4712143709405680281}
+  - {fileID: -5384562321398197491}
+  - {fileID: -1825439406389282208}
+  - {fileID: 4929230910386923155}
+  - {fileID: 9207181523076361043}
+  - {fileID: -6578738591330520278}
+  - {fileID: 3095499515734539615}
+  - {fileID: -3102693932531837989}
+  - {fileID: 4209735629256136237}
+  - {fileID: 7803276284485392258}
+  - {fileID: -3700748607180476889}
+  - {fileID: -1599602283127920728}
+  - {fileID: 8867469249027409361}
+  - {fileID: 5670463511009659415}
+  - {fileID: 3567208385458365118}
+  - {fileID: 3697401182301539121}
+  - {fileID: 6945085467749870999}
+  - {fileID: -569087673897599619}
+  - {fileID: -3844955273536826535}
+  - {fileID: -9171935103135999646}
+  - {fileID: -5498974351119677773}
+  - {fileID: 4950845400202198028}
+  - {fileID: 2270013692850172019}
+  - {fileID: -5685888655579853509}
+  - {fileID: 4044268475337176718}
+  - {fileID: -8463351267917278911}
+  - {fileID: -8890051618210049999}
+  - {fileID: 4916252074877331653}
+  - {fileID: 6168514670585546369}
+  - {fileID: -8017427667428640637}
+  - {fileID: -239400351414519154}
+  - {fileID: -1054940476288486972}
+  - {fileID: -1682278449136564833}
+  - {fileID: -6295774062892165201}
+  - {fileID: 5282596629392760066}
+  - {fileID: 1736488858522468840}
+  - {fileID: 6142233939120758359}
+  - {fileID: 5031077276826643281}
+  - {fileID: 3586586334482780865}
+  - {fileID: -3157060648557967212}
+  - {fileID: -6942822684139482904}
+  - {fileID: 255150160854178167}
+  - {fileID: 698163937831037823}
+  - {fileID: -800749779452853868}
+  - {fileID: -248693691459295712}
+  - {fileID: 6829727547318371035}
+  - {fileID: 6850797890168413727}
+  - {fileID: -940253712344606344}
+  - {fileID: 1609252467131851113}
+  - {fileID: -3821544064752274641}
+  - {fileID: -2791182912992849674}
+  - {fileID: -6446758249669020353}
+  - {fileID: 8594485423450314895}
+  - {fileID: -7490028779596602777}
+  - {fileID: 2182728818246448046}
+  - {fileID: 6581352070496633033}
+  - {fileID: -3733202645551510176}
+  - {fileID: 2041964683298779551}
+  - {fileID: 6186154258089160434}
+  - {fileID: 8852317114998369897}
+  - {fileID: -3520988174087174561}
+  - {fileID: -6568410978032312131}
+  - {fileID: -8640566437882576019}
+  - {fileID: 525008316067470930}
+  - {fileID: 330467698095033538}
+  - {fileID: -1433456000469672441}
+  - {fileID: 4720325234589290415}
+  - {fileID: 6885173995202744231}
+  - {fileID: -6554241209624581176}
+  - {fileID: -4355800731878091085}
+  - {fileID: 2078697916937303457}
+  - {fileID: 5693977511018239879}
+  - {fileID: -1621492975303262627}
+  - {fileID: 2737425865422845102}
+  - {fileID: -6111311852055318669}
+  - {fileID: 2647640719810060150}
+--- !u!114 &255150160854178167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: SelfRepresented
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 7200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 255150160854178167}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -6942822684139482904}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 255150160854178167}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 255150160854178167}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 698163937831037823}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: SelfRepresented
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &330467698095033538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box24
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 10800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 330467698095033538}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 525008316067470930}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 330467698095033538}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 330467698095033538}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -1433456000469672441}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box24
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &525008316067470930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box23
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 10800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 525008316067470930}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -8640566437882576019}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 525008316067470930}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 525008316067470930}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 330467698095033538}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box23
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &698163937831037823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Prefix_8
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 7200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 698163937831037823}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 255150160854178167}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 698163937831037823}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 698163937831037823}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -800749779452853868}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Prefix_8
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &1284258135261780484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: MMDDYYYY
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 1200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 1284258135261780484}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 4890064911606113759}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 1284258135261780484}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 1284258135261780484}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -4712143709405680281}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: MMDDYYYY
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &1609252467131851113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box8
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 8400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 1609252467131851113}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -940253712344606344}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 1609252467131851113}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 1609252467131851113}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -3821544064752274641}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box8
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &1736488858522468840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Prefix_7
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 6600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 1736488858522468840}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 5282596629392760066}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 1736488858522468840}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 1736488858522468840}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 6142233939120758359}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Prefix_7
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &2041964683298779551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box17
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 9600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 2041964683298779551}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -3733202645551510176}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 2041964683298779551}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 2041964683298779551}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 6186154258089160434}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box17
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &2078697916937303457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box30
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 11400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 2078697916937303457}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -4355800731878091085}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 2078697916937303457}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 2078697916937303457}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 5693977511018239879}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box30
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &2182728818246448046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box14
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 9000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 2182728818246448046}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -7490028779596602777}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 2182728818246448046}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 2182728818246448046}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 6581352070496633033}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box14
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &2270013692850172019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: First_5
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 4200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 2270013692850172019}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 4950845400202198028}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 2270013692850172019}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 2270013692850172019}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -5685888655579853509}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: First_5
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &2647640719810060150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5da56fbd6bc41446b731f00ed086781, type: 3}
+  m_Name: EndNode
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 12600}
+  ports:
+    keys:
+    - Input
+    values:
+    - _fieldName: Input
+      _node: {fileID: 2647640719810060150}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -6111311852055318669}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Input: {fileID: 0}
+--- !u!114 &2737425865422845102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box33
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 12000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 2737425865422845102}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1621492975303262627}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 2737425865422845102}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 2737425865422845102}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6111311852055318669}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box33
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &3095499515734539615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Last_2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 1800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 3095499515734539615}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -6578738591330520278}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 3095499515734539615}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 3095499515734539615}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -3102693932531837989}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Last_2
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &3567208385458365118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Suffix_3
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 3000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 3567208385458365118}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 5670463511009659415}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 3567208385458365118}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 3567208385458365118}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 3697401182301539121}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Suffix_3
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &3586586334482780865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Middle I_8
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 6600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 3586586334482780865}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 5031077276826643281}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 3586586334482780865}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 3586586334482780865}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -3157060648557967212}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Middle I_8
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &3697401182301539121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Prefix_3
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 3600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 3697401182301539121}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 3567208385458365118}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 3697401182301539121}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 3697401182301539121}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 6945085467749870999}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Prefix_3
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &4044268475337176718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Suffix_5
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 4800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 4044268475337176718}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -5685888655579853509}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 4044268475337176718}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 4044268475337176718}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -8463351267917278911}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Suffix_5
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &4209735629256136237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Middle I_2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 2400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 4209735629256136237}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -3102693932531837989}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 4209735629256136237}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 4209735629256136237}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 7803276284485392258}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Middle I_2
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &4538445939530091627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Superior or
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 4538445939530091627}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 7950784095049828700}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 4538445939530091627}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 4538445939530091627}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 4890064911606113759}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Superior or
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &4720325234589290415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box26
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 10800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 4720325234589290415}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1433456000469672441}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 4720325234589290415}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 4720325234589290415}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 6885173995202744231}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box26
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &4890064911606113759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: County
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 4890064911606113759}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 4538445939530091627}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 4890064911606113759}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 4890064911606113759}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 1284258135261780484}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: County
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &4916252074877331653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: First_6
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 5400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 4916252074877331653}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -8890051618210049999}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 4916252074877331653}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 4916252074877331653}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 6168514670585546369}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: First_6
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &4929230910386923155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Middle I
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 1800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 4929230910386923155}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1825439406389282208}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 4929230910386923155}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 4929230910386923155}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 9207181523076361043}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Middle I
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &4950845400202198028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Last_5
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 4200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 4950845400202198028}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -5498974351119677773}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 4950845400202198028}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 4950845400202198028}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 2270013692850172019}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Last_5
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &5031077276826643281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: First_8
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 6600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 5031077276826643281}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 6142233939120758359}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 5031077276826643281}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 5031077276826643281}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 3586586334482780865}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: First_8
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &5282596629392760066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Suffix_7
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 6000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 5282596629392760066}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -6295774062892165201}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 5282596629392760066}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 5282596629392760066}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 1736488858522468840}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Suffix_7
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &5670463511009659415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Middle I_3
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 3000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 5670463511009659415}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 8867469249027409361}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 5670463511009659415}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 5670463511009659415}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 3567208385458365118}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Middle I_3
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &5693977511018239879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box31
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 12000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 5693977511018239879}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 2078697916937303457}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 5693977511018239879}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 5693977511018239879}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -1621492975303262627}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box31
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &6142233939120758359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Last_8
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 6600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 6142233939120758359}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 1736488858522468840}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 6142233939120758359}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 6142233939120758359}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 5031077276826643281}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Last_8
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &6168514670585546369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Middle I_6
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 5400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 6168514670585546369}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 4916252074877331653}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 6168514670585546369}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 6168514670585546369}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -8017427667428640637}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Middle I_6
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &6186154258089160434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box18
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 9600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 6186154258089160434}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 2041964683298779551}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 6186154258089160434}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 6186154258089160434}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 8852317114998369897}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box18
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &6581352070496633033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box15
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 9600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 6581352070496633033}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 2182728818246448046}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 6581352070496633033}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 6581352070496633033}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -3733202645551510176}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box15
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &6829727547318371035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Case Number_2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 7800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 6829727547318371035}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -248693691459295712}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 6829727547318371035}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 6829727547318371035}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 6850797890168413727}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Case Number_2
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &6850797890168413727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Case Number_3
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 7800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 6850797890168413727}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 6829727547318371035}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 6850797890168413727}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 6850797890168413727}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -940253712344606344}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Case Number_3
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &6885173995202744231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box27
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 11400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 6885173995202744231}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 4720325234589290415}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 6885173995202744231}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 6885173995202744231}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6554241209624581176}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box27
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &6945085467749870999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Last_4
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 3600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 6945085467749870999}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 3697401182301539121}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 6945085467749870999}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 6945085467749870999}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -569087673897599619}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Last_4
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &7803276284485392258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Suffix_2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -500, y: 2400}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 7803276284485392258}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 4209735629256136237}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 7803276284485392258}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 7803276284485392258}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -3700748607180476889}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Suffix_2
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &7950784095049828700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: General Civil and Domestic Relations Case Filing Information Form
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 600}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 7950784095049828700}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -2774411348788477178}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 7950784095049828700}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 7950784095049828700}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 4538445939530091627}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: General Civil and Domestic Relations Case Filing Information Form
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &8594485423450314895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box12
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 9000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 8594485423450314895}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -6446758249669020353}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 8594485423450314895}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 8594485423450314895}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -7490028779596602777}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box12
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &8852317114998369897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de113a8853b74b4085d455ae79b5986, type: 3}
+  m_Name: Check Box19
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1500, y: 10200}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 8852317114998369897}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 6186154258089160434}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 8852317114998369897}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 8852317114998369897}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -3520988174087174561}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Check Box19
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  Options: []
+--- !u!114 &8867469249027409361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: First_3
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 3000}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 8867469249027409361}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -1599602283127920728}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 8867469249027409361}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 8867469249027409361}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 5670463511009659415}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: First_3
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
+--- !u!114 &9207181523076361043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2248ef7021c594b429377379900ce502, type: 3}
+  m_Name: Suffix
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1000, y: 1800}
+  ports:
+    keys:
+    - Input
+    - OverrideInput
+    - Output
+    values:
+    - _fieldName: Input
+      _node: {fileID: 9207181523076361043}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 4929230910386923155}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OverrideInput
+      _node: {fileID: 9207181523076361043}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Output
+      _node: {fileID: 9207181523076361043}
+      _typeQualifiedName: DialogueNode, NameChangeSimulator.Shared, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6578738591330520278}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  SpriteType: 1
+  VoiceLine: 0
+  DialogueText: Suffix
+  Keyword: 
+  Input: {fileID: 0}
+  OverrideInput: {fileID: 0}
+  Output: {fileID: 0}
+  CanLeaveBlank: 0
