@@ -10,18 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: Examples
   m_EditorClassIdentifier: 
-  m_GroupName: Default Local Group
-  m_GUID: 71d8d06bdf9756b449936f6d1086e2fd
+  m_GroupName: Examples
+  m_GUID: ecb99cf2affd1014aadfd35d1103a1c0
   m_SerializeEntries:
-  - m_GUID: 4e66fd43e196fac4f86fb0ce54d02f00
-    m_Address: Assets/(Working)/Zan/Example/Data/MockState_Keyword.json
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7b6c0371a7232634cb2510facaf4a0bf
-    m_Address: Assets/(Working)/Zan/Example/Data/Keywords/MockState.asset
+  - m_GUID: bbf4d4ccaccfbdd4f8fcc98dbeab823a
+    m_Address: Assets/(Working)/Zan/Example/Data/Keyword.json
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -29,5 +24,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 8c016db8cd85da54a9d0fe6a8c1b3db6, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: e495f96f41f7ae146be16d93b39ee08f, type: 2}
-    - {fileID: 11400000, guid: b9b5c1acf00244742888ea30db32d68b, type: 2}
+    - {fileID: 11400000, guid: e961a18066a9e21458ba6b16424a9b84, type: 2}
+    - {fileID: 11400000, guid: 6274d57fa63e90c41846a9271d741b93, type: 2}
