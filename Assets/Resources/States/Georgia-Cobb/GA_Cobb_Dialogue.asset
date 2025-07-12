@@ -55,7 +55,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: PhoneNumber
+  DialogueText: And finally, what's your PHONE NUMBER?
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -177,7 +177,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: BirthCountry
+  DialogueText: What COUNTRY were you born in?
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
@@ -568,7 +568,7 @@ MonoBehaviour:
       _dynamic: 0
   SpriteType: 1
   VoiceLine: 0
-  DialogueText: Address
+  DialogueText: 'Next: your FULL ADDRESS?'
   Keyword: 
   Input: {fileID: 0}
   OverrideInput: {fileID: 0}
