@@ -6,7 +6,9 @@
         "Anarchy.Shared",
         "Unity.TextMeshPro",
         "XNode",
-        "NameChangeSimulator.Shared"
+        "NameChangeSimulator.Shared",
+        "{Levels.Core.Collections}",
+        "DW.Tools"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

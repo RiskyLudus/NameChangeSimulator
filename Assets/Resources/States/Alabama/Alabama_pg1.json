@@ -1,0 +1,290 @@
+{
+    "backgroundAssetPath": "Assets/Resources/States/Alabama/PDFPages/MainPage.png",
+    "fields": [
+        {
+            "type": "String",
+            "id": "DeadFirstName",
+            "label": "",
+            "topLeft": {
+                "x": 0.23871417343616486,
+                "y": 0.14033010601997376
+            },
+            "bottomRight": {
+                "x": 0.5137979388237,
+                "y": 0.16852283477783204
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "DeadMiddleName",
+            "label": "",
+            "topLeft": {
+                "x": 0.5172343254089356,
+                "y": 0.1404934972524643
+            },
+            "bottomRight": {
+                "x": 0.7115074396133423,
+                "y": 0.1677025854587555
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "DeadLastName",
+            "label": "",
+            "topLeft": {
+                "x": 0.718761682510376,
+                "y": 0.1372140645980835
+            },
+            "bottomRight": {
+                "x": 0.9130348563194275,
+                "y": 0.1644231677055359
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "DeadFirstName",
+            "label": "",
+            "topLeft": {
+                "x": 0.2824383080005646,
+                "y": 0.2698449194431305
+            },
+            "bottomRight": {
+                "x": 0.540341854095459,
+                "y": 0.29803764820098879
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "DeadMiddleName",
+            "label": "",
+            "topLeft": {
+                "x": 0.5425055027008057,
+                "y": 0.2690246105194092
+            },
+            "bottomRight": {
+                "x": 0.7285066246986389,
+                "y": 0.29623371362686159
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "DeadLastName",
+            "label": "",
+            "topLeft": {
+                "x": 0.7293979525566101,
+                "y": 0.2691880464553833
+            },
+            "bottomRight": {
+                "x": 0.9236710667610169,
+                "y": 0.2963971197605133
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Street_Address",
+            "label": "",
+            "topLeft": {
+                "x": 0.23580721020698548,
+                "y": 0.3108249008655548
+            },
+            "bottomRight": {
+                "x": 0.4708039164543152,
+                "y": 0.3323737382888794
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "State",
+            "label": "",
+            "topLeft": {
+                "x": 0.6307709813117981,
+                "y": 0.31144577264785769
+            },
+            "bottomRight": {
+                "x": 0.7671405076980591,
+                "y": 0.3335907459259033
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Zip",
+            "label": "",
+            "topLeft": {
+                "x": 0.7769400477409363,
+                "y": 0.3111206591129303
+            },
+            "bottomRight": {
+                "x": 0.910128116607666,
+                "y": 0.3334510922431946
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "City",
+            "label": "",
+            "topLeft": {
+                "x": 0.4721256494522095,
+                "y": 0.3114030063152313
+            },
+            "bottomRight": {
+                "x": 0.6275842189788818,
+                "y": 0.33306607604026797
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "County_Name1",
+            "label": "",
+            "topLeft": {
+                "x": 0.37024813890457156,
+                "y": 0.11196734011173248
+            },
+            "bottomRight": {
+                "x": 0.650422215461731,
+                "y": 0.1352417767047882
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "Image",
+            "id": "DL#_Check",
+            "label": "",
+            "topLeft": {
+                "x": 0.522666871547699,
+                "y": 0.4733734726905823
+            },
+            "bottomRight": {
+                "x": 0.5407329797744751,
+                "y": 0.4875350296497345
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "Image",
+            "id": "ID#_Check",
+            "label": "",
+            "topLeft": {
+                "x": 0.5228379964828491,
+                "y": 0.4911257326602936
+            },
+            "bottomRight": {
+                "x": 0.5409041047096252,
+                "y": 0.5052872896194458
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "DL#",
+            "label": "",
+            "topLeft": {
+                "x": 0.6669719815254211,
+                "y": 0.4699240028858185
+            },
+            "bottomRight": {
+                "x": 0.9074651598930359,
+                "y": 0.4881185293197632
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "ID#",
+            "label": "",
+            "topLeft": {
+                "x": 0.7102532386779785,
+                "y": 0.4882923364639282
+            },
+            "bottomRight": {
+                "x": 0.907841682434082,
+                "y": 0.5037291646003723
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Why_change_name2",
+            "label": "",
+            "topLeft": {
+                "x": 0.12471809983253479,
+                "y": 0.5279651284217835
+            },
+            "bottomRight": {
+                "x": 0.9052135944366455,
+                "y": 0.5627185702323914
+            },
+            "text": "Why_Change_Name",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "NewFirstName",
+            "label": "",
+            "topLeft": {
+                "x": 0.3343631625175476,
+                "y": 0.5646297335624695
+            },
+            "bottomRight": {
+                "x": 0.5486581921577454,
+                "y": 0.5893779993057251
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "NewMiddleName",
+            "label": "",
+            "topLeft": {
+                "x": 0.5604648590087891,
+                "y": 0.5650252103805542
+            },
+            "bottomRight": {
+                "x": 0.7464659810066223,
+                "y": 0.5897738933563232
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "NewLastName",
+            "label": "",
+            "topLeft": {
+                "x": 0.7519544363021851,
+                "y": 0.5642878413200378
+            },
+            "bottomRight": {
+                "x": 0.9071281552314758,
+                "y": 0.5890365242958069
+            },
+            "text": "",
+            "imageAssetPath": ""
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77a5fb7bab93544590fc764da5358c9, type: 3}
+  m_Name: Alabama_pg2
+  m_EditorClassIdentifier: 
+  next: {fileID: 11400000, guid: 825a1961fd5cd9a4c9540c104600f508, type: 2}
+  jsonExport: {fileID: 0}
+  backgroundImage: {fileID: 2800000, guid: 0aea766a6e8c8dd43b5b28bf268444d3, type: 3}
+  fields: []
