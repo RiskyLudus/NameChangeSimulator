@@ -27,7 +27,6 @@ namespace DW.Tools {
 			tex.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
 			tex.Apply(false, false);
 
-			// restore and release safely
 			RenderTexture.active = prev == rt ? null : prev;
 			RenderTexture.ReleaseTemporary(rt);
 

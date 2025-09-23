@@ -1,12 +1,13 @@
-namespace DW.Tools {
-	using DW;
 
+
+namespace DW.Tools {
 	using UnityEditor;
 
 	using UnityEngine;
 
 	using state = ImageFielding.Editor.State;
 
+	// TODO : Comments
 	public class EditingSection {
 		private readonly UnityEditor.EditorWindow _host;
 
@@ -67,7 +68,6 @@ namespace DW.Tools {
 
 			_scroll = GUI.BeginScrollView(_viewRect, _scroll, _contentRect, true, true);
 
-			// Heavy drawing only on Repaint for perf
 			if (Event.current.type == EventType.Repaint) {
 				GUI.DrawTexture(_imageRect, bg, ScaleMode.StretchToFill);
 				for (int i = 0; i < state.Fields.Count; i++)
@@ -144,8 +144,10 @@ namespace DW.Tools {
 
 			if (_isPanning && evnt.type == EventType.MouseDrag) {
 				Vector2 delta = evnt.mousePosition - _panStartMouse;
+
 				_scroll = _panStartScroll - delta;
 				ClampScroll(_viewRect.size, new Vector2(state.Background.width * _zoom, state.Background.height * _zoom), ref _scroll);
+
 				_host.Repaint();
 				evnt.Use();
 				return;
@@ -185,11 +187,13 @@ namespace DW.Tools {
 				var pad = 2f;
 				var content = new Rect(rect.x + pad, rect.y + pad, rect.width - pad * 2f, rect.height - pad * 2f);
 				GUI.DrawTexture(content, fld.image, ScaleMode.ScaleToFit, true);
+
 			} else if (fld.type == ImageFieldingTypes.String) {
 				string txt = string.IsNullOrEmpty(fld.text) ? fld.id : fld.text;
 				var pad = 4f;
 				var content = new Rect(rect.x + pad, rect.y + pad, rect.width - pad * 2f, rect.height - pad * 2f);
 				GUI.Label(content, txt, s_FieldTextStyle);
+
 			} else {
 				var pad = 4f;
 				var content = new Rect(rect.x + pad, rect.y + pad, rect.width - pad * 2f, 18f);
@@ -222,6 +226,7 @@ namespace DW.Tools {
 
 			foreach (var grip in s_GripOrder)
 				EditorGUIUtility.AddCursorRect(GetGripHitRect(rectSlct, grip), GetCursorForGrip(grip));
+
 			EditorGUIUtility.AddCursorRect(rectSlct, MouseCursor.MoveArrow);
 		}
 
@@ -233,6 +238,7 @@ namespace DW.Tools {
 			actionArea.yMin -= GRIP_PICK_SIZE_PX;
 			actionArea.xMax += GRIP_PICK_SIZE_PX;
 			actionArea.yMax += GRIP_PICK_SIZE_PX;
+
 			if (!actionArea.Contains(evnt.mousePosition))
 				return;
 
@@ -342,6 +348,7 @@ namespace DW.Tools {
 				}
 			}
 			picked = GripDirection.None;
+
 			return -1;
 		}
 
@@ -355,19 +362,34 @@ namespace DW.Tools {
 			float vrtDistToTop = Mathf.Abs(mousePos.y - fieldDrawRect.y);
 			float vrtDistToBtm = Mathf.Abs(mousePos.y - fieldDrawRect.yMax);
 
-			bool nearLeft = hrzDistToLeft <= EDGE_PICK_PAD_PX && mousePos.x <= fieldDrawRect.x && mousePos.y >= fieldDrawRect.y - EDGE_PICK_PAD_PX && mousePos.y <= fieldDrawRect.yMax + EDGE_PICK_PAD_PX;
-			bool nearRight = hrzDistToRight <= EDGE_PICK_PAD_PX && mousePos.x >= fieldDrawRect.xMax && mousePos.y >= fieldDrawRect.y - EDGE_PICK_PAD_PX && mousePos.y <= fieldDrawRect.yMax + EDGE_PICK_PAD_PX;
-			bool nearTop = vrtDistToTop <= EDGE_PICK_PAD_PX && mousePos.y <= fieldDrawRect.y && mousePos.x >= fieldDrawRect.x - EDGE_PICK_PAD_PX && mousePos.x <= fieldDrawRect.xMax + EDGE_PICK_PAD_PX;
-			bool nearBottom = vrtDistToBtm <= EDGE_PICK_PAD_PX && mousePos.y >= fieldDrawRect.yMax && mousePos.x >= fieldDrawRect.x - EDGE_PICK_PAD_PX && mousePos.x <= fieldDrawRect.xMax + EDGE_PICK_PAD_PX;
+			bool nearLeft = hrzDistToLeft <= EDGE_PICK_PAD_PX && 
+				mousePos.x <= fieldDrawRect.x && 
+				mousePos.y >= fieldDrawRect.y - EDGE_PICK_PAD_PX && 
+				mousePos.y <= fieldDrawRect.yMax + EDGE_PICK_PAD_PX;
 
-			if (nearTop && nearLeft) { result = GripDirection.topLeft; return true; }
-			if (nearTop && nearRight) { result = GripDirection.topRight; return true; }
-			if (nearTop) { result = GripDirection.top; return true; }
-			if (nearBottom && nearRight) { result = GripDirection.bottomRight; return true; }
-			if (nearBottom && nearLeft) { result = GripDirection.bottomLeft; return true; }
-			if (nearBottom) { result = GripDirection.bottom; return true; }
-			if (nearLeft) { result = GripDirection.left; return true; }
-			if (nearRight) { result = GripDirection.right; return true; }
+			bool nearRight = hrzDistToRight <= EDGE_PICK_PAD_PX && 
+				mousePos.x >= fieldDrawRect.xMax && 
+				mousePos.y >= fieldDrawRect.y - EDGE_PICK_PAD_PX && 
+				mousePos.y <= fieldDrawRect.yMax + EDGE_PICK_PAD_PX;
+
+			bool nearTop = vrtDistToTop <= EDGE_PICK_PAD_PX && 
+				mousePos.y <= fieldDrawRect.y && 
+				mousePos.x >= fieldDrawRect.x - EDGE_PICK_PAD_PX && 
+				mousePos.x <= fieldDrawRect.xMax + EDGE_PICK_PAD_PX;
+
+			bool nearBottom = vrtDistToBtm <= EDGE_PICK_PAD_PX && 
+				mousePos.y >= fieldDrawRect.yMax && 
+				mousePos.x >= fieldDrawRect.x - EDGE_PICK_PAD_PX && 
+				mousePos.x <= fieldDrawRect.xMax + EDGE_PICK_PAD_PX;
+
+			if (nearTop && nearLeft) {		result = GripDirection.topLeft;		return true; }
+			if (nearTop && nearRight) {		result = GripDirection.topRight;	return true; }
+			if (nearTop) {					result = GripDirection.top;			return true; }
+			if (nearBottom && nearRight) {	result = GripDirection.bottomRight;	return true; }
+			if (nearBottom && nearLeft) {	result = GripDirection.bottomLeft;	return true; }
+			if (nearBottom) {				result = GripDirection.bottom;		return true; }
+			if (nearLeft) {					result = GripDirection.left;		return true; }
+			if (nearRight) {				result = GripDirection.right;		return true; }
 
 			if (fieldDrawRect.Contains(mousePos)) { result = GripDirection.Move; return true; }
 
@@ -388,66 +410,90 @@ namespace DW.Tools {
 			float yMin = Mathf.InverseLerp(displayRect.y, displayRect.yMax, rect.yMin);
 			float xMax = Mathf.InverseLerp(displayRect.x, displayRect.xMax, rect.xMax);
 			float yMax = Mathf.InverseLerp(displayRect.y, displayRect.yMax, rect.yMax);
+
 			return Rect.MinMaxRect(xMin, yMin, xMax, yMax);
 		}
 
 		private static Rect ConstrainToArea(Rect rect, Rect area, float min) {
 			if (rect.width < min)
 				rect.width = min;
+
 			if (rect.height < min)
 				rect.height = min;
+
 			if (rect.x < area.x)
 				rect.x = area.x;
+
 			if (rect.y < area.y)
 				rect.y = area.y;
+
 			if (rect.xMax > area.xMax)
 				rect.x = area.xMax - rect.width;
+
 			if (rect.yMax > area.yMax)
 				rect.y = area.yMax - rect.height;
+
 			return rect;
 		}
 
 		private static void ResizeByGrip(ref Rect rect, GripDirection grip, Vector2 mouseDelta) {
 			switch (grip) {
 			case GripDirection.topLeft:
+
 				rect.x += mouseDelta.x;
 				rect.width -= mouseDelta.x;
 				rect.y += mouseDelta.y;
 				rect.height -= mouseDelta.y;
+
 				break;
 			case GripDirection.top:
+
 				rect.y += mouseDelta.y;
 				rect.height -= mouseDelta.y;
+
 				break;
 			case GripDirection.topRight:
+
 				rect.width += mouseDelta.x;
 				rect.y += mouseDelta.y;
 				rect.height -= mouseDelta.y;
+
 				break;
 			case GripDirection.right:
+
 				rect.width += mouseDelta.x;
+
 				break;
 			case GripDirection.bottomRight:
+
 				rect.width += mouseDelta.x;
 				rect.height += mouseDelta.y;
+
 				break;
 			case GripDirection.bottom:
+
 				rect.height += mouseDelta.y;
+
 				break;
 			case GripDirection.bottomLeft:
+
 				rect.x += mouseDelta.x;
 				rect.width -= mouseDelta.x;
 				rect.height += mouseDelta.y;
+
 				break;
 			case GripDirection.left:
+
 				rect.x += mouseDelta.x;
 				rect.width -= mouseDelta.x;
+
 				break;
 			}
 		}
 
 		private static Rect GetGripDrawRect(Rect rect, GripDirection grip) {
 			float s = GRIP_VISUAL_SIZE_PX;
+
 			switch (grip) {
 			case GripDirection.topLeft:
 				return new Rect(rect.x - s * .5f, rect.y - s * .5f, s, s);
@@ -472,6 +518,7 @@ namespace DW.Tools {
 
 		private static Rect GetGripHitRect(Rect rect, GripDirection grip) {
 			float pick = GRIP_PICK_SIZE_PX;
+
 			switch (grip) {
 			case GripDirection.topLeft:
 				return new Rect(rect.x - pick, rect.y - pick, pick, pick);

@@ -40,20 +40,22 @@ namespace NCS {
 					return null;
 
 				var synonyms = Collections.Blackboard.MatchLogic.Synonyms.GetSynonyms(searchKeyword);
+
 				for (int i = 0; i < _entries.Length; i++) {
 					var kw = _entries[i].Keyword ?? "";
+
 					foreach (var syn in synonyms) {
-						if (!string.IsNullOrEmpty(syn) &&
-							kw.IndexOf(syn, System.StringComparison.OrdinalIgnoreCase) >= 0) {
+						if (!string.IsNullOrEmpty(syn) && kw.IndexOf(syn, System.StringComparison.OrdinalIgnoreCase) >= 0) {
+
 							return _entries[i].Text;
 						}
 					}
 				}
+
 				return null;
 			}
 		}
 
-		// Keep this legacy type so existing assets still deserialize
 		[CreateAssetMenu(fileName = "DialogSO_New", menuName = "Anarchy/DialogSO")]
 		public class DialogSO : ScriptableObject {
 			public string Keyword;

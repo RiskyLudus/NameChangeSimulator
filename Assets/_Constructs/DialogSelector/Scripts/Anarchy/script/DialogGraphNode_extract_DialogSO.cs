@@ -26,25 +26,31 @@ public class DialogSO_BulkFromDialogueGraphWindow : EditorWindow {
 	[MenuItem("Tools/NCS/Generate DialogSOs From DialogueGraph…")]
 	private static void Open() {
 		var w = GetWindow<DialogSO_BulkFromDialogueGraphWindow>("DialogSO Generator");
+
 		w.minSize = new Vector2(520, 420);
 		w.Show();
 	}
 
 	private void OnGUI() {
+		// Source
 		EditorGUILayout.LabelField("Source", EditorStyles.boldLabel);
 		_graph = (NodeGraph)EditorGUILayout.ObjectField("DialogueGraph", _graph, typeof(NodeGraph), false);
 
+		// Output
 		EditorGUILayout.Space(6);
 		EditorGUILayout.LabelField("Output", EditorStyles.boldLabel);
 		_outputFolder = (DefaultAsset)EditorGUILayout.ObjectField("Folder (Project)", _outputFolder, typeof(DefaultAsset), false);
 
+		// Destination
 		using (new EditorGUILayout.HorizontalScope()) {
 			if (GUILayout.Button("Use Assets/Resources/Dialogs", GUILayout.Height(22))) {
 				EnsureDefaultFolder("Assets/Resources/Dialogs");
 			}
+
 			if (GUILayout.Button("Pick Folder…", GUILayout.Height(22))) {
 				PickFolderWithOSDialog();
 			}
+
 			if (GUILayout.Button("Reveal Folder", GUILayout.Height(22))) {
 				var p = GetFolderPath();
 				if (Directory.Exists(p))
@@ -52,26 +58,35 @@ public class DialogSO_BulkFromDialogueGraphWindow : EditorWindow {
 			}
 		}
 
+		// Selected
 		var relOut = _outputFolder ? AssetDatabase.GetAssetPath(_outputFolder) : "Assets/Resources/Dialogs";
+
 		EditorGUILayout.LabelField("Selected:", relOut);
 
+		// Options
 		EditorGUILayout.Space(6);
 		EditorGUILayout.LabelField("Options", EditorStyles.boldLabel);
+
 		_splitAmpersandKeywords = EditorGUILayout.ToggleLeft("Split keywords on '&'", _splitAmpersandKeywords);
 		_sanitizeFilenames = EditorGUILayout.ToggleLeft("Sanitize asset file names", _sanitizeFilenames);
 		_dryRun = EditorGUILayout.ToggleLeft("Dry run (don’t write files)", _dryRun);
 
+		// Preview
 		EditorGUILayout.Space(8);
+
 		using (new EditorGUI.DisabledScope(_graph == null)) {
 			if (GUILayout.Button(_dryRun ? "Preview" : "Generate / Update", GUILayout.Height(28))) {
 				Run();
 			}
 		}
 
+		// Log
 		EditorGUILayout.Space(8);
 		EditorGUILayout.LabelField("Log", EditorStyles.boldLabel);
+
 		using (var sv = new EditorGUILayout.ScrollViewScope(_logScroll, GUILayout.ExpandHeight(true))) {
 			_logScroll = sv.scrollPosition;
+
 			foreach (var line in _log) {
 				GUILayout.Label($"[{line.action}] {line.node}  =>  {line.path}");
 			}
@@ -123,27 +138,40 @@ public class DialogSO_BulkFromDialogueGraphWindow : EditorWindow {
 				if (existing == null) {
 					if (_dryRun) {
 						Log(node.name, "create*", assetRel);
+
 						created++;
+
 						continue;
 					}
+
 					var so = ScriptableObject.CreateInstance<DialogSO>();
 					so.Keyword = kw;
 					so.Dialog = dialogText;
+
 					AssetDatabase.CreateAsset(so, assetRel);
 					AssetDatabase.ImportAsset(assetRel);
+
 					Log(node.name, "create", assetRel);
+
 					created++;
 				} else {
 					if (_dryRun) {
 						Log(node.name, "update*", assetRel);
+
 						updated++;
+
 						continue;
 					}
+
 					Undo.RecordObject(existing, "Update DialogSO");
+
 					existing.Keyword = kw;
 					existing.Dialog = dialogText;
+
 					EditorUtility.SetDirty(existing);
+
 					Log(node.name, "update", assetRel);
+
 					updated++;
 				}
 			}
@@ -189,43 +217,55 @@ public class DialogSO_BulkFromDialogueGraphWindow : EditorWindow {
 	private void EnsureDefaultFolder(string rel) {
 		if (!rel.StartsWith("Assets"))
 			rel = "Assets/Resources/Dialogs";
+
 		var parts = rel.Split(new[] { '/', '\\' }, StringSplitOptions.RemoveEmptyEntries);
 		string acc = parts[0];
+
 		for (int i = 1; i < parts.Length; i++) {
 			string next = acc + "/" + parts[i];
+
 			if (!AssetDatabase.IsValidFolder(next)) {
 				AssetDatabase.CreateFolder(acc, parts[i]);
 			}
 			acc = next;
 		}
+
 		_outputFolder = AssetDatabase.LoadAssetAtPath<DefaultAsset>(acc);
 	}
 
 	private string GetFolderPath() {
 		if (_outputFolder == null)
 			return Path.Combine(Application.dataPath, "Resources/Dialogs").Replace('\\', '/');
+
 		var rel = AssetDatabase.GetAssetPath(_outputFolder);
+
 		if (string.IsNullOrEmpty(rel))
 			return Path.Combine(Application.dataPath, "Resources/Dialogs").Replace('\\', '/');
+
 		return ToAbsoluteProjectPath(rel);
 	}
 
 	private static string ToAbsoluteProjectPath(string rel) {
 		rel = rel.Replace('\\', '/').TrimStart('/');
+
 		string proj = Application.dataPath.Replace("Assets", "");
+
 		return Path.Combine(proj, rel).Replace('\\', '/');
 	}
 
 	private static string ToProjectRelativePath(string abs) {
 		abs = abs.Replace('\\', '/');
 		string proj = Application.dataPath.Replace("Assets", "");
+
 		if (!abs.StartsWith(proj))
 			return string.Empty;
+
 		return abs.Substring(proj.Length);
 	}
 
 	private void Log(string node, string action, string messageOrPath) {
 		_log.Add(new ResultLine { node = node, action = action, path = messageOrPath });
+
 		Debug.Log($"[DialogSO Generator] [{action}] {node} -> {messageOrPath}");
 	}
 
@@ -233,16 +273,21 @@ public class DialogSO_BulkFromDialogueGraphWindow : EditorWindow {
 		var start = _outputFolder ? AssetDatabase.GetAssetPath(_outputFolder) : "Assets/Resources/Dialogs";
 		if (string.IsNullOrEmpty(start))
 			start = "Assets/Resources/Dialogs";
+
 		var startAbs = ToAbsoluteProjectPath(start);
 		var selectedAbs = EditorUtility.OpenFolderPanel("Choose output folder (must be inside Assets)", startAbs, "");
+
 		if (string.IsNullOrEmpty(selectedAbs))
 			return;
+
 		selectedAbs = selectedAbs.Replace('\\', '/');
 		var rel = ToProjectRelativePath(selectedAbs);
+
 		if (string.IsNullOrEmpty(rel) || !rel.StartsWith("Assets/")) {
 			Log("—", "error", "Selected path must be inside the project Assets folder.");
 			return;
 		}
+
 		_outputFolder = AssetDatabase.LoadAssetAtPath<DefaultAsset>(rel);
 	}
 }

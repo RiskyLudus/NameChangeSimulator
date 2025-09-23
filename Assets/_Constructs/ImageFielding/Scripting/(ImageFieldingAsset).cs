@@ -21,6 +21,7 @@ namespace DW.Tools {
 			int outputHeightPixels,
 			string filePath,
 			ImageFielding.AssetRenderer.FileFormat fileFormat = ImageFielding.AssetRenderer.FileFormat.Png) {
+
 			ImageFielding.AssetRenderer.RenderToFile(
 				this,
 				renderData,
@@ -31,14 +32,17 @@ namespace DW.Tools {
 		}
 
 		public List<ImageFieldingAsset> GetChainedLayouts(bool includeSelf = true, int maxHops = 128) {
+
 			var list = new List<ImageFieldingAsset>();
 			var seen = new HashSet<ImageFieldingAsset>();
 			var cur = includeSelf ? this : next;
 			int hops = 0;
+
 			while (cur != null && hops++ < maxHops && seen.Add(cur)) {
 				list.Add(cur);
 				cur = cur.next;
 			}
+
 			return list;
 		}
 
@@ -78,6 +82,7 @@ namespace DW.Tools {
 				path,
 				pdfDpi: pdfDpi
 			);
+
 			Debug.Log("Saved chained PDF: " + path);
 		}
 

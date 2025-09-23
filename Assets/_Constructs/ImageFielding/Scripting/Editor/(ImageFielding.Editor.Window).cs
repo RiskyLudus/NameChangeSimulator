@@ -26,7 +26,9 @@
 
 				public static void OpenWith(ImageFieldingAsset asset) {
 					var win = Open();
+
 					state.BindFromAsset(asset);
+
 					win.Repaint();
 				}
 
@@ -34,6 +36,7 @@
 					wantsMouseMove = true;
 					_fieldsSection = new FieldsSection(this);
 					_canvasSection = new EditingSection(this);
+
 					state.StateChanged += Repaint;
 				}
 
@@ -174,9 +177,12 @@
 						if (_deletedStack.Count > 0) {
 							var last = _deletedStack[_deletedStack.Count - 1];
 							int insertAt = Mathf.Clamp(last.index, 0, state.Fields.Count);
+
 							state.Fields.Insert(insertAt, last.fld);
 							state.SelectedIndex = insertAt;
+
 							_deletedStack.RemoveAt(_deletedStack.Count - 1);
+
 							Repaint();
 							crntEvent.Use();
 							return false;

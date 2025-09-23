@@ -1,5 +1,3 @@
-using UnityEngine;
-
 
 namespace DW.Core {
 	using System;

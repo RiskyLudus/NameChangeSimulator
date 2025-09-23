@@ -122,7 +122,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0.37024814
       y: 0.11196734
-      width: 0.28017408
+      width: 0.28952348
       height: 0.023274437
     text: 123123qwq
     image: {fileID: 0}
@@ -205,4 +205,74 @@ MonoBehaviour:
       width: 0.15517372
       height: 0.024748683
     text: awawd12e3f23sedff
+    image: {fileID: 0}
+  - ID: Home_Phone
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.3661441
+      y: 0.34871724
+      width: 0.2185817
+      height: 0.019880354
+    text: 
+    image: {fileID: 0}
+  - ID: Work_Phone
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.6411479
+      y: 0.35012147
+      width: 0.2656045
+      height: 0.018644005
+    text: 
+    image: {fileID: 0}
+  - ID: DOB
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.36646524
+      y: 0.37406862
+      width: 0.52814054
+      height: 0.02056247
+    text: 
+    image: {fileID: 0}
+  - ID: Name_First_Birth
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.30088478
+      y: 0.4007818
+      width: 0.21869856
+      height: 0.021093607
+    text: 
+    image: {fileID: 0}
+  - ID: Name_Middle_Birth
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.52002525
+      y: 0.4007325
+      width: 0.21869856
+      height: 0.021093607
+    text: 
+    image: {fileID: 0}
+  - ID: Name_Last_Birth
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.7411244
+      y: 0.40092778
+      width: 0.17397326
+      height: 0.020702988
+    text: 
+    image: {fileID: 0}
+  - ID: County_Name1
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.70688576
+      y: 0.43862307
+      width: 0.19873625
+      height: 0.020703018
+    text: 
     image: {fileID: 0}

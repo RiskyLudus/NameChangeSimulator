@@ -17,8 +17,7 @@
 				private static string[] s_AllIds = Array.Empty<string>();
 				private static double s_LastScanTime = -1d;
 				private const double SCAN_COOLDOWN = 1.0;
-				private readonly Dictionary<string, string> _searchCache =
-					new Dictionary<string, string>(StringComparer.Ordinal);
+				private readonly Dictionary<string, string> _searchCache = new Dictionary<string, string>(StringComparer.Ordinal);
 
 				public FieldsSection(Window host) { _host = host; }
 
@@ -40,10 +39,13 @@
 					using (new EditorGUILayout.HorizontalScope()) {
 						if (GUILayout.Button("New", GUILayout.Height(24)))
 							state.New();
+
 						if (GUILayout.Button("Save", GUILayout.Height(24)))
 							state.Save();
+
 						if (GUILayout.Button("Save As…", GUILayout.Height(24)))
 							state.SaveAs();
+
 						if (GUILayout.Button("Load…", GUILayout.Height(24)))
 							state.Load();
 					}
@@ -63,6 +65,7 @@
 								}
 							);
 						}
+
 						if (GUILayout.Button("Add Image Field", GUILayout.Height(22))) {
 							state.Fields.Add(
 								new state.FieldViewModle {
@@ -74,6 +77,7 @@
 								}
 							);
 						}
+
 						if (GUILayout.Button("Copy Field", GUILayout.Height(22))) {
 							int index = state.SelectedIndex;
 							if (index >= 0 && index < state.Fields.Count) {
@@ -112,6 +116,7 @@
 					}
 				}
 
+				// TODO : Comments
 				private void DrawFieldHeader(int index, ref state.FieldViewModle vm) {
 					using (new EditorGUILayout.HorizontalScope()) {
 						bool sel = GUILayout.Toggle(index == state.SelectedIndex, GUIContent.none, GUILayout.Width(18));
@@ -136,6 +141,7 @@
 					}
 				}
 
+				// TODO : Comments
 				private void DrawIdPickerAndSearch(int index, ref state.FieldViewModle vm) {
 					const string PrefPrefix = "DW.ImageFielding.FieldsSection.IdSearch.";
 					string prefKey = BuildSearchPrefKey(PrefPrefix, vm.id, index);
@@ -173,7 +179,9 @@
 				private void DrawTypeSpecificEditors(ref state.FieldViewModle vm) {
 					if (vm.type == ImageFieldingTypes.String) {
 						EditorGUI.BeginChangeCheck();
+
 						var newText = EditorGUILayout.TextField("Text", vm.text);
+
 						if (EditorGUI.EndChangeCheck()) { vm.text = newText; _host.Repaint(); }
 					} else {
 						vm.image = (Texture2D)EditorGUILayout.ObjectField("Image", vm.image, typeof(Texture2D), false);
@@ -193,36 +201,44 @@
 				private static string[] BuildIdDropdownOptions(string[] allIds) {
 					var options = new string[allIds.Length + 1];
 					options[0] = "— New ID —";
+
 					for (int i = 0; i < allIds.Length; i++)
 						options[i + 1] = allIds[i];
+
 					return options;
 				}
 
 				private static int GetCurrentIdIndex(string[] allIds, string currentId) {
 					if (string.IsNullOrEmpty(currentId))
 						return 0;
+
 					for (int i = 0; i < allIds.Length; i++) {
 						if (string.Equals(allIds[i], currentId, System.StringComparison.OrdinalIgnoreCase))
 							return i + 1; // +1 because index 0 is "— New ID —"
 					}
+
 					return 0;
 				}
 
 				private static string BuildSearchPrefKey(string prefix, string id, int indexFallback) {
 					string raw = string.IsNullOrEmpty(id) ? indexFallback.ToString() : id;
+
 					for (int i = 0; i < raw.Length; i++) {
 						char chr = raw[i];
 						if (!(char.IsLetterOrDigit(chr) || chr == '_' || chr == '-' || chr == '.'))
 							raw = raw.Replace(chr, '_');
 					}
+
 					return prefix + raw;
 				}
 
 				private string GetSearchText(string key) {
 					if (_searchCache.TryGetValue(key, out var v))
 						return v;
+
 					string loaded = EditorPrefs.GetString(key, string.Empty);
 					_searchCache[key] = loaded;
+
 					return loaded;
 				}
 
@@ -269,14 +285,17 @@
 						if (!string.IsNullOrEmpty(id) && id.IndexOf(filter, StringComparison.OrdinalIgnoreCase) >= 0)
 							result.Add(id);
 					}
+
 					return result.ToArray();
 				}
 
 				private static void AccumulateKeywords(UnityEngine.Object[] objs, List<string> list) {
 					for (int i = 0; i < objs.Length; i++) {
 						var obj = objs[i];
+
 						if (!obj)
 							continue;
+
 						if (TryGetKeywordFast(obj, out var kw))
 							AddUniqueIgnoreCase(list, kw);
 					}
@@ -309,9 +328,11 @@
 				private static void AddUniqueIgnoreCase(List<string> list, string value) {
 					if (string.IsNullOrEmpty(value))
 						return;
+
 					for (int i = 0; i < list.Count; i++)
 						if (string.Equals(list[i], value, StringComparison.OrdinalIgnoreCase))
 							return;
+
 					list.Add(value);
 				}
 				#endregion

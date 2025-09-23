@@ -8,9 +8,6 @@ namespace DW.Tools {
 	using UnityEditor;
 
 	using UnityEngine;
-
-	using DW.Tools;
-
 	public partial class ImageFielding {
 		public partial class Editor {
 			public static class State {
@@ -67,6 +64,7 @@ namespace DW.Tools {
 
 					for (int i = 0; i < Fields.Count; i++) {
 						var vm = Fields[i];
+
 						dto.fields.Add(new FieldJson {
 							type = vm.type.ToString(),
 							id = vm.id,
@@ -101,6 +99,7 @@ namespace DW.Tools {
 					if (data.fields != null) {
 						for (int i = 0; i < data.fields.Count; i++) {
 							var fldJson = data.fields[i];
+
 							var vm = new FieldViewModle {
 								id = fldJson.id,
 								label = fldJson.label,
@@ -112,12 +111,15 @@ namespace DW.Tools {
 									? AssetDatabase.LoadAssetAtPath<Texture2D>(fldJson.imageAssetPath)
 									: null
 							};
+
 							ClampAndOrder(ref vm.topLeft, ref vm.bottomRight);
 							Fields.Add(vm);
 						}
 					}
+
 					SelectedIndex = Fields.Count > 0 ? 0 : -1;
 					MarkDirty();
+
 					return true;
 				}
 
@@ -132,9 +134,12 @@ namespace DW.Tools {
 						WriteJsonToAbsolutePath(jsonAbs);
 
 						var jsonRel = ToProjectRelativePath(jsonAbs);
+
 						if (!string.IsNullOrEmpty(jsonRel)) {
 							AssetDatabase.ImportAsset(jsonRel);
+
 							var ta = AssetDatabase.LoadAssetAtPath<TextAsset>(jsonRel);
+
 							ActiveAsset.jsonExport = ta;
 							EditorUtility.SetDirty(ActiveAsset);
 							AssetDatabase.SaveAssets();
@@ -156,6 +161,7 @@ namespace DW.Tools {
 					var existing = AssetDatabase.LoadAssetAtPath<ImageFieldingAsset>(projPath);
 					if (!existing) {
 						existing = ScriptableObject.CreateInstance<ImageFieldingAsset>();
+
 						AssetDatabase.CreateAsset(existing, projPath);
 						AssetDatabase.ImportAsset(projPath);
 					}
@@ -170,8 +176,10 @@ namespace DW.Tools {
 					var jsonRel = ToProjectRelativePath(jsonAbs);
 					if (!string.IsNullOrEmpty(jsonRel)) {
 						AssetDatabase.ImportAsset(jsonRel);
+
 						var ta = AssetDatabase.LoadAssetAtPath<TextAsset>(jsonRel);
 						existing.jsonExport = ta;
+
 						EditorUtility.SetDirty(existing);
 						AssetDatabase.SaveAssets();
 					}
@@ -229,21 +237,25 @@ namespace DW.Tools {
 				public static ImageFieldingTypes ParseTypeSafe(string typeStr) {
 					if (Enum.TryParse<ImageFieldingTypes>(typeStr, true, out var typeEnum))
 						return typeEnum;
+
 					return string.Equals(typeStr, "text", StringComparison.OrdinalIgnoreCase) ? ImageFieldingTypes.String : ImageFieldingTypes.Image;
 				}
 
 				public static string ToAbsoluteProjectPath(string projectRelativePath) {
 					string projectRoot = Directory.GetParent(Application.dataPath).FullName;
+
 					return Path.GetFullPath(Path.Combine(projectRoot, projectRelativePath));
 				}
 
 				public static string ToProjectRelativePath(string absolutePath) {
 					var relativePath = FileUtil.GetProjectRelativePath(absolutePath);
+
 					return string.IsNullOrEmpty(relativePath) ? null : relativePath.Replace('\\', '/');
 				}
 
 				private static List<FieldViewModle> FromAssetToVM(ImageFieldingAsset asset) {
 					var list = new List<FieldViewModle>();
+
 					if (asset == null)
 						return list;
 
@@ -251,7 +263,9 @@ namespace DW.Tools {
 						var fld = asset.fields[i];
 						var topLeft = new Vector2(fld.normalizedRect.x, fld.normalizedRect.y);
 						var btmRight = new Vector2(fld.normalizedRect.x + fld.normalizedRect.width, fld.normalizedRect.y + fld.normalizedRect.height);
+
 						ClampAndOrder(ref topLeft, ref btmRight);
+
 						list.Add(new FieldViewModle {
 							type = fld.fieldType,
 							id = fld.ID,
@@ -262,6 +276,7 @@ namespace DW.Tools {
 							image = fld.image
 						});
 					}
+
 					return list;
 				}
 				#endregion

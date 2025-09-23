@@ -1,5 +1,6 @@
-﻿#if UNITY_EDITOR
-
+﻿
+/*
+#if UNITY_EDITOR
 namespace NameChangeSimulator.Editor {
 	using System;
 	using System.Collections;
@@ -309,7 +310,7 @@ namespace NameChangeSimulator.Editor {
 
 					// "output ->" + port dropdown
 					GUILayout.Label(GOutputArrow, GUILayout.Width(_w.portLabelW));
-					cfg.NextRowPort = PortSelPopup(cfg.NextRowPort, _w.connectW, /*isOptionRow*/ false);
+					cfg.NextRowPort = PortSelPopup(cfg.NextRowPort, _w.connectW, false);
 
 					// InputOverride (dropdown of node names; first is "(none)")
 					int ovIdx = IndexOfChoice(nodeNameChoices, cfg.InputOverride);
@@ -357,7 +358,7 @@ namespace NameChangeSimulator.Editor {
 						t1 = EditorGUILayout.Popup(t1, nodeNameChoices, GUILayout.Width(_w.optTargetW));
 						cfg.Opt1TargetName = (t1 <= 0) ? string.Empty : nodeNameChoices[t1];
 
-						cfg.Opt1TargetPort = PortSelPopup(cfg.Opt1TargetPort, _w.optPortW, /*isOptionRow*/ true);
+						cfg.Opt1TargetPort = PortSelPopup(cfg.Opt1TargetPort, _w.optPortW, true);
 					}
 					using (new EditorGUILayout.HorizontalScope()) {
 						// Option 2: label | target dropdown | port dropdown
@@ -367,7 +368,7 @@ namespace NameChangeSimulator.Editor {
 						t2 = EditorGUILayout.Popup(t2, nodeNameChoices, GUILayout.Width(_w.optTargetW));
 						cfg.Opt2TargetName = (t2 <= 0) ? string.Empty : nodeNameChoices[t2];
 
-						cfg.Opt2TargetPort = PortSelPopup(cfg.Opt2TargetPort, _w.optPortW, /*isOptionRow*/ true);
+						cfg.Opt2TargetPort = PortSelPopup(cfg.Opt2TargetPort, _w.optPortW, true);
 					}
 				}
 
@@ -688,63 +689,106 @@ namespace NameChangeSimulator.Editor {
 
 		private List<ImageFieldingAsset> TryResolveChainViaMethod(ImageFieldingAsset root, HashSet<ImageFieldingAsset> visited) {
 			var collected = new List<ImageFieldingAsset>();
-			var t = typeof(ImageFieldingAsset);
-			var candidateNames = new[] { "GetChainedLayouts", "GetChainedLayoutChain", "GetChain" };
-			var methods = t.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
-				.Where(m => candidateNames.Contains(m.Name)).ToArray();
-
-			foreach (var m in methods) {
-				try {
-					var ps = m.GetParameters();
-					object target = m.IsStatic ? null : root;
-
-					if (ps.Length == 0) {
-						var res = m.Invoke(target, null);
-						if (AppendFromEnumerable(res, collected, visited))
-							return collected;
-					}
-
-					if (ps.Length == 1 && typeof(IList).IsAssignableFrom(ps[0].ParameterType)) {
-						var list = (IList)Activator.CreateInstance(typeof(List<ImageFieldingAsset>));
-						m.Invoke(target, new object[] { list });
-						if (AppendFromEnumerable(list, collected, visited))
-							return collected;
-					}
-
-					if (ps.Length == 1 && ps[0].ParameterType == typeof(bool)) {
-						foreach (var flag in new[] { true, false }) {
-							var res = m.Invoke(target, new object[] { flag });
-							if (AppendFromEnumerable(res, collected, visited))
-								return collected;
-						}
-					}
-
-					if (ps.Length == 2) {
-						bool firstIList = typeof(IList).IsAssignableFrom(ps[0].ParameterType);
-						bool secondIList = typeof(IList).IsAssignableFrom(ps[1].ParameterType);
-
-						if (firstIList && ps[1].ParameterType == typeof(bool)) {
-							var list = (IList)Activator.CreateInstance(typeof(List<ImageFieldingAsset>));
-							foreach (var flag in new[] { true, false }) {
-								m.Invoke(target, new object[] { list, flag });
-								if (AppendFromEnumerable(list, collected, visited))
-									return collected;
-								list.Clear();
-							}
-						} else if (ps[0].ParameterType == typeof(bool) && secondIList) {
-							var list = (IList)Activator.CreateInstance(typeof(List<ImageFieldingAsset>));
-							foreach (var flag in new[] { true, false }) {
-								m.Invoke(target, new object[] { flag, list });
-								if (AppendFromEnumerable(list, collected, visited))
-									return collected;
-								list.Clear();
-							}
-						}
-					}
-				}
-				catch { }
+			foreach (var m in GetCandidateMethods()) {
+				if (TryInvokeMethodVariants(m, root, collected, visited))
+					return collected;
 			}
 			return collected;
+		}
+
+		private static IEnumerable<MethodInfo> GetCandidateMethods() {
+			var t = typeof(ImageFieldingAsset);
+			var candidateNames = new[] { "GetChainedLayouts", "GetChainedLayoutChain", "GetChain" };
+			return t.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
+					.Where(m => candidateNames.Contains(m.Name));
+		}
+
+		private bool TryInvokeMethodVariants(MethodInfo m, ImageFieldingAsset root, List<ImageFieldingAsset> collected, HashSet<ImageFieldingAsset> visited) {
+			try {
+				var ps = m.GetParameters();
+				object target = m.IsStatic ? null : root;
+
+				if (ps.Length == 0)
+					return TryNoArg(m, target, collected, visited);
+
+				if (ps.Length == 1 && typeof(IList).IsAssignableFrom(ps[0].ParameterType))
+					return TryOutListSingle(m, target, collected, visited);
+
+				if (ps.Length == 1 && ps[0].ParameterType == typeof(bool))
+					return TryBoolSingle(m, target, collected, visited);
+
+				if (ps.Length == 2)
+					return TryTwoParamCombos(m, target, ps, collected, visited);
+			}
+			catch {
+				// ignore and try next method
+			}
+			return false;
+		}
+
+		private bool TryNoArg(MethodInfo m, object target, List<ImageFieldingAsset> collected, HashSet<ImageFieldingAsset> visited) {
+			var res = m.Invoke(target, null);
+			return AppendFromEnumerable(res, collected, visited);
+		}
+
+		private bool TryOutListSingle(MethodInfo m, object target, List<ImageFieldingAsset> collected, HashSet<ImageFieldingAsset> visited) {
+			var list = (IList)Activator.CreateInstance(typeof(List<ImageFieldingAsset>));
+			m.Invoke(target, new object[] { list });
+			return AppendFromEnumerable(list, collected, visited);
+		}
+
+		private bool TryBoolSingle(MethodInfo m, object target, List<ImageFieldingAsset> collected, HashSet<ImageFieldingAsset> visited) {
+			foreach (var flag in new[] { true, false }) {
+				var res = m.Invoke(target, new object[] { flag });
+
+				if (AppendFromEnumerable(res, collected, visited))
+					return true;
+			}
+
+			return false;
+		}
+
+		private bool TryTwoParamCombos(MethodInfo m, object target, ParameterInfo[] ps, List<ImageFieldingAsset> collected, HashSet<ImageFieldingAsset> visited) {
+			bool firstIsList = typeof(IList).IsAssignableFrom(ps[0].ParameterType);
+			bool secondIsList = typeof(IList).IsAssignableFrom(ps[1].ParameterType);
+
+			if (firstIsList && ps[1].ParameterType == typeof(bool))
+				return TryListThenBool(m, target, collected, visited);
+
+			if (ps[0].ParameterType == typeof(bool) && secondIsList)
+				return TryBoolThenList(m, target, collected, visited);
+
+			return false;
+		}
+
+		private bool TryListThenBool(MethodInfo m, object target, List<ImageFieldingAsset> collected, HashSet<ImageFieldingAsset> visited) {
+			var list = (IList)Activator.CreateInstance(typeof(List<ImageFieldingAsset>));
+
+			foreach (var flag in new[] { true, false }) {
+				m.Invoke(target, new object[] { list, flag });
+
+				if (AppendFromEnumerable(list, collected, visited))
+					return true;
+
+				list.Clear();
+			}
+
+			return false;
+		}
+
+		private bool TryBoolThenList(MethodInfo m, object target, List<ImageFieldingAsset> collected, HashSet<ImageFieldingAsset> visited) {
+			var list = (IList)Activator.CreateInstance(typeof(List<ImageFieldingAsset>));
+
+			foreach (var flag in new[] { true, false }) {
+				m.Invoke(target, new object[] { flag, list });
+
+				if (AppendFromEnumerable(list, collected, visited))
+					return true;
+
+				list.Clear();
+			}
+
+			return false;
 		}
 
 		private List<ImageFieldingAsset> TryResolveChainViaMembers(ImageFieldingAsset root, HashSet<ImageFieldingAsset> visited) {
@@ -790,10 +834,11 @@ namespace NameChangeSimulator.Editor {
 			foreach (var f in t.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)) {
 				if (!typeof(IList).IsAssignableFrom(f.FieldType))
 					continue;
-				if (preferredNames.Any(n => string.Equals(f.Name, n, StringComparison.OrdinalIgnoreCase)) ||
-					IsIListOfLayouts(f.FieldType)) {
+
+				if (preferredNames.Any(n => string.Equals(f.Name, n, StringComparison.OrdinalIgnoreCase)) || IsIListOfLayouts(f.FieldType)) {
 					var val = f.GetValue(obj) as IList;
 					var list = ToLayoutList(val);
+
 					if (list != null && list.Count > 0)
 						return list;
 				}
@@ -804,10 +849,10 @@ namespace NameChangeSimulator.Editor {
 					continue;
 				if (!typeof(IList).IsAssignableFrom(p.PropertyType))
 					continue;
-				if (preferredNames.Any(n => string.Equals(p.Name, n, StringComparison.OrdinalIgnoreCase)) ||
-					IsIListOfLayouts(p.PropertyType)) {
+				if (preferredNames.Any(n => string.Equals(p.Name, n, StringComparison.OrdinalIgnoreCase)) || IsIListOfLayouts(p.PropertyType)) {
 					var val = p.GetValue(obj, null) as IList;
 					var list = ToLayoutList(val);
+
 					if (list != null && list.Count > 0)
 						return list;
 				}
@@ -833,6 +878,7 @@ namespace NameChangeSimulator.Editor {
 			foreach (var p in t.GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)) {
 				if (!p.CanRead)
 					continue;
+
 				if (typeof(ImageFieldingAsset).IsAssignableFrom(p.PropertyType)) {
 					if (preferredNames.Any(n => string.Equals(p.Name, n, StringComparison.OrdinalIgnoreCase)))
 						return p.GetValue(obj, null) as ImageFieldingAsset;
@@ -849,19 +895,23 @@ namespace NameChangeSimulator.Editor {
 		private static bool IsIListOfLayouts(Type t) {
 			if (!typeof(IList).IsAssignableFrom(t))
 				return false;
+
 			if (t.IsGenericType && t.GetGenericArguments().Length == 1) {
 				return typeof(ImageFieldingAsset).IsAssignableFrom(t.GetGenericArguments()[0]);
 			}
+
 			return false;
 		}
 
 		private static List<ImageFieldingAsset> ToLayoutList(IList list) {
 			if (list == null)
 				return null;
+
 			var res = new List<ImageFieldingAsset>();
 			foreach (var obj in list)
 				if (obj is ImageFieldingAsset la && la)
 					res.Add(la);
+
 			return res;
 		}
 
@@ -873,11 +923,14 @@ namespace NameChangeSimulator.Editor {
 
 			var graph = ScriptableObject.CreateInstance<DialogueGraph>();
 			string defaultFolder = Path.GetDirectoryName(AssetDatabase.GetAssetPath(selectedLayout)).Replace("\\", "/");
+
 			if (!AssetDatabase.IsValidFolder(defaultFolder)) {
 				var parts = defaultFolder.Split('/');
 				string acc = parts[0];
+
 				for (int i = 1; i < parts.Length; i++) {
 					string next = acc + "/" + parts[i];
+
 					if (!AssetDatabase.IsValidFolder(next))
 						AssetDatabase.CreateFolder(acc, parts[i]);
 					acc = next;
@@ -891,6 +944,7 @@ namespace NameChangeSimulator.Editor {
 				"Save the dialogue as a ScriptableObject asset.",
 				defaultFolder
 			);
+
 			if (string.IsNullOrEmpty(savePath))
 				return;
 
@@ -939,12 +993,17 @@ namespace NameChangeSimulator.Editor {
 
 				if (IsOptionsType(cfg.TypeIndex)) {
 					var opts = new List<string>();
+
 					if (!string.IsNullOrWhiteSpace(cfg.Opt1Label))
 						opts.Add(cfg.Opt1Label);
+
 					if (!string.IsNullOrWhiteSpace(cfg.Opt2Label))
 						opts.Add(cfg.Opt2Label);
+
 					SetOptionsIfPresent(node, opts.ToArray());
+
 					var updatePorts = typeof(XNode.Node).GetMethod("UpdatePorts", BindingFlags.Instance | BindingFlags.NonPublic);
+
 					updatePorts?.Invoke(node, null);
 				}
 
@@ -956,6 +1015,7 @@ namespace NameChangeSimulator.Editor {
 					// Always create two options; use placeholders if labels are empty.
 					var opt1 = string.IsNullOrWhiteSpace(cfg.Opt1Label) ? "Option 1" : cfg.Opt1Label;
 					var opt2 = string.IsNullOrWhiteSpace(cfg.Opt2Label) ? "Option 2" : cfg.Opt2Label;
+
 					SetOptionsIfPresent(node, new[] { opt1, opt2 });
 
 					// Ensure dynamic "Options N" ports exist AFTER the node is attached to the graph.
@@ -986,6 +1046,7 @@ namespace NameChangeSimulator.Editor {
 			try {
 				if (created.Count > 0) {
 					var first = created[0] as XNode.Node;
+
 					startNode.GetOutputPort("Output").Connect(first.GetInputPort("Input"));
 				} else {
 					startNode.GetOutputPort("Output").Connect(endNode.GetInputPort("Input"));
@@ -1022,6 +1083,7 @@ namespace NameChangeSimulator.Editor {
 			// Options wiring
 			for (int i = 0; i < created.Count; i++) {
 				var key = orderedKeys[i];
+
 				if (!fieldConfigs.TryGetValue(key, out var cfg))
 					continue;
 				if (!IsOptionsType(cfg.TypeIndex))
@@ -1043,6 +1105,7 @@ namespace NameChangeSimulator.Editor {
 			// InputOverride back-edges
 			for (int i = 0; i < created.Count; i++) {
 				var key = orderedKeys[i];
+
 				if (!fieldConfigs.TryGetValue(key, out var cfg))
 					continue;
 				if (string.IsNullOrWhiteSpace(cfg.InputOverride))
@@ -1050,10 +1113,11 @@ namespace NameChangeSimulator.Editor {
 
 				if (!byName.TryGetValue(cfg.InputOverride, out var source))
 					continue;
-				var current = created[i] as XNode.Node;
 
+				var current = created[i] as XNode.Node;
 				var srcOut = source.GetOutputPort("Output");
 				var dstIn = current.GetInputPort("OverrideInput") ?? current.GetInputPort("InputOverride");
+
 				if (srcOut != null && dstIn != null) {
 					try {
 						if (!dstIn.IsConnected || !dstIn.GetConnections().Any(c => c.node == source))
@@ -1070,6 +1134,7 @@ namespace NameChangeSimulator.Editor {
 				if (created.Count > 0) {
 					var last = created.Last() as XNode.Node;
 					var lastOut = last.GetOutputPort("Output");
+
 					if (lastOut != null && !lastOut.IsConnected) {
 						lastOut.Connect(endNode.GetInputPort("Input"));
 					}
@@ -1084,10 +1149,14 @@ namespace NameChangeSimulator.Editor {
 			EditorUtility.DisplayDialog("Done", $"Dialogue created with {created.Count} nodes.", "OK");
 		}
 
-		private void WireOption(XNode.Node node, Dictionary<string, Node> byName,
-								string targetName, PortSel targetPortSel,
-								int optionIndex, XNode.NodePort fallbackIn) {
-			// Ports should already be updated, but update again defensively
+		private void WireOption(
+			XNode.Node node,
+			Dictionary<string, Node> byName,
+			string targetName, 
+			PortSel targetPortSel,
+			int optionIndex, 
+			XNode.NodePort fallbackIn) {
+
 			var updatePorts = typeof(XNode.Node).GetMethod("UpdatePorts", BindingFlags.Instance | BindingFlags.NonPublic);
 			updatePorts?.Invoke(node, null);
 
@@ -1130,23 +1199,36 @@ namespace NameChangeSimulator.Editor {
 
 			var p = t.GetProperty("Options", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 			if (p != null && p.CanWrite) {
-				if (p.PropertyType == typeof(string[])) { p.SetValue(node, options, null); return; }
+				if (p.PropertyType == typeof(string[])) { 
+					p.SetValue(node, options, null);
+
+					return; 
+				}
+
 				if (typeof(IList<string>).IsAssignableFrom(p.PropertyType)) {
 					var list = (IList<string>)Activator.CreateInstance(p.PropertyType);
+
 					foreach (var s in options)
 						list.Add(s);
 					p.SetValue(node, list, null);
+
 					return;
 				}
 			}
 
 			var f = t.GetField("Options", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 			if (f != null) {
-				if (f.FieldType == typeof(string[])) { f.SetValue(node, options); return; }
+				if (f.FieldType == typeof(string[])) { 
+					f.SetValue(node, options); 
+					return; 
+				}
+
 				if (typeof(IList<string>).IsAssignableFrom(f.FieldType)) {
 					var list = (IList<string>)Activator.CreateInstance(f.FieldType);
+
 					foreach (var s in options)
 						list.Add(s);
+
 					f.SetValue(node, list);
 				}
 			}
@@ -1155,9 +1237,11 @@ namespace NameChangeSimulator.Editor {
 		private static Type ResolveNodeType(string simpleName) {
 			if (string.IsNullOrEmpty(simpleName))
 				return null;
+
 			foreach (var asm in AppDomain.CurrentDomain.GetAssemblies()) {
 				try {
 					var t = asm.GetTypes().FirstOrDefault(tt => tt.Name == simpleName && typeof(Node).IsAssignableFrom(tt));
+
 					if (t != null)
 						return t;
 				}
@@ -1168,9 +1252,11 @@ namespace NameChangeSimulator.Editor {
 		private static Type ResolveTypeBySimpleName(string simpleName) {
 			if (string.IsNullOrEmpty(simpleName))
 				return null;
+
 			foreach (var asm in AppDomain.CurrentDomain.GetAssemblies()) {
 				try {
 					var t = asm.GetTypes().FirstOrDefault(tt => tt.Name == simpleName);
+
 					if (t != null)
 						return t;
 				}
@@ -1185,12 +1271,18 @@ namespace NameChangeSimulator.Editor {
 			var t = target.GetType();
 
 			var p = t.GetProperty(memberName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-			if (p != null && p.CanWrite && p.PropertyType == typeof(string)) { p.SetValue(target, value, null); return; }
+			if (p != null && p.CanWrite && p.PropertyType == typeof(string)) { 
+				p.SetValue(target, value, null); 
+				return; 
+			}
 
 			var f = t.GetField(memberName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-			if (f != null && f.FieldType == typeof(string)) { f.SetValue(target, value); }
+			if (f != null && f.FieldType == typeof(string)) { 
+				f.SetValue(target, value); 
+			}
 		}
 
+		// TODO : Rename variables
 		private static void SetEnumMember(object target, string memberName, Type enumType, int index, string[] names) {
 			if (target == null || enumType == null || names == null || names.Length == 0)
 				return;
@@ -1205,13 +1297,15 @@ namespace NameChangeSimulator.Editor {
 					p.SetValue(target, value, null);
 					return;
 				}
+
 				var f = t.GetField(memberName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 				if (f != null && f.FieldType.IsEnum && f.FieldType == enumType) {
 					f.SetValue(target, value);
 				}
 			}
-			catch { /* ignore if not assignable */ }
+			catch { }
 		}
 	}
 }
 #endif
+*/

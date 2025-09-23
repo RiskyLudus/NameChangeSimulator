@@ -1,4 +1,3 @@
-using NCS;
 
 using UnityEngine;
 
