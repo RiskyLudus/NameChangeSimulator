@@ -1,6 +1,5 @@
 ﻿
 /*
-#if UNITY_EDITOR
 namespace NameChangeSimulator.Editor {
 	using System;
 	using System.Collections;

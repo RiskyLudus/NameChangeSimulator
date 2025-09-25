@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 
 #if UNITY_EDITOR
@@ -31,20 +30,33 @@ namespace NameChangeSimulator.Runtime.ImageFieldingBridge {
 		public int outputHeightPixels = 2048;
 		public float pdfDpi = 300f;
 
-		private ImageFieldingAsset _activeLayout;
-		private string _stateName;
+		private ImageFieldingAsset activeLayout;
+		private string stateName;
 
-		private string _deadFirstName, _deadMiddleName, _deadLastName;
-		private string _newFirstName, _newMiddleName, _newLastName;
+		private string deadFirstName;
+		private string deadMiddleName;
+		private string deadLastName;
 
-		private readonly Dictionary<string, string> _strings =
+		private string newFirstName;
+		private string newMiddleName;
+		private string newLastName;
+
+		private readonly Dictionary<string, string> stringsById =
 			new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
-		private readonly Dictionary<string, string> _pendingStrings =
+		private readonly Dictionary<string, string> pendingStringsById =
 			new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
-		private string FullDeadName => $"{_deadFirstName} {_deadMiddleName} {_deadLastName}".Trim();
-		private string FullNewName => $"{_newFirstName} {_newMiddleName} {_newLastName}".Trim();
+		private string FullDeadName => $"{deadFirstName} {deadMiddleName} {deadLastName}".Trim();
+		private string FullNewName => $"{newFirstName} {newMiddleName} {newLastName}".Trim();
+
+		private const string TagFiller = "<color=orange>[FormDataFiller]</color>";
+		private const string TagOnLoad = "<color=cyan>[OnLoad]</color>";
+		private const string TagSubmit = "<color=cyan>[OnSubmit]</color>";
+		private const string TagOther = "<color=magenta>[Other]</color>";
+		private const string TagAlias = "<color=yellow>[Alias]</color>";
+		private const string TagOutput = "<color=green>[Output]</color>";
+		private const string TagError = "<color=red>[Error]</color>";
 
 		private void OnEnable() {
 			ConstructBindings.Send_FormDataFillerData_Load?.AddListener(OnLoad);
@@ -58,75 +70,105 @@ namespace NameChangeSimulator.Runtime.ImageFieldingBridge {
 			ConstructBindings.Send_FormDataFillerData_ApplyToPDF?.RemoveListener(OnApplyToPDF);
 		}
 
-		private void OnLoad(string stateName) {
-			_stateName = stateName;
-			_activeLayout = ResolveLayoutForState(stateName) ?? defaultLayout;
+		private void OnLoad(string requestedStateName) {
+			stateName = requestedStateName;
+			activeLayout = ResolveLayoutForState(requestedStateName) ?? defaultLayout;
 
-			if (_activeLayout == null) {
-				Debug.LogError($"[FormDataFiller] No ImageFieldingLayoutAsset for state '{stateName}'. Inputs will be stored and applied when a layout is available.");
-				_strings.Clear();
-				_deadFirstName = _deadMiddleName = _deadLastName = string.Empty;
-				_newFirstName = _newMiddleName = _newLastName = string.Empty;
+			if (activeLayout == null) {
+				Debug.LogError($"{TagFiller}{TagOnLoad}{TagError} No ImageFieldingLayoutAsset for state='{requestedStateName}'. Inputs will be stored and applied when a layout is available.");
+				stringsById.Clear();
+				deadFirstName = deadMiddleName = deadLastName = string.Empty;
+				newFirstName = newMiddleName = newLastName = string.Empty;
 				return;
 			}
 
-			_strings.Clear();
-			_deadFirstName = _deadMiddleName = _deadLastName = string.Empty;
-			_newFirstName = _newMiddleName = _newLastName = string.Empty;
+			Debug.Log($"{TagFiller}{TagOnLoad} state='{stateName}' layout='{activeLayout.name}' fields={activeLayout.fields.Count}");
+
+			stringsById.Clear();
+			deadFirstName = deadMiddleName = deadLastName = string.Empty;
+			newFirstName = newMiddleName = newLastName = string.Empty;
 
 			SetOverride("IsAdult", "Yes");
 			SetOverride("FullDeadName", FullDeadName);
-			SetOverride("DeadFirstName", _deadFirstName);
-			SetOverride("DeadMiddleName", _deadMiddleName);
-			SetOverride("DeadLastName", _deadLastName);
+			SetOverride("DeadFirstName", deadFirstName);
+			SetOverride("DeadMiddleName", deadMiddleName);
+			SetOverride("DeadLastName", deadLastName);
 			SetOverride("FullNewName", FullNewName);
-			SetOverride("NewFirstName", _newFirstName);
-			SetOverride("NewMiddleName", _newMiddleName);
-			SetOverride("NewLastName", _newLastName);
+			SetOverride("NewFirstName", newFirstName);
+			SetOverride("NewMiddleName", newMiddleName);
+			SetOverride("NewLastName", newLastName);
 
 			if (useBackgroundSize)
-				_activeLayout.ComputeDefaultSize(out outputWidthPixels, out outputHeightPixels);
+				activeLayout.ComputeDefaultSize(out outputWidthPixels, out outputHeightPixels);
 
-			if (_pendingStrings.Count > 0) {
-				foreach (var kv in _pendingStrings)
-					_strings[kv.Key] = kv.Value;
-				_pendingStrings.Clear();
+			if (pendingStringsById.Count > 0) {
+				foreach (var pair in pendingStringsById)
+					stringsById[pair.Key] = pair.Value;
+				pendingStringsById.Clear();
+				Debug.Log($"{TagFiller}{TagOnLoad} mergedPending count={stringsById.Count}");
 			}
 
-			if (updateAssetTextFieldsLive)
-				PushStringsIntoLayoutAsset(_activeLayout, _strings);
+			void CopyIfPresent(string from, string to) {
+				if (stringsById.TryGetValue(from, out var value) && !string.IsNullOrEmpty(value)) {
+					if (!stringsById.TryGetValue(to, out var current) || current != value) {
+						stringsById[to] = value;
+						Debug.Log($"{TagFiller}{TagOnLoad}{TagAlias} '{from}' → '{to}' = '{value}'");
+					}
+				}
+			}
+			CopyIfPresent("Name_First_Dead", "DeadFirstName");
+			CopyIfPresent("Name_Middle_Dead", "DeadMiddleName");
+			CopyIfPresent("Name_Last_Dead", "DeadLastName");
+			CopyIfPresent("Name_First_New", "NewFirstName");
+			CopyIfPresent("Name_Middle_New", "NewMiddleName");
+			CopyIfPresent("Name_Last_New", "NewLastName");
 
-			if (Application.isEditor && viewController != null && _activeLayout != null)
-				viewController.RenderPreview(_activeLayout, BuildRenderDataForOne(_activeLayout), outputWidthPixels, outputHeightPixels);
+			deadFirstName = stringsById.TryGetValue("DeadFirstName", out var dfn) ? dfn : (stringsById.TryGetValue("Name_First_Dead", out var dfn2) ? dfn2 : "");
+			deadMiddleName = stringsById.TryGetValue("DeadMiddleName", out var dmn) ? dmn : (stringsById.TryGetValue("Name_Middle_Dead", out var dmn2) ? dmn2 : "");
+			deadLastName = stringsById.TryGetValue("DeadLastName", out var dln) ? dln : (stringsById.TryGetValue("Name_Last_Dead", out var dln2) ? dln2 : "");
+			newFirstName = stringsById.TryGetValue("NewFirstName", out var nfn) ? nfn : (stringsById.TryGetValue("Name_First_New", out var nfn2) ? nfn2 : "");
+			newMiddleName = stringsById.TryGetValue("NewMiddleName", out var nmn) ? nmn : (stringsById.TryGetValue("Name_Middle_New", out var nmn2) ? nmn2 : "");
+			newLastName = stringsById.TryGetValue("NewLastName", out var nln) ? nln : (stringsById.TryGetValue("Name_Last_New", out var nln2) ? nln2 : "");
+
+			stringsById["FullDeadName"] = FullDeadName;
+			stringsById["FullNewName"] = FullNewName;
+
+			Debug.Log($"{TagFiller}{TagOnLoad} Dead='{FullDeadName}' New='{FullNewName}' totalKeys={stringsById.Count}");
+
+			if (updateAssetTextFieldsLive)
+				PushStringsIntoLayoutAsset(activeLayout, stringsById);
+
+			if (Application.isEditor && viewController != null && activeLayout != null)
+				viewController.RenderPreview(activeLayout, BuildRenderDataForOne(activeLayout), outputWidthPixels, outputHeightPixels);
 		}
 
-		private ImageFieldingAsset ResolveLayoutForState(string stateName) {
-			if (!string.IsNullOrEmpty(stateName)) {
+		private ImageFieldingAsset ResolveLayoutForState(string targetStateName) {
+			if (!string.IsNullOrEmpty(targetStateName)) {
 				for (int i = 0; i < stateLayouts.Count; i++) {
-					var s = stateLayouts[i];
-					if (!string.IsNullOrEmpty(s.stateName) &&
-						string.Equals(s.stateName, stateName, StringComparison.OrdinalIgnoreCase) &&
-						s.layout)
-						return s.layout;
+					var binding = stateLayouts[i];
+					if (!string.IsNullOrEmpty(binding.stateName) &&
+						string.Equals(binding.stateName, targetStateName, StringComparison.OrdinalIgnoreCase) &&
+						binding.layout)
+						return binding.layout;
 				}
 			}
 
-			if (!string.IsNullOrEmpty(stateName)) {
-				var all = Resources.LoadAll<ImageFieldingAsset>($"States/{stateName}");
-				if (all != null && all.Length > 0) {
-					var set = new HashSet<ImageFieldingAsset>(all);
+			if (!string.IsNullOrEmpty(targetStateName)) {
+				var allAssets = Resources.LoadAll<ImageFieldingAsset>($"States/{targetStateName}");
+				if (allAssets != null && allAssets.Length > 0) {
+					var allSet = new HashSet<ImageFieldingAsset>(allAssets);
 					var pointedTo = new HashSet<ImageFieldingAsset>();
-					for (int i = 0; i < all.Length; i++) {
-						var a = all[i];
-						if (a != null && a.next != null && set.Contains(a.next))
-							pointedTo.Add(a.next);
+					for (int i = 0; i < allAssets.Length; i++) {
+						var asset = allAssets[i];
+						if (asset != null && asset.next != null && allSet.Contains(asset.next))
+							pointedTo.Add(asset.next);
 					}
-					for (int i = 0; i < all.Length; i++) {
-						var a = all[i];
-						if (a != null && !pointedTo.Contains(a))
-							return a;
+					for (int i = 0; i < allAssets.Length; i++) {
+						var asset = allAssets[i];
+						if (asset != null && !pointedTo.Contains(asset))
+							return asset;
 					}
-					return all[0];
+					return allAssets[0];
 				}
 			}
 
@@ -134,145 +176,174 @@ namespace NameChangeSimulator.Runtime.ImageFieldingBridge {
 		}
 
 		private void OnSubmit(string keyword, string value) {
-			if (string.IsNullOrEmpty(keyword))
+			string rawKey = keyword ?? "";
+			string rawValue = value ?? "";
+
+			if (string.IsNullOrWhiteSpace(rawKey))
 				return;
 
-			if (keyword.Contains("&")) {
-				var parts = keyword.Split('&');
+			if (rawKey.Contains("&")) {
+				var parts = rawKey.Split('&');
 				for (int i = 0; i < parts.Length; i++)
-					OnSubmit(parts[i].Trim(), value);
+					OnSubmit(parts[i].Trim(), rawValue);
 				return;
 			}
 
-			switch (keyword) {
-			case "Dead Name Input": {
-				string[] parsed = (value ?? string.Empty).Split('~');
-				_deadFirstName = parsed.Length > 0 ? parsed[0] : string.Empty;
-				_deadMiddleName = parsed.Length > 1 ? parsed[1] : string.Empty;
-				_deadLastName = parsed.Length > 2 ? parsed[2] : string.Empty;
+			string key = rawKey.Trim();
+			string keyLower = key.ToLowerInvariant();
+
+			switch (keyLower) {
+			case "dead name input": {
+				string[] parsed = rawValue.Split('~');
+				deadFirstName = parsed.Length > 0 ? parsed[0] : string.Empty;
+				deadMiddleName = parsed.Length > 1 ? parsed[1] : string.Empty;
+				deadLastName = parsed.Length > 2 ? parsed[2] : string.Empty;
+
+				SetOverride("Name_First_Dead", deadFirstName);
+				SetOverride("Name_Middle_Dead", deadMiddleName);
+				SetOverride("Name_Last_Dead", deadLastName);
+
+				SetOverride("DeadFirstName", deadFirstName);
+				SetOverride("DeadMiddleName", deadMiddleName);
+				SetOverride("DeadLastName", deadLastName);
 
 				SetOverride("FullDeadName", FullDeadName);
-				SetOverride("DeadFirstName", _deadFirstName);
-				SetOverride("DeadMiddleName", _deadMiddleName);
-				SetOverride("DeadLastName", _deadLastName);
+
+				Debug.Log($"{TagFiller}{TagSubmit} parsedDead F='{deadFirstName}' M='{deadMiddleName}' L='{deadLastName}' Full='{FullDeadName}'");
 				break;
 			}
-			case "New Name Input": {
-				string[] parsed = (value ?? string.Empty).Split('~');
-				_newFirstName = parsed.Length > 0 ? parsed[0] : string.Empty;
-				_newMiddleName = parsed.Length > 1 ? parsed[1] : string.Empty;
-				_newLastName = parsed.Length > 2 ? parsed[2] : string.Empty;
 
-				PlayerPrefs.SetString("NewFirstName", _newFirstName);
+			case "new name input": {
+				string[] parsed = rawValue.Split('~');
+				newFirstName = parsed.Length > 0 ? parsed[0] : string.Empty;
+				newMiddleName = parsed.Length > 1 ? parsed[1] : string.Empty;
+				newLastName = parsed.Length > 2 ? parsed[2] : string.Empty;
+
+				PlayerPrefs.SetString("NewFirstName", newFirstName);
+
+				SetOverride("Name_First_New", newFirstName);
+				SetOverride("Name_Middle_New", newMiddleName);
+				SetOverride("Name_Last_New", newLastName);
+
+				SetOverride("NewFirstName", newFirstName);
+				SetOverride("NewMiddleName", newMiddleName);
+				SetOverride("NewLastName", newLastName);
 
 				SetOverride("FullNewName", FullNewName);
-				SetOverride("NewFirstName", _newFirstName);
-				SetOverride("NewMiddleName", _newMiddleName);
-				SetOverride("NewLastName", _newLastName);
-				break;
-			}
-			default:
-				_strings[keyword] = value ?? string.Empty;
-				if (_activeLayout == null)
-					_pendingStrings[keyword] = value ?? string.Empty;
+
+				Debug.Log($"{TagFiller}{TagSubmit} parsedNew  F='{newFirstName}' M='{newMiddleName}' L='{newLastName}' Full='{FullNewName}'");
 				break;
 			}
 
-			if (_activeLayout != null) {
-				if (_pendingStrings.Count > 0) {
-					foreach (var kv in _pendingStrings)
-						_strings[kv.Key] = kv.Value;
-					_pendingStrings.Clear();
+			default:
+				stringsById[key] = rawValue;
+				if (activeLayout == null)
+					pendingStringsById[key] = rawValue;
+				Debug.Log($"{TagFiller}{TagSubmit}{TagOther} '{key}' = '{rawValue}' (activeLayout={(activeLayout ? activeLayout.name : "null")})");
+				break;
+			}
+
+			if (activeLayout != null) {
+				if (pendingStringsById.Count > 0) {
+					foreach (var pair in pendingStringsById)
+						stringsById[pair.Key] = pair.Value;
+					pendingStringsById.Clear();
 				}
+
 				if (updateAssetTextFieldsLive)
-					PushStringsIntoLayoutAsset(_activeLayout, _strings);
+					PushStringsIntoLayoutAsset(activeLayout, stringsById);
 
 				if (viewController != null)
-					viewController.RenderPreview(_activeLayout, BuildRenderDataForOne(_activeLayout), outputWidthPixels, outputHeightPixels);
+					viewController.RenderPreview(activeLayout, BuildRenderDataForOne(activeLayout), outputWidthPixels, outputHeightPixels);
 			}
+
+			Debug.Log($"{TagFiller}{TagSubmit} totals strings={stringsById.Count} pending={pendingStringsById.Count}");
 		}
 
-		private void SetOverride(string id, string val) {
+		private void SetOverride(string id, string value) {
 			if (string.IsNullOrEmpty(id))
 				return;
-			_strings[id] = val ?? string.Empty;
-			if (_activeLayout == null)
-				_pendingStrings[id] = val ?? string.Empty;
+
+			string finalValue = value ?? string.Empty;
+			stringsById[id] = finalValue;
+
+			if (activeLayout == null)
+				pendingStringsById[id] = finalValue;
 		}
 
 		private void OnApplyToPDF() {
-			if (_activeLayout == null) {
-				Debug.LogError("[FormDataFiller] ApplyToPDF called without an active layout.");
+			if (activeLayout == null) {
+				Debug.LogError($"{TagFiller}{TagOutput}{TagError} ApplyToPDF called without an active layout.");
 				return;
 			}
 
-			var chain = CollectChain(_activeLayout);
+			var chain = CollectChain(activeLayout);
 			if (chain.Count == 0) {
-				Debug.LogError("[FormDataFiller] No layouts to render.");
+				Debug.LogError($"{TagFiller}{TagOutput}{TagError} No layouts to render.");
 				return;
 			}
 
-			int w = Mathf.Max(8, outputWidthPixels);
-			int h = Mathf.Max(8, outputHeightPixels);
-			if (useBackgroundSize && chain[0] != null) {
-				chain[0].ComputeDefaultSize(out w, out h);
-			}
+			int width = Mathf.Max(8, outputWidthPixels);
+			int height = Mathf.Max(8, outputHeightPixels);
+			if (useBackgroundSize && chain[0] != null)
+				chain[0].ComputeDefaultSize(out width, out height);
 
-			var merged = BuildRenderDataForChain(chain);
-			var rdList = new System.Collections.Generic.List<ImageFielding.RenderData>(chain.Count);
+			var mergedRenderData = BuildRenderDataForChain(chain);
+			var renderDataList = new List<ImageFielding.RenderData>(chain.Count);
 			for (int i = 0; i < chain.Count; i++)
-				rdList.Add(merged);
+				renderDataList.Add(mergedRenderData);
 
-			string baseName = string.IsNullOrEmpty(_stateName) ? (chain[0] ? chain[0].name : "Layout") : _stateName;
-			string dir = Application.persistentDataPath;
-			System.IO.Directory.CreateDirectory(dir);
-			string outPath = System.IO.Path.Combine(dir, $"Updated_{baseName}.pdf");
+			string baseName = string.IsNullOrEmpty(stateName) ? (chain[0] ? chain[0].name : "Layout") : stateName;
+			string directoryPath = Application.persistentDataPath;
+			System.IO.Directory.CreateDirectory(directoryPath);
+			string outputPath = System.IO.Path.Combine(directoryPath, $"Updated_{baseName}.pdf");
 
-			StartCoroutine(GeneratePdf_Co(chain, rdList, w, h, outPath));
+			StartCoroutine(GeneratePdf_Co(chain, renderDataList, width, height, outputPath));
 		}
 
 		private System.Collections.IEnumerator GeneratePdf_Co(
-			System.Collections.Generic.IList<ImageFieldingAsset> chain,
-			System.Collections.Generic.IList<ImageFielding.RenderData> rdList,
-			int w, int h,
-			string outPath
+			IList<ImageFieldingAsset> chain,
+			IList<ImageFielding.RenderData> renderDataList,
+			int width,
+			int height,
+			string outputPath
 		) {
 			ConstructBindings.Send_ProgressBarData_ShowProgressBar?.Invoke(0, chain.Count);
 
 			int lastShown = 0;
-			System.Action<int, int, string> report = (cur, total, phase) => {
-				int step = Mathf.Clamp(cur, 0, total);
+			Action<int, int, string> report = (current, total, phase) => {
+				int step = Mathf.Clamp(current, 0, total);
 				if (phase == "render")
 					lastShown = step;
 				ConstructBindings.Send_ProgressBarData_UpdateProgress?.Invoke(step);
 			};
 
 			yield return ImageFielding.AssetRenderer.RenderLayoutsToPdf_Co(
-				chain, rdList, w, h, outPath, Mathf.Max(36f, pdfDpi), 8.5, 11.0, 0.25, report
+				chain, renderDataList, width, height, outputPath, Mathf.Max(36f, pdfDpi), 8.5, 11.0, 0.25, report
 			);
 
-			byte[] pdfBytes = System.IO.File.ReadAllBytes(outPath);
-			Debug.Log($"[FormDataFiller] Saved: {outPath}");
+			byte[] pdfBytes = System.IO.File.ReadAllBytes(outputPath);
+			Debug.Log($"{TagFiller}{TagOutput} Saved PDF: {outputPath}");
 
 			ConstructBindings.Send_ProgressBarData_CloseProgressBar?.Invoke();
-
 			ConstructBindings.Send_PDFViewerData_Load?.Invoke(pdfBytes);
 		}
-
 
 		private List<ImageFieldingAsset> CollectChain(ImageFieldingAsset start) {
 			var list = new List<ImageFieldingAsset>();
 			var seen = new HashSet<ImageFieldingAsset>();
-			var cur = start;
-			while (cur != null && seen.Add(cur)) {
-				list.Add(cur);
-				cur = cur.next;
+			var current = start;
+
+			while (current != null && seen.Add(current)) {
+				list.Add(current);
+				current = current.next;
 			}
+
 			return list;
 		}
 
 		private ImageFielding.RenderData BuildRenderDataForOne(ImageFieldingAsset layout) {
-			var rd = new ImageFielding.RenderData {
+			var renderData = new ImageFielding.RenderData {
 				textFontSizePixels = 32,
 				textColor = Color.black,
 				textAlignment = TextAnchor.MiddleCenter,
@@ -280,62 +351,64 @@ namespace NameChangeSimulator.Runtime.ImageFieldingBridge {
 			};
 
 			if (layout == null)
-				return rd;
+				return renderData;
 
 			for (int i = 0; i < layout.fields.Count; i++) {
-				var f = layout.fields[i];
+				var fieldEntry = layout.fields[i];
 
-				if (f.fieldType == ImageFieldingTypes.String) {
-					if (!string.IsNullOrEmpty(f.ID)) {
-						if (_strings.TryGetValue(f.ID, out var userVal) && !string.IsNullOrEmpty(userVal)) {
-							rd.fieldStringValues[f.ID] = userVal;
-						} else if (!string.IsNullOrEmpty(f.text)) {
-							rd.fieldStringValues[f.ID] = f.text;
+				if (fieldEntry.fieldType == ImageFieldingTypes.String) {
+					if (!string.IsNullOrEmpty(fieldEntry.ID)) {
+						if (stringsById.TryGetValue(fieldEntry.ID, out var userValue) && !string.IsNullOrEmpty(userValue)) {
+							renderData.fieldStringValues[fieldEntry.ID] = userValue;
+						} else if (!string.IsNullOrEmpty(fieldEntry.text)) {
+							renderData.fieldStringValues[fieldEntry.ID] = fieldEntry.text;
 						}
 					}
-				} else if (f.fieldType == ImageFieldingTypes.Image) {
-					if (!string.IsNullOrEmpty(f.ID) && f.image != null)
-						rd.fieldImageValues[f.ID] = f.image;
+				} else if (fieldEntry.fieldType == ImageFieldingTypes.Image) {
+					if (!string.IsNullOrEmpty(fieldEntry.ID) && fieldEntry.image != null)
+						renderData.fieldImageValues[fieldEntry.ID] = fieldEntry.image;
 				}
 			}
 
-			return rd;
+			return renderData;
 		}
 
 		private ImageFielding.RenderData BuildRenderDataForChain(List<ImageFieldingAsset> chain) {
-			var rd = new ImageFielding.RenderData {
+			var renderData = new ImageFielding.RenderData {
 				textFontSizePixels = 32,
 				textColor = Color.black,
 				textAlignment = TextAnchor.MiddleCenter,
 				drawPlaceholderBoxesForMissingValues = false
 			};
 
-			foreach (var layout in chain) {
+			for (int i = 0; i < chain.Count; i++) {
+				var layout = chain[i];
 				if (layout == null)
 					continue;
-				for (int i = 0; i < layout.fields.Count; i++) {
-					var f = layout.fields[i];
 
-					if (f.fieldType == ImageFieldingTypes.String) {
-						if (string.IsNullOrEmpty(f.ID))
+				for (int j = 0; j < layout.fields.Count; j++) {
+					var fieldEntry = layout.fields[j];
+
+					if (fieldEntry.fieldType == ImageFieldingTypes.String) {
+						if (string.IsNullOrEmpty(fieldEntry.ID))
 							continue;
 
-						if (_strings.TryGetValue(f.ID, out var userVal) && !string.IsNullOrEmpty(userVal)) {
-							rd.fieldStringValues[f.ID] = userVal;
-						} else if (!string.IsNullOrEmpty(f.text)) {
-							if (!rd.fieldStringValues.ContainsKey(f.ID))
-								rd.fieldStringValues[f.ID] = f.text;
+						if (stringsById.TryGetValue(fieldEntry.ID, out var userValue) && !string.IsNullOrEmpty(userValue)) {
+							renderData.fieldStringValues[fieldEntry.ID] = userValue;
+						} else if (!string.IsNullOrEmpty(fieldEntry.text)) {
+							if (!renderData.fieldStringValues.ContainsKey(fieldEntry.ID))
+								renderData.fieldStringValues[fieldEntry.ID] = fieldEntry.text;
 						}
-					} else if (f.fieldType == ImageFieldingTypes.Image) {
-						if (!string.IsNullOrEmpty(f.ID) && f.image != null) {
-							if (!rd.fieldImageValues.ContainsKey(f.ID))
-								rd.fieldImageValues[f.ID] = f.image;
+					} else if (fieldEntry.fieldType == ImageFieldingTypes.Image) {
+						if (!string.IsNullOrEmpty(fieldEntry.ID) && fieldEntry.image != null) {
+							if (!renderData.fieldImageValues.ContainsKey(fieldEntry.ID))
+								renderData.fieldImageValues[fieldEntry.ID] = fieldEntry.image;
 						}
 					}
 				}
 			}
 
-			return rd;
+			return renderData;
 		}
 
 		private void PushStringsIntoLayoutAsset(ImageFieldingAsset layout, Dictionary<string, string> inputs) {
@@ -345,16 +418,16 @@ namespace NameChangeSimulator.Runtime.ImageFieldingBridge {
 			bool changed = false;
 
 			for (int i = 0; i < layout.fields.Count; i++) {
-				var f = layout.fields[i];
-				if (f.fieldType != ImageFieldingTypes.String)
+				var fieldEntry = layout.fields[i];
+				if (fieldEntry.fieldType != ImageFieldingTypes.String)
 					continue;
-				if (string.IsNullOrEmpty(f.ID))
+				if (string.IsNullOrEmpty(fieldEntry.ID))
 					continue;
 
-				if (inputs.TryGetValue(f.ID, out var v)) {
-					if (!string.Equals(f.text, v, StringComparison.Ordinal)) {
-						f.text = v;
-						layout.fields[i] = f;
+				if (inputs.TryGetValue(fieldEntry.ID, out var value)) {
+					if (!string.Equals(fieldEntry.text, value, StringComparison.Ordinal)) {
+						fieldEntry.text = value;
+						layout.fields[i] = fieldEntry;
 						changed = true;
 					}
 				}
