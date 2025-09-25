@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d8c8bff4fcba944bef3fddcb0dfdbc, type: 3}
+  m_Name: AlabamaMockPDFFields
+  m_EditorClassIdentifier: 
+  PdfFileName: AlabamaPDF
+  fields:
+  - fieldName: County_Name1
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Current_First_Name1
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Current_Middle_Name1
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Current_Last_Name1
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Current_First_Name2
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Current_Middle_Name2
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Current_Last_Name2
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Street_Address
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: City
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: State
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Zip
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Home_Phone
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Work_Phone
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: DOB
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Birth_First_Name
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Birth_Middle_Name
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Birth_Last_Name
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: County_Name2
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: PhotoID
+    fieldValue: 
+    fieldType: Radio Button
+    options:
+    - 1
+    - Off
+    - 2
+    overrideKey: 
+  - fieldName: DL#
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: ID#
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Why_change_name1
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Why_change_name2
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: Why_change_name3
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: New_First_Name
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: New_Middle_Name
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  - fieldName: New_Last_Name
+    fieldValue: 
+    fieldType: Text Field
+    options: []
+    overrideKey: 
+  keywords:
+  - County_Name1
+  - Current_First_Name1
+  - Current_Middle_Name1
+  - Current_Last_Name1
+  - Current_First_Name2
+  - Current_Middle_Name2
+  - Current_Last_Name2
+  - Street_Address
+  - City
+  - State
+  - Zip
+  - Home_Phone
+  - Work_Phone
+  - DOB
+  - Birth_First_Name
+  - Birth_Middle_Name
+  - Birth_Last_Name
+  - County_Name2
+  - PhotoID
+  - DL#
+  - ID#
+  - Why_change_name1
+  - Why_change_name2
+  - Why_change_name3
+  - New_First_Name
+  - New_Middle_Name
+  - New_Last_Name

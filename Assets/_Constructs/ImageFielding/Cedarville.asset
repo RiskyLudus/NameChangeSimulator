@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77a5fb7bab93544590fc764da5358c9, type: 3}
+  m_Name: Cedarville
+  m_EditorClassIdentifier: 
+  next: {fileID: 11400000, guid: 528e4bac893137b44ae4ccc60f3db504, type: 2}
+  jsonExport: {fileID: 0}
+  backgroundImage: {fileID: 2800000, guid: d1c528ccc8e23cd41b0969a6852fd361, type: 3}
+  fields:
+  - fieldName: ID#
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.15931597
+      y: 0.50098985
+      width: 0.19999999
+      height: 0.100000024
+    text: 
+    image: {fileID: 0}
+  - fieldName: City
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.1
+      y: 0.1
+      width: 0.20000002
+      height: 0.1
+    text: 
+    image: {fileID: 0}

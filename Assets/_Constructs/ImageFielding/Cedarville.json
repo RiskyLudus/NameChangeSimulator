@@ -1,0 +1,35 @@
+{
+    "backgroundAssetPath": "Assets/UI Art/Mockups/01 NCS_Title Screen_Mockup.png",
+    "fields": [
+        {
+            "type": "String",
+            "id": "ID#",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.15931597352027894,
+                "y": 0.5009898543357849
+            },
+            "bottomRight": {
+                "x": 0.35931596159935,
+                "y": 0.6009898781776428
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "City",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.10000000149011612,
+                "y": 0.10000000149011612
+            },
+            "bottomRight": {
+                "x": 0.30000001192092898,
+                "y": 0.20000000298023225
+            },
+            "text": "",
+            "imageAssetPath": ""
+        }
+    ]
+}

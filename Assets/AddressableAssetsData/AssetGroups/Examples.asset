@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Examples
+  m_EditorClassIdentifier: 
+  m_GroupName: Examples
+  m_GUID: ecb99cf2affd1014aadfd35d1103a1c0
+  m_SerializeEntries:
+  - m_GUID: bbf4d4ccaccfbdd4f8fcc98dbeab823a
+    m_Address: Assets/(Working)/Zan/Example/Data/Keyword.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 8c016db8cd85da54a9d0fe6a8c1b3db6, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e961a18066a9e21458ba6b16424a9b84, type: 2}
+    - {fileID: 11400000, guid: 6274d57fa63e90c41846a9271d741b93, type: 2}

@@ -1,0 +1,35 @@
+{
+    "backgroundAssetPath": "Assets/UI Art/Mockups/02 NCS_Credits_Mockup.png",
+    "fields": [
+        {
+            "type": "String",
+            "id": "PhotoID",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.10000000149011612,
+                "y": 0.10000000149011612
+            },
+            "bottomRight": {
+                "x": 0.30000001192092898,
+                "y": 0.20000000298023225
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Zip",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.10390236973762512,
+                "y": 0.21655070781707765
+            },
+            "bottomRight": {
+                "x": 0.30390235781669619,
+                "y": 0.31655070185661318
+            },
+            "text": "",
+            "imageAssetPath": ""
+        }
+    ]
+}
