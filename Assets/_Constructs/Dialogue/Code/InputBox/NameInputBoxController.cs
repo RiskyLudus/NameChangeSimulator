@@ -10,8 +10,9 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
     {
         private static readonly int OpenTrigger = Animator.StringToHash("Open");
         private static readonly int CloseTrigger = Animator.StringToHash("Close");
-        
-        [SerializeField] private DialogueController dialogueController;
+
+		[SerializeField] private string formKeyword = "Dead Name Input"; // or "New Name Input"
+		[SerializeField] private DialogueController dialogueController;
         [SerializeField] private GameObject container;
         [SerializeField] private TMP_InputField firstNameInputField, middleNameInputField, lastNameInputField;
         [SerializeField] private Animator nameInputAnimator;
@@ -29,33 +30,53 @@ namespace NameChangeSimulator.Constructs.Dialogue.InputBox
             ResetBox();
             nameInputAnimator.SetTrigger(OpenTrigger);
         }
-        
-        public void SubmitInput()
-        {
-            if (!string.IsNullOrEmpty(firstNameInputField.text) && !string.IsNullOrEmpty(lastNameInputField.text))
-            {
-                Debug.Log("<color=lightblue>[SUBMIT]</color> name input");
-                button.SetActive(false);
-                AudioManager.Instance.PlayUIConfirm_SFX();
-                middleNameInputField.placeholder.GetComponent<TMP_Text>().enabled = false;
-                foreach (var animator in animators)
-                {
-                    animator.SetTrigger(triggerName);
-                    ConstructBindings.Send_ScreenBlockerData_ToggleScreenBlocker?.Invoke(true);
-                }
-            }
-        }
 
-        public void GoToNext()
-        {
-            if (_goToNextRunning) return;
-            _goToNextRunning = true;
-            dialogueController.GoToNext($"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}");
-            ConstructBindings.Send_ScreenBlockerData_ToggleScreenBlocker?.Invoke(false);
-            nameInputAnimator.SetTrigger(CloseTrigger);
-        }
+		public void SubmitInput() {
+			// Guard: need first & last to proceed
+			if (string.IsNullOrEmpty(firstNameInputField.text) || string.IsNullOrEmpty(lastNameInputField.text)) {
+				Debug.LogWarning($"[NAME_UI][SUBMIT] blocked — missing required fields. first='{firstNameInputField.text}', last='{lastNameInputField.text}'");
+				return;
+			}
 
-        public void Close()
+			string payload = $"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}";
+			Debug.Log($"<color=lightblue>[SUBMIT]</color> name input keyword='{formKeyword}' payload='{payload}'");
+
+			// Push to the form filler immediately (we also resend in GoToNext as a belt-and-suspenders)
+			ConstructBindings.Send_FormDataFillerData_Submit?.Invoke(formKeyword, payload);
+
+			button.SetActive(false);
+			AudioManager.Instance.PlayUIConfirm_SFX();
+			var ph = middleNameInputField.placeholder != null ? middleNameInputField.placeholder.GetComponent<TMP_Text>() : null;
+			if (ph != null)
+				ph.enabled = false;
+
+			foreach (var animator in animators) {
+				animator.SetTrigger(triggerName);
+				ConstructBindings.Send_ScreenBlockerData_ToggleScreenBlocker?.Invoke(true);
+			}
+		}
+
+
+		public void GoToNext() {
+			if (_goToNextRunning)
+				return;
+			_goToNextRunning = true;
+
+			string payload = $"{firstNameInputField.text}~{middleNameInputField.text}~{lastNameInputField.text}";
+			Debug.Log($"[NAME_UI][NEXT] keyword='{formKeyword}' payload='{payload}'");
+
+			// Resend to ensure the very latest text reaches the filler
+			ConstructBindings.Send_FormDataFillerData_Submit?.Invoke(formKeyword, payload);
+
+			// Advance the dialogue flow (you were already passing the payload here)
+			dialogueController.GoToNext(payload);
+
+			ConstructBindings.Send_ScreenBlockerData_ToggleScreenBlocker?.Invoke(false);
+			nameInputAnimator.SetTrigger(CloseTrigger);
+		}
+
+
+		public void Close()
         {
             if (_open)
             {

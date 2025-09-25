@@ -5,8 +5,8 @@ namespace DW.Core {
 	using System.IO;
 	using System.Text.Json;
 
-
 	using UnityEngine;
+	using UnityEngine.AddressableAssets;
 	using UnityEngine.ResourceManagement.AsyncOperations;
 
 	using JsonSerializer = System.Text.Json.JsonSerializer;
@@ -20,39 +20,109 @@ namespace DW.Core {
 			public Action<Post> OnPostAdded;
 			public Action<Post> OnPostRemoved;
 
+			private const string TagBB = "<color=orange>[BB]</color>";
+			private const string TagSynonyms = "<color=cyan>[SYNONYMS]</color>";
+			private const string TagPostAdd = "<color=orange>[POST:ADD]</color>";
+			private const string TagPostRemove = "<color=orange>[POST:REMOVE]</color>";
+			private const string TagWarn = "<color=yellow>[WARN]</color>";
+			private const string TagError = "<color=red>[ERROR]</color>";
+
 			public Blackboard() {
 				Initialize();
 			}
 
 			public void Initialize() {
+				Debug.Log($"{TagBB}[Init] MatchGroup='{MatchGroup ?? "(null)"}'");
 				LoadAllSynonymGroups();
 			}
 
+			private void SeedBuiltinLinks() {
+				MatchLogic.Synonyms.AddLink("Name_First_Dead", "DeadFirstName");
+				MatchLogic.Synonyms.AddLink("Name_Middle_Dead", "DeadMiddleName");
+				MatchLogic.Synonyms.AddLink("Name_Last_Dead", "DeadLastName");
+
+				MatchLogic.Synonyms.AddLink("Name_First_New", "NewFirstName");
+				MatchLogic.Synonyms.AddLink("Name_Middle_New", "NewMiddleName");
+				MatchLogic.Synonyms.AddLink("Name_Last_New", "NewLastName");
+
+				MatchLogic.Synonyms.AddLink("FullDeadName", "DeadFirstName");
+				MatchLogic.Synonyms.AddLink("FullNewName", "NewFirstName");
+
+				Debug.Log($"{TagSynonyms}[Seeded built-ins]");
+			}
+
 			private async void LoadAllSynonymGroups() {
-				JsonGroupSO[] groups = Resources.LoadAll<JsonGroupSO>("");
+				try {
+					var groupScriptableObjects = Resources.LoadAll<JsonGroupSO>("");
 
-				foreach (var groupSO in groups) {
-					if (!string.Equals(groupSO.groupName, MatchGroup, StringComparison.OrdinalIgnoreCase))
-						return;
+					SeedBuiltinLinks();
 
-					Debug.Log($"[BlackBoard] Loading group: {groupSO.groupName}");
+					int consideredCount = 0;
+					int loadedCount = 0;
+					int skippedCount = 0;
 
-					if (groupSO.Asset == null) {
-						Debug.LogWarning($"No AssetReference for group: {groupSO.groupName}");
-						continue;
+					foreach (var groupScriptableObject in groupScriptableObjects) {
+						if (groupScriptableObject == null) {
+							continue;
+						}
+
+						consideredCount++;
+
+						bool groupMatches =
+							string.Equals(groupScriptableObject.groupName, MatchGroup, StringComparison.OrdinalIgnoreCase);
+
+						if (!groupMatches) {
+							skippedCount++;
+							continue;
+						}
+
+						if (groupScriptableObject.Asset == null || !groupScriptableObject.Asset.RuntimeKeyIsValid()) {
+							Debug.LogWarning($"{TagSynonyms}{TagWarn} Skipping group '{groupScriptableObject.groupName}' on SO '{groupScriptableObject.name}': AssetReference missing or invalid.");
+							continue;
+						}
+
+						AsyncOperationHandle<TextAsset> loadHandle;
+						try {
+							loadHandle = groupScriptableObject.Asset.LoadAssetAsync<TextAsset>();
+							await loadHandle.Task;
+						}
+						catch (Exception exception) {
+							Debug.LogError($"{TagSynonyms}{TagError} Exception while loading '{groupScriptableObject.groupName}' from SO '{groupScriptableObject.name}': {exception}");
+							continue;
+						}
+
+						if (loadHandle.Status != AsyncOperationStatus.Succeeded || loadHandle.Result == null) {
+							Debug.LogError($"{TagSynonyms}{TagError} Failed to load JSON for group '{groupScriptableObject.groupName}' (SO '{groupScriptableObject.name}').");
+							Addressables.Release(loadHandle);
+							continue;
+						}
+
+						try {
+							string json = loadHandle.Result.text;
+
+							if (string.IsNullOrWhiteSpace(json)) {
+								Debug.LogWarning($"{TagSynonyms}{TagWarn} Empty JSON for group '{groupScriptableObject.groupName}' (SO '{groupScriptableObject.name}').");
+							} else {
+								int groupsBefore = MatchLogic.Synonyms.GroupCountApprox();
+								MatchLogic.Synonyms.LoadFromJsonString(json);
+								int groupsAfter = MatchLogic.Synonyms.GroupCountApprox();
+
+								Debug.Log($"{TagSynonyms}[Loaded] '{groupScriptableObject.groupName}' Groups {groupsBefore} → {groupsAfter}");
+								loadedCount++;
+							}
+						}
+						catch (Exception parseException) {
+							Debug.LogError($"{TagSynonyms}{TagError} JSON parse error for group '{groupScriptableObject.groupName}' (SO '{groupScriptableObject.name}'): {parseException}");
+						}
+						finally {
+							Addressables.Release(loadHandle);
+						}
 					}
 
-					AsyncOperationHandle<TextAsset> handle = groupSO.Asset.LoadAssetAsync<TextAsset>();
-					await handle.Task;
-
-					if (handle.Status == AsyncOperationStatus.Succeeded) {
-						TextAsset jsonAsset = handle.Result;
-						Debug.Log($"Loaded JSON for group: {groupSO.groupName}\n{jsonAsset.text}");
-
-						MatchLogic.Synonyms.LoadFromJsonString(jsonAsset.text);
-					} else {
-						Debug.LogError($"Failed to load JSON for group: {groupSO.groupName}");
-					}
+					Debug.Log($"{TagSynonyms}[Scan Complete] considered={consideredCount} matchedGroup='{MatchGroup}' loaded={loadedCount} skipped={skippedCount} total≈{MatchLogic.Synonyms.GroupCountApprox()}");
+				}
+				catch (Exception exception) {
+					Debug.LogError($"{TagSynonyms}{TagError} Unexpected error in LoadAllSynonymGroups: {exception}");
 				}
 			}
 
@@ -61,34 +131,85 @@ namespace DW.Core {
 			}
 
 			private void Add(Post post) {
+				if (post == null) {
+					Debug.LogWarning($"{TagBB}{TagPostAdd}{TagWarn} Null post ignored.");
+					return;
+				}
+
 				Posts.Add(post);
-				OnPostAdded(post);
+				Debug.Log($"{TagBB}{TagPostAdd} Label='{Safe(post.Label)}'");
+
+				if (OnPostAdded != null) {
+					try {
+						OnPostAdded.Invoke(post);
+					}
+					catch (Exception exception) {
+						Debug.LogError($"{TagBB}{TagPostAdd}{TagError} OnPostAdded exception: {exception}");
+					}
+				}
+
+				if (OnPostsUpdated != null) {
+					try {
+						OnPostsUpdated.Invoke();
+					}
+					catch (Exception exception) {
+						Debug.LogError($"{TagBB}{TagPostAdd}{TagError} OnPostsUpdated exception: {exception}");
+					}
+				}
 			}
 
 			public bool RemovePost(Post post) {
-				return !Posts.Contains(post) ? false : Remove(post);
+				if (!Posts.Contains(post)) {
+					return false;
+				}
+				return Remove(post);
 			}
 
 			private bool Remove(Post post) {
-				Posts.Remove(post);
+				if (post == null) {
+					return false;
+				}
 
-				OnPostRemoved(post);
+				bool removed = Posts.Remove(post);
+				if (removed) {
+					Debug.Log($"{TagBB}{TagPostRemove} Label='{Safe(post.Label)}'");
 
-				return true;
+					if (OnPostRemoved != null) {
+						try {
+							OnPostRemoved.Invoke(post);
+						}
+						catch (Exception exception) {
+							Debug.LogError($"{TagBB}{TagPostRemove}{TagError} OnPostRemoved exception: {exception}");
+						}
+					}
+
+					if (OnPostsUpdated != null) {
+						try {
+							OnPostsUpdated.Invoke();
+						}
+						catch (Exception exception) {
+							Debug.LogError($"{TagBB}{TagPostRemove}{TagError} OnPostsUpdated exception: {exception}");
+						}
+					}
+				}
+
+				return removed;
 			}
 
 			public Post[] GetMatch(Predicate<Post> condition) {
+				if (condition == null) {
+					return Array.Empty<Post>();
+				}
 				return Posts.FindAll(condition).ToArray();
 			}
 
 			public interface Post {
 				public string Label { get; set; }
-
 				public Type types { get; set; }
-
 				public object dataObj { get; set; }
 			}
 
+			[Serializable]
 			public class Postit<T> : Post {
 				[field: SerializeField, Header("SETTINGS")]
 				public string Label { get; set; }
@@ -97,7 +218,6 @@ namespace DW.Core {
 				public T data;
 
 				public Type types { get; set; }
-
 				public object dataObj { get; set; }
 			}
 
@@ -105,22 +225,47 @@ namespace DW.Core {
 				public static SynonymMap Synonyms = new SynonymMap();
 
 				public static bool Matches(Post post, string searchTerm) {
-					var synonyms = Synonyms.GetSynonyms(searchTerm);
+					if (post == null) {
+						return false;
+					}
+					if (string.IsNullOrWhiteSpace(searchTerm)) {
+						return false;
+					}
 
-					foreach (var synonym in synonyms) {
-						if (post.Label.IndexOf(synonym, StringComparison.OrdinalIgnoreCase) >= 0)
+					var synonymsToCheck = Synonyms.GetSynonyms(searchTerm);
+
+					foreach (var synonym in synonymsToCheck) {
+						int index = post.Label?.IndexOf(synonym, StringComparison.OrdinalIgnoreCase) ?? -1;
+						if (index >= 0) {
 							return true;
+						}
 					}
 
 					return false;
 				}
+			}
+
+			private static string Safe(string value) {
+				if (string.IsNullOrEmpty(value)) {
+					return "";
+				}
+				value = value.Replace("\n", " ").Replace("\r", " ");
+				return value.Length > 160 ? value.Substring(0, 157) + "..." : value;
 			}
 		}
 
 		public class SynonymMap {
 			private readonly Dictionary<string, HashSet<string>> _map = new(StringComparer.OrdinalIgnoreCase);
 
+			private const string TagSynonyms = "<color=cyan>[SYNONYMS]</color>";
+			private const string TagWarn = "<color=yellow>[WARN]</color>";
+			private const string TagError = "<color=red>[ERROR]</color>";
+
 			public void AddLink(string word1, string word2) {
+				if (string.IsNullOrWhiteSpace(word1) || string.IsNullOrWhiteSpace(word2)) {
+					return;
+				}
+
 				if (!_map.TryGetValue(word1, out var set1)) {
 					set1 = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { word1 };
 					_map[word1] = set1;
@@ -144,9 +289,15 @@ namespace DW.Core {
 			}
 
 			public HashSet<string> GetSynonyms(string word) {
-				return _map.TryGetValue(word, out var set)
-					? set
-					: new HashSet<string>(StringComparer.OrdinalIgnoreCase) { word };
+				if (string.IsNullOrWhiteSpace(word)) {
+					return new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+				}
+
+				if (_map.TryGetValue(word, out var set)) {
+					return set;
+				}
+
+				return new HashSet<string>(StringComparer.OrdinalIgnoreCase) { word };
 			}
 
 			public List<List<string>> ToSynonymGroups() {
@@ -162,39 +313,65 @@ namespace DW.Core {
 				return groups;
 			}
 
+			public int GroupCountApprox() {
+				var seen = new HashSet<HashSet<string>>();
+				foreach (var set in _map.Values) {
+					seen.Add(set);
+				}
+				return seen.Count;
+			}
+
 			public void SaveToJson(string filePath) {
-				var groups = ToSynonymGroups();
-				var json = JsonSerializer.Serialize(groups, new JsonSerializerOptions { WriteIndented = true });
-				File.WriteAllText(filePath, json);
+				try {
+					var groups = ToSynonymGroups();
+					var json = JsonSerializer.Serialize(groups, new JsonSerializerOptions { WriteIndented = true });
+					File.WriteAllText(filePath, json);
+					Debug.Log($"{TagSynonyms}[Saved] groups={groups.Count} path='{filePath}'");
+				}
+				catch (Exception exception) {
+					Debug.LogError($"{TagSynonyms}{TagError} SaveToJson error: {exception}");
+				}
 			}
 
 			public void LoadFromJson(string filePath) {
-				if (!File.Exists(filePath))
-					return;
+				try {
+					if (!File.Exists(filePath)) {
+						Debug.LogWarning($"{TagSynonyms}{TagWarn} LoadFromJson path not found: '{filePath}'");
+						return;
+					}
 
-				var json = File.ReadAllText(filePath);
-				var groups = JsonSerializer.Deserialize<List<List<string>>>(json);
-
-				if (groups == null)
-					return;
-
-				foreach (var group in groups) {
-					if (group.Count < 2)
-						continue;
-
-					LinkPairs(group);
+					var json = File.ReadAllText(filePath);
+					LoadFromJsonString(json);
+					Debug.Log($"{TagSynonyms}[Loaded File] path='{filePath}' total≈{GroupCountApprox()}");
+				}
+				catch (Exception exception) {
+					Debug.LogError($"{TagSynonyms}{TagError} LoadFromJson error: {exception}");
 				}
 			}
 
 			public void LoadFromJsonString(string json) {
-				var groups = Newtonsoft.Json.JsonConvert.DeserializeObject<List<List<string>>>(json);
-				if (groups == null)
-					return;
+				try {
+					var groups = Newtonsoft.Json.JsonConvert.DeserializeObject<List<List<string>>>(json);
+					if (groups == null) {
+						Debug.LogWarning($"{TagSynonyms}{TagWarn} JSON contained no groups.");
+						return;
+					}
 
-				foreach (var group in groups) {
-					if (group.Count < 2)
-						continue;
-					LinkPairs(group);
+					int linkedGroupCount = 0;
+
+					foreach (var group in groups) {
+						if (group == null || group.Count < 2) {
+							continue;
+						}
+
+						LinkPairs(group);
+						linkedGroupCount++;
+					}
+
+					Debug.Log($"{TagSynonyms}[Linked] groups={linkedGroupCount} total≈{GroupCountApprox()}");
+				}
+				catch (Exception exception) {
+					Debug.LogError($"{TagSynonyms}{TagError} LoadFromJsonString parse error: {exception}");
 				}
 			}
 
@@ -205,11 +382,8 @@ namespace DW.Core {
 					}
 				}
 			}
-
 		}
 
-		public class _BlackBoard_ : MonoBehaviour {
-
-		}
+		public class _BlackBoard_ : MonoBehaviour { }
 	}
 }
