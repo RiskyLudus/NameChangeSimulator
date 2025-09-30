@@ -1,0 +1,338 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77a5fb7bab93544590fc764da5358c9, type: 3}
+  m_Name: OregonPDF-1
+  m_EditorClassIdentifier: 
+  next: {fileID: 11400000, guid: 41ce9852ad3e55043b2f758bf9304732, type: 2}
+  jsonExport: {fileID: 0}
+  backgroundImage: {fileID: 2800000, guid: 94cb31ef2b676fb42b61760ce9ca5946, type: 3}
+  fields:
+  - ID: Current_First
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.25635698
+      y: 0.32315853
+      width: 0.17259964
+      height: 0.028714567
+    text: 
+    image: {fileID: 0}
+  - ID: Current_Middle
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.446848
+      y: 0.32189497
+      width: 0.20000002
+      height: 0.029722303
+    text: 
+    image: {fileID: 0}
+  - ID: Current_Last
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.6699422
+      y: 0.3231964
+      width: 0.19999993
+      height: 0.028420955
+    text: 
+    image: {fileID: 0}
+  - ID: Current_First
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.09630037
+      y: 0.1808904
+      width: 0.14481816
+      height: 0.028063864
+    text: 
+    image: {fileID: 0}
+  - ID: Current_Middle
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.2413307
+      y: 0.18157902
+      width: 0.15959056
+      height: 0.027119368
+    text: 
+    image: {fileID: 0}
+  - ID: Current_Last
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.40044314
+      y: 0.1822297
+      width: 0.14191127
+      height: 0.02842088
+    text: 
+    image: {fileID: 0}
+  - ID: New_First
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.23102923
+      y: 0.3546092
+      width: 0.17259963
+      height: 0.028714627
+    text: 
+    image: {fileID: 0}
+  - ID: New_Middle
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.44889492
+      y: 0.3556423
+      width: 0.17259967
+      height: 0.028714627
+    text: 
+    image: {fileID: 0}
+  - ID: New_Last
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.6804466
+      y: 0.35564235
+      width: 0.17259967
+      height: 0.028714597
+    text: 
+    image: {fileID: 0}
+  - ID: Gender_Change
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.7183888
+      y: 0.1892587
+      width: 0.047470927
+      height: 0.01955621
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: New_Gender_M
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.25019532
+      y: 0.4146534
+      width: 0.047470927
+      height: 0.019556195
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: New_Gender_F
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.31721023
+      y: 0.41440204
+      width: 0.047470927
+      height: 0.019556224
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: New_Gender_X
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.39778048
+      y: 0.4141436
+      width: 0.047470927
+      height: 0.019556224
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: County
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.5185963
+      y: 0.10626999
+      width: 0.16690212
+      height: 0.017825648
+    text: 
+    image: {fileID: 0}
+  - ID: CS
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.16402377
+      y: 0.522989
+      width: 0.047470927
+      height: 0.019556165
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: RO
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.16349323
+      y: 0.5598947
+      width: 0.047470927
+      height: 0.019556165
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: PB
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.16296275
+      y: 0.59310997
+      width: 0.047470927
+      height: 0.019556105
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: Other_Names
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.10696933
+      y: 0.69679326
+      width: 0.04381527
+      height: 0.019556224
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: SO
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.16508484
+      y: 0.62919563
+      width: 0.047470927
+      height: 0.019556224
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: Why_CS
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.17975073
+      y: 0.5417393
+      width: 0.7031715
+      height: 0.017825544
+    text: 
+    image: {fileID: 0}
+  - ID: Why_RO
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.17945379
+      y: 0.5780148
+      width: 0.70317143
+      height: 0.017825603
+    text: 
+    image: {fileID: 0}
+  - ID: Why_PB
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.17910175
+      y: 0.61259305
+      width: 0.7031713
+      height: 0.017825603
+    text: 
+    image: {fileID: 0}
+  - ID: Why_SO
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.1777776
+      y: 0.6485172
+      width: 0.70317143
+      height: 0.017825663
+    text: 
+    image: {fileID: 0}
+  - ID: List_Names_1
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.17652836
+      y: 0.74423784
+      width: 0.29577863
+      height: 0.017825484
+    text: 
+    image: {fileID: 0}
+  - ID: List_Names_2
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.17547691
+      y: 0.76394093
+      width: 0.29577848
+      height: 0.017825067
+    text: 
+    image: {fileID: 0}
+  - ID: List_Names_3
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.17579913
+      y: 0.78188837
+      width: 0.29577854
+      height: 0.017825067
+    text: 
+    image: {fileID: 0}
+  - ID: List_Names_4
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.52889323
+      y: 0.74524885
+      width: 0.2957785
+      height: 0.017825007
+    text: 
+    image: {fileID: 0}
+  - ID: List_Names_5
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.52910393
+      y: 0.7638129
+      width: 0.2957785
+      height: 0.017825007
+    text: 
+    image: {fileID: 0}
+  - ID: List_Names_6
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.529736
+      y: 0.7820512
+      width: 0.2957785
+      height: 0.017825007
+    text: 
+    image: {fileID: 0}
+  - ID: NS
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.106804594
+      y: 0.81456745
+      width: 0.043815255
+      height: 0.019556284
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: Why_NS_1
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.1659788
+      y: 0.84583503
+      width: 0.04381524
+      height: 0.019556344
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}
+  - ID: Why_NS_2
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.16564447
+      y: 0.8621149
+      width: 0.043815255
+      height: 0.019556284
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}

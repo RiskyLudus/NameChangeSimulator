@@ -1,0 +1,80 @@
+{
+    "backgroundAssetPath": "Assets/Resources/States/Oregon/OregonPDF-3.png",
+    "fields": [
+        {
+            "type": "String",
+            "id": "County",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.5034441351890564,
+                "y": 0.10716501623392105
+            },
+            "bottomRight": {
+                "x": 0.7034440040588379,
+                "y": 0.12346441298723221
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_First",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.11666823923587799,
+                "y": 0.1748807430267334
+            },
+            "bottomRight": {
+                "x": 0.25894296169281008,
+                "y": 0.19118012487888337
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_Middle",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.258780837059021,
+                "y": 0.1750057190656662
+            },
+            "bottomRight": {
+                "x": 0.40105557441711428,
+                "y": 0.19130511581897736
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_Last",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.4009869396686554,
+                "y": 0.17512616515159608
+            },
+            "bottomRight": {
+                "x": 0.543261706829071,
+                "y": 0.19142556190490724
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "Image",
+            "id": "Gender_Change",
+            "label": "",
+            "topLeft": {
+                "x": 0.7914729118347168,
+                "y": 0.19280117750167848
+            },
+            "bottomRight": {
+                "x": 0.820117712020874,
+                "y": 0.20955683290958405
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        }
+    ]
+}

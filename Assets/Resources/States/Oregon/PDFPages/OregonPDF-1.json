@@ -1,0 +1,485 @@
+{
+    "backgroundAssetPath": "Assets/Resources/States/Oregon/OregonPDF-1.png",
+    "fields": [
+        {
+            "type": "String",
+            "id": "Current_First",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.25635698437690737,
+                "y": 0.32315853238105776
+            },
+            "bottomRight": {
+                "x": 0.42895662784576418,
+                "y": 0.35187309980392458
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_Middle",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.4468480050563812,
+                "y": 0.32189497351646426
+            },
+            "bottomRight": {
+                "x": 0.6468480229377747,
+                "y": 0.3516172766685486
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_Last",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.6699422001838684,
+                "y": 0.3231964111328125
+            },
+            "bottomRight": {
+                "x": 0.8699421286582947,
+                "y": 0.35161736607551577
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_First",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.09630037099123001,
+                "y": 0.18089039623737336
+            },
+            "bottomRight": {
+                "x": 0.24111852049827577,
+                "y": 0.20895425975322724
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_Middle",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.24133069813251496,
+                "y": 0.18157902359962464
+            },
+            "bottomRight": {
+                "x": 0.4009212553501129,
+                "y": 0.20869839191436768
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_Last",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.4004431366920471,
+                "y": 0.18222969770431519
+            },
+            "bottomRight": {
+                "x": 0.5423544049263,
+                "y": 0.21065057814121247
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "New_First",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.2310292273759842,
+                "y": 0.3546091914176941
+            },
+            "bottomRight": {
+                "x": 0.4036288559436798,
+                "y": 0.3833238184452057
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "New_Middle",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.4488949179649353,
+                "y": 0.35564228892326357
+            },
+            "bottomRight": {
+                "x": 0.6214945912361145,
+                "y": 0.38435691595077517
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "New_Last",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.6804466247558594,
+                "y": 0.3556423485279083
+            },
+            "bottomRight": {
+                "x": 0.8530462980270386,
+                "y": 0.38435694575309756
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "Image",
+            "id": "Gender_Change",
+            "label": "",
+            "topLeft": {
+                "x": 0.7183887958526611,
+                "y": 0.18925869464874268
+            },
+            "bottomRight": {
+                "x": 0.7658597230911255,
+                "y": 0.20881490409374238
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "Image",
+            "id": "New_Gender_M",
+            "label": "",
+            "topLeft": {
+                "x": 0.25019532442092898,
+                "y": 0.41465339064598086
+            },
+            "bottomRight": {
+                "x": 0.2976662516593933,
+                "y": 0.43420958518981936
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "Image",
+            "id": "New_Gender_F",
+            "label": "",
+            "topLeft": {
+                "x": 0.31721022725105288,
+                "y": 0.414402037858963
+            },
+            "bottomRight": {
+                "x": 0.3646811544895172,
+                "y": 0.4339582622051239
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "Image",
+            "id": "New_Gender_X",
+            "label": "",
+            "topLeft": {
+                "x": 0.39778047800064089,
+                "y": 0.4141435921192169
+            },
+            "bottomRight": {
+                "x": 0.4452514052391052,
+                "y": 0.4336998164653778
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "String",
+            "id": "County",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.5185962915420532,
+                "y": 0.10626999288797379
+            },
+            "bottomRight": {
+                "x": 0.6854984164237976,
+                "y": 0.12409564107656479
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "Image",
+            "id": "CS",
+            "label": "",
+            "topLeft": {
+                "x": 0.1640237718820572,
+                "y": 0.5229889750480652
+            },
+            "bottomRight": {
+                "x": 0.21149469912052155,
+                "y": 0.5425451397895813
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "Image",
+            "id": "RO",
+            "label": "",
+            "topLeft": {
+                "x": 0.16349323093891145,
+                "y": 0.5598946809768677
+            },
+            "bottomRight": {
+                "x": 0.2109641581773758,
+                "y": 0.5794508457183838
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "Image",
+            "id": "PB",
+            "label": "",
+            "topLeft": {
+                "x": 0.16296274960041047,
+                "y": 0.5931099653244019
+            },
+            "bottomRight": {
+                "x": 0.21043367683887483,
+                "y": 0.6126660704612732
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "Image",
+            "id": "Other_Names",
+            "label": "",
+            "topLeft": {
+                "x": 0.10696932673454285,
+                "y": 0.696793258190155
+            },
+            "bottomRight": {
+                "x": 0.15078459680080415,
+                "y": 0.7163494825363159
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "Image",
+            "id": "SO",
+            "label": "",
+            "topLeft": {
+                "x": 0.1650848388671875,
+                "y": 0.6291956305503845
+            },
+            "bottomRight": {
+                "x": 0.21255576610565186,
+                "y": 0.6487518548965454
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "String",
+            "id": "Why_CS",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.1797507256269455,
+                "y": 0.541739284992218
+            },
+            "bottomRight": {
+                "x": 0.8829222321510315,
+                "y": 0.5595648288726807
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Why_RO",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.1794537901878357,
+                "y": 0.5780147910118103
+            },
+            "bottomRight": {
+                "x": 0.8826252222061157,
+                "y": 0.5958403944969177
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Why_PB",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.17910175025463105,
+                "y": 0.6125930547714233
+            },
+            "bottomRight": {
+                "x": 0.8822730779647827,
+                "y": 0.6304186582565308
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Why_SO",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.17777760326862336,
+                "y": 0.6485171914100647
+            },
+            "bottomRight": {
+                "x": 0.8809490203857422,
+                "y": 0.6663428544998169
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "List_Names_1",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.17652836441993714,
+                "y": 0.7442378401756287
+            },
+            "bottomRight": {
+                "x": 0.4723069965839386,
+                "y": 0.7620633244514465
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "List_Names_2",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.17547690868377686,
+                "y": 0.7639409303665161
+            },
+            "bottomRight": {
+                "x": 0.4712553918361664,
+                "y": 0.7817659974098206
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "List_Names_3",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.17579913139343263,
+                "y": 0.7818883657455444
+            },
+            "bottomRight": {
+                "x": 0.4715776741504669,
+                "y": 0.7997134327888489
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "List_Names_4",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.528893232345581,
+                "y": 0.7452488541603088
+            },
+            "bottomRight": {
+                "x": 0.824671745300293,
+                "y": 0.7630738615989685
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "List_Names_5",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.5291039347648621,
+                "y": 0.7638128995895386
+            },
+            "bottomRight": {
+                "x": 0.824882447719574,
+                "y": 0.7816379070281982
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "List_Names_6",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.5297359824180603,
+                "y": 0.7820512056350708
+            },
+            "bottomRight": {
+                "x": 0.8255144953727722,
+                "y": 0.7998762130737305
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "Image",
+            "id": "NS",
+            "label": "",
+            "topLeft": {
+                "x": 0.10680459439754486,
+                "y": 0.8145674467086792
+            },
+            "bottomRight": {
+                "x": 0.15061984956264497,
+                "y": 0.8341237306594849
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "Image",
+            "id": "Why_NS_1",
+            "label": "",
+            "topLeft": {
+                "x": 0.16597880423069,
+                "y": 0.8458350300788879
+            },
+            "bottomRight": {
+                "x": 0.2097940444946289,
+                "y": 0.8653913736343384
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        },
+        {
+            "type": "Image",
+            "id": "Why_NS_2",
+            "label": "",
+            "topLeft": {
+                "x": 0.16564446687698365,
+                "y": 0.8621149063110352
+            },
+            "bottomRight": {
+                "x": 0.20945972204208375,
+                "y": 0.8816711902618408
+            },
+            "text": "",
+            "imageAssetPath": "Assets/Resources/NCS_Checkmark.png"
+        }
+    ]
+}

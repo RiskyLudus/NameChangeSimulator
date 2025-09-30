@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77a5fb7bab93544590fc764da5358c9, type: 3}
+  m_Name: OregonPDF-3
+  m_EditorClassIdentifier: 
+  next: {fileID: 11400000, guid: 0d9bca230a94da44a87c76eaaf255ef7, type: 2}
+  jsonExport: {fileID: 0}
+  backgroundImage: {fileID: 2800000, guid: e4494a40483312b40968fe174e42c5c6, type: 3}
+  fields:
+  - ID: County
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.50344414
+      y: 0.107165016
+      width: 0.19999987
+      height: 0.016299397
+    text: 
+    image: {fileID: 0}
+  - ID: Current_First
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.11666824
+      y: 0.17488074
+      width: 0.14227472
+      height: 0.016299382
+    text: 
+    image: {fileID: 0}
+  - ID: Current_Middle
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.25878084
+      y: 0.17500572
+      width: 0.14227474
+      height: 0.016299397
+    text: 
+    image: {fileID: 0}
+  - ID: Current_Last
+    fieldType: 0
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.40098694
+      y: 0.17512617
+      width: 0.14227477
+      height: 0.016299397
+    text: 
+    image: {fileID: 0}
+  - ID: Gender_Change
+    fieldType: 1
+    normalizedRect:
+      serializedVersion: 2
+      x: 0.7914729
+      y: 0.19280118
+      width: 0.0286448
+      height: 0.016755655
+    text: 
+    image: {fileID: 2800000, guid: 657e99909b95634488bd01f9df5ffdc6, type: 3}

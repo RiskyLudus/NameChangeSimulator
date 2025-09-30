@@ -1,0 +1,95 @@
+{
+    "backgroundAssetPath": "Assets/Resources/States/Oregon/OregonPDF-2.png",
+    "fields": [
+        {
+            "type": "String",
+            "id": "Address",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.11671712249517441,
+                "y": 0.29035595059394839
+            },
+            "bottomRight": {
+                "x": 0.3984573781490326,
+                "y": 0.31384116411209109
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_Location",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.4034568667411804,
+                "y": 0.29017144441604617
+            },
+            "bottomRight": {
+                "x": 0.695547342300415,
+                "y": 0.31365662813186648
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Home_Phone",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.6968033313751221,
+                "y": 0.2903762757778168
+            },
+            "bottomRight": {
+                "x": 0.8835065960884094,
+                "y": 0.3138613998889923
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_First",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.4690702557563782,
+                "y": 0.24278557300567628
+            },
+            "bottomRight": {
+                "x": 0.6126509308815002,
+                "y": 0.2662706971168518
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_Middle",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.6129230856895447,
+                "y": 0.24274061620235444
+            },
+            "bottomRight": {
+                "x": 0.7565038204193115,
+                "y": 0.26622575521469118
+            },
+            "text": "",
+            "imageAssetPath": ""
+        },
+        {
+            "type": "String",
+            "id": "Current_Last",
+            "label": "NewText",
+            "topLeft": {
+                "x": 0.7566038370132446,
+                "y": 0.24290348589420319
+            },
+            "bottomRight": {
+                "x": 0.900184690952301,
+                "y": 0.26638859510421755
+            },
+            "text": "",
+            "imageAssetPath": ""
+        }
+    ]
+}
