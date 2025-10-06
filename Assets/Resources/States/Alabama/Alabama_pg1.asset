@@ -16,7 +16,7 @@ MonoBehaviour:
   jsonExport: {fileID: 0}
   backgroundImage: {fileID: 2800000, guid: a1cf80af3ff1d5c439431e8dbf529eaf, type: 3}
   fields:
-  - ID: DeadFirstName
+  - ID: Current_First
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -26,7 +26,7 @@ MonoBehaviour:
       height: 0.028192729
     text: 
     image: {fileID: 0}
-  - ID: DeadMiddleName
+  - ID: Current_Middle
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -36,7 +36,7 @@ MonoBehaviour:
       height: 0.027209088
     text: 
     image: {fileID: 0}
-  - ID: DeadLastName
+  - ID: Current_Last
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -46,7 +46,7 @@ MonoBehaviour:
       height: 0.027209103
     text: 
     image: {fileID: 0}
-  - ID: DeadFirstName
+  - ID: Current_First
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -56,7 +56,7 @@ MonoBehaviour:
       height: 0.028192729
     text: 
     image: {fileID: 0}
-  - ID: DeadMiddleName
+  - ID: Current_Middle
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -66,7 +66,7 @@ MonoBehaviour:
       height: 0.027209103
     text: 
     image: {fileID: 0}
-  - ID: DeadLastName
+  - ID: Current_Last
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -76,7 +76,7 @@ MonoBehaviour:
       height: 0.027209073
     text: 
     image: {fileID: 0}
-  - ID: Street_Address
+  - ID: Address
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -86,7 +86,7 @@ MonoBehaviour:
       height: 0.021548837
     text: 
     image: {fileID: 0}
-  - ID: State
+  - ID: Current_State
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -96,7 +96,7 @@ MonoBehaviour:
       height: 0.022144973
     text: 
     image: {fileID: 0}
-  - ID: Zip
+  - ID: Current_ZIP
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -106,7 +106,7 @@ MonoBehaviour:
       height: 0.022330433
     text: 
     image: {fileID: 0}
-  - ID: City
+  - ID: Current_City
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -116,7 +116,7 @@ MonoBehaviour:
       height: 0.02166307
     text: 
     image: {fileID: 0}
-  - ID: County_Name1
+  - ID: County
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -166,7 +166,7 @@ MonoBehaviour:
       height: 0.015436828
     text: 
     image: {fileID: 0}
-  - ID: Why_change_name2
+  - ID: Why_NC_1
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -176,7 +176,7 @@ MonoBehaviour:
       height: 0.03475344
     text: 
     image: {fileID: 0}
-  - ID: NewFirstName
+  - ID: New_First
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -186,7 +186,7 @@ MonoBehaviour:
       height: 0.024748266
     text: 
     image: {fileID: 0}
-  - ID: NewMiddleName
+  - ID: New_Middle
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -196,7 +196,7 @@ MonoBehaviour:
       height: 0.024748683
     text: 
     image: {fileID: 0}
-  - ID: NewLastName
+  - ID: New_Last
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -236,7 +236,7 @@ MonoBehaviour:
       height: 0.02056247
     text: 
     image: {fileID: 0}
-  - ID: Name_First_Birth
+  - ID: Birth_First
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -246,7 +246,7 @@ MonoBehaviour:
       height: 0.021093607
     text: 
     image: {fileID: 0}
-  - ID: Name_Middle_Birth
+  - ID: Birth_Middle
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -256,7 +256,7 @@ MonoBehaviour:
       height: 0.021093607
     text: 
     image: {fileID: 0}
-  - ID: Name_Last_Birth
+  - ID: Birth_Last
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
@@ -266,7 +266,7 @@ MonoBehaviour:
       height: 0.020702988
     text: 
     image: {fileID: 0}
-  - ID: County_Name1
+  - ID: County
     fieldType: 0
     normalizedRect:
       serializedVersion: 2
